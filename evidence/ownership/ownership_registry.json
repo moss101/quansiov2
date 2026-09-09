@@ -1,0 +1,150 @@
+{
+  "registry_version": "1.1.0",
+  "canonical_services": {
+    "quansio-api": {
+      "owns": ["Authenticated public commands", "session entry", "event projection", "upload initiation"],
+      "must_not_own": ["graph execution", "provider credential custody", "effect settlement", "machine actuation"],
+      "package": "quansio/api",
+      "deployable": "services/quansio_api"
+    },
+    "quansio-control": {
+      "owns": ["Tenant/identity/RBAC/policy/approval/registry/schedule/support configuration authority"],
+      "must_not_own": ["model fulfillment", "browser actuation", "connector actuation", "guest actuation"],
+      "package": "quansio/control",
+      "deployable": "services/quansio_control"
+    },
+    "quansio-runtime": {
+      "owns": ["Canonical WorkGraph/AgentGraph/StateGraph execution", "admission", "turns", "waits", "cancellation", "budgets", "recovery coordination"],
+      "must_not_own": ["direct provider credentials", "unmediated external effects"],
+      "package": "quansio/runtime",
+      "deployable": "services/quansio_runtime"
+    },
+    "quansio-model-gateway": {
+      "owns": ["All model fulfillment", "provider adapters", "routing", "streaming", "usage settlement", "model egress policy"],
+      "must_not_own": ["task truth", "user approval truth", "general connector authority"],
+      "package": "quansio/model_gateway",
+      "deployable": "services/quansio_model_gateway"
+    },
+    "quansio-context": {
+      "owns": ["Context Projection", "SearchProgram execution", "retrieval coordination", "evidence assembly", "Knowledge Fabric queries"],
+      "must_not_own": ["independent task scheduler", "effect path"],
+      "package": "quansio/context",
+      "deployable": "services/quansio_context"
+    },
+    "quansio-indexer": {
+      "owns": ["Ingestion", "chunking", "indexing", "freshness", "tombstones", "index provenance"],
+      "must_not_own": ["model orchestration", "business workflow authority"],
+      "package": "quansio/indexer",
+      "deployable": "services/quansio_indexer"
+    },
+    "quansio-worker-gateway": {
+      "owns": ["Authenticated worker/guest transport", "lease/generation validation", "ACK/redelivery", "cancellation relay"],
+      "must_not_own": ["tenant policy ownership", "model credentials"],
+      "package": "quansio/worker_gateway",
+      "deployable": "services/quansio_worker_gateway"
+    },
+    "quansio-machine-control": {
+      "owns": ["Execution-target inventory", "placement", "leases", "generations", "snapshots", "restore", "migration"],
+      "must_not_own": ["application task truth", "provider fulfillment"],
+      "package": "quansio/machine_control",
+      "deployable": "services/quansio_machine_control"
+    },
+    "quansio-integration-broker": {
+      "owns": ["Connector adapters", "credential handles", "typed external operations", "webhook ingress"],
+      "must_not_own": ["policy/effect bypass", "ambient tenant secret exposure"],
+      "package": "quansio/integration_broker",
+      "deployable": "services/quansio_integration_broker"
+    },
+    "quansio-artifact": {
+      "owns": ["Immutable artifacts/evidence", "digests", "scanning", "grants", "lifecycle"],
+      "must_not_own": ["task orchestration"],
+      "package": "quansio/artifact",
+      "deployable": "services/quansio_artifact"
+    },
+    "quansio-notify": {
+      "owns": ["Durable attention/notification delivery", "receipt tracking"],
+      "must_not_own": ["approval truth", "task state authority"],
+      "package": "quansio/notify",
+      "deployable": "services/quansio_notify"
+    },
+    "qworkerd": {
+      "owns": ["Guest actuation for assigned filesystem/terminal/browser/computer/process operations"],
+      "must_not_own": ["ambient cloud authority", "provider credentials", "tenant policy ownership"],
+      "package": "quansio/qworkerd",
+      "deployable": "services/qworkerd"
+    }
+  },
+  "supporting_owners": {
+    "authority": "Quansio V9 specification authority package (docs, schemas, registries, wiring, graphs, protocols, prompts, validator scripts)",
+    "governance": "Implementation governance tooling enforcing ownership, bindings, evidence",
+    "tests": "Qualification and acceptance test suites",
+    "evidence": "Executed verification reports and implementation evidence records",
+    "clients": "Desktop/web/mobile/CLI client applications (projections only)",
+    "deploy": "Deployment topology, compose topology and CI definitions",
+    "platform": "Shared infrastructure instances hosting multiple logical state areas (logical per-area ownership tracked by schema ownership registry)"
+  },
+  "entries": [
+    { "kind": "authority_path", "path": "00_README.md", "owner": "authority", "status": "present", "state_class": null, "role": "authority package overview" },
+    { "kind": "authority_path", "path": "AGENTS.md", "owner": "authority", "status": "present", "state_class": null, "role": "binding implementation rules" },
+    { "kind": "authority_path", "path": "CHECKSUMS.sha256", "owner": "authority", "status": "present", "state_class": null, "role": "package integrity checksums" },
+    { "kind": "authority_path", "path": "HANDOFF.md", "owner": "authority", "status": "present", "state_class": null, "role": "implementation handoff" },
+    { "kind": "authority_path", "path": "INSTALL.md", "owner": "authority", "status": "present", "state_class": null, "role": "authority package installation" },
+    { "kind": "authority_path", "path": "MANIFEST.json", "owner": "authority", "status": "present", "state_class": null, "role": "payload manifest" },
+    { "kind": "authority_path", "path": "Quansio_V9_FINAL_MASTER_DOSSIER.md", "owner": "authority", "status": "present", "state_class": null, "role": "master dossier reading view" },
+    { "kind": "authority_path", "path": "SKILLS.md", "owner": "authority", "status": "present", "state_class": null, "role": "skills index" },
+    { "kind": "authority_path", "path": "TOOLS.md", "owner": "authority", "status": "present", "state_class": null, "role": "tools index" },
+    { "kind": "authority_path", "path": "V9_SPECIFICATION_SEAL.md", "owner": "authority", "status": "present", "state_class": null, "role": "specification seal" },
+    { "kind": "authority_path", "path": "VALIDATION_REPORT.md", "owner": "authority", "status": "present", "state_class": null, "role": "authority validation report" },
+    { "kind": "authority_path", "path": "docs", "owner": "authority", "status": "present", "state_class": null, "role": "normative specification documents" },
+    { "kind": "authority_path", "path": "graphs", "owner": "authority", "status": "present", "state_class": null, "role": "architecture diagrams" },
+    { "kind": "authority_path", "path": "prompts", "owner": "authority", "status": "present", "state_class": null, "role": "implementation kickoff prompts" },
+    { "kind": "authority_path", "path": "protocols", "owner": "authority", "status": "present", "state_class": null, "role": "error codes and state machines" },
+    { "kind": "authority_path", "path": "pyproject.toml", "owner": "authority", "status": "present", "state_class": null, "role": "project metadata and tool configuration" },
+    { "kind": "authority_path", "path": "registries", "owner": "authority", "status": "present", "state_class": null, "role": "machine-readable task/requirement/support/qualification/release registries" },
+    { "kind": "authority_path", "path": "schemas", "owner": "authority", "status": "present", "state_class": null, "role": "canonical contract schemas" },
+    { "kind": "authority_path", "path": "scripts", "owner": "authority", "status": "present", "state_class": null, "role": "authority validators and generators" },
+    { "kind": "authority_path", "path": "wiring", "owner": "authority", "status": "present", "state_class": null, "role": "canonical service wiring flows" },
+    { "kind": "authority_path", "path": ".gitignore", "owner": "authority", "status": "present", "state_class": null, "role": "VCS ignore rules" },
+    { "kind": "governance_path", "path": "tools", "owner": "governance", "status": "present", "state_class": null, "role": "implementation governance tooling" },
+    { "kind": "test_path", "path": "tests", "owner": "tests", "status": "present", "state_class": null, "role": "qualification and acceptance suites" },
+    { "kind": "evidence_path", "path": "evidence", "owner": "evidence", "status": "present", "state_class": null, "role": "verification reports and implementation evidence" },
+    { "kind": "durable_store", "path": "migrations", "owner": "quansio-control", "status": "planned", "state_class": "relational_migrations", "role": "authoritative relational schema migrations" },
+    { "kind": "deploy_path", "path": "deploy", "owner": "deploy", "status": "planned", "state_class": null, "role": "deployment topology definitions" },
+    { "kind": "deploy_path", "path": "services", "owner": "deploy", "status": "planned", "state_class": null, "role": "deployable service containers" },
+    { "kind": "client_path", "path": "clients", "owner": "clients", "status": "planned", "state_class": null, "role": "client application workspace" },
+    { "kind": "generated_path", "path": "generated", "owner": "governance", "status": "planned", "state_class": null, "role": "generated schema bindings and authority views" },
+    { "kind": "package_path", "path": "quansio", "owner": "authority", "status": "planned", "state_class": null, "role": "canonical implementation package root" },
+    { "kind": "package_path", "path": "quansio/api", "owner": "quansio-api", "status": "planned", "state_class": null, "role": "public command admission" },
+    { "kind": "package_path", "path": "quansio/artifact", "owner": "quansio-artifact", "status": "planned", "state_class": null, "role": "immutable artifact and evidence storage" },
+    { "kind": "package_path", "path": "quansio/context", "owner": "quansio-context", "status": "planned", "state_class": null, "role": "context projection and research" },
+    { "kind": "package_path", "path": "quansio/control", "owner": "quansio-control", "status": "planned", "state_class": null, "role": "tenant/identity/policy/approval authority" },
+    { "kind": "package_path", "path": "quansio/indexer", "owner": "quansio-indexer", "status": "planned", "state_class": null, "role": "ingestion and index freshness" },
+    { "kind": "package_path", "path": "quansio/integration_broker", "owner": "quansio-integration-broker", "status": "planned", "state_class": null, "role": "connector adapters and webhook ingress" },
+    { "kind": "package_path", "path": "quansio/machine_control", "owner": "quansio-machine-control", "status": "planned", "state_class": null, "role": "execution-target inventory and leases" },
+    { "kind": "package_path", "path": "quansio/model_gateway", "owner": "quansio-model-gateway", "status": "planned", "state_class": null, "role": "exclusive model fulfillment boundary" },
+    { "kind": "package_path", "path": "quansio/notify", "owner": "quansio-notify", "status": "planned", "state_class": null, "role": "durable notification delivery" },
+    { "kind": "package_path", "path": "quansio/qworkerd", "owner": "qworkerd", "status": "planned", "state_class": null, "role": "guest actuator implementation" },
+    { "kind": "package_path", "path": "quansio/runtime", "owner": "quansio-runtime", "status": "planned", "state_class": null, "role": "canonical graph execution authority" },
+    { "kind": "package_path", "path": "quansio/worker_gateway", "owner": "quansio-worker-gateway", "status": "planned", "state_class": null, "role": "worker transport, leases, ACK/redelivery" },
+    { "kind": "entrypoint", "path": "services/quansio_api/main.py", "owner": "quansio-api", "status": "planned", "state_class": null, "role": "API deployable entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_artifact/main.py", "owner": "quansio-artifact", "status": "planned", "state_class": null, "role": "artifact service entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_context/main.py", "owner": "quansio-context", "status": "planned", "state_class": null, "role": "context service entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_control/main.py", "owner": "quansio-control", "status": "planned", "state_class": null, "role": "control service entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_indexer/main.py", "owner": "quansio-indexer", "status": "planned", "state_class": null, "role": "indexer service entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_integration_broker/main.py", "owner": "quansio-integration-broker", "status": "planned", "state_class": null, "role": "integration broker entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_machine_control/main.py", "owner": "quansio-machine-control", "status": "planned", "state_class": null, "role": "machine control entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_model_gateway/main.py", "owner": "quansio-model-gateway", "status": "planned", "state_class": null, "role": "model gateway entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_notify/main.py", "owner": "quansio-notify", "status": "planned", "state_class": null, "role": "notification service entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_runtime/main.py", "owner": "quansio-runtime", "status": "planned", "state_class": null, "role": "runtime service entrypoint" },
+    { "kind": "entrypoint", "path": "services/quansio_worker_gateway/main.py", "owner": "quansio-worker-gateway", "status": "planned", "state_class": null, "role": "worker gateway entrypoint" },
+    { "kind": "entrypoint", "path": "services/qworkerd/main.py", "owner": "qworkerd", "status": "planned", "state_class": null, "role": "guest actuator entrypoint" },
+    { "kind": "entrypoint", "path": "deploy/compose/docker-compose.yml", "owner": "deploy", "status": "planned", "state_class": null, "role": "qualification environment topology" },
+    { "kind": "durable_store", "path": "deploy/compose/docker-compose.yml#postgres", "owner": "platform", "status": "planned", "state_class": "relational_primary", "role": "authoritative relational store; logical per-area ownership tracked by schema ownership registry" },
+    { "kind": "durable_store", "path": "deploy/compose/docker-compose.yml#redis", "owner": "platform", "status": "planned", "state_class": "non_authoritative_coordination", "role": "leases, rate limits and reconstruction-safe cache only" },
+    { "kind": "durable_store", "path": "deploy/compose/docker-compose.yml#minio", "owner": "quansio-artifact", "status": "planned", "state_class": "artifact_object_store", "role": "immutable artifact and evidence object storage" },
+    { "kind": "client_path", "path": "clients/cli", "owner": "clients", "status": "planned", "state_class": null, "role": "packaged command-line client" },
+    { "kind": "client_path", "path": "clients/desktop", "owner": "clients", "status": "planned", "state_class": null, "role": "Electron desktop workbench" },
+    { "kind": "client_path", "path": "clients/mobile", "owner": "clients", "status": "planned", "state_class": null, "role": "mobile attention client" },
+    { "kind": "client_path", "path": "clients/web", "owner": "clients", "status": "planned", "state_class": null, "role": "web client" }
+  ]
+}

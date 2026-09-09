@@ -2,6 +2,9 @@
 from pathlib import Path
 import json, re, hashlib, sys, subprocess
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'tools/governance'))
+from repo_paths import iter_payload_files  # noqa: E402
+PAYLOAD=[p for p in iter_payload_files(ROOT)]
 errs=[]
 tasks=json.load(open(ROOT/'registries/tasks.json')); reqs=json.load(open(ROOT/'registries/requirements.json')); graph=json.load(open(ROOT/'registries/task-graph.json')); supports=json.load(open(ROOT/'registries/support-matrix.json')); suites=json.load(open(ROOT/'registries/qualification-matrix.json')); release=json.load(open(ROOT/'registries/release-state-machine.json'))
 T={t['task_id']:t for t in tasks}; R={r['requirement_id']:r for r in reqs}; S={s['suite_id']:s for s in suites}
@@ -84,22 +87,23 @@ for s in suites:
 # Source-agnostic and no historical-version language. Construct terms to avoid putting blocked strings literally into normal text.
 blocked=['V'+str(i) for i in range(1,9)] + ['Gro'+'k','Per'+'plexity','Wiki'+'Skills','reverse'+' engineering']
 text_ext={'.md','.json','.txt','.py'}
-for p in ROOT.rglob('*'):
- if not p.is_file() or p.suffix.lower() not in text_ext: continue
+for p in PAYLOAD:
+ if p.suffix.lower() not in text_ext: continue
  rel=p.relative_to(ROOT).as_posix()
  if rel=='scripts/validate_authority.py': continue
  s=p.read_text(errors='ignore')
  for term in blocked:
   if re.search(r'(?<![A-Za-z0-9_])'+re.escape(term)+r'(?![A-Za-z0-9_])',s,re.I): errs.append(f'{rel}: forbidden historical/provenance term')
 # No mandatory report signing language or signature fields. Statements that explicitly say signatures are not required are allowed.
-for p in ROOT.rglob('*'):
- if not p.is_file() or p.suffix.lower() not in {'.md','.json','.txt'}: continue
+for p in PAYLOAD:
+ if p.suffix.lower() not in {'.md','.json','.txt'}: continue
  s=p.read_text(errors='ignore').lower()
  if 'signed verificationreport' in s or 'signed verification report' in s or 'signature_required' in s: errs.append(f'{p.relative_to(ROOT)}: obsolete signing gate language')
 # Authority-local document references must resolve. Only canonical package path prefixes are checked;
 # application source examples are deliberately excluded.
 path_pat=re.compile(r'`((?:docs|schemas|registries|graphs|wiring|prompts|protocols|scripts|tests/fixtures)/[^`\s]+|(?:AGENTS|HANDOFF|INSTALL|SKILLS|TOOLS|VALIDATION_REPORT|V9_SPECIFICATION_SEAL|MANIFEST)\.(?:md|json))`')
-for p in ROOT.rglob('*.md'):
+for p in PAYLOAD:
+ if p.suffix!='.md': continue
  s=p.read_text(errors='ignore')
  for ref in path_pat.findall(s):
   ref=ref.rstrip('.,;:)')

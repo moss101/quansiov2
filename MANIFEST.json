@@ -1,7 +1,12 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 223,
+  "file_count": 232,
   "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "fac2ea265c4bbc5e9a9638fa3645ec85e28302826b96dfa8527e8835a060baf0",
+      "size_bytes": 105
+    },
     {
       "path": "00_README.md",
       "sha256": "6e745659dd40c96be326bae0101095b29e47725db53ef3632adb49c3a50ff85a",
@@ -36,6 +41,866 @@
       "path": "TOOLS.md",
       "sha256": "dd5033f90befece843d809f6f1b3f5e603c3c4736125ab8aa5d0259e0ce493ee",
       "size_bytes": 755
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "7f30131128a8cc6eb6f2c7b09d326d5e5934a4bd2a95fa0d84aeb732db4293b8",
+      "size_bytes": 703
+    },
+    {
+      "path": "wiring/README.md",
+      "sha256": "949194d0a13462f27e8f09ab260b8ffeab9073a4612872e809a3e324e58e0afb",
+      "size_bytes": 289
+    },
+    {
+      "path": "wiring/service-wiring.json",
+      "sha256": "c65fc9d3f4421a239c7c23b0910605f7dab4dd8de68ea97f495dfe47a16b1d29",
+      "size_bytes": 3201
+    },
+    {
+      "path": "tools/governance/ownership_inventory.py",
+      "sha256": "d165ed28dc4936f39949df32c918758159851b6c695317381d8b42d698762a1f",
+      "size_bytes": 11705
+    },
+    {
+      "path": "tools/governance/repo_paths.py",
+      "sha256": "b39831a11945d3b90ee54473631cb055fb606d1008ae4964a4d5e1d6f9844d1a",
+      "size_bytes": 2288
+    },
+    {
+      "path": "tools/governance/verify_all.sh",
+      "sha256": "447189a5ccdc42384a5769cdde92817162abc6821e967fb834120f4f3cd55571",
+      "size_bytes": 591
+    },
+    {
+      "path": "tests/governance/test_ownership_inventory.py",
+      "sha256": "ddc37fa6e1db183b6ae5a9ec3bb09ea7713b32e45cc3d0cd85790e989ddef6d3",
+      "size_bytes": 5230
+    },
+    {
+      "path": "tests/fixtures/valid/AgentGraph.json",
+      "sha256": "25b9125eb7106cd2600f79728a06cb9d30783cbd6fef519d961c807c24c80926",
+      "size_bytes": 116
+    },
+    {
+      "path": "tests/fixtures/valid/ApprovalReceipt.json",
+      "sha256": "b005c28631f634ee7c4830b8c3fd3adbbffe56777f3c2c1c84f88dfb03422215",
+      "size_bytes": 316
+    },
+    {
+      "path": "tests/fixtures/valid/ApprovalRequest.json",
+      "sha256": "89c90253e75907a0ac3e0e8268a94f99504aa257d122f6ce732379e13875c60b",
+      "size_bytes": 327
+    },
+    {
+      "path": "tests/fixtures/valid/ArtifactRecord.json",
+      "sha256": "28862de5c80f42849f95f91b094d6af333a6886d9cc35b44104a187e1587b307",
+      "size_bytes": 285
+    },
+    {
+      "path": "tests/fixtures/valid/AutomationFire.json",
+      "sha256": "5890bd36f7f84c9b335589c26cd2da942f78ea78c305db77cfca1bd61df03152",
+      "size_bytes": 236
+    },
+    {
+      "path": "tests/fixtures/valid/AutomationSchedule.json",
+      "sha256": "9bc81d74d402e361154c44a1d564ecaf82bfd1a8f77ec3f87bed82bb01c754f3",
+      "size_bytes": 268
+    },
+    {
+      "path": "tests/fixtures/valid/BrowserSession.json",
+      "sha256": "987d1a68a9bcb84b894ab01540524e39c4c1c4e5a36566088e13bec27d00f32d",
+      "size_bytes": 242
+    },
+    {
+      "path": "tests/fixtures/valid/BudgetReservation.json",
+      "sha256": "6f31b71266c2bc9c18fa84bfbba6c5f5a836204b28a3f2c1e5aba0bfd282dbcd",
+      "size_bytes": 180
+    },
+    {
+      "path": "tests/fixtures/valid/BusinessCapabilityPack.json",
+      "sha256": "c16162116dbac245ef2a9c51395fe11d5564ab61f43531864eee3484ffc27af4",
+      "size_bytes": 609
+    },
+    {
+      "path": "tests/fixtures/valid/CapabilityDemand.json",
+      "sha256": "62f1f3745a63967bc71e68260e4dcfc529de62e283f6a7024e99f4ffbbd9c1d0",
+      "size_bytes": 397
+    },
+    {
+      "path": "tests/fixtures/valid/CapabilitySnapshot.json",
+      "sha256": "e59f2e2af4f84e1a664a9fe94c1d74ecac47c2d9e8a062b7755d3e870fffd4f9",
+      "size_bytes": 290
+    },
+    {
+      "path": "tests/fixtures/valid/Checkpoint.json",
+      "sha256": "a697006662c1df5df861f97ab437a7ff47ecf3cb5d7fdb99a6d90b93fb747086",
+      "size_bytes": 450
+    },
+    {
+      "path": "tests/fixtures/valid/CommandEnvelope.json",
+      "sha256": "099a340675d4bc19f25ce1a45135c0c7bba9aedd665f70705653ce067e1dc412",
+      "size_bytes": 226
+    },
+    {
+      "path": "tests/fixtures/valid/ContextProjection.json",
+      "sha256": "f9c361241d641603ea47ab15033cdc857b9bd623978859d58edb0a2cf054f1d0",
+      "size_bytes": 219
+    },
+    {
+      "path": "tests/fixtures/valid/EffectRecord.json",
+      "sha256": "8fd0f8fe9d31a042f320c612da263a9fc2b4dd2aa6b31b48b7d9633525e74924",
+      "size_bytes": 379
+    },
+    {
+      "path": "tests/fixtures/valid/EndpointActionEnvelope.json",
+      "sha256": "e83b0501917dd00c523f8ed9420c92201f6d85ec470ecb976b8b09cb626dc442",
+      "size_bytes": 796
+    },
+    {
+      "path": "tests/fixtures/valid/EndpointActionResult.json",
+      "sha256": "bec41bd2c8610a23d67863d692d2954791710aee5567d1dadcb46b996f9e0d90",
+      "size_bytes": 207
+    },
+    {
+      "path": "tests/fixtures/valid/ExecutionTarget.json",
+      "sha256": "bb5ee92e44c7805b199b3603abe119af8810de64cdf210d27bae6566eaf46d36",
+      "size_bytes": 227
+    },
+    {
+      "path": "tests/fixtures/valid/GraphTransaction.json",
+      "sha256": "59b74c7ece43992ccb234b5d9597c9863573ab0c38d4fd7f0aef69cd3f370855",
+      "size_bytes": 176
+    },
+    {
+      "path": "tests/fixtures/valid/ImplementationEvidence.json",
+      "sha256": "fac00cf1d986938ed1ea369540402791f38f2333fdc0a04a3b10be3f4e8a14eb",
+      "size_bytes": 624
+    },
+    {
+      "path": "tests/fixtures/valid/KnowledgeCandidate.json",
+      "sha256": "f958003b2908fdc67c8877da8e3d445b948ce929d1e5755c5b0f3bbef6b50802",
+      "size_bytes": 251
+    },
+    {
+      "path": "tests/fixtures/valid/ModelEvent.json",
+      "sha256": "5e45cc42ff2ca335f64843e8d7d52fe8fb7dac5fbc2d4dd1e380c75fc4040a6d",
+      "size_bytes": 368
+    },
+    {
+      "path": "tests/fixtures/valid/ModelRequestEnvelope.json",
+      "sha256": "7fa51fd388a3e6f5c994e031d25e3c2920de31b5d9085ca09edf2f410939d51f",
+      "size_bytes": 426
+    },
+    {
+      "path": "tests/fixtures/valid/NotificationRecord.json",
+      "sha256": "82bf6d691948d9a0422e2eaabb5a4561e8d2b49b1b11e37e659b2376b941a6b1",
+      "size_bytes": 236
+    },
+    {
+      "path": "tests/fixtures/valid/PolicyDecision.json",
+      "sha256": "adf66a0d09fb04a2d54baa41f61e160687f01139f1b1301150cc8de1f233dcba",
+      "size_bytes": 392
+    },
+    {
+      "path": "tests/fixtures/valid/QualificationResult.json",
+      "sha256": "8c063b169d151d5f2e42ab6d88ff375920a2cba9d92d85a8650426ebd6e2c5f7",
+      "size_bytes": 419
+    },
+    {
+      "path": "tests/fixtures/valid/RecoveryConsistencyPoint.json",
+      "sha256": "b25c3734500f062934d558d5e16c26d02a217c3e71869fe000490d48e30d552b",
+      "size_bytes": 434
+    },
+    {
+      "path": "tests/fixtures/valid/ReleaseCandidate.json",
+      "sha256": "26fa689826515fa70f950fec9fd9e658c74ad2917596a840730e5b45e39a5ac2",
+      "size_bytes": 593
+    },
+    {
+      "path": "tests/fixtures/valid/ReleaseStateRecord.json",
+      "sha256": "6cd35c2a863b459d58a3437d4cc5add3731d5761f78d61738f72e4a68ec7064c",
+      "size_bytes": 219
+    },
+    {
+      "path": "tests/fixtures/valid/RemoteArtifactVerification.json",
+      "sha256": "b127292caaed24bcb43abc25bbbef0a48778fbd7432074c18e4817a41c58199f",
+      "size_bytes": 601
+    },
+    {
+      "path": "tests/fixtures/valid/ResearchRecord.json",
+      "sha256": "d906d94d825adfc73fc8f54d3cb71422a11e7f8dc9d0a26bcb3440b14e9ca350",
+      "size_bytes": 213
+    },
+    {
+      "path": "tests/fixtures/valid/RuntimeEvent.json",
+      "sha256": "c2dbf757f4d50760de65846f1f16aa0d728337e7c68e6ca12b64061771507fa8",
+      "size_bytes": 308
+    },
+    {
+      "path": "tests/fixtures/valid/SearchProgram.json",
+      "sha256": "67883c558308e350e8dc19f4b82b936d0353ac929034b4959fc7710b03673831",
+      "size_bytes": 759
+    },
+    {
+      "path": "tests/fixtures/valid/SkillPackage.json",
+      "sha256": "a8177440411f8e443d9785a06bea8efe5bd6e3b6bea2fc238f3e8d8e7e503782",
+      "size_bytes": 401
+    },
+    {
+      "path": "tests/fixtures/valid/StateGraph.json",
+      "sha256": "278c1a99ea1d329b3522b010088f25d7f08a018c4b3e8c75ea4f26c8d1e993fc",
+      "size_bytes": 127
+    },
+    {
+      "path": "tests/fixtures/valid/SupportSelection.json",
+      "sha256": "00baf7f04bb7acdcbaf0ee8bddeae25bdb6de14208fb24e7e9c86b64abc8ab9a",
+      "size_bytes": 296
+    },
+    {
+      "path": "tests/fixtures/valid/ToolOperation.json",
+      "sha256": "488b8c76b3da8d7074162465ed241b252740a6abbfc5c3068ff8a8a23d7ac2a0",
+      "size_bytes": 300
+    },
+    {
+      "path": "tests/fixtures/valid/TurnDispatch.json",
+      "sha256": "dfe1101bebd738c1671982c27df6b1899ad910eb38ac7993f7d0472c70e9d800",
+      "size_bytes": 303
+    },
+    {
+      "path": "tests/fixtures/valid/TurnOutcome.json",
+      "sha256": "0dafa227b8f8d4b28bddb591c7540bf5e1c7ffef2f4668f8f1be5b26ae2891bf",
+      "size_bytes": 127
+    },
+    {
+      "path": "tests/fixtures/valid/VerificationReport.json",
+      "sha256": "ec68168ce1d9a55fd6e7910b8ef0c9b6979157ccaf597eaf37d98c1bc72c1f49",
+      "size_bytes": 528
+    },
+    {
+      "path": "tests/fixtures/valid/WebhookEnvelope.json",
+      "sha256": "92a81bae1798aa99620bf801dae45de34620fa9a6c44ac867058d43db9e47c36",
+      "size_bytes": 297
+    },
+    {
+      "path": "tests/fixtures/valid/WorkGraph.json",
+      "sha256": "90ba0857a778543e201c64d19c32438cf3b8c4e73500d72b58d7e661ed9be6a7",
+      "size_bytes": 185
+    },
+    {
+      "path": "tests/fixtures/valid/WorkerLease.json",
+      "sha256": "e8c419e7ebd0297d5f6e78a9fda8c603da46298b38c090422bd769d8ee97a1a2",
+      "size_bytes": 278
+    },
+    {
+      "path": "tests/fixtures/invalid/AgentGraph.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ApprovalReceipt.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ApprovalRequest.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ArtifactRecord.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/AutomationFire.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/AutomationSchedule.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/BrowserSession.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/BudgetReservation.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/BusinessCapabilityPack.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/CapabilityDemand.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/CapabilitySnapshot.json",
+      "sha256": "4d8b97ff9d800b70295e242c0fcda49d9f7772d0d2e36a302f81eb2a6c6cebd2",
+      "size_bytes": 253
+    },
+    {
+      "path": "tests/fixtures/invalid/Checkpoint.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/CommandEnvelope.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ContextProjection.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/EffectRecord.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/EndpointActionEnvelope.json",
+      "sha256": "450791976aacf3572b978cbb61be592618623e938dc2e3454a138aa9783b7ece",
+      "size_bytes": 776
+    },
+    {
+      "path": "tests/fixtures/invalid/EndpointActionResult.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ExecutionTarget.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/GraphTransaction.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ImplementationEvidence.json",
+      "sha256": "c267d2af7bd3e844f8e97b27b6bdcca01de4c0aa97cce141ad900ffdb8dd5e3c",
+      "size_bytes": 585
+    },
+    {
+      "path": "tests/fixtures/invalid/KnowledgeCandidate.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ModelEvent.json",
+      "sha256": "f932981b265e425e8dff5d57854d4472f09035efe31144c20e4d56ffb15ff82a",
+      "size_bytes": 362
+    },
+    {
+      "path": "tests/fixtures/invalid/ModelRequestEnvelope.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/NotificationRecord.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/PolicyDecision.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/QualificationResult.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/RecoveryConsistencyPoint.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ReleaseCandidate.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ReleaseStateRecord.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/RemoteArtifactVerification.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/ResearchRecord.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/RuntimeEvent.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/SearchProgram.json",
+      "sha256": "5ef4146b269393283997d54755a95b5b3d749ab4b25b99b771e353eb15b67d80",
+      "size_bytes": 525
+    },
+    {
+      "path": "tests/fixtures/invalid/SkillPackage.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/StateGraph.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/SupportSelection.json",
+      "sha256": "c5ff24017d05d776960d40196fca71a8d705c1e74042290c1cf96686e388f1b0",
+      "size_bytes": 296
+    },
+    {
+      "path": "tests/fixtures/invalid/ToolOperation.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/TurnDispatch.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/TurnOutcome.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/VerificationReport.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/WebhookEnvelope.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/WorkGraph.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "tests/fixtures/invalid/WorkerLease.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "scripts/finalize_package.py",
+      "sha256": "5de7b0c4298f97014f2291b8600d26ccd755d94bebe1c04894699c033eff4685",
+      "size_bytes": 3827
+    },
+    {
+      "path": "scripts/implementation_completeness_gate.py",
+      "sha256": "2509de2d8eac63d5c81a9db17df438da35e7940a6635eb4ed67114ec375ba4ce",
+      "size_bytes": 646
+    },
+    {
+      "path": "scripts/regenerate_authority_views.py",
+      "sha256": "d0d5c38550a611c6ba261f4fa642dc93169ef92aba027578e1e791221284e309",
+      "size_bytes": 3189
+    },
+    {
+      "path": "scripts/scan_exclusions.json",
+      "sha256": "f86b1c835429e0e96e935156fe073162141c9851612499dc957bf6d968ace0ca",
+      "size_bytes": 518
+    },
+    {
+      "path": "scripts/scan_production_placeholders.py",
+      "sha256": "2c18088a8fb7a0fb2912ef20d8d0fca5cb4a35193e712d727e58d18b6c6658e8",
+      "size_bytes": 2553
+    },
+    {
+      "path": "scripts/self_test_validators.py",
+      "sha256": "55fa73ede076d225101409c400353a60b6556be3ed8c74a4a88eaa7a626c22c7",
+      "size_bytes": 6337
+    },
+    {
+      "path": "scripts/validate_all.py",
+      "sha256": "513c1eb95171ec02fe6bc0ee17a919743801147a090d57f26cecbc9fb810cdf3",
+      "size_bytes": 426
+    },
+    {
+      "path": "scripts/validate_authority.py",
+      "sha256": "d66a0600f4f9d56884c65752e868c5b5f156ed87de02b81b05c18b0a3b373c67",
+      "size_bytes": 7797
+    },
+    {
+      "path": "scripts/validate_contracts.py",
+      "sha256": "3dcc435e9dc413d89f39a1476cee201107a6a9fdb2441a0e387b0b10dea61661",
+      "size_bytes": 2226
+    },
+    {
+      "path": "scripts/validate_implementation_evidence.py",
+      "sha256": "e0af7c10599604d689887af6fe546a265a1a22fd30d945e4307647f286a04a05",
+      "size_bytes": 6482
+    },
+    {
+      "path": "scripts/validate_integrity.py",
+      "sha256": "9331a59d6ad1be660ae90c1105286900acfc161598db1f40f840abf0e8ceb03e",
+      "size_bytes": 2983
+    },
+    {
+      "path": "schemas/AgentGraph.schema.json",
+      "sha256": "04b1a5611a5d334842f21b95cb6cfb3dc5dd99ce31f194da3d2373b15724d1ee",
+      "size_bytes": 1455
+    },
+    {
+      "path": "schemas/ApprovalReceipt.schema.json",
+      "sha256": "044356c3fd75a043f7ddb13bbe1975d75d6fee6eefd2cc5b92939285524886a2",
+      "size_bytes": 1145
+    },
+    {
+      "path": "schemas/ApprovalRequest.schema.json",
+      "sha256": "fea463bcacddade1edea5b9adb3e046bf7b011c39bb595779b87e247f16c930b",
+      "size_bytes": 1504
+    },
+    {
+      "path": "schemas/ArtifactRecord.schema.json",
+      "sha256": "32c7fa65ac7e3365c175ae3dec35a05926b8f01e81323c1a98f79cffa0dce282",
+      "size_bytes": 1262
+    },
+    {
+      "path": "schemas/AutomationFire.schema.json",
+      "sha256": "400dcaef59f6ebcaa878b584c93e7d7ae2472937d1114ab6063549310098387d",
+      "size_bytes": 1240
+    },
+    {
+      "path": "schemas/AutomationSchedule.schema.json",
+      "sha256": "257f1b0db5188865620c3599e96e7ee80ec7f57c9f7c5062be90f8777c99dda6",
+      "size_bytes": 1431
+    },
+    {
+      "path": "schemas/BrowserSession.schema.json",
+      "sha256": "9b72938131d1e3a877d7e3173d8f4422cfff1b5942b114d288f39e92388efd4c",
+      "size_bytes": 1281
+    },
+    {
+      "path": "schemas/BudgetReservation.schema.json",
+      "sha256": "0d1c2463a8dc6c99f4d1c2eaea2bc3b7289e7596454c05d61c733e2754382e89",
+      "size_bytes": 1197
+    },
+    {
+      "path": "schemas/BusinessCapabilityPack.schema.json",
+      "sha256": "d663982136b8ee97dfb75cc5fcb655f2babf38c25ca3f9b87491ed7ba963fb0e",
+      "size_bytes": 3684
+    },
+    {
+      "path": "schemas/CapabilityDemand.schema.json",
+      "sha256": "1784dd42f675ecda767fe99e4d5c74b1eb1f4f1a99243aea4aa11200ade7d05f",
+      "size_bytes": 2387
+    },
+    {
+      "path": "schemas/CapabilitySnapshot.schema.json",
+      "sha256": "aab310403d833a8134ca483f39762adf11a4e94b3fb7b4c8473c49e1aa37b657",
+      "size_bytes": 1125
+    },
+    {
+      "path": "schemas/Checkpoint.schema.json",
+      "sha256": "026460248d64e14f478907fa41378199556b8293ff58740691250557cc9a4c01",
+      "size_bytes": 1470
+    },
+    {
+      "path": "schemas/CommandEnvelope.schema.json",
+      "sha256": "88350b175833c113fbaea76b18c272b5fbd0feb5c153d7a57f2811fd8fed1da6",
+      "size_bytes": 1037
+    },
+    {
+      "path": "schemas/ContextProjection.schema.json",
+      "sha256": "ca274a9fb78d8d7c65b5ea852fddb04c19955209a726c336557bb0d9688086c1",
+      "size_bytes": 1489
+    },
+    {
+      "path": "schemas/EffectRecord.schema.json",
+      "sha256": "b34515c9dc93e983e1b257b21193189c3c37e081b87e9981fc23bae0dbe1c518",
+      "size_bytes": 1872
+    },
+    {
+      "path": "schemas/EndpointActionEnvelope.schema.json",
+      "sha256": "5f4e91a66b6301bc5f6dd3691846fd4238d06e4b00a88996be503f8e2b63868e",
+      "size_bytes": 3054
+    },
+    {
+      "path": "schemas/EndpointActionResult.schema.json",
+      "sha256": "a635bb039f3983140532816e234496dce44fe388fe079f692acd9454f3970372",
+      "size_bytes": 1177
+    },
+    {
+      "path": "schemas/ExecutionTarget.schema.json",
+      "sha256": "7727b782fefb2972b2b0519b9039c7366847822fe1ac12c09bdfab0abd657d13",
+      "size_bytes": 1427
+    },
+    {
+      "path": "schemas/GraphTransaction.schema.json",
+      "sha256": "f6f1a5e3bb6340e714fac8e00905e709ba1a3778374d78476746a20af692118e",
+      "size_bytes": 928
+    },
+    {
+      "path": "schemas/ImplementationEvidence.schema.json",
+      "sha256": "6ced0e8298bfd6ddb215224cb87ce31f0dd21c8e17cfb02403799c89a29c17fd",
+      "size_bytes": 2012
+    },
+    {
+      "path": "schemas/KnowledgeCandidate.schema.json",
+      "sha256": "96483a2254dca34682b3879ecee51e46dcf8a7c9bcc7b02135d40f9598ef1b4b",
+      "size_bytes": 1573
+    },
+    {
+      "path": "schemas/ModelEvent.schema.json",
+      "sha256": "064735a61877a86f0a271d3a19a902edd90647ef4cc189364d600e2bbc834b39",
+      "size_bytes": 1454
+    },
+    {
+      "path": "schemas/ModelRequestEnvelope.schema.json",
+      "sha256": "1cdbe96e8a532e4069d359ac1fa0062c3c73c81c2fb65d73782104abb7e4869b",
+      "size_bytes": 2212
+    },
+    {
+      "path": "schemas/NotificationRecord.schema.json",
+      "sha256": "b6d5506724a27518e27847fa355aceddc417d8ab81ef2e232ef63007cb209bea",
+      "size_bytes": 1284
+    },
+    {
+      "path": "schemas/PolicyDecision.schema.json",
+      "sha256": "1ecbd62bb617564957d4f2ad77443a3fc432b4f3bf159f51c1c4daf12fecb1c3",
+      "size_bytes": 1536
+    },
+    {
+      "path": "schemas/QualificationResult.schema.json",
+      "sha256": "5baf49a99105cd5343ea96606f5206f4543a76aa76c584b411bf0fcdeb8ee683",
+      "size_bytes": 1894
+    },
+    {
+      "path": "schemas/RecoveryConsistencyPoint.schema.json",
+      "sha256": "60d7b9f10aa0da84ed3f1d0602780272e16da26bccdb8c40e4e7363ae5789a2d",
+      "size_bytes": 1349
+    },
+    {
+      "path": "schemas/ReleaseCandidate.schema.json",
+      "sha256": "904459696f2c6063216b045862ca483877790c3021c043386f10c2a1f990794a",
+      "size_bytes": 1501
+    },
+    {
+      "path": "schemas/ReleaseStateRecord.schema.json",
+      "sha256": "5a66b48351608cfeef8c2348922b9c2a509e891bcc1ac591957cc67a57dbb498",
+      "size_bytes": 1274
+    },
+    {
+      "path": "schemas/RemoteArtifactVerification.schema.json",
+      "sha256": "1cf8923b193018441bab1350ee6859786282eea1b4cd842454f3edeabcd34538",
+      "size_bytes": 2079
+    },
+    {
+      "path": "schemas/ResearchRecord.schema.json",
+      "sha256": "95fe77d27b2a9d44627ba1291377ad09321eb1d340861d3f3fde1d27659d6be6",
+      "size_bytes": 1221
+    },
+    {
+      "path": "schemas/RuntimeEvent.schema.json",
+      "sha256": "3cca01f30c04b71c7ef49f22b50fce726d5656b98c262ede5989ee50272e682b",
+      "size_bytes": 1536
+    },
+    {
+      "path": "schemas/SearchProgram.schema.json",
+      "sha256": "8f42fa6bb5910ed6b179c8a49651bee5fd66ed3dd06abb2d40bf57141135d947",
+      "size_bytes": 13046
+    },
+    {
+      "path": "schemas/SkillPackage.schema.json",
+      "sha256": "2355abbb698156f21d00c9d619842adc55124442725c3510b1ebb1e68ceabda1",
+      "size_bytes": 2587
+    },
+    {
+      "path": "schemas/StateGraph.schema.json",
+      "sha256": "f133256fb067831e6d093e80d4dd5f0e4f3683ce5a6399860da5a00a109c7e40",
+      "size_bytes": 719
+    },
+    {
+      "path": "schemas/SupportSelection.schema.json",
+      "sha256": "bd81bfd22ac94516913d5034edb105aa3c582d8abbc93ed91be68133b9e8f76c",
+      "size_bytes": 1431
+    },
+    {
+      "path": "schemas/ToolOperation.schema.json",
+      "sha256": "7f82baadb986d6d7ec34b36275c30e41d1c84623acd8b3f9fdde99d3f1b46957",
+      "size_bytes": 1895
+    },
+    {
+      "path": "schemas/TurnDispatch.schema.json",
+      "sha256": "a59f8aceca55327a858c0d83e9be99982604a922d219fb94c14012e941da727b",
+      "size_bytes": 1471
+    },
+    {
+      "path": "schemas/TurnOutcome.schema.json",
+      "sha256": "1c8dda3dedf5fcd560f362932f0b6b35292179d3bdaac05b13d1c9fa43c86dd1",
+      "size_bytes": 1224
+    },
+    {
+      "path": "schemas/VerificationReport.schema.json",
+      "sha256": "bde578d2c069cda00da1c4bc2ae07de54cb90f42600bfeb42f6b09e4557dd731",
+      "size_bytes": 3717
+    },
+    {
+      "path": "schemas/WebhookEnvelope.schema.json",
+      "sha256": "73072d5268ce580486e5695822e9fa458e3a04a2804cdac22ab90ca4a74052d6",
+      "size_bytes": 1070
+    },
+    {
+      "path": "schemas/WorkGraph.schema.json",
+      "sha256": "248afe64240bee08fa3b3cc15710929543c98d3e7e2a2c130226ff6797004b90",
+      "size_bytes": 1915
+    },
+    {
+      "path": "schemas/WorkerLease.schema.json",
+      "sha256": "23ab3234e98a9c643eb07a406fe85498fbfae43253c8dfc17749f87d16e5548f",
+      "size_bytes": 1268
+    },
+    {
+      "path": "registries/deployables.json",
+      "sha256": "9e501b6045c2fa3fd513fcf6871b25908262b6a951274e868acc80a6a836718a",
+      "size_bytes": 2690
+    },
+    {
+      "path": "registries/qualification-matrix.json",
+      "sha256": "c5b6411b0df221dcb356259c31bdc2ebca8c88a0470cba8b3b46b28454bb7226",
+      "size_bytes": 4827
+    },
+    {
+      "path": "registries/recovery-semantics.json",
+      "sha256": "c6b9db210072858e2e4095d97a5e225a60b6a8f529655c42c466a283c27607a8",
+      "size_bytes": 1298
+    },
+    {
+      "path": "registries/release-state-machine.json",
+      "sha256": "9162bfe6d405b66712702e6f0563abc778b9e5ac0b2d809585a3adc243871531",
+      "size_bytes": 1061
+    },
+    {
+      "path": "registries/requirements.json",
+      "sha256": "e36688662155a94d1679c5135e7f671310ec0f2bd487071a6fbae6a3283dd48a",
+      "size_bytes": 36689
+    },
+    {
+      "path": "registries/schema-registry.json",
+      "sha256": "4d623669d52db617390f13c14ad7f8102d808654cedbc62a1ac9f21dc166f2eb",
+      "size_bytes": 6198
+    },
+    {
+      "path": "registries/semantic-operations.json",
+      "sha256": "55a5ff3dba1e11a5805a3b174fe3b0bc017294b9463c623d5ef5f1c1093f5419",
+      "size_bytes": 1240
+    },
+    {
+      "path": "registries/support-matrix.json",
+      "sha256": "0215bafd252cf1df57c54d6962816c724558c37f7743171b89893dc05ae7993a",
+      "size_bytes": 3477
+    },
+    {
+      "path": "registries/task-graph.json",
+      "sha256": "8717b9ca261f0bfd8e3dbe358e03f359d846f986bc7f7d04cd8f118a7fc416bc",
+      "size_bytes": 22365
+    },
+    {
+      "path": "registries/tasks.json",
+      "sha256": "ccfa0da4f2e315f6ffe18b44589cce05c99b84c1f4f8e9514a1515550bbbb3e6",
+      "size_bytes": 202994
+    },
+    {
+      "path": "protocols/ERROR_CODES.md",
+      "sha256": "f5d3771d7af27e28975216aaafba58eef286f18de1bed072de85a0ea2d8cf848",
+      "size_bytes": 891
+    },
+    {
+      "path": "protocols/README.md",
+      "sha256": "fdd3a926bbf72a70766e9cd44986ffff905748f4a46ce8e07397bc53a332323f",
+      "size_bytes": 402
+    },
+    {
+      "path": "protocols/STATE_MACHINES.md",
+      "sha256": "2bcd40c84b8d2a65fb6bea51befa33d9ef3852537988c2b96eea2bd78e13b977",
+      "size_bytes": 411
+    },
+    {
+      "path": "prompts/IMPLEMENTATION_KICKOFF_PROMPT.md",
+      "sha256": "4c372032042b1c3e26935516c8f61069e4c97ac4d2d619e67d7e2c4dc7051ab0",
+      "size_bytes": 4718
+    },
+    {
+      "path": "prompts/IMPLEMENTATION_MASTER_PROMPT.md",
+      "sha256": "4c372032042b1c3e26935516c8f61069e4c97ac4d2d619e67d7e2c4dc7051ab0",
+      "size_bytes": 4718
+    },
+    {
+      "path": "graphs/business-capability-compiler.mmd",
+      "sha256": "e9bc6d38661d2899cd0b2ad01045665aea379b56d40701c811c78a99dc401c13",
+      "size_bytes": 338
+    },
+    {
+      "path": "graphs/frontend.mmd",
+      "sha256": "753ea283672b1ae36557a87b9e93c11d834f3e4b245c9033191f02177e4111b9",
+      "size_bytes": 316
+    },
+    {
+      "path": "graphs/machine-fabric.mmd",
+      "sha256": "3a78b405a470984a9fc48bc6ff8a243e200677d3e3565a73918d6a4ad68e0cc5",
+      "size_bytes": 278
+    },
+    {
+      "path": "graphs/recovery.mmd",
+      "sha256": "4a9f585c90914c9513311c73197bc3c781fe9b59450e5bc466c74c59035737b3",
+      "size_bytes": 305
+    },
+    {
+      "path": "graphs/release-state.mmd",
+      "sha256": "f2394a4a27bf590748b315c8eea56fea1ec1c3405a8bd7ce38911bc8a22590ae",
+      "size_bytes": 355
+    },
+    {
+      "path": "graphs/research.mmd",
+      "sha256": "397a5357f9773d4fbe4446c5c3b6bbaa6528635527236c9c6557a431626b83db",
+      "size_bytes": 247
+    },
+    {
+      "path": "graphs/runtime-collaboration.mmd",
+      "sha256": "6a6b9cfb9e4782ca8c11a81519c40c8bb13c6b36865dd8046c4c28ceab8b5afe",
+      "size_bytes": 260
+    },
+    {
+      "path": "graphs/system-architecture.mmd",
+      "sha256": "e1547427337c1ed09c9b0d8a8d4ea3897021db39f249568a138efdaedcb6e8f6",
+      "size_bytes": 489
+    },
+    {
+      "path": "evidence/ownership/inventory.json",
+      "sha256": "3e00cbb4618a62995c56e2c708b32ef77c4d20290c94064a56b0da9a9dc1587b",
+      "size_bytes": 5149
+    },
+    {
+      "path": "evidence/ownership/ownership_registry.json",
+      "sha256": "17dcfc67b2e554796a4081cf81adfe1e0382601ec808bd32069decf73e58a283",
+      "size_bytes": 15401
     },
     {
       "path": "docs/01_PRODUCT_CONTRACT.md",
@@ -296,826 +1161,6 @@
       "path": "docs/52_OPERATIONAL_RUNBOOKS.md",
       "sha256": "5c75cfcd25378ddbd1e4d1694038e4f67071125ed461cab2952d0c6d2a774249",
       "size_bytes": 1323
-    },
-    {
-      "path": "graphs/business-capability-compiler.mmd",
-      "sha256": "e9bc6d38661d2899cd0b2ad01045665aea379b56d40701c811c78a99dc401c13",
-      "size_bytes": 338
-    },
-    {
-      "path": "graphs/frontend.mmd",
-      "sha256": "753ea283672b1ae36557a87b9e93c11d834f3e4b245c9033191f02177e4111b9",
-      "size_bytes": 316
-    },
-    {
-      "path": "graphs/machine-fabric.mmd",
-      "sha256": "3a78b405a470984a9fc48bc6ff8a243e200677d3e3565a73918d6a4ad68e0cc5",
-      "size_bytes": 278
-    },
-    {
-      "path": "graphs/recovery.mmd",
-      "sha256": "4a9f585c90914c9513311c73197bc3c781fe9b59450e5bc466c74c59035737b3",
-      "size_bytes": 305
-    },
-    {
-      "path": "graphs/release-state.mmd",
-      "sha256": "f2394a4a27bf590748b315c8eea56fea1ec1c3405a8bd7ce38911bc8a22590ae",
-      "size_bytes": 355
-    },
-    {
-      "path": "graphs/research.mmd",
-      "sha256": "397a5357f9773d4fbe4446c5c3b6bbaa6528635527236c9c6557a431626b83db",
-      "size_bytes": 247
-    },
-    {
-      "path": "graphs/runtime-collaboration.mmd",
-      "sha256": "6a6b9cfb9e4782ca8c11a81519c40c8bb13c6b36865dd8046c4c28ceab8b5afe",
-      "size_bytes": 260
-    },
-    {
-      "path": "graphs/system-architecture.mmd",
-      "sha256": "e1547427337c1ed09c9b0d8a8d4ea3897021db39f249568a138efdaedcb6e8f6",
-      "size_bytes": 489
-    },
-    {
-      "path": "prompts/IMPLEMENTATION_KICKOFF_PROMPT.md",
-      "sha256": "4c372032042b1c3e26935516c8f61069e4c97ac4d2d619e67d7e2c4dc7051ab0",
-      "size_bytes": 4718
-    },
-    {
-      "path": "prompts/IMPLEMENTATION_MASTER_PROMPT.md",
-      "sha256": "4c372032042b1c3e26935516c8f61069e4c97ac4d2d619e67d7e2c4dc7051ab0",
-      "size_bytes": 4718
-    },
-    {
-      "path": "protocols/ERROR_CODES.md",
-      "sha256": "f5d3771d7af27e28975216aaafba58eef286f18de1bed072de85a0ea2d8cf848",
-      "size_bytes": 891
-    },
-    {
-      "path": "protocols/README.md",
-      "sha256": "fdd3a926bbf72a70766e9cd44986ffff905748f4a46ce8e07397bc53a332323f",
-      "size_bytes": 402
-    },
-    {
-      "path": "protocols/STATE_MACHINES.md",
-      "sha256": "2bcd40c84b8d2a65fb6bea51befa33d9ef3852537988c2b96eea2bd78e13b977",
-      "size_bytes": 411
-    },
-    {
-      "path": "registries/deployables.json",
-      "sha256": "9e501b6045c2fa3fd513fcf6871b25908262b6a951274e868acc80a6a836718a",
-      "size_bytes": 2690
-    },
-    {
-      "path": "registries/qualification-matrix.json",
-      "sha256": "c5b6411b0df221dcb356259c31bdc2ebca8c88a0470cba8b3b46b28454bb7226",
-      "size_bytes": 4827
-    },
-    {
-      "path": "registries/recovery-semantics.json",
-      "sha256": "c6b9db210072858e2e4095d97a5e225a60b6a8f529655c42c466a283c27607a8",
-      "size_bytes": 1298
-    },
-    {
-      "path": "registries/release-state-machine.json",
-      "sha256": "9162bfe6d405b66712702e6f0563abc778b9e5ac0b2d809585a3adc243871531",
-      "size_bytes": 1061
-    },
-    {
-      "path": "registries/requirements.json",
-      "sha256": "e36688662155a94d1679c5135e7f671310ec0f2bd487071a6fbae6a3283dd48a",
-      "size_bytes": 36689
-    },
-    {
-      "path": "registries/schema-registry.json",
-      "sha256": "4d623669d52db617390f13c14ad7f8102d808654cedbc62a1ac9f21dc166f2eb",
-      "size_bytes": 6198
-    },
-    {
-      "path": "registries/semantic-operations.json",
-      "sha256": "55a5ff3dba1e11a5805a3b174fe3b0bc017294b9463c623d5ef5f1c1093f5419",
-      "size_bytes": 1240
-    },
-    {
-      "path": "registries/support-matrix.json",
-      "sha256": "0215bafd252cf1df57c54d6962816c724558c37f7743171b89893dc05ae7993a",
-      "size_bytes": 3477
-    },
-    {
-      "path": "registries/task-graph.json",
-      "sha256": "8717b9ca261f0bfd8e3dbe358e03f359d846f986bc7f7d04cd8f118a7fc416bc",
-      "size_bytes": 22365
-    },
-    {
-      "path": "registries/tasks.json",
-      "sha256": "ccfa0da4f2e315f6ffe18b44589cce05c99b84c1f4f8e9514a1515550bbbb3e6",
-      "size_bytes": 202994
-    },
-    {
-      "path": "schemas/AgentGraph.schema.json",
-      "sha256": "04b1a5611a5d334842f21b95cb6cfb3dc5dd99ce31f194da3d2373b15724d1ee",
-      "size_bytes": 1455
-    },
-    {
-      "path": "schemas/ApprovalReceipt.schema.json",
-      "sha256": "044356c3fd75a043f7ddb13bbe1975d75d6fee6eefd2cc5b92939285524886a2",
-      "size_bytes": 1145
-    },
-    {
-      "path": "schemas/ApprovalRequest.schema.json",
-      "sha256": "fea463bcacddade1edea5b9adb3e046bf7b011c39bb595779b87e247f16c930b",
-      "size_bytes": 1504
-    },
-    {
-      "path": "schemas/ArtifactRecord.schema.json",
-      "sha256": "32c7fa65ac7e3365c175ae3dec35a05926b8f01e81323c1a98f79cffa0dce282",
-      "size_bytes": 1262
-    },
-    {
-      "path": "schemas/AutomationFire.schema.json",
-      "sha256": "400dcaef59f6ebcaa878b584c93e7d7ae2472937d1114ab6063549310098387d",
-      "size_bytes": 1240
-    },
-    {
-      "path": "schemas/AutomationSchedule.schema.json",
-      "sha256": "257f1b0db5188865620c3599e96e7ee80ec7f57c9f7c5062be90f8777c99dda6",
-      "size_bytes": 1431
-    },
-    {
-      "path": "schemas/BrowserSession.schema.json",
-      "sha256": "9b72938131d1e3a877d7e3173d8f4422cfff1b5942b114d288f39e92388efd4c",
-      "size_bytes": 1281
-    },
-    {
-      "path": "schemas/BudgetReservation.schema.json",
-      "sha256": "0d1c2463a8dc6c99f4d1c2eaea2bc3b7289e7596454c05d61c733e2754382e89",
-      "size_bytes": 1197
-    },
-    {
-      "path": "schemas/BusinessCapabilityPack.schema.json",
-      "sha256": "d663982136b8ee97dfb75cc5fcb655f2babf38c25ca3f9b87491ed7ba963fb0e",
-      "size_bytes": 3684
-    },
-    {
-      "path": "schemas/CapabilityDemand.schema.json",
-      "sha256": "1784dd42f675ecda767fe99e4d5c74b1eb1f4f1a99243aea4aa11200ade7d05f",
-      "size_bytes": 2387
-    },
-    {
-      "path": "schemas/CapabilitySnapshot.schema.json",
-      "sha256": "aab310403d833a8134ca483f39762adf11a4e94b3fb7b4c8473c49e1aa37b657",
-      "size_bytes": 1125
-    },
-    {
-      "path": "schemas/Checkpoint.schema.json",
-      "sha256": "026460248d64e14f478907fa41378199556b8293ff58740691250557cc9a4c01",
-      "size_bytes": 1470
-    },
-    {
-      "path": "schemas/CommandEnvelope.schema.json",
-      "sha256": "88350b175833c113fbaea76b18c272b5fbd0feb5c153d7a57f2811fd8fed1da6",
-      "size_bytes": 1037
-    },
-    {
-      "path": "schemas/ContextProjection.schema.json",
-      "sha256": "ca274a9fb78d8d7c65b5ea852fddb04c19955209a726c336557bb0d9688086c1",
-      "size_bytes": 1489
-    },
-    {
-      "path": "schemas/EffectRecord.schema.json",
-      "sha256": "b34515c9dc93e983e1b257b21193189c3c37e081b87e9981fc23bae0dbe1c518",
-      "size_bytes": 1872
-    },
-    {
-      "path": "schemas/EndpointActionEnvelope.schema.json",
-      "sha256": "5f4e91a66b6301bc5f6dd3691846fd4238d06e4b00a88996be503f8e2b63868e",
-      "size_bytes": 3054
-    },
-    {
-      "path": "schemas/EndpointActionResult.schema.json",
-      "sha256": "a635bb039f3983140532816e234496dce44fe388fe079f692acd9454f3970372",
-      "size_bytes": 1177
-    },
-    {
-      "path": "schemas/ExecutionTarget.schema.json",
-      "sha256": "7727b782fefb2972b2b0519b9039c7366847822fe1ac12c09bdfab0abd657d13",
-      "size_bytes": 1427
-    },
-    {
-      "path": "schemas/GraphTransaction.schema.json",
-      "sha256": "f6f1a5e3bb6340e714fac8e00905e709ba1a3778374d78476746a20af692118e",
-      "size_bytes": 928
-    },
-    {
-      "path": "schemas/ImplementationEvidence.schema.json",
-      "sha256": "6ced0e8298bfd6ddb215224cb87ce31f0dd21c8e17cfb02403799c89a29c17fd",
-      "size_bytes": 2012
-    },
-    {
-      "path": "schemas/KnowledgeCandidate.schema.json",
-      "sha256": "96483a2254dca34682b3879ecee51e46dcf8a7c9bcc7b02135d40f9598ef1b4b",
-      "size_bytes": 1573
-    },
-    {
-      "path": "schemas/ModelEvent.schema.json",
-      "sha256": "064735a61877a86f0a271d3a19a902edd90647ef4cc189364d600e2bbc834b39",
-      "size_bytes": 1454
-    },
-    {
-      "path": "schemas/ModelRequestEnvelope.schema.json",
-      "sha256": "1cdbe96e8a532e4069d359ac1fa0062c3c73c81c2fb65d73782104abb7e4869b",
-      "size_bytes": 2212
-    },
-    {
-      "path": "schemas/NotificationRecord.schema.json",
-      "sha256": "b6d5506724a27518e27847fa355aceddc417d8ab81ef2e232ef63007cb209bea",
-      "size_bytes": 1284
-    },
-    {
-      "path": "schemas/PolicyDecision.schema.json",
-      "sha256": "1ecbd62bb617564957d4f2ad77443a3fc432b4f3bf159f51c1c4daf12fecb1c3",
-      "size_bytes": 1536
-    },
-    {
-      "path": "schemas/QualificationResult.schema.json",
-      "sha256": "5baf49a99105cd5343ea96606f5206f4543a76aa76c584b411bf0fcdeb8ee683",
-      "size_bytes": 1894
-    },
-    {
-      "path": "schemas/RecoveryConsistencyPoint.schema.json",
-      "sha256": "60d7b9f10aa0da84ed3f1d0602780272e16da26bccdb8c40e4e7363ae5789a2d",
-      "size_bytes": 1349
-    },
-    {
-      "path": "schemas/ReleaseCandidate.schema.json",
-      "sha256": "904459696f2c6063216b045862ca483877790c3021c043386f10c2a1f990794a",
-      "size_bytes": 1501
-    },
-    {
-      "path": "schemas/ReleaseStateRecord.schema.json",
-      "sha256": "5a66b48351608cfeef8c2348922b9c2a509e891bcc1ac591957cc67a57dbb498",
-      "size_bytes": 1274
-    },
-    {
-      "path": "schemas/RemoteArtifactVerification.schema.json",
-      "sha256": "1cf8923b193018441bab1350ee6859786282eea1b4cd842454f3edeabcd34538",
-      "size_bytes": 2079
-    },
-    {
-      "path": "schemas/ResearchRecord.schema.json",
-      "sha256": "95fe77d27b2a9d44627ba1291377ad09321eb1d340861d3f3fde1d27659d6be6",
-      "size_bytes": 1221
-    },
-    {
-      "path": "schemas/RuntimeEvent.schema.json",
-      "sha256": "3cca01f30c04b71c7ef49f22b50fce726d5656b98c262ede5989ee50272e682b",
-      "size_bytes": 1536
-    },
-    {
-      "path": "schemas/SearchProgram.schema.json",
-      "sha256": "8f42fa6bb5910ed6b179c8a49651bee5fd66ed3dd06abb2d40bf57141135d947",
-      "size_bytes": 13046
-    },
-    {
-      "path": "schemas/SkillPackage.schema.json",
-      "sha256": "2355abbb698156f21d00c9d619842adc55124442725c3510b1ebb1e68ceabda1",
-      "size_bytes": 2587
-    },
-    {
-      "path": "schemas/StateGraph.schema.json",
-      "sha256": "f133256fb067831e6d093e80d4dd5f0e4f3683ce5a6399860da5a00a109c7e40",
-      "size_bytes": 719
-    },
-    {
-      "path": "schemas/SupportSelection.schema.json",
-      "sha256": "bd81bfd22ac94516913d5034edb105aa3c582d8abbc93ed91be68133b9e8f76c",
-      "size_bytes": 1431
-    },
-    {
-      "path": "schemas/ToolOperation.schema.json",
-      "sha256": "7f82baadb986d6d7ec34b36275c30e41d1c84623acd8b3f9fdde99d3f1b46957",
-      "size_bytes": 1895
-    },
-    {
-      "path": "schemas/TurnDispatch.schema.json",
-      "sha256": "a59f8aceca55327a858c0d83e9be99982604a922d219fb94c14012e941da727b",
-      "size_bytes": 1471
-    },
-    {
-      "path": "schemas/TurnOutcome.schema.json",
-      "sha256": "1c8dda3dedf5fcd560f362932f0b6b35292179d3bdaac05b13d1c9fa43c86dd1",
-      "size_bytes": 1224
-    },
-    {
-      "path": "schemas/VerificationReport.schema.json",
-      "sha256": "bde578d2c069cda00da1c4bc2ae07de54cb90f42600bfeb42f6b09e4557dd731",
-      "size_bytes": 3717
-    },
-    {
-      "path": "schemas/WebhookEnvelope.schema.json",
-      "sha256": "73072d5268ce580486e5695822e9fa458e3a04a2804cdac22ab90ca4a74052d6",
-      "size_bytes": 1070
-    },
-    {
-      "path": "schemas/WorkGraph.schema.json",
-      "sha256": "248afe64240bee08fa3b3cc15710929543c98d3e7e2a2c130226ff6797004b90",
-      "size_bytes": 1915
-    },
-    {
-      "path": "schemas/WorkerLease.schema.json",
-      "sha256": "23ab3234e98a9c643eb07a406fe85498fbfae43253c8dfc17749f87d16e5548f",
-      "size_bytes": 1268
-    },
-    {
-      "path": "scripts/finalize_package.py",
-      "sha256": "9e09b0e02ec7f10d87ba8a6e207c19c774c9761c02a0dd989785f716d742a80e",
-      "size_bytes": 3858
-    },
-    {
-      "path": "scripts/implementation_completeness_gate.py",
-      "sha256": "2509de2d8eac63d5c81a9db17df438da35e7940a6635eb4ed67114ec375ba4ce",
-      "size_bytes": 646
-    },
-    {
-      "path": "scripts/regenerate_authority_views.py",
-      "sha256": "d0d5c38550a611c6ba261f4fa642dc93169ef92aba027578e1e791221284e309",
-      "size_bytes": 3189
-    },
-    {
-      "path": "scripts/scan_production_placeholders.py",
-      "sha256": "29f5813ba6dd64979c9671d34b2db115fbdc14c43ead15d32ea78af57d3455ff",
-      "size_bytes": 1744
-    },
-    {
-      "path": "scripts/self_test_validators.py",
-      "sha256": "55fa73ede076d225101409c400353a60b6556be3ed8c74a4a88eaa7a626c22c7",
-      "size_bytes": 6337
-    },
-    {
-      "path": "scripts/validate_all.py",
-      "sha256": "513c1eb95171ec02fe6bc0ee17a919743801147a090d57f26cecbc9fb810cdf3",
-      "size_bytes": 426
-    },
-    {
-      "path": "scripts/validate_authority.py",
-      "sha256": "2cf607f222314d8695052082916c6e2e99ff460b2aaa984835bbc6cb79a9113b",
-      "size_bytes": 7682
-    },
-    {
-      "path": "scripts/validate_contracts.py",
-      "sha256": "3dcc435e9dc413d89f39a1476cee201107a6a9fdb2441a0e387b0b10dea61661",
-      "size_bytes": 2226
-    },
-    {
-      "path": "scripts/validate_implementation_evidence.py",
-      "sha256": "e0af7c10599604d689887af6fe546a265a1a22fd30d945e4307647f286a04a05",
-      "size_bytes": 6482
-    },
-    {
-      "path": "scripts/validate_integrity.py",
-      "sha256": "57343af5f8f11ac124d7bf95f2bbd76737b160bd76ddf2b59fcb8ee808791b57",
-      "size_bytes": 3038
-    },
-    {
-      "path": "tests/fixtures/invalid/AgentGraph.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ApprovalReceipt.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ApprovalRequest.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ArtifactRecord.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/AutomationFire.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/AutomationSchedule.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/BrowserSession.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/BudgetReservation.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/BusinessCapabilityPack.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/CapabilityDemand.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/CapabilitySnapshot.json",
-      "sha256": "4d8b97ff9d800b70295e242c0fcda49d9f7772d0d2e36a302f81eb2a6c6cebd2",
-      "size_bytes": 253
-    },
-    {
-      "path": "tests/fixtures/invalid/Checkpoint.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/CommandEnvelope.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ContextProjection.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/EffectRecord.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/EndpointActionEnvelope.json",
-      "sha256": "450791976aacf3572b978cbb61be592618623e938dc2e3454a138aa9783b7ece",
-      "size_bytes": 776
-    },
-    {
-      "path": "tests/fixtures/invalid/EndpointActionResult.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ExecutionTarget.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/GraphTransaction.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ImplementationEvidence.json",
-      "sha256": "c267d2af7bd3e844f8e97b27b6bdcca01de4c0aa97cce141ad900ffdb8dd5e3c",
-      "size_bytes": 585
-    },
-    {
-      "path": "tests/fixtures/invalid/KnowledgeCandidate.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ModelEvent.json",
-      "sha256": "f932981b265e425e8dff5d57854d4472f09035efe31144c20e4d56ffb15ff82a",
-      "size_bytes": 362
-    },
-    {
-      "path": "tests/fixtures/invalid/ModelRequestEnvelope.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/NotificationRecord.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/PolicyDecision.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/QualificationResult.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/RecoveryConsistencyPoint.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ReleaseCandidate.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ReleaseStateRecord.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/RemoteArtifactVerification.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/ResearchRecord.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/RuntimeEvent.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/SearchProgram.json",
-      "sha256": "5ef4146b269393283997d54755a95b5b3d749ab4b25b99b771e353eb15b67d80",
-      "size_bytes": 525
-    },
-    {
-      "path": "tests/fixtures/invalid/SkillPackage.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/StateGraph.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/SupportSelection.json",
-      "sha256": "c5ff24017d05d776960d40196fca71a8d705c1e74042290c1cf96686e388f1b0",
-      "size_bytes": 296
-    },
-    {
-      "path": "tests/fixtures/invalid/ToolOperation.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/TurnDispatch.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/TurnOutcome.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/VerificationReport.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/WebhookEnvelope.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/WorkGraph.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/invalid/WorkerLease.json",
-      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-      "size_bytes": 3
-    },
-    {
-      "path": "tests/fixtures/valid/AgentGraph.json",
-      "sha256": "25b9125eb7106cd2600f79728a06cb9d30783cbd6fef519d961c807c24c80926",
-      "size_bytes": 116
-    },
-    {
-      "path": "tests/fixtures/valid/ApprovalReceipt.json",
-      "sha256": "b005c28631f634ee7c4830b8c3fd3adbbffe56777f3c2c1c84f88dfb03422215",
-      "size_bytes": 316
-    },
-    {
-      "path": "tests/fixtures/valid/ApprovalRequest.json",
-      "sha256": "89c90253e75907a0ac3e0e8268a94f99504aa257d122f6ce732379e13875c60b",
-      "size_bytes": 327
-    },
-    {
-      "path": "tests/fixtures/valid/ArtifactRecord.json",
-      "sha256": "28862de5c80f42849f95f91b094d6af333a6886d9cc35b44104a187e1587b307",
-      "size_bytes": 285
-    },
-    {
-      "path": "tests/fixtures/valid/AutomationFire.json",
-      "sha256": "5890bd36f7f84c9b335589c26cd2da942f78ea78c305db77cfca1bd61df03152",
-      "size_bytes": 236
-    },
-    {
-      "path": "tests/fixtures/valid/AutomationSchedule.json",
-      "sha256": "9bc81d74d402e361154c44a1d564ecaf82bfd1a8f77ec3f87bed82bb01c754f3",
-      "size_bytes": 268
-    },
-    {
-      "path": "tests/fixtures/valid/BrowserSession.json",
-      "sha256": "987d1a68a9bcb84b894ab01540524e39c4c1c4e5a36566088e13bec27d00f32d",
-      "size_bytes": 242
-    },
-    {
-      "path": "tests/fixtures/valid/BudgetReservation.json",
-      "sha256": "6f31b71266c2bc9c18fa84bfbba6c5f5a836204b28a3f2c1e5aba0bfd282dbcd",
-      "size_bytes": 180
-    },
-    {
-      "path": "tests/fixtures/valid/BusinessCapabilityPack.json",
-      "sha256": "c16162116dbac245ef2a9c51395fe11d5564ab61f43531864eee3484ffc27af4",
-      "size_bytes": 609
-    },
-    {
-      "path": "tests/fixtures/valid/CapabilityDemand.json",
-      "sha256": "62f1f3745a63967bc71e68260e4dcfc529de62e283f6a7024e99f4ffbbd9c1d0",
-      "size_bytes": 397
-    },
-    {
-      "path": "tests/fixtures/valid/CapabilitySnapshot.json",
-      "sha256": "e59f2e2af4f84e1a664a9fe94c1d74ecac47c2d9e8a062b7755d3e870fffd4f9",
-      "size_bytes": 290
-    },
-    {
-      "path": "tests/fixtures/valid/Checkpoint.json",
-      "sha256": "a697006662c1df5df861f97ab437a7ff47ecf3cb5d7fdb99a6d90b93fb747086",
-      "size_bytes": 450
-    },
-    {
-      "path": "tests/fixtures/valid/CommandEnvelope.json",
-      "sha256": "099a340675d4bc19f25ce1a45135c0c7bba9aedd665f70705653ce067e1dc412",
-      "size_bytes": 226
-    },
-    {
-      "path": "tests/fixtures/valid/ContextProjection.json",
-      "sha256": "f9c361241d641603ea47ab15033cdc857b9bd623978859d58edb0a2cf054f1d0",
-      "size_bytes": 219
-    },
-    {
-      "path": "tests/fixtures/valid/EffectRecord.json",
-      "sha256": "8fd0f8fe9d31a042f320c612da263a9fc2b4dd2aa6b31b48b7d9633525e74924",
-      "size_bytes": 379
-    },
-    {
-      "path": "tests/fixtures/valid/EndpointActionEnvelope.json",
-      "sha256": "e83b0501917dd00c523f8ed9420c92201f6d85ec470ecb976b8b09cb626dc442",
-      "size_bytes": 796
-    },
-    {
-      "path": "tests/fixtures/valid/EndpointActionResult.json",
-      "sha256": "bec41bd2c8610a23d67863d692d2954791710aee5567d1dadcb46b996f9e0d90",
-      "size_bytes": 207
-    },
-    {
-      "path": "tests/fixtures/valid/ExecutionTarget.json",
-      "sha256": "bb5ee92e44c7805b199b3603abe119af8810de64cdf210d27bae6566eaf46d36",
-      "size_bytes": 227
-    },
-    {
-      "path": "tests/fixtures/valid/GraphTransaction.json",
-      "sha256": "59b74c7ece43992ccb234b5d9597c9863573ab0c38d4fd7f0aef69cd3f370855",
-      "size_bytes": 176
-    },
-    {
-      "path": "tests/fixtures/valid/ImplementationEvidence.json",
-      "sha256": "fac00cf1d986938ed1ea369540402791f38f2333fdc0a04a3b10be3f4e8a14eb",
-      "size_bytes": 624
-    },
-    {
-      "path": "tests/fixtures/valid/KnowledgeCandidate.json",
-      "sha256": "f958003b2908fdc67c8877da8e3d445b948ce929d1e5755c5b0f3bbef6b50802",
-      "size_bytes": 251
-    },
-    {
-      "path": "tests/fixtures/valid/ModelEvent.json",
-      "sha256": "5e45cc42ff2ca335f64843e8d7d52fe8fb7dac5fbc2d4dd1e380c75fc4040a6d",
-      "size_bytes": 368
-    },
-    {
-      "path": "tests/fixtures/valid/ModelRequestEnvelope.json",
-      "sha256": "7fa51fd388a3e6f5c994e031d25e3c2920de31b5d9085ca09edf2f410939d51f",
-      "size_bytes": 426
-    },
-    {
-      "path": "tests/fixtures/valid/NotificationRecord.json",
-      "sha256": "82bf6d691948d9a0422e2eaabb5a4561e8d2b49b1b11e37e659b2376b941a6b1",
-      "size_bytes": 236
-    },
-    {
-      "path": "tests/fixtures/valid/PolicyDecision.json",
-      "sha256": "adf66a0d09fb04a2d54baa41f61e160687f01139f1b1301150cc8de1f233dcba",
-      "size_bytes": 392
-    },
-    {
-      "path": "tests/fixtures/valid/QualificationResult.json",
-      "sha256": "8c063b169d151d5f2e42ab6d88ff375920a2cba9d92d85a8650426ebd6e2c5f7",
-      "size_bytes": 419
-    },
-    {
-      "path": "tests/fixtures/valid/RecoveryConsistencyPoint.json",
-      "sha256": "b25c3734500f062934d558d5e16c26d02a217c3e71869fe000490d48e30d552b",
-      "size_bytes": 434
-    },
-    {
-      "path": "tests/fixtures/valid/ReleaseCandidate.json",
-      "sha256": "26fa689826515fa70f950fec9fd9e658c74ad2917596a840730e5b45e39a5ac2",
-      "size_bytes": 593
-    },
-    {
-      "path": "tests/fixtures/valid/ReleaseStateRecord.json",
-      "sha256": "6cd35c2a863b459d58a3437d4cc5add3731d5761f78d61738f72e4a68ec7064c",
-      "size_bytes": 219
-    },
-    {
-      "path": "tests/fixtures/valid/RemoteArtifactVerification.json",
-      "sha256": "b127292caaed24bcb43abc25bbbef0a48778fbd7432074c18e4817a41c58199f",
-      "size_bytes": 601
-    },
-    {
-      "path": "tests/fixtures/valid/ResearchRecord.json",
-      "sha256": "d906d94d825adfc73fc8f54d3cb71422a11e7f8dc9d0a26bcb3440b14e9ca350",
-      "size_bytes": 213
-    },
-    {
-      "path": "tests/fixtures/valid/RuntimeEvent.json",
-      "sha256": "c2dbf757f4d50760de65846f1f16aa0d728337e7c68e6ca12b64061771507fa8",
-      "size_bytes": 308
-    },
-    {
-      "path": "tests/fixtures/valid/SearchProgram.json",
-      "sha256": "67883c558308e350e8dc19f4b82b936d0353ac929034b4959fc7710b03673831",
-      "size_bytes": 759
-    },
-    {
-      "path": "tests/fixtures/valid/SkillPackage.json",
-      "sha256": "a8177440411f8e443d9785a06bea8efe5bd6e3b6bea2fc238f3e8d8e7e503782",
-      "size_bytes": 401
-    },
-    {
-      "path": "tests/fixtures/valid/StateGraph.json",
-      "sha256": "278c1a99ea1d329b3522b010088f25d7f08a018c4b3e8c75ea4f26c8d1e993fc",
-      "size_bytes": 127
-    },
-    {
-      "path": "tests/fixtures/valid/SupportSelection.json",
-      "sha256": "00baf7f04bb7acdcbaf0ee8bddeae25bdb6de14208fb24e7e9c86b64abc8ab9a",
-      "size_bytes": 296
-    },
-    {
-      "path": "tests/fixtures/valid/ToolOperation.json",
-      "sha256": "488b8c76b3da8d7074162465ed241b252740a6abbfc5c3068ff8a8a23d7ac2a0",
-      "size_bytes": 300
-    },
-    {
-      "path": "tests/fixtures/valid/TurnDispatch.json",
-      "sha256": "dfe1101bebd738c1671982c27df6b1899ad910eb38ac7993f7d0472c70e9d800",
-      "size_bytes": 303
-    },
-    {
-      "path": "tests/fixtures/valid/TurnOutcome.json",
-      "sha256": "0dafa227b8f8d4b28bddb591c7540bf5e1c7ffef2f4668f8f1be5b26ae2891bf",
-      "size_bytes": 127
-    },
-    {
-      "path": "tests/fixtures/valid/VerificationReport.json",
-      "sha256": "ec68168ce1d9a55fd6e7910b8ef0c9b6979157ccaf597eaf37d98c1bc72c1f49",
-      "size_bytes": 528
-    },
-    {
-      "path": "tests/fixtures/valid/WebhookEnvelope.json",
-      "sha256": "92a81bae1798aa99620bf801dae45de34620fa9a6c44ac867058d43db9e47c36",
-      "size_bytes": 297
-    },
-    {
-      "path": "tests/fixtures/valid/WorkGraph.json",
-      "sha256": "90ba0857a778543e201c64d19c32438cf3b8c4e73500d72b58d7e661ed9be6a7",
-      "size_bytes": 185
-    },
-    {
-      "path": "tests/fixtures/valid/WorkerLease.json",
-      "sha256": "e8c419e7ebd0297d5f6e78a9fda8c603da46298b38c090422bd769d8ee97a1a2",
-      "size_bytes": 278
-    },
-    {
-      "path": "wiring/README.md",
-      "sha256": "949194d0a13462f27e8f09ab260b8ffeab9073a4612872e809a3e324e58e0afb",
-      "size_bytes": 289
-    },
-    {
-      "path": "wiring/service-wiring.json",
-      "sha256": "c65fc9d3f4421a239c7c23b0910605f7dab4dd8de68ea97f495dfe47a16b1d29",
-      "size_bytes": 3201
     }
   ],
   "schema_revision": "9.0.0"

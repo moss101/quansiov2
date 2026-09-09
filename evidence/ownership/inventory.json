@@ -1,0 +1,202 @@
+{
+  "entries": [
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": ".gitignore",
+      "role": "VCS ignore rules",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "00_README.md",
+      "role": "authority package overview",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "AGENTS.md",
+      "role": "binding implementation rules",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "CHECKSUMS.sha256",
+      "role": "package integrity checksums",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "HANDOFF.md",
+      "role": "implementation handoff",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "INSTALL.md",
+      "role": "authority package installation",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "MANIFEST.json",
+      "role": "payload manifest",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "Quansio_V9_FINAL_MASTER_DOSSIER.md",
+      "role": "master dossier reading view",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "SKILLS.md",
+      "role": "skills index",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "TOOLS.md",
+      "role": "tools index",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "V9_SPECIFICATION_SEAL.md",
+      "role": "specification seal",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "VALIDATION_REPORT.md",
+      "role": "authority validation report",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "docs",
+      "role": "normative specification documents",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "graphs",
+      "role": "architecture diagrams",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "prompts",
+      "role": "implementation kickoff prompts",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "protocols",
+      "role": "error codes and state machines",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "pyproject.toml",
+      "role": "project metadata and tool configuration",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "registries",
+      "role": "machine-readable task/requirement/support/qualification/release registries",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "schemas",
+      "role": "canonical contract schemas",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "scripts",
+      "role": "authority validators and generators",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
+      "owner": "authority",
+      "path": "wiring",
+      "role": "canonical service wiring flows",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "evidence_path",
+      "owner": "evidence",
+      "path": "evidence",
+      "role": "verification reports and implementation evidence",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "governance_path",
+      "owner": "governance",
+      "path": "tools",
+      "role": "implementation governance tooling",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "test_path",
+      "owner": "tests",
+      "path": "tests",
+      "role": "qualification and acceptance suites",
+      "state_class": null,
+      "status": "present"
+    }
+  ],
+  "entry_count": 24,
+  "inventory_version": "1.0.0",
+  "registry_sha256": "17dcfc67b2e554796a4081cf81adfe1e0382601ec808bd32069decf73e58a283",
+  "registry_version": "1.1.0",
+  "ruleset_version": "1.0.0",
+  "tooling_sha256": "dace0f359ac8803fb7a08186f8cc5f669c300af399c41356f3c49908ba1262db"
+}

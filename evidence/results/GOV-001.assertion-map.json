@@ -1,0 +1,26 @@
+{
+  "GOV-001-P01": [
+    "tests/governance/test_ownership_inventory.py::test_p01_inventory_is_deterministic_and_fully_owned",
+    "tests/governance/test_ownership_inventory.py::test_p01_committed_inventory_matches_regenerated",
+    "tests/governance/test_ownership_inventory.py::test_p01_every_canonical_service_has_adoption_plan"
+  ],
+  "GOV-001-N01": [
+    "tests/governance/test_ownership_inventory.py::test_n01_unregistered_entrypoint_is_rejected",
+    "tests/governance/test_ownership_inventory.py::test_n01_live_repo_rejects_unowned_entrypoint",
+    "tests/governance/test_ownership_inventory.py::test_n01_unowned_second_authoritative_store_is_rejected"
+  ],
+  "GOV-001-R01": [
+    "tests/governance/test_ownership_inventory.py::test_r01_tracked_input_change_is_detected_then_recovery_is_clean",
+    "tests/governance/test_ownership_inventory.py::test_r01_planned_path_adopted_only_through_registry"
+  ],
+  "GOV-001-A01": [
+    "tests/governance/test_ownership_inventory.py::test_p01_inventory_is_deterministic_and_fully_owned",
+    "tests/governance/test_ownership_inventory.py::test_p01_every_canonical_service_has_adoption_plan",
+    "tests/governance/test_ownership_inventory.py::test_n01_unowned_second_authoritative_store_is_rejected"
+  ],
+  "INV-007-A01": [
+    "tests/governance/test_ownership_inventory.py::test_p01_inventory_is_deterministic_and_fully_owned",
+    "tests/governance/test_ownership_inventory.py::test_n01_unowned_second_authoritative_store_is_rejected",
+    "tests/governance/test_ownership_inventory.py::test_r01_planned_path_adopted_only_through_registry"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "excluded_paths": [
+    {
+      "path": "scripts/self_test_validators.py",
+      "reason_class": "self_test",
+      "reason": "Validator self-test: deliberately embeds placeholder markers as test data to prove the scanner detects them in production trees."
+    },
+    {
+      "path": "scripts/scan_production_placeholders.py",
+      "reason_class": "self_test",
+      "reason": "Scanner itself: contains pattern literals for the markers it detects; authority validator tooling, not production source."
+    }
+  ]
+}

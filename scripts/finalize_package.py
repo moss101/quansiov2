@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json, hashlib, subprocess, sys
+import json, subprocess, sys
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'tools/governance'))
+from repo_paths import iter_payload_files, sha256_file  # noqa: E402
 EXCLUDED={'MANIFEST.json','V9_SPECIFICATION_SEAL.md','VALIDATION_REPORT.md','CHECKSUMS.sha256'}
-def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def run(script):
  r=subprocess.run([sys.executable,str(ROOT/'scripts'/script)],capture_output=True,text=True)
  if r.returncode:
@@ -23,21 +24,20 @@ report += ['## Integrity model','','`MANIFEST.json` hashes every payload file ex
 (ROOT/'VALIDATION_REPORT.md').write_text('\n'.join(report))
 # Manifest payload after report has been written; report remains outside manifest by design.
 payload=[]
-for p in sorted(ROOT.rglob('*')):
- if not p.is_file() or '__pycache__' in p.parts: continue
+for p in iter_payload_files(ROOT):
  rel=p.relative_to(ROOT).as_posix()
  if rel in EXCLUDED: continue
- payload.append({'path':rel,'sha256':sha(p),'size_bytes':p.stat().st_size})
+ payload.append({'path':rel,'sha256':sha256_file(p),'size_bytes':p.stat().st_size})
 manifest={'authority_name':'Quansio V9 Final Implementation Authority','schema_revision':'9.0.0','file_count':len(payload),'files':payload}
 (ROOT/'MANIFEST.json').write_text(json.dumps(manifest,indent=2,sort_keys=True)+'\n')
-md=sha(ROOT/'MANIFEST.json')
+md=sha256_file(ROOT/'MANIFEST.json')
 seal=f'''# Quansio V9 Specification Seal\n\n**Schema revision:** `9.0.0`  \n**Manifest SHA-256:** `{md}`  \n**Canonical tasks:** {len(tasks)}  \n**Normative requirements:** {len(reqs)}  \n**Canonical schemas:** {len(schemas)}  \n**Dependency edges:** {len(edges)}\n\nThis seal binds the exact non-circular authority payload listed by `MANIFEST.json`. The manifest excludes itself, this seal, `VALIDATION_REPORT.md` and `CHECKSUMS.sha256`. `CHECKSUMS.sha256` then covers every package file except itself.\n'''
 (ROOT/'V9_SPECIFICATION_SEAL.md').write_text(seal)
-# Exact checksums for every file except checksum file itself.
+# Exact checksums for every payload file except checksum file itself.
 lines=[]
-for p in sorted(ROOT.rglob('*')):
- if not p.is_file() or p.name=='CHECKSUMS.sha256' or '__pycache__' in p.parts: continue
- lines.append(f'{sha(p)}  {p.relative_to(ROOT).as_posix()}')
+for p in iter_payload_files(ROOT):
+ if p.name=='CHECKSUMS.sha256': continue
+ lines.append(f'{sha256_file(p)}  {p.relative_to(ROOT).as_posix()}')
 (ROOT/'CHECKSUMS.sha256').write_text('\n'.join(lines)+'\n')
 # Final integrity validation.
 out=run('validate_integrity.py')
