@@ -1,0 +1,69 @@
+{
+  "$id": "quansio://schema/WorkerLease/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "execution_generation": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "expires_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "fence_token": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "issued_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "lease_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "state": {
+      "enum": [
+        "ACTIVE",
+        "RELEASED",
+        "EXPIRED",
+        "REVOKED"
+      ]
+    },
+    "target_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "worker_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "lease_id",
+    "tenant_id",
+    "target_id",
+    "run_id",
+    "worker_id",
+    "execution_generation",
+    "fence_token",
+    "issued_at",
+    "expires_at",
+    "state"
+  ],
+  "title": "WorkerLease",
+  "type": "object"
+}

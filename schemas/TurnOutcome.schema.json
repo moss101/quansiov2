@@ -1,0 +1,68 @@
+{
+  "$id": "quansio://schema/TurnOutcome/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "completed_sequence": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "dispatch_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "effect_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "error": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "result_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "status": {
+      "enum": [
+        "COMPLETED",
+        "PARTIAL",
+        "CANCELLED",
+        "FAILED",
+        "TIMED_OUT"
+      ]
+    },
+    "worker_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "dispatch_id",
+    "worker_id",
+    "status",
+    "completed_sequence"
+  ],
+  "title": "TurnOutcome",
+  "type": "object"
+}

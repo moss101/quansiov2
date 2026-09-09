@@ -1,0 +1,255 @@
+[
+  {
+    "blocking": true,
+    "candidate_bound": false,
+    "name": "Authority, identity and tenant isolation",
+    "qualification_tasks": [
+      "GOV-002",
+      "GOV-003",
+      "DAT-001",
+      "DAT-008",
+      "SEC-006"
+    ],
+    "suite_id": "Q-AUTH"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": false,
+    "name": "Durable data, event and protocol state",
+    "qualification_tasks": [
+      "DAT-002",
+      "DAT-003",
+      "DAT-004",
+      "DAT-005",
+      "DAT-006",
+      "QA-008"
+    ],
+    "suite_id": "Q-DATA"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": false,
+    "name": "Graph runtime, workers, budgets and recovery",
+    "qualification_tasks": [
+      "RUN-001",
+      "RUN-002",
+      "RUN-003",
+      "RUN-004",
+      "RUN-005",
+      "RUN-006",
+      "RUN-007",
+      "RUN-008",
+      "QA-001"
+    ],
+    "suite_id": "Q-RUNTIME"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": true,
+    "name": "Server model fulfillment",
+    "qualification_tasks": [
+      "MOD-001",
+      "MOD-002",
+      "MOD-003",
+      "MOD-004",
+      "MOD-005",
+      "MOD-006",
+      "MOD-007",
+      "MOD-008",
+      "QA-002"
+    ],
+    "suite_id": "Q-MODEL"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": false,
+    "name": "Evidence-first research",
+    "qualification_tasks": [
+      "CTX-001",
+      "CTX-002",
+      "CTX-003",
+      "CTX-004",
+      "CTX-005",
+      "CTX-006",
+      "CTX-007",
+      "CTX-008",
+      "QA-003"
+    ],
+    "suite_id": "Q-RESEARCH"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": false,
+    "name": "Policy, approvals and effects",
+    "qualification_tasks": [
+      "SEC-001",
+      "SEC-002",
+      "SEC-003",
+      "SEC-004",
+      "SEC-005",
+      "EFF-001",
+      "EFF-002",
+      "EFF-003",
+      "QA-004"
+    ],
+    "suite_id": "Q-EFFECT"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": true,
+    "name": "Worker and machine fabric",
+    "qualification_tasks": [
+      "MAC-001",
+      "MAC-002",
+      "MAC-003",
+      "MAC-004",
+      "MAC-005",
+      "MAC-006",
+      "MAC-007",
+      "MAC-008",
+      "QA-005"
+    ],
+    "suite_id": "Q-MACHINE"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": true,
+    "name": "Browser and endpoint control",
+    "qualification_tasks": [
+      "BRW-001",
+      "BRW-002",
+      "BRW-003",
+      "BRW-004",
+      "BRW-005",
+      "BRW-006",
+      "BRW-007",
+      "BRW-008",
+      "QA-005"
+    ],
+    "suite_id": "Q-BROWSER"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": false,
+    "name": "Knowledge and controlled skill evolution",
+    "qualification_tasks": [
+      "KNW-001",
+      "KNW-002",
+      "KNW-003",
+      "SKL-001",
+      "SKL-002",
+      "SKL-003",
+      "SKL-004",
+      "SKL-005",
+      "QA-006"
+    ],
+    "suite_id": "Q-SKILL"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": false,
+    "name": "Business Capability Packs and compiler",
+    "qualification_tasks": [
+      "BUS-001",
+      "BUS-002",
+      "BUS-003",
+      "BUS-004",
+      "BUS-005",
+      "EXT-001",
+      "EXT-002",
+      "EXT-003",
+      "QA-006"
+    ],
+    "suite_id": "Q-BUSINESS"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": false,
+    "name": "Automation and collaboration",
+    "qualification_tasks": [
+      "AUT-001",
+      "AUT-002",
+      "AUT-003",
+      "AUT-004",
+      "COL-001",
+      "COL-002",
+      "COL-003",
+      "COL-004",
+      "QA-007"
+    ],
+    "suite_id": "Q-AUTOMATION"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": true,
+    "name": "Desktop, web, mobile and CLI",
+    "qualification_tasks": [
+      "UX-001",
+      "UX-002",
+      "UX-003",
+      "UX-004",
+      "UX-005",
+      "UX-006",
+      "UX-007",
+      "UX-008",
+      "QA-007"
+    ],
+    "suite_id": "Q-CLIENT"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": true,
+    "name": "Security and isolation",
+    "qualification_tasks": [
+      "SEC-001",
+      "SEC-002",
+      "SEC-003",
+      "SEC-004",
+      "SEC-005",
+      "SEC-006",
+      "BRW-003",
+      "MAC-002",
+      "QA-004",
+      "QA-005"
+    ],
+    "suite_id": "Q-SECURITY"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": true,
+    "name": "Backup, restore and recovery consistency",
+    "qualification_tasks": [
+      "SRE-003",
+      "SRE-004",
+      "QA-008"
+    ],
+    "suite_id": "Q-DR"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": true,
+    "name": "Load, soak, quota and cost",
+    "qualification_tasks": [
+      "SRE-002",
+      "SRE-005",
+      "SRE-006"
+    ],
+    "suite_id": "Q-LOAD"
+  },
+  {
+    "blocking": true,
+    "candidate_bound": true,
+    "name": "Candidate, canary and rollback",
+    "qualification_tasks": [
+      "REL-001",
+      "REL-002",
+      "REL-003",
+      "REL-004",
+      "REL-005",
+      "REL-006",
+      "REL-007",
+      "GATE-M14"
+    ],
+    "suite_id": "Q-CANARY"
+  }
+]

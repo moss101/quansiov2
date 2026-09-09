@@ -1,0 +1,78 @@
+{
+  "$id": "quansio://schema/ContextProjection/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "capability_snapshot_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "content_blocks": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "knowledge_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "privacy_decision_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "projection_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "revision": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "source_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "step_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "token_budget": {
+      "minimum": 1,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "projection_id",
+    "tenant_id",
+    "run_id",
+    "step_id",
+    "revision",
+    "token_budget",
+    "source_refs",
+    "knowledge_refs",
+    "content_blocks"
+  ],
+  "title": "ContextProjection",
+  "type": "object"
+}

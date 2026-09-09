@@ -1,0 +1,67 @@
+{
+  "$id": "quansio://schema/ArtifactRecord/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "grant_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "media_type": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "producer_ref": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "scan_state": {
+      "enum": [
+        "PENDING",
+        "CLEAN",
+        "REJECTED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "size_bytes": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "artifact_id",
+    "tenant_id",
+    "digest",
+    "size_bytes",
+    "media_type",
+    "producer_ref",
+    "scan_state",
+    "created_at"
+  ],
+  "title": "ArtifactRecord",
+  "type": "object"
+}

@@ -1,0 +1,217 @@
+[
+  {
+    "$id": "quansio://schema/AgentGraph/9.0.0",
+    "name": "AgentGraph",
+    "path": "schemas/AgentGraph.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ApprovalReceipt/9.0.0",
+    "name": "ApprovalReceipt",
+    "path": "schemas/ApprovalReceipt.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ApprovalRequest/9.0.0",
+    "name": "ApprovalRequest",
+    "path": "schemas/ApprovalRequest.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ArtifactRecord/9.0.0",
+    "name": "ArtifactRecord",
+    "path": "schemas/ArtifactRecord.schema.json"
+  },
+  {
+    "$id": "quansio://schema/AutomationFire/9.0.0",
+    "name": "AutomationFire",
+    "path": "schemas/AutomationFire.schema.json"
+  },
+  {
+    "$id": "quansio://schema/AutomationSchedule/9.0.0",
+    "name": "AutomationSchedule",
+    "path": "schemas/AutomationSchedule.schema.json"
+  },
+  {
+    "$id": "quansio://schema/BrowserSession/9.0.0",
+    "name": "BrowserSession",
+    "path": "schemas/BrowserSession.schema.json"
+  },
+  {
+    "$id": "quansio://schema/BudgetReservation/9.0.0",
+    "name": "BudgetReservation",
+    "path": "schemas/BudgetReservation.schema.json"
+  },
+  {
+    "$id": "quansio://schema/BusinessCapabilityPack/9.0.0",
+    "name": "BusinessCapabilityPack",
+    "path": "schemas/BusinessCapabilityPack.schema.json"
+  },
+  {
+    "$id": "quansio://schema/CapabilityDemand/9.0.0",
+    "name": "CapabilityDemand",
+    "path": "schemas/CapabilityDemand.schema.json"
+  },
+  {
+    "$id": "quansio://schema/CapabilitySnapshot/9.0.0",
+    "name": "CapabilitySnapshot",
+    "path": "schemas/CapabilitySnapshot.schema.json"
+  },
+  {
+    "$id": "quansio://schema/Checkpoint/9.0.0",
+    "name": "Checkpoint",
+    "path": "schemas/Checkpoint.schema.json"
+  },
+  {
+    "$id": "quansio://schema/CommandEnvelope/9.0.0",
+    "name": "CommandEnvelope",
+    "path": "schemas/CommandEnvelope.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ContextProjection/9.0.0",
+    "name": "ContextProjection",
+    "path": "schemas/ContextProjection.schema.json"
+  },
+  {
+    "$id": "quansio://schema/EffectRecord/9.0.0",
+    "name": "EffectRecord",
+    "path": "schemas/EffectRecord.schema.json"
+  },
+  {
+    "$id": "quansio://schema/EndpointActionEnvelope/9.0.0",
+    "name": "EndpointActionEnvelope",
+    "path": "schemas/EndpointActionEnvelope.schema.json"
+  },
+  {
+    "$id": "quansio://schema/EndpointActionResult/9.0.0",
+    "name": "EndpointActionResult",
+    "path": "schemas/EndpointActionResult.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ExecutionTarget/9.0.0",
+    "name": "ExecutionTarget",
+    "path": "schemas/ExecutionTarget.schema.json"
+  },
+  {
+    "$id": "quansio://schema/GraphTransaction/9.0.0",
+    "name": "GraphTransaction",
+    "path": "schemas/GraphTransaction.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ImplementationEvidence/9.0.0",
+    "name": "ImplementationEvidence",
+    "path": "schemas/ImplementationEvidence.schema.json"
+  },
+  {
+    "$id": "quansio://schema/KnowledgeCandidate/9.0.0",
+    "name": "KnowledgeCandidate",
+    "path": "schemas/KnowledgeCandidate.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ModelEvent/9.0.0",
+    "name": "ModelEvent",
+    "path": "schemas/ModelEvent.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ModelRequestEnvelope/9.0.0",
+    "name": "ModelRequestEnvelope",
+    "path": "schemas/ModelRequestEnvelope.schema.json"
+  },
+  {
+    "$id": "quansio://schema/NotificationRecord/9.0.0",
+    "name": "NotificationRecord",
+    "path": "schemas/NotificationRecord.schema.json"
+  },
+  {
+    "$id": "quansio://schema/PolicyDecision/9.0.0",
+    "name": "PolicyDecision",
+    "path": "schemas/PolicyDecision.schema.json"
+  },
+  {
+    "$id": "quansio://schema/QualificationResult/9.0.0",
+    "name": "QualificationResult",
+    "path": "schemas/QualificationResult.schema.json"
+  },
+  {
+    "$id": "quansio://schema/RecoveryConsistencyPoint/9.0.0",
+    "name": "RecoveryConsistencyPoint",
+    "path": "schemas/RecoveryConsistencyPoint.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ReleaseCandidate/9.0.0",
+    "name": "ReleaseCandidate",
+    "path": "schemas/ReleaseCandidate.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ReleaseStateRecord/9.0.0",
+    "name": "ReleaseStateRecord",
+    "path": "schemas/ReleaseStateRecord.schema.json"
+  },
+  {
+    "name": "RemoteArtifactVerification",
+    "path": "schemas/RemoteArtifactVerification.schema.json",
+    "schema_revision": "9.0.0"
+  },
+  {
+    "$id": "quansio://schema/ResearchRecord/9.0.0",
+    "name": "ResearchRecord",
+    "path": "schemas/ResearchRecord.schema.json"
+  },
+  {
+    "$id": "quansio://schema/RuntimeEvent/9.0.0",
+    "name": "RuntimeEvent",
+    "path": "schemas/RuntimeEvent.schema.json"
+  },
+  {
+    "$id": "quansio://schema/SearchProgram/9.0.0",
+    "name": "SearchProgram",
+    "path": "schemas/SearchProgram.schema.json"
+  },
+  {
+    "$id": "quansio://schema/SkillPackage/9.0.0",
+    "name": "SkillPackage",
+    "path": "schemas/SkillPackage.schema.json"
+  },
+  {
+    "$id": "quansio://schema/StateGraph/9.0.0",
+    "name": "StateGraph",
+    "path": "schemas/StateGraph.schema.json"
+  },
+  {
+    "$id": "quansio://schema/SupportSelection/9.0.0",
+    "name": "SupportSelection",
+    "path": "schemas/SupportSelection.schema.json"
+  },
+  {
+    "$id": "quansio://schema/ToolOperation/9.0.0",
+    "name": "ToolOperation",
+    "path": "schemas/ToolOperation.schema.json"
+  },
+  {
+    "$id": "quansio://schema/TurnDispatch/9.0.0",
+    "name": "TurnDispatch",
+    "path": "schemas/TurnDispatch.schema.json"
+  },
+  {
+    "$id": "quansio://schema/TurnOutcome/9.0.0",
+    "name": "TurnOutcome",
+    "path": "schemas/TurnOutcome.schema.json"
+  },
+  {
+    "$id": "quansio://schema/VerificationReport/9.0.0",
+    "name": "VerificationReport",
+    "path": "schemas/VerificationReport.schema.json"
+  },
+  {
+    "$id": "quansio://schema/WebhookEnvelope/9.0.0",
+    "name": "WebhookEnvelope",
+    "path": "schemas/WebhookEnvelope.schema.json"
+  },
+  {
+    "$id": "quansio://schema/WorkGraph/9.0.0",
+    "name": "WorkGraph",
+    "path": "schemas/WorkGraph.schema.json"
+  },
+  {
+    "$id": "quansio://schema/WorkerLease/9.0.0",
+    "name": "WorkerLease",
+    "path": "schemas/WorkerLease.schema.json"
+  }
+]

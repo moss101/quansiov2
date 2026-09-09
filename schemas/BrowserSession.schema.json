@@ -1,0 +1,70 @@
+{
+  "$id": "quansio://schema/BrowserSession/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "browser_session_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "controller": {
+      "enum": [
+        "AGENT",
+        "HUMAN",
+        "NONE"
+      ]
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "current_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "execution_generation": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "state": {
+      "enum": [
+        "STARTING",
+        "READY",
+        "TAKEOVER_PENDING",
+        "SUSPENDED",
+        "CLOSED",
+        "FAILED"
+      ]
+    },
+    "target_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "workspace_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "browser_session_id",
+    "tenant_id",
+    "workspace_id",
+    "target_id",
+    "execution_generation",
+    "controller",
+    "state",
+    "created_at"
+  ],
+  "title": "BrowserSession",
+  "type": "object"
+}

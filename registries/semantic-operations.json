@@ -1,0 +1,52 @@
+[
+  {
+    "effect_class": "CONSEQUENTIAL",
+    "fidelity": "LOSSLESS_WITH_CONSTRAINTS",
+    "operation": "message.send"
+  },
+  {
+    "effect_class": "CONSEQUENTIAL",
+    "fidelity": "LOSSLESS_WITH_CONSTRAINTS",
+    "operation": "content.publish"
+  },
+  {
+    "effect_class": "HIGH_RISK",
+    "fidelity": "IRREVERSIBLE",
+    "operation": "financial.authorize"
+  },
+  {
+    "effect_class": "HIGH_RISK",
+    "fidelity": "IRREVERSIBLE",
+    "operation": "data.delete"
+  },
+  {
+    "effect_class": "CONSEQUENTIAL",
+    "fidelity": "LOSSLESS_WITH_CONSTRAINTS",
+    "operation": "artifact.upload_protected"
+  },
+  {
+    "effect_class": "CONSEQUENTIAL",
+    "fidelity": "LOSSLESS_WITH_CONSTRAINTS",
+    "operation": "record.update"
+  },
+  {
+    "effect_class": "OBSERVATIONAL",
+    "fidelity": "LOSSLESS",
+    "operation": "browser.navigate"
+  },
+  {
+    "effect_class": "SEMANTICALLY_CLASSIFIED",
+    "fidelity": "LOSSLESS_WITH_CONSTRAINTS",
+    "operation": "browser.input"
+  },
+  {
+    "effect_class": "SEMANTICALLY_CLASSIFIED",
+    "fidelity": "LOSSLESS_WITH_CONSTRAINTS",
+    "operation": "terminal.execute"
+  },
+  {
+    "effect_class": "NON_CONSEQUENTIAL",
+    "fidelity": "BEST_EFFORT_DEGRADING",
+    "operation": "artifact.transform"
+  }
+]

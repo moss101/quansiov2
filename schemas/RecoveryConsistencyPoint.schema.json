@@ -1,0 +1,59 @@
+{
+  "$id": "quansio://schema/RecoveryConsistencyPoint/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "database_position": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "effect_settlement_watermark": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "evidence_manifest_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "recovery_point_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "runtime_event_sequence": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "snapshot_inventory_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "unresolved_unknown_effect_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_revision",
+    "recovery_point_id",
+    "database_position",
+    "runtime_event_sequence",
+    "evidence_manifest_digest",
+    "snapshot_inventory_digest",
+    "effect_settlement_watermark",
+    "unresolved_unknown_effect_ids",
+    "created_at"
+  ],
+  "title": "RecoveryConsistencyPoint",
+  "type": "object"
+}

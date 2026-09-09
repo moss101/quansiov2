@@ -1,0 +1,10 @@
+{
+  "amount": 1.0,
+  "idempotency_key": "x",
+  "kind": "MODEL",
+  "reservation_id": "x",
+  "run_id": "x",
+  "schema_revision": "9.0.0",
+  "state": "RESERVED",
+  "tenant_id": "x"
+}

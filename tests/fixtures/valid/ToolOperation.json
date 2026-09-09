@@ -1,0 +1,13 @@
+{
+  "capability_requirements": [],
+  "effect_class": "OBSERVATIONAL",
+  "evidence_requirements": [],
+  "fidelity": "LOSSLESS",
+  "idempotency": "REQUIRED",
+  "input_schema_id": "x",
+  "operation_id": "x",
+  "output_schema_id": "x",
+  "schema_revision": "9.0.0",
+  "timeout_ms": 1,
+  "version": "x"
+}

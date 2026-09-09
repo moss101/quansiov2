@@ -1,0 +1,14 @@
+{
+  "attestation_digest": null,
+  "attestation_path": null,
+  "environment_id": "qual-env",
+  "expected_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "observed_at": "2026-09-10T00:00:00Z",
+  "observed_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "path_or_uri": "oci://registry.example/artifact@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "verification_id": "rav-1",
+  "verification_method": "REMOTE_DIGEST_LOOKUP",
+  "verifier_identity": "ci-runner"
+}

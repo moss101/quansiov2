@@ -1,0 +1,48 @@
+{
+  "$id": "quansio://schema/GraphTransaction/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "mutations": {
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "transaction_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "transaction_id",
+    "tenant_id",
+    "run_id",
+    "expected_revision",
+    "mutations",
+    "idempotency_key"
+  ],
+  "title": "GraphTransaction",
+  "type": "object"
+}

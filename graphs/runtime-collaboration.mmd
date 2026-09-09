@@ -1,0 +1,10 @@
+flowchart LR
+  U[User / Automation] --> P[Persistent teammate]
+  P --> WG[WorkGraph]
+  WG --> A[Atomic admission]
+  A --> W1[Ephemeral worker A]
+  A --> W2[Ephemeral worker B]
+  W1 --> O[Durable TurnOutcome]
+  W2 --> O
+  O --> WG
+  WG --> R[Result / Evidence]

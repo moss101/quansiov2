@@ -1,0 +1,20 @@
+{
+  "capability_requirements": [],
+  "dependencies": [],
+  "evaluation_thresholds": {},
+  "exclusions": [],
+  "input_contract": {},
+  "instructions": [
+    "x"
+  ],
+  "intended_use": [],
+  "output_contract": {},
+  "owner_scope": "x",
+  "promotion_state": "CANDIDATE",
+  "purpose": "x",
+  "rollback_target": "x",
+  "schema_revision": "9.0.0",
+  "skill_id": "x",
+  "source_refs": [],
+  "version": "x"
+}

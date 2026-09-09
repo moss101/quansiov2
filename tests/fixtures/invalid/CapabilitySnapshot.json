@@ -1,0 +1,12 @@
+{
+  "actor_id": "agent-1",
+  "atoms": [
+    "artifact.read"
+  ],
+  "constraints": {},
+  "expires_at": "2026-01-02T00:00:00Z",
+  "issued_at": "2026-01-01T00:00:00Z",
+  "parent_snapshot_id": null,
+  "schema_revision": "9.0.0",
+  "tenant_id": "tenant-1"
+}

@@ -1,0 +1,14 @@
+{
+  "argument_scope_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "created_at": "2026-09-10T00:00:00Z",
+  "effect_class": "CONSEQUENTIAL",
+  "effect_id": "x",
+  "idempotency_key": "x",
+  "operation_id": "x",
+  "policy_decision_id": "x",
+  "run_id": "x",
+  "schema_revision": "9.0.0",
+  "state": "PROPOSED",
+  "step_id": "x",
+  "tenant_id": "x"
+}

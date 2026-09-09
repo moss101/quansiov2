@@ -1,0 +1,12 @@
+{
+  "approval_request_id": "x",
+  "argument_scope_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "effect_id": "x",
+  "expires_at": "2026-09-10T00:00:00Z",
+  "operation_id": "x",
+  "requested_authority": [],
+  "risk_class": "x",
+  "schema_revision": "9.0.0",
+  "target": {},
+  "tenant_id": "x"
+}

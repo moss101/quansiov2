@@ -1,0 +1,67 @@
+{
+  "$id": "quansio://schema/ReleaseCandidate/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_digests": {
+      "additionalProperties": {
+        "pattern": "^[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "minProperties": 1,
+      "type": "object"
+    },
+    "candidate_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "configuration_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "migration_set_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "source_commit": {
+      "pattern": "^[a-f0-9]{40,64}$",
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "CANDIDATE_CREATED",
+        "CANDIDATE_QUALIFIED",
+        "CANARY_DEPLOYED",
+        "CANARY_QUALIFIED",
+        "GO_APPROVED",
+        "READINESS_EVIDENCE_SEALED",
+        "PRODUCTION_READY",
+        "PRODUCTION_RELEASED"
+      ]
+    },
+    "support_selection_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "candidate_id",
+    "source_commit",
+    "artifact_digests",
+    "configuration_digest",
+    "migration_set_digest",
+    "support_selection_digest",
+    "state",
+    "created_at"
+  ],
+  "title": "ReleaseCandidate",
+  "type": "object"
+}

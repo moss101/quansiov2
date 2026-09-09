@@ -1,0 +1,65 @@
+{
+  "$id": "quansio://schema/ResearchRecord/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "attributes": {
+      "type": "object"
+    },
+    "claims": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "entity_identity": {
+      "type": "object"
+    },
+    "freshness": {
+      "type": "object"
+    },
+    "record_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "source_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "verification_status": {
+      "enum": [
+        "SUPPORTED",
+        "UNSUPPORTED",
+        "STALE",
+        "INACCESSIBLE",
+        "CONFLICTING",
+        "UNVERIFIED"
+      ]
+    }
+  },
+  "required": [
+    "schema_revision",
+    "record_id",
+    "entity_identity",
+    "attributes",
+    "claims",
+    "source_refs",
+    "freshness",
+    "confidence",
+    "verification_status"
+  ],
+  "title": "ResearchRecord",
+  "type": "object"
+}

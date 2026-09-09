@@ -1,0 +1,84 @@
+{
+  "$id": "quansio://schema/KnowledgeCandidate/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "conflict_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "knowledge_type": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "source_epoch": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "status": {
+      "enum": [
+        "CANDIDATE",
+        "ACCEPTED",
+        "REJECTED",
+        "STALE",
+        "SUPERSEDED"
+      ]
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "valid_from": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "valid_until": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_revision",
+    "candidate_id",
+    "tenant_id",
+    "knowledge_type",
+    "source_epoch",
+    "provenance",
+    "evidence_refs",
+    "confidence",
+    "valid_from",
+    "status"
+  ],
+  "title": "KnowledgeCandidate",
+  "type": "object"
+}

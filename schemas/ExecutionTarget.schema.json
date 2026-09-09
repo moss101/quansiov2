@@ -1,0 +1,75 @@
+{
+  "$id": "quansio://schema/ExecutionTarget/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "execution_generation": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "fence_token": {
+      "minimum": 1,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "health_state": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "lease_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lifecycle_state": {
+      "enum": [
+        "PROVISIONING",
+        "READY",
+        "LEASED",
+        "HIBERNATED",
+        "MIGRATING",
+        "UNHEALTHY",
+        "TERMINATED"
+      ]
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "support_profile_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "target_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "target_type": {
+      "enum": [
+        "HOSTED_ISOLATED",
+        "PERSISTENT_WORKSPACE",
+        "LOCAL_VIRTUALIZED",
+        "PRIVATE_WORKER",
+        "PERSONAL_ENDPOINT"
+      ]
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "target_id",
+    "tenant_id",
+    "target_type",
+    "support_profile_id",
+    "lifecycle_state",
+    "execution_generation",
+    "health_state"
+  ],
+  "title": "ExecutionTarget",
+  "type": "object"
+}

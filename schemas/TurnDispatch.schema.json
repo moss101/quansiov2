@@ -1,0 +1,75 @@
+{
+  "$id": "quansio://schema/TurnDispatch/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cancellation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "capability_snapshot_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "deadline": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "dispatch_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "expected_output_schema_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "input_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "parent_run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "parent_turn_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "target_agent_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "dispatch_id",
+    "tenant_id",
+    "parent_run_id",
+    "parent_turn_id",
+    "target_agent_id",
+    "capability_snapshot_id",
+    "input_refs",
+    "expected_output_schema_id",
+    "deadline",
+    "idempotency_key"
+  ],
+  "title": "TurnDispatch",
+  "type": "object"
+}

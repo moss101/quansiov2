@@ -1,0 +1,10 @@
+{
+  "execution_generation": 1,
+  "health_state": "x",
+  "lifecycle_state": "PROVISIONING",
+  "schema_revision": "9.0.0",
+  "support_profile_id": "x",
+  "target_id": "x",
+  "target_type": "HOSTED_ISOLATED",
+  "tenant_id": "x"
+}

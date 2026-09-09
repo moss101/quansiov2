@@ -1,0 +1,66 @@
+{
+  "$id": "quansio://schema/BudgetReservation/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "amount": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "MODEL",
+        "WORKER",
+        "RESEARCH",
+        "CONNECTOR",
+        "STORAGE"
+      ]
+    },
+    "parent_reservation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reservation_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "state": {
+      "enum": [
+        "RESERVED",
+        "SETTLING_PROVIDER_USAGE",
+        "SETTLED",
+        "RELEASED",
+        "ADJUSTED"
+      ]
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "reservation_id",
+    "tenant_id",
+    "run_id",
+    "kind",
+    "amount",
+    "state",
+    "idempotency_key"
+  ],
+  "title": "BudgetReservation",
+  "type": "object"
+}

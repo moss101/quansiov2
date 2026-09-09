@@ -1,0 +1,58 @@
+{
+  "$id": "quansio://schema/ApprovalReceipt/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approval_receipt_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "approval_request_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "approver_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "argument_scope_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "decided_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "APPROVED",
+        "DENIED",
+        "EXPIRED"
+      ]
+    },
+    "effect_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "approval_receipt_id",
+    "approval_request_id",
+    "tenant_id",
+    "effect_id",
+    "argument_scope_digest",
+    "approver_id",
+    "decision",
+    "decided_at"
+  ],
+  "title": "ApprovalReceipt",
+  "type": "object"
+}

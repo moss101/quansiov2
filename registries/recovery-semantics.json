@@ -1,0 +1,42 @@
+[
+  {
+    "action": "continue eligible server work; rebuild client from snapshot plus event cursor",
+    "authority": "runtime",
+    "failure": "CLIENT_DISCONNECT"
+  },
+  {
+    "action": "replay canonical state/protocol; reconcile effects; resume eligible waits/work",
+    "authority": "runtime",
+    "failure": "RUNTIME_RESTART"
+  },
+  {
+    "action": "typed terminal/retry policy; preserve request and usage identities",
+    "authority": "model-gateway",
+    "failure": "MODEL_STREAM_INTERRUPTION"
+  },
+  {
+    "action": "mark UNKNOWN and reconcile before retry",
+    "authority": "effect-engine",
+    "failure": "AMBIGUOUS_EXTERNAL_TIMEOUT"
+  },
+  {
+    "action": "redeliver same delivery/idempotency identity; do not re-execute completed operation",
+    "authority": "worker-gateway",
+    "failure": "WORKER_ACK_LOSS"
+  },
+  {
+    "action": "advance generation/fence and reject stale actions",
+    "authority": "machine-control",
+    "failure": "MACHINE_RESTORE"
+  },
+  {
+    "action": "rebuild from authoritative source/artifact metadata; knowledge/recovery truth unaffected",
+    "authority": "indexer",
+    "failure": "INDEX_LOSS"
+  },
+  {
+    "action": "reacquire/invalidate leases from authoritative state; no task truth loss",
+    "authority": "owners",
+    "failure": "CACHE_LOSS"
+  }
+]

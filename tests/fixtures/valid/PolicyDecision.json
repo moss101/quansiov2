@@ -1,0 +1,14 @@
+{
+  "actor_id": "x",
+  "argument_scope_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "capability_snapshot_id": "x",
+  "data_classification": [],
+  "decision": "ALLOW",
+  "expires_at": "2026-09-10T00:00:00Z",
+  "operation_id": "x",
+  "policy_decision_id": "x",
+  "policy_revision": "x",
+  "schema_revision": "9.0.0",
+  "target_scope": {},
+  "tenant_id": "x"
+}

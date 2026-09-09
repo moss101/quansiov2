@@ -1,0 +1,10 @@
+{
+  "candidate_id": "x",
+  "created_at": "2026-09-10T00:00:00Z",
+  "evidence_refs": [],
+  "from_state": "x",
+  "owner_task_id": "x",
+  "record_id": "x",
+  "schema_revision": "9.0.0",
+  "to_state": "CANDIDATE_CREATED"
+}

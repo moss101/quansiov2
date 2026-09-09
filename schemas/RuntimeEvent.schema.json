@@ -1,0 +1,81 @@
+{
+  "$id": "quansio://schema/RuntimeEvent/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "causal_parent_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "committed_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "event_id": {
+      "minLength": 8,
+      "type": "string"
+    },
+    "event_type": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "execution_generation": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "occurred_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "producer_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "producer_sequence": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "sequence": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "workspace_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "event_id",
+    "tenant_id",
+    "workspace_id",
+    "run_id",
+    "sequence",
+    "producer_id",
+    "execution_generation",
+    "event_type",
+    "occurred_at",
+    "committed_at",
+    "payload"
+  ],
+  "title": "RuntimeEvent",
+  "type": "object"
+}

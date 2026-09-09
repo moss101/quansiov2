@@ -1,0 +1,172 @@
+{
+  "$id": "quansio://schema/VerificationReport/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_records": {
+      "items": {
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "verification_method": {
+                  "enum": [
+                    "REMOTE_DIGEST_LOOKUP",
+                    "TRUSTED_BUILD_ATTESTATION"
+                  ]
+                }
+              },
+              "required": [
+                "verification_method"
+              ]
+            },
+            "then": {
+              "properties": {
+                "verification_receipt_ref": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "verification_receipt_ref"
+              ]
+            }
+          }
+        ],
+        "properties": {
+          "digest": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "path_or_uri": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "verification_method": {
+            "enum": [
+              "LOCAL_HASH",
+              "REMOTE_DIGEST_LOOKUP",
+              "TRUSTED_BUILD_ATTESTATION"
+            ]
+          },
+          "verification_receipt_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "path_or_uri",
+          "digest",
+          "verification_method"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "assertion_results": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertion_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "blocking": {
+            "type": "boolean"
+          },
+          "details": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "BLOCKED"
+            ]
+          }
+        },
+        "required": [
+          "assertion_id",
+          "blocking",
+          "status"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "ci_pipeline_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "ci_run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "configuration_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "environment_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "executed_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "git_commit": {
+      "pattern": "^[a-f0-9]{40,64}$",
+      "type": "string"
+    },
+    "protected_ref": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "real_boundary": {
+      "type": "boolean"
+    },
+    "report_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "repository_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED_REAL_BOUNDARY"
+      ]
+    },
+    "task_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "report_id",
+    "task_id",
+    "repository_id",
+    "git_commit",
+    "protected_ref",
+    "environment_id",
+    "configuration_digest",
+    "status",
+    "assertion_results",
+    "artifact_records",
+    "real_boundary",
+    "executed_at"
+  ],
+  "title": "VerificationReport",
+  "type": "object"
+}

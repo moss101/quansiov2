@@ -1,0 +1,20 @@
+{
+  "cancellation_id": "x",
+  "capability_snapshot_id": "x",
+  "context_projection_id": "x",
+  "created_at": "2026-09-10T00:00:00Z",
+  "execution_generation": 1,
+  "messages": [
+    {}
+  ],
+  "model_profile_id": "x",
+  "request_id": "x",
+  "route_decision_id": "x",
+  "run_id": "x",
+  "schema_revision": "9.0.0",
+  "step_id": "x",
+  "stream_id": "x",
+  "tenant_id": "x",
+  "usage_reservation_id": "x",
+  "workspace_id": "x"
+}

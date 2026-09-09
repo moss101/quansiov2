@@ -1,0 +1,13 @@
+{
+  "execution_generation": 1,
+  "expires_at": "2026-09-10T00:00:00Z",
+  "fence_token": 1,
+  "issued_at": "2026-09-10T00:00:00Z",
+  "lease_id": "x",
+  "run_id": "x",
+  "schema_revision": "9.0.0",
+  "state": "ACTIVE",
+  "target_id": "x",
+  "tenant_id": "x",
+  "worker_id": "x"
+}

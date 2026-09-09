@@ -1,0 +1,100 @@
+{
+  "$id": "quansio://schema/ImplementationEvidence/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_digests": {
+      "additionalProperties": {
+        "pattern": "^[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "evidence_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "git_commit": {
+      "pattern": "^[a-f0-9]{40,64}$",
+      "type": "string"
+    },
+    "real_boundary": {
+      "type": "boolean"
+    },
+    "report_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "report_path": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "repository_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "requirement_assertion_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "requirement_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "rollback_verified": {
+      "type": "boolean"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED_REAL_BOUNDARY"
+      ]
+    },
+    "task_assertion_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "task_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "evidence_id",
+    "task_id",
+    "requirement_ids",
+    "task_assertion_ids",
+    "requirement_assertion_ids",
+    "repository_id",
+    "git_commit",
+    "report_path",
+    "report_digest",
+    "status",
+    "real_boundary",
+    "artifact_digests",
+    "created_at"
+  ],
+  "title": "ImplementationEvidence",
+  "type": "object"
+}

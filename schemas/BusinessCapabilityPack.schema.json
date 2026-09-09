@@ -1,0 +1,182 @@
+{
+  "$id": "quansio://schema/BusinessCapabilityPack/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "acceptance_thresholds": {
+      "type": "object"
+    },
+    "approval_rules": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "compatibility": {
+      "type": "object"
+    },
+    "connector_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "credential_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "evaluation_cases": {
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "evidence_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "input_contracts": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "knowledge_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "lifecycle": {
+      "additionalProperties": false,
+      "properties": {
+        "deprecation_policy": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "migration_policy": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "rollback_policy": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "migration_policy",
+        "deprecation_policy",
+        "rollback_policy"
+      ],
+      "type": "object"
+    },
+    "output_contracts": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "owner_scope": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "pack_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "permission_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "policies": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "role_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "skills": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "tool_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "version": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "workflow_templates": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_revision",
+    "pack_id",
+    "version",
+    "owner_scope",
+    "knowledge_requirements",
+    "skills",
+    "tool_requirements",
+    "connector_requirements",
+    "role_requirements",
+    "permission_requirements",
+    "policies",
+    "approval_rules",
+    "workflow_templates",
+    "input_contracts",
+    "output_contracts",
+    "evidence_requirements",
+    "evaluation_cases",
+    "acceptance_thresholds",
+    "compatibility",
+    "lifecycle"
+  ],
+  "title": "BusinessCapabilityPack",
+  "type": "object"
+}

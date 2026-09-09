@@ -1,0 +1,28 @@
+{
+  "acceptance_thresholds": {},
+  "approval_rules": [],
+  "compatibility": {},
+  "connector_requirements": [],
+  "evaluation_cases": [
+    {}
+  ],
+  "evidence_requirements": [],
+  "input_contracts": [],
+  "knowledge_requirements": [],
+  "lifecycle": {
+    "deprecation_policy": "x",
+    "migration_policy": "x",
+    "rollback_policy": "x"
+  },
+  "output_contracts": [],
+  "owner_scope": "x",
+  "pack_id": "x",
+  "permission_requirements": [],
+  "policies": [],
+  "role_requirements": [],
+  "schema_revision": "9.0.0",
+  "skills": [],
+  "tool_requirements": [],
+  "version": "x",
+  "workflow_templates": []
+}

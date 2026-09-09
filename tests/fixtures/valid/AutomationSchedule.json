@@ -1,0 +1,13 @@
+{
+  "automation_id": "x",
+  "dst_fold_policy": "FIRST",
+  "dst_gap_policy": "SKIP",
+  "max_catch_up": 1,
+  "missed_fire_policy": "SKIP",
+  "owner_agent_id": "x",
+  "rule": "x",
+  "schema_revision": "9.0.0",
+  "state": "ACTIVE",
+  "tenant_id": "x",
+  "timezone": "x"
+}

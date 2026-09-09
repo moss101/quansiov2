@@ -1,0 +1,77 @@
+{
+  "$id": "quansio://schema/PolicyDecision/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actor_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "argument_scope_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "capability_snapshot_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "data_classification": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "decision": {
+      "enum": [
+        "ALLOW",
+        "ALLOW_REDACTED",
+        "REQUIRE_APPROVAL",
+        "DENY"
+      ]
+    },
+    "expires_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "operation_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "policy_decision_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "policy_revision": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "target_scope": {
+      "type": "object"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "policy_decision_id",
+    "tenant_id",
+    "actor_id",
+    "capability_snapshot_id",
+    "operation_id",
+    "argument_scope_digest",
+    "target_scope",
+    "data_classification",
+    "decision",
+    "policy_revision",
+    "expires_at"
+  ],
+  "title": "PolicyDecision",
+  "type": "object"
+}

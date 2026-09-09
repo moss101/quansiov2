@@ -1,0 +1,39 @@
+{
+  "$id": "quansio://schema/StateGraph/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "revision": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "stategraph_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "states": {
+      "type": "object"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "stategraph_id",
+    "tenant_id",
+    "run_id",
+    "revision",
+    "states"
+  ],
+  "title": "StateGraph",
+  "type": "object"
+}

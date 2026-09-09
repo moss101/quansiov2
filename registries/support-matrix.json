@@ -1,0 +1,169 @@
+[
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "client",
+    "profile_id": "client.desktop.primary",
+    "qualification_tasks": [
+      "UX-001",
+      "UX-002",
+      "UX-003",
+      "UX-004",
+      "QA-007"
+    ],
+    "required_suites": [
+      "Q-AUTH",
+      "Q-CLIENT",
+      "Q-SECURITY"
+    ],
+    "status": "REQUIRED_GA"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "client",
+    "profile_id": "client.web.primary",
+    "qualification_tasks": [
+      "UX-006",
+      "QA-007"
+    ],
+    "required_suites": [
+      "Q-AUTH",
+      "Q-CLIENT",
+      "Q-SECURITY"
+    ],
+    "status": "REQUIRED_GA"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "client",
+    "profile_id": "client.mobile.primary",
+    "qualification_tasks": [
+      "UX-007",
+      "QA-007"
+    ],
+    "required_suites": [
+      "Q-AUTH",
+      "Q-CLIENT",
+      "Q-SECURITY"
+    ],
+    "status": "DISABLED_UNTIL_QUALIFIED"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "client",
+    "profile_id": "client.cli.primary",
+    "qualification_tasks": [
+      "UX-008",
+      "QA-007"
+    ],
+    "required_suites": [
+      "Q-AUTH",
+      "Q-CLIENT"
+    ],
+    "status": "REQUIRED_GA"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "execution",
+    "profile_id": "execution.hosted_microvm.primary",
+    "qualification_tasks": [
+      "MAC-005",
+      "MAC-007",
+      "QA-005",
+      "QA-008"
+    ],
+    "required_suites": [
+      "Q-MACHINE",
+      "Q-SECURITY",
+      "Q-DR"
+    ],
+    "status": "REQUIRED_GA"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "execution",
+    "profile_id": "execution.persistent_workspace.primary",
+    "qualification_tasks": [
+      "MAC-006",
+      "MAC-007",
+      "QA-005"
+    ],
+    "required_suites": [
+      "Q-MACHINE",
+      "Q-BROWSER",
+      "Q-DR"
+    ],
+    "status": "REQUIRED_GA"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "execution",
+    "profile_id": "execution.local_virtualized.primary",
+    "qualification_tasks": [
+      "MAC-008",
+      "QA-005"
+    ],
+    "required_suites": [
+      "Q-MACHINE",
+      "Q-SECURITY"
+    ],
+    "status": "DISABLED_UNTIL_QUALIFIED"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "execution",
+    "profile_id": "execution.private_worker.primary",
+    "qualification_tasks": [
+      "MAC-008",
+      "QA-005"
+    ],
+    "required_suites": [
+      "Q-MACHINE",
+      "Q-SECURITY"
+    ],
+    "status": "DISABLED_UNTIL_QUALIFIED"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "browser",
+    "profile_id": "browser.managed.primary",
+    "qualification_tasks": [
+      "BRW-008",
+      "QA-004",
+      "QA-005"
+    ],
+    "required_suites": [
+      "Q-BROWSER",
+      "Q-EFFECT",
+      "Q-SECURITY"
+    ],
+    "status": "REQUIRED_GA"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "model",
+    "profile_id": "model.primary_profile",
+    "qualification_tasks": [
+      "MOD-008",
+      "QA-002"
+    ],
+    "required_suites": [
+      "Q-MODEL",
+      "Q-SECURITY"
+    ],
+    "status": "REQUIRED_GA"
+  },
+  {
+    "enabled_when": "ALL_REQUIRED_SUITES_PASS",
+    "kind": "model",
+    "profile_id": "model.secondary_profile",
+    "qualification_tasks": [
+      "MOD-008",
+      "QA-002"
+    ],
+    "required_suites": [
+      "Q-MODEL",
+      "Q-SECURITY"
+    ],
+    "status": "DISABLED_UNTIL_QUALIFIED"
+  }
+]

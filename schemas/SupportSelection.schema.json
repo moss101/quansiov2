@@ -1,0 +1,66 @@
+{
+  "$id": "quansio://schema/SupportSelection/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "profiles": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "profile_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "qualification_result_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
+          },
+          "state": {
+            "enum": [
+              "REQUIRED_GA",
+              "DISABLED_UNTIL_QUALIFIED",
+              "UNSUPPORTED"
+            ]
+          }
+        },
+        "required": [
+          "profile_id",
+          "state",
+          "qualification_result_ids"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "selection_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "selection_id",
+    "candidate_id",
+    "profiles",
+    "created_at"
+  ],
+  "title": "SupportSelection",
+  "type": "object"
+}

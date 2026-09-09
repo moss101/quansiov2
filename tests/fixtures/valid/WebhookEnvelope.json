@@ -1,0 +1,11 @@
+{
+  "auth_verification": "VERIFIED",
+  "body_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "connector_id": "x",
+  "delivery_id": "x",
+  "payload": {},
+  "received_at": "2026-09-10T00:00:00Z",
+  "schema_revision": "9.0.0",
+  "tenant_id": "x",
+  "webhook_id": "x"
+}

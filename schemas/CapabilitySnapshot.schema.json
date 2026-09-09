@@ -1,0 +1,59 @@
+{
+  "$id": "quansio://schema/CapabilitySnapshot/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actor_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "atoms": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "capability_snapshot_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "constraints": {
+      "type": "object"
+    },
+    "expires_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issued_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "parent_snapshot_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "capability_snapshot_id",
+    "tenant_id",
+    "actor_id",
+    "atoms",
+    "constraints",
+    "issued_at",
+    "expires_at"
+  ],
+  "title": "CapabilitySnapshot",
+  "type": "object"
+}

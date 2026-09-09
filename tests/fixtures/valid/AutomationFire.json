@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "authority_snapshot_id": "x",
+  "automation_id": "x",
+  "fire_id": "x",
+  "logical_fire_key": "x",
+  "scheduled_for": "2026-09-10T00:00:00Z",
+  "schema_revision": "9.0.0",
+  "state": "ADMITTED",
+  "tenant_id": "x"
+}

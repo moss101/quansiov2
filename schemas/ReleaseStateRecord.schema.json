@@ -1,0 +1,64 @@
+{
+  "$id": "quansio://schema/ReleaseStateRecord/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "from_state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "owner_task_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "record_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "to_state": {
+      "enum": [
+        "CANDIDATE_CREATED",
+        "CANDIDATE_QUALIFIED",
+        "CANARY_DEPLOYED",
+        "CANARY_QUALIFIED",
+        "GO_APPROVED",
+        "READINESS_EVIDENCE_SEALED",
+        "PRODUCTION_READY",
+        "PRODUCTION_RELEASED"
+      ]
+    }
+  },
+  "required": [
+    "schema_revision",
+    "record_id",
+    "candidate_id",
+    "from_state",
+    "to_state",
+    "owner_task_id",
+    "evidence_refs",
+    "created_at"
+  ],
+  "title": "ReleaseStateRecord",
+  "type": "object"
+}

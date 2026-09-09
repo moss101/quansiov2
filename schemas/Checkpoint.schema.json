@@ -1,0 +1,76 @@
+{
+  "$id": "quansio://schema/Checkpoint/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_manifest_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "checkpoint_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "database_position": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "event_sequence": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "execution_generation": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "snapshot_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "CREATING",
+        "DURABLE",
+        "RESTORABLE",
+        "INVALID"
+      ]
+    },
+    "target_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "tier": {
+      "enum": [
+        "WORKSPACE",
+        "FULL_MACHINE"
+      ]
+    }
+  },
+  "required": [
+    "schema_revision",
+    "checkpoint_id",
+    "tenant_id",
+    "target_id",
+    "execution_generation",
+    "tier",
+    "state",
+    "database_position",
+    "event_sequence",
+    "artifact_manifest_digest",
+    "snapshot_digest",
+    "created_at"
+  ],
+  "title": "Checkpoint",
+  "type": "object"
+}

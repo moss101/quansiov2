@@ -1,0 +1,10 @@
+flowchart TD
+  S[Server snapshot + RuntimeEvent cursor] --> CS[Client projection store]
+  CS --> W[Work timeline]
+  CS --> A[Approvals]
+  CS --> B[Browser / Computer]
+  CS --> R[Research / Evidence]
+  CS --> C[Capabilities / Skills]
+  U[User action] --> CMD[Canonical command]
+  CMD --> API[quansio-api]
+  API --> S

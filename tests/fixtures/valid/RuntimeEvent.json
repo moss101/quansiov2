@@ -1,0 +1,14 @@
+{
+  "committed_at": "2026-09-10T00:00:00Z",
+  "event_id": "xxxxxxxx",
+  "event_type": "x",
+  "execution_generation": 1,
+  "occurred_at": "2026-09-10T00:00:00Z",
+  "payload": {},
+  "producer_id": "x",
+  "run_id": "x",
+  "schema_revision": "9.0.0",
+  "sequence": 1,
+  "tenant_id": "x",
+  "workspace_id": "x"
+}

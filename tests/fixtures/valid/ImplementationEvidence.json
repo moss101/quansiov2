@@ -1,0 +1,25 @@
+{
+  "artifact_digests": {},
+  "created_at": "2026-01-01T00:00:00Z",
+  "evidence_id": "ev-1",
+  "git_commit": "1111111111111111111111111111111111111111",
+  "real_boundary": false,
+  "report_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+  "report_path": "reports/gov001.json",
+  "repository_id": "repo-1",
+  "requirement_assertion_ids": [
+    "GOV-001-A01"
+  ],
+  "requirement_ids": [
+    "GOV-001"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "GOV-001-P01",
+    "GOV-001-N01",
+    "GOV-001-R01"
+  ],
+  "task_id": "GOV-001"
+}

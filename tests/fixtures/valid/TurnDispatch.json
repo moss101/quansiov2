@@ -1,0 +1,13 @@
+{
+  "capability_snapshot_id": "x",
+  "deadline": "2026-09-10T00:00:00Z",
+  "dispatch_id": "x",
+  "expected_output_schema_id": "x",
+  "idempotency_key": "x",
+  "input_refs": [],
+  "parent_run_id": "x",
+  "parent_turn_id": "x",
+  "schema_revision": "9.0.0",
+  "target_agent_id": "x",
+  "tenant_id": "x"
+}

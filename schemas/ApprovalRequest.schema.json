@@ -1,0 +1,77 @@
+{
+  "$id": "quansio://schema/ApprovalRequest/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approval_request_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "argument_scope_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "data_classification": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "effect_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "expires_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "financial_scope": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "operation_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "requested_authority": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "risk_class": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "target": {
+      "type": "object"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "approval_request_id",
+    "tenant_id",
+    "effect_id",
+    "operation_id",
+    "argument_scope_digest",
+    "target",
+    "risk_class",
+    "requested_authority",
+    "expires_at"
+  ],
+  "title": "ApprovalRequest",
+  "type": "object"
+}

@@ -1,0 +1,62 @@
+{
+  "$id": "quansio://schema/EndpointActionResult/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "action_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "completed_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "delivery_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "execution_generation": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "result": {
+      "type": "object"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "status": {
+      "enum": [
+        "COMPLETED",
+        "DENIED",
+        "FAILED",
+        "CANCELLED",
+        "EXPIRED"
+      ]
+    },
+    "target_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "action_id",
+    "delivery_id",
+    "target_id",
+    "execution_generation",
+    "status",
+    "result",
+    "completed_at"
+  ],
+  "title": "EndpointActionResult",
+  "type": "object"
+}

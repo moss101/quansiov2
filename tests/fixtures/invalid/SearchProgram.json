@@ -1,0 +1,26 @@
+{
+  "budget": {
+    "max_duration_seconds": 300,
+    "max_fanout": 10,
+    "max_operations": 100
+  },
+  "evidence_policy_id": "evp-1",
+  "objective": "Find and verify entities",
+  "operators": [
+    {
+      "op": "SEARCH",
+      "output_ref": "s1",
+      "query": "example"
+    },
+    {
+      "input_ref": "s1",
+      "op": "FILTER",
+      "output_ref": "s2",
+      "predicate": "lambda x: True"
+    }
+  ],
+  "output_schema_id": "schema-out",
+  "program_id": "sp-1",
+  "schema_revision": "9.0.0",
+  "tenant_id": "tenant-1"
+}

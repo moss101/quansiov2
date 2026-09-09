@@ -1,0 +1,142 @@
+{
+  "flows": [
+    {
+      "consumer": "quansio-api",
+      "contracts": [
+        "CommandEnvelope",
+        "CapabilitySnapshot",
+        "PolicyDecision",
+        "RuntimeEvent"
+      ],
+      "flow_id": "command.admission",
+      "next": [
+        "quansio-control",
+        "quansio-runtime"
+      ],
+      "producer": "clients"
+    },
+    {
+      "consumer": "quansio-model-gateway",
+      "contracts": [
+        "ModelRequestEnvelope",
+        "ModelEvent",
+        "BudgetReservation",
+        "CapabilityDemand"
+      ],
+      "flow_id": "model.fulfillment",
+      "next": [
+        "model-provider-profile",
+        "quansio-runtime"
+      ],
+      "producer": "quansio-runtime"
+    },
+    {
+      "consumer": "quansio-context",
+      "contracts": [
+        "SearchProgram",
+        "ResearchRecord",
+        "ContextProjection",
+        "ArtifactRecord"
+      ],
+      "flow_id": "research.execution",
+      "next": [
+        "quansio-indexer",
+        "managed-browser",
+        "quansio-artifact",
+        "quansio-runtime"
+      ],
+      "producer": "quansio-runtime"
+    },
+    {
+      "consumer": "quansio-control",
+      "contracts": [
+        "ToolOperation",
+        "CapabilitySnapshot",
+        "PolicyDecision",
+        "ApprovalRequest",
+        "ApprovalReceipt",
+        "EffectRecord"
+      ],
+      "flow_id": "effect.execution",
+      "next": [
+        "quansio-integration-broker",
+        "quansio-worker-gateway",
+        "quansio-machine-control"
+      ],
+      "producer": "quansio-runtime"
+    },
+    {
+      "consumer": "quansio-worker-gateway",
+      "contracts": [
+        "TurnDispatch",
+        "WorkerLease",
+        "EndpointActionEnvelope",
+        "EndpointActionResult",
+        "TurnOutcome"
+      ],
+      "flow_id": "worker.machine",
+      "next": [
+        "quansio-machine-control",
+        "qworkerd",
+        "quansio-runtime"
+      ],
+      "producer": "quansio-runtime"
+    },
+    {
+      "consumer": "quansio-control",
+      "contracts": [
+        "KnowledgeCandidate",
+        "SkillPackage",
+        "CapabilitySnapshot"
+      ],
+      "flow_id": "knowledge.skill",
+      "next": [
+        "quansio-runtime"
+      ],
+      "producer": "quansio-context"
+    },
+    {
+      "consumer": "capability-compiler",
+      "contracts": [
+        "BusinessCapabilityPack",
+        "SkillPackage",
+        "ToolOperation"
+      ],
+      "flow_id": "business.compile",
+      "next": [
+        "quansio-control",
+        "quansio-runtime"
+      ],
+      "producer": "quansio-control"
+    },
+    {
+      "consumer": "quansio-runtime",
+      "contracts": [
+        "AutomationSchedule",
+        "AutomationFire",
+        "CapabilitySnapshot",
+        "RuntimeEvent",
+        "NotificationRecord"
+      ],
+      "flow_id": "automation.fire",
+      "next": [
+        "quansio-notify"
+      ],
+      "producer": "quansio-control"
+    },
+    {
+      "consumer": "clients",
+      "contracts": [
+        "RuntimeEvent",
+        "ArtifactRecord",
+        "NotificationRecord",
+        "ApprovalRequest",
+        "BrowserSession"
+      ],
+      "flow_id": "client.projection",
+      "next": [],
+      "producer": "quansio-api"
+    }
+  ],
+  "schema_revision": "9.0.0"
+}

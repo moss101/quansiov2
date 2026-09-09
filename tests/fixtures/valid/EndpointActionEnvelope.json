@@ -1,0 +1,27 @@
+{
+  "action_id": "action-000001",
+  "approval_receipt_id": "apr-1",
+  "approval_required": true,
+  "approval_scope_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+  "arguments": {
+    "recipient": "test@example.invalid"
+  },
+  "capability_snapshot_id": "cap-1",
+  "delivery_attempt": 1,
+  "delivery_id": "del-1",
+  "effect_class": "CONSEQUENTIAL",
+  "effect_id": "eff-1",
+  "endpoint_id": "endpoint-1",
+  "execution_generation": 1,
+  "expires_at": "2026-01-01T01:00:00Z",
+  "fence_token": 1,
+  "idempotency_key": "idem-1",
+  "input_schema_id": "schema-input-1",
+  "lease_id": "lease-1",
+  "operation_id": "message.send",
+  "operation_version": "1",
+  "policy_decision_id": "pol-1",
+  "schema_revision": "9.0.0",
+  "target_id": "target-1",
+  "tenant_id": "tenant-1"
+}

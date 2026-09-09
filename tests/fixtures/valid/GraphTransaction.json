@@ -1,0 +1,11 @@
+{
+  "expected_revision": 1,
+  "idempotency_key": "x",
+  "mutations": [
+    {}
+  ],
+  "run_id": "x",
+  "schema_revision": "9.0.0",
+  "tenant_id": "x",
+  "transaction_id": "x"
+}

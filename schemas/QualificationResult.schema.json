@@ -1,0 +1,93 @@
+{
+  "$id": "quansio://schema/QualificationResult/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_digests": {
+      "additionalProperties": {
+        "pattern": "^[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "assertion_results": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assertion_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "blocking": {
+            "type": "boolean"
+          },
+          "details": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "BLOCKED"
+            ]
+          }
+        },
+        "required": [
+          "assertion_id",
+          "status",
+          "blocking"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "candidate_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "configuration_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "executed_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "real_boundary": {
+      "type": "boolean"
+    },
+    "result_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED_REAL_BOUNDARY"
+      ]
+    },
+    "suite_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "result_id",
+    "suite_id",
+    "candidate_id",
+    "configuration_digest",
+    "status",
+    "assertion_results",
+    "artifact_digests",
+    "real_boundary",
+    "executed_at"
+  ],
+  "title": "QualificationResult",
+  "type": "object"
+}

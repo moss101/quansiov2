@@ -1,0 +1,11 @@
+{
+  "artifact_id": "x",
+  "created_at": "2026-09-10T00:00:00Z",
+  "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "media_type": "x",
+  "producer_ref": "x",
+  "scan_state": "PENDING",
+  "schema_revision": "9.0.0",
+  "size_bytes": 1,
+  "tenant_id": "x"
+}

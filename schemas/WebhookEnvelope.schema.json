@@ -1,0 +1,56 @@
+{
+  "$id": "quansio://schema/WebhookEnvelope/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "auth_verification": {
+      "enum": [
+        "VERIFIED",
+        "REJECTED"
+      ]
+    },
+    "body_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "connector_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "delivery_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "received_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "webhook_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "webhook_id",
+    "tenant_id",
+    "connector_id",
+    "delivery_id",
+    "received_at",
+    "body_digest",
+    "auth_verification",
+    "payload"
+  ],
+  "title": "WebhookEnvelope",
+  "type": "object"
+}

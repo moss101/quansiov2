@@ -1,0 +1,101 @@
+{
+  "$id": "quansio://schema/EffectRecord/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approval_receipt_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "argument_scope_digest": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "effect_class": {
+      "enum": [
+        "CONSEQUENTIAL",
+        "HIGH_RISK"
+      ]
+    },
+    "effect_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "operation_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "policy_decision_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "receipt_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "run_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "state": {
+      "enum": [
+        "PROPOSED",
+        "APPROVAL_REQUIRED",
+        "APPROVED",
+        "EXECUTING",
+        "UNKNOWN",
+        "COMMITTED",
+        "DENIED",
+        "FAILED",
+        "RECONCILED"
+      ]
+    },
+    "step_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "effect_id",
+    "tenant_id",
+    "run_id",
+    "step_id",
+    "operation_id",
+    "effect_class",
+    "idempotency_key",
+    "state",
+    "policy_decision_id",
+    "argument_scope_digest",
+    "created_at"
+  ],
+  "title": "EffectRecord",
+  "type": "object"
+}

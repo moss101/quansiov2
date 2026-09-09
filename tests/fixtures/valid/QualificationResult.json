@@ -1,0 +1,18 @@
+{
+  "artifact_digests": {},
+  "assertion_results": [
+    {
+      "assertion_id": "x",
+      "blocking": false,
+      "status": "PASS"
+    }
+  ],
+  "candidate_id": "x",
+  "configuration_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "executed_at": "2026-09-10T00:00:00Z",
+  "real_boundary": false,
+  "result_id": "x",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "suite_id": "x"
+}

@@ -1,0 +1,70 @@
+{
+  "$id": "quansio://schema/NotificationRecord/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approval_request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "attention_type": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deep_link_target": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "notification_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "recipient_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "state": {
+      "enum": [
+        "PENDING",
+        "DELIVERED",
+        "ACKNOWLEDGED",
+        "EXPIRED",
+        "FAILED"
+      ]
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "urgency": {
+      "enum": [
+        "LOW",
+        "NORMAL",
+        "HIGH",
+        "URGENT"
+      ]
+    }
+  },
+  "required": [
+    "schema_revision",
+    "notification_id",
+    "tenant_id",
+    "recipient_id",
+    "attention_type",
+    "deep_link_target",
+    "urgency",
+    "state",
+    "created_at"
+  ],
+  "title": "NotificationRecord",
+  "type": "object"
+}

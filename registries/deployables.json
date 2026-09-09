@@ -1,0 +1,62 @@
+[
+  {
+    "id": "quansio-api",
+    "must_not_own": "No graph execution, provider credential custody, effect settlement, or machine actuation.",
+    "owns": "Authenticated public commands, session entry, event projection, upload initiation."
+  },
+  {
+    "id": "quansio-control",
+    "must_not_own": "No model, browser, connector, or guest actuation.",
+    "owns": "Tenant/identity/RBAC/policy/approval/registry/schedule/support configuration authority."
+  },
+  {
+    "id": "quansio-runtime",
+    "must_not_own": "No direct provider credentials or unmediated external effects.",
+    "owns": "Canonical WorkGraph/AgentGraph/StateGraph execution, admission, turns, waits, cancellation, budgets, recovery coordination."
+  },
+  {
+    "id": "quansio-model-gateway",
+    "must_not_own": "No task truth, user approval truth, or general connector authority.",
+    "owns": "All model fulfillment, provider adapters, routing, streaming, usage settlement, model egress policy."
+  },
+  {
+    "id": "quansio-context",
+    "must_not_own": "No independent task scheduler or effect path.",
+    "owns": "Context Projection, SearchProgram execution, retrieval coordination, evidence assembly, Knowledge Fabric queries."
+  },
+  {
+    "id": "quansio-indexer",
+    "must_not_own": "No model orchestration or business workflow authority.",
+    "owns": "Ingestion, chunking, indexing, freshness, tombstones and index provenance."
+  },
+  {
+    "id": "quansio-worker-gateway",
+    "must_not_own": "No tenant policy ownership or model credentials.",
+    "owns": "Authenticated worker/guest transport, lease/generation validation, ACK/redelivery and cancellation relay."
+  },
+  {
+    "id": "quansio-machine-control",
+    "must_not_own": "No application task truth or provider fulfillment.",
+    "owns": "Execution-target inventory, placement, leases, generations, snapshots, restore and migration."
+  },
+  {
+    "id": "quansio-integration-broker",
+    "must_not_own": "No policy/effect bypass; no ambient tenant secret exposure.",
+    "owns": "Connector adapters, credential handles, typed external operations and webhook ingress."
+  },
+  {
+    "id": "quansio-artifact",
+    "must_not_own": "No task orchestration.",
+    "owns": "Immutable artifacts/evidence, digests, scanning, grants and lifecycle."
+  },
+  {
+    "id": "quansio-notify",
+    "must_not_own": "No approval truth or task state authority.",
+    "owns": "Durable attention/notification delivery and receipt tracking."
+  },
+  {
+    "id": "qworkerd",
+    "must_not_own": "No ambient cloud authority, provider credentials, or tenant policy ownership.",
+    "owns": "Guest actuator for assigned filesystem/terminal/browser/computer/process operations."
+  }
+]

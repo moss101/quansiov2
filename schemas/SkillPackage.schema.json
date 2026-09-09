@@ -1,0 +1,137 @@
+{
+  "$id": "quansio://schema/SkillPackage/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assets": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "capability_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "compatibility": {
+      "type": "object"
+    },
+    "dependencies": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "evaluation_thresholds": {
+      "type": "object"
+    },
+    "exclusions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "helpers": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "input_contract": {
+      "type": "object"
+    },
+    "instructions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "intended_use": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "output_contract": {
+      "type": "object"
+    },
+    "owner_scope": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "promotion_state": {
+      "enum": [
+        "CANDIDATE",
+        "QUALIFIED",
+        "ACTIVE",
+        "RETIRED",
+        "REJECTED"
+      ]
+    },
+    "purpose": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "rollback_target": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "skill_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_refs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "version": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "skill_id",
+    "version",
+    "owner_scope",
+    "purpose",
+    "intended_use",
+    "exclusions",
+    "input_contract",
+    "output_contract",
+    "instructions",
+    "dependencies",
+    "source_refs",
+    "capability_requirements",
+    "evaluation_thresholds",
+    "promotion_state",
+    "rollback_target"
+  ],
+  "title": "SkillPackage",
+  "type": "object"
+}

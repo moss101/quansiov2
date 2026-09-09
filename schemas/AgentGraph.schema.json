@@ -1,0 +1,70 @@
+{
+  "$id": "quansio://schema/AgentGraph/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "agentgraph_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "agents": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "agent_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "capability_snapshot_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "lifecycle": {
+            "enum": [
+              "PERSISTENT",
+              "EPHEMERAL"
+            ]
+          },
+          "owner_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "workspace_binding": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "agent_id",
+          "lifecycle",
+          "owner_id",
+          "capability_snapshot_id"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "workspace_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "agentgraph_id",
+    "tenant_id",
+    "workspace_id",
+    "agents"
+  ],
+  "title": "AgentGraph",
+  "type": "object"
+}

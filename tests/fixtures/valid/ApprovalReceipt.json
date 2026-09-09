@@ -1,0 +1,11 @@
+{
+  "approval_receipt_id": "x",
+  "approval_request_id": "x",
+  "approver_id": "x",
+  "argument_scope_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "decided_at": "2026-09-10T00:00:00Z",
+  "decision": "APPROVED",
+  "effect_id": "x",
+  "schema_revision": "9.0.0",
+  "tenant_id": "x"
+}

@@ -1,0 +1,8 @@
+flowchart LR
+  E[Canonical events] --> RP[RecoveryConsistencyPoint]
+  P[Protocol state] --> RP
+  A[Artifact/evidence manifest] --> RP
+  S[Workspace snapshots] --> RP
+  F[Effect settlement watermark + UNKNOWN set] --> RP
+  RP --> V[Restore + reconcile + generation advance]
+  V --> R[Resume eligible work]

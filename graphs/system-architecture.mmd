@@ -1,0 +1,15 @@
+flowchart TD
+  C[Desktop / Web / Mobile / CLI / Admin] --> API[quansio-api]
+  API --> CTRL[quansio-control]
+  CTRL --> RT[quansio-runtime]
+  RT --> CTX[quansio-context]
+  CTX --> IDX[quansio-indexer]
+  CTX --> ART[quansio-artifact]
+  RT --> MG[quansio-model-gateway]
+  RT --> FX[Policy / Approval / Effect path]
+  FX --> IB[quansio-integration-broker]
+  RT --> WG[quansio-worker-gateway]
+  WG --> MC[quansio-machine-control]
+  MC --> QW[qworkerd]
+  CTRL --> NT[quansio-notify]
+  RT --> NT

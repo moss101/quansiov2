@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-09-10T00:00:00Z",
+  "database_position": "x",
+  "effect_settlement_watermark": "x",
+  "evidence_manifest_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "recovery_point_id": "x",
+  "runtime_event_sequence": 1,
+  "schema_revision": "9.0.0",
+  "snapshot_inventory_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "unresolved_unknown_effect_ids": []
+}

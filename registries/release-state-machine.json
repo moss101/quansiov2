@@ -1,0 +1,51 @@
+{
+  "production_ready_owner": "GATE-M14",
+  "schema_revision": "9.0.0",
+  "states": [
+    "CANDIDATE_CREATED",
+    "CANDIDATE_QUALIFIED",
+    "CANARY_DEPLOYED",
+    "CANARY_QUALIFIED",
+    "GO_APPROVED",
+    "READINESS_EVIDENCE_SEALED",
+    "PRODUCTION_READY",
+    "PRODUCTION_RELEASED"
+  ],
+  "transitions": [
+    {
+      "from": "CANDIDATE_CREATED",
+      "owner": "REL-002",
+      "to": "CANDIDATE_QUALIFIED"
+    },
+    {
+      "from": "CANDIDATE_QUALIFIED",
+      "owner": "REL-003",
+      "to": "CANARY_DEPLOYED"
+    },
+    {
+      "from": "CANARY_DEPLOYED",
+      "owner": "REL-004",
+      "to": "CANARY_QUALIFIED"
+    },
+    {
+      "from": "CANARY_QUALIFIED",
+      "owner": "REL-005",
+      "to": "GO_APPROVED"
+    },
+    {
+      "from": "GO_APPROVED",
+      "owner": "REL-006",
+      "to": "READINESS_EVIDENCE_SEALED"
+    },
+    {
+      "from": "READINESS_EVIDENCE_SEALED",
+      "owner": "GATE-M14",
+      "to": "PRODUCTION_READY"
+    },
+    {
+      "from": "PRODUCTION_READY",
+      "owner": "REL-008",
+      "to": "PRODUCTION_RELEASED"
+    }
+  ]
+}

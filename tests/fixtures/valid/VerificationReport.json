@@ -1,0 +1,21 @@
+{
+  "artifact_records": [],
+  "assertion_results": [
+    {
+      "assertion_id": "x",
+      "blocking": false,
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "environment_id": "x",
+  "executed_at": "2026-09-10T00:00:00Z",
+  "git_commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "protected_ref": "x",
+  "real_boundary": false,
+  "report_id": "x",
+  "repository_id": "x",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "x"
+}

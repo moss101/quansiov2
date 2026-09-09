@@ -1,0 +1,11 @@
+flowchart TD
+  RT[quansio-runtime] --> WG[worker-gateway]
+  WG --> MC[machine-control]
+  MC --> H[Hosted isolated runtime]
+  MC --> P[Persistent workspace]
+  MC --> L[Qualified local target]
+  MC --> V[Qualified private worker]
+  H --> Q[qworkerd]
+  P --> Q
+  L --> Q
+  V --> Q

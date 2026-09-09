@@ -1,0 +1,12 @@
+{
+  "candidate_id": "x",
+  "confidence": 1.0,
+  "evidence_refs": [],
+  "knowledge_type": "x",
+  "provenance": {},
+  "schema_revision": "9.0.0",
+  "source_epoch": 1,
+  "status": "CANDIDATE",
+  "tenant_id": "x",
+  "valid_from": "2026-09-10T00:00:00Z"
+}

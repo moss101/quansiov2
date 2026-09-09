@@ -1,0 +1,11 @@
+{
+  "actor_id": "x",
+  "arguments": {},
+  "command_id": "x",
+  "command_type": "x",
+  "idempotency_key": "x",
+  "schema_revision": "9.0.0",
+  "submitted_at": "2026-09-10T00:00:00Z",
+  "tenant_id": "x",
+  "workspace_id": "x"
+}

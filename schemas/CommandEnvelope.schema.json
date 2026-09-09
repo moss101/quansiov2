@@ -1,0 +1,54 @@
+{
+  "$id": "quansio://schema/CommandEnvelope/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actor_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "arguments": {
+      "type": "object"
+    },
+    "command_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "command_type": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "idempotency_key": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "submitted_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "workspace_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "command_id",
+    "tenant_id",
+    "workspace_id",
+    "actor_id",
+    "command_type",
+    "arguments",
+    "idempotency_key",
+    "submitted_at"
+  ],
+  "title": "CommandEnvelope",
+  "type": "object"
+}

@@ -1,0 +1,79 @@
+{
+  "$id": "quansio://schema/AutomationSchedule/9.0.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automation_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "dst_fold_policy": {
+      "enum": [
+        "FIRST",
+        "SECOND",
+        "BOTH",
+        "REJECT"
+      ]
+    },
+    "dst_gap_policy": {
+      "enum": [
+        "SKIP",
+        "NEXT_VALID_TIME",
+        "REJECT"
+      ]
+    },
+    "max_catch_up": {
+      "maximum": 100,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "missed_fire_policy": {
+      "enum": [
+        "SKIP",
+        "FIRE_ONCE",
+        "CATCH_UP_BOUNDED"
+      ]
+    },
+    "owner_agent_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "rule": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_revision": {
+      "const": "9.0.0"
+    },
+    "state": {
+      "enum": [
+        "ACTIVE",
+        "PAUSED",
+        "DELETED"
+      ]
+    },
+    "tenant_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "timezone": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_revision",
+    "automation_id",
+    "tenant_id",
+    "owner_agent_id",
+    "timezone",
+    "rule",
+    "dst_gap_policy",
+    "dst_fold_policy",
+    "missed_fire_policy",
+    "max_catch_up",
+    "state"
+  ],
+  "title": "AutomationSchedule",
+  "type": "object"
+}
