@@ -1,0 +1,35 @@
+{
+  "artifact_digests": {
+    "docs/decisions/0003-decision-and-threat-model-workflow.md": "a98ba248831e2d5f6f70d1570edbee681d830a80ed08a46a07d207b7c9cb3dcd",
+    "tests/governance/test_decision_gate.py": "cb48595017cc2cba486e852769ca7645ca2b30f6d6bd46d742bacda811a1ab56",
+    "tools/governance/decision_gate.py": "b4f28cd1a7af9fb3b321c9ffd858c38cb408bac442878b336ad733798f236ec0"
+  },
+  "created_at": "2026-09-10T00:22:25Z",
+  "evidence_id": "evidence-gov-007-36a3a7adeae9",
+  "git_commit": "36a3a7adeae934a73eddc106e2743159d16ecb45",
+  "real_boundary": false,
+  "report_digest": "c69d942423ae0a9f7109788eb7c58207449440ff7eb80bda126194ba7ecdfc87",
+  "report_path": "evidence/reports/report-gov-007-36a3a7adeae9.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "GOV-005-A01",
+    "INV-004-A01",
+    "INV-006-A01",
+    "INV-010-A01"
+  ],
+  "requirement_ids": [
+    "GOV-005",
+    "INV-004",
+    "INV-006",
+    "INV-010"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "GOV-007-N01",
+    "GOV-007-P01",
+    "GOV-007-R01"
+  ],
+  "task_id": "GOV-007"
+}
