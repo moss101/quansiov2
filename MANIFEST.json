@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 767,
+  "file_count": 781,
   "files": [
     {
       "path": ".gitignore",
@@ -2073,6 +2073,11 @@
       "size_bytes": 1305
     },
     {
+      "path": "evidence/reports/evidence-gate-m0-04545d52a498.json",
+      "sha256": "f5236030ea8c74fd75857fa98b0c4d82525287d83cb8748e8d2d5ae3608b8bd9",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m0-0deaaa1ebc75.json",
       "sha256": "064fd086b112f650885359d1049879f1d3bfd1259e49dfdf85973c40f1a0d677",
       "size_bytes": 1039
@@ -2133,6 +2138,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m1-04545d52a498.json",
+      "sha256": "39dfb7541355788fe4505602a55a59ae54fea0c0b21b390af0749fa4b2872e40",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m1-0deaaa1ebc75.json",
       "sha256": "a75d305d0dffcdfbd2f757cf68737e1141f1184e333742679de1fd64c9494b11",
       "size_bytes": 1039
@@ -2173,6 +2183,16 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m2-04545d52a498.json",
+      "sha256": "5db18818e9126135efca2af46d8b1b8f338322794be29bc4a37d6c2425b708c5",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m2-1a66b170e17a.json",
+      "sha256": "05e3e6f805e459fb2d246dcf205c8abaf8a7394ec89ddf0f1730a460f07862bf",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m2-639e9a62ab33.json",
       "sha256": "440726b32b52b518fefd3dda7eb6d9c5e3c4c84c82cd75b5baa8c5aa708f2588",
       "size_bytes": 1039
@@ -2185,6 +2205,11 @@
     {
       "path": "evidence/reports/evidence-gate-m2-f66e8bd40b15.json",
       "sha256": "acdbfd7af3e83761331822069ca96b50c98060851a30781e7a89e6ea5d8dae5e",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m3-1a66b170e17a.json",
+      "sha256": "44dabbfa2f55606f5aa3ce4d94d1a9cf19aa50b26496152593607c9c56f62268",
       "size_bytes": 1039
     },
     {
@@ -2313,6 +2338,11 @@
       "size_bytes": 1120
     },
     {
+      "path": "evidence/reports/evidence-gov-002-f1bf76104e2b.json",
+      "sha256": "efdc240719af650a350715a7793078c16e958f773e387c30cbf463e691d671e3",
+      "size_bytes": 1120
+    },
+    {
       "path": "evidence/reports/evidence-gov-002-f66e8bd40b15.json",
       "sha256": "52cae3f62ec8c13c5f83972085e1b22330d483f83c9830a0c983a5f5fcee3021",
       "size_bytes": 1120
@@ -2341,6 +2371,11 @@
       "path": "evidence/reports/evidence-gov-005-4c33c00b7859.json",
       "sha256": "2490956693ee68af51a94e0cfe48c80e8f136289c6e160161a0e676bf5b1f4ad",
       "size_bytes": 1076
+    },
+    {
+      "path": "evidence/reports/evidence-gov-006-04545d52a498.json",
+      "sha256": "f307da44340288f722f5770add5812fded2597e2ff934465ca040f390ee4d23f",
+      "size_bytes": 1089
     },
     {
       "path": "evidence/reports/evidence-gov-006-32a08945ab47.json",
@@ -2738,6 +2773,11 @@
       "size_bytes": 3676
     },
     {
+      "path": "evidence/reports/report-gate-m0-04545d52a498.json",
+      "sha256": "09eafe5aa5d1d19cfb91ff416fd2af4f1d1e783b47d757e343bee9a5521e6d7b",
+      "size_bytes": 3023
+    },
+    {
       "path": "evidence/reports/report-gate-m0-0deaaa1ebc75.json",
       "sha256": "d05f663018861bd0ddabd0669b4c02aa344789a4710551a865c6f859925bfcac",
       "size_bytes": 3023
@@ -2798,6 +2838,11 @@
       "size_bytes": 3023
     },
     {
+      "path": "evidence/reports/report-gate-m1-04545d52a498.json",
+      "sha256": "8e6aee8ff43ec48b4ceec66c428395b7a0cc0c568ccf4b29f366d9c3c41b44e7",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gate-m1-0deaaa1ebc75.json",
       "sha256": "185f8d6f87659cc04b577bef55deb467cb36cf0329e905ebae08e48ea326f932",
       "size_bytes": 2887
@@ -2838,6 +2883,16 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m2-04545d52a498.json",
+      "sha256": "ed4205808259d96a33278fe0b709c385ca7b8750d8fe49d38b0f54d9e6c26d77",
+      "size_bytes": 2887
+    },
+    {
+      "path": "evidence/reports/report-gate-m2-1a66b170e17a.json",
+      "sha256": "c7e3e49b6c19a3ac014c74097f95675581fd0c3d6cb07b0abd57f8e02feec53d",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gate-m2-639e9a62ab33.json",
       "sha256": "77f51fc1f6d67aab835f94710dc43786170a103323bce0d85688f33b1cac2c05",
       "size_bytes": 2887
@@ -2850,6 +2905,11 @@
     {
       "path": "evidence/reports/report-gate-m2-f66e8bd40b15.json",
       "sha256": "54eddbf85af833677d0aaa9fc0a29679fe5852b224e15f434a6bded22ab6d66b",
+      "size_bytes": 2887
+    },
+    {
+      "path": "evidence/reports/report-gate-m3-1a66b170e17a.json",
+      "sha256": "5162498e6aa6dc488736fa011380b906d28d730d59f53de5d835e8f40cc4230e",
       "size_bytes": 2887
     },
     {
@@ -2978,6 +3038,11 @@
       "size_bytes": 4382
     },
     {
+      "path": "evidence/reports/report-gov-002-f1bf76104e2b.json",
+      "sha256": "78dd2d85fe1743dd89d72ff0b24482a519adf2ef2c6fec62619a7eb63f87a3e3",
+      "size_bytes": 4382
+    },
+    {
       "path": "evidence/reports/report-gov-002-f66e8bd40b15.json",
       "sha256": "bcce9582e45920f6a0f3377be5a8a93c3471f98bfe363074bf553b97428deb2d",
       "size_bytes": 4382
@@ -3006,6 +3071,11 @@
       "path": "evidence/reports/report-gov-005-4c33c00b7859.json",
       "sha256": "6bdda73b05bf44db5e3f0300c1f477ee7edd97bc7bcd84c81dd2e458dadf16bb",
       "size_bytes": 3518
+    },
+    {
+      "path": "evidence/reports/report-gov-006-04545d52a498.json",
+      "sha256": "daba59adc77ff5cbb8465de770d5bc9bab9d39bd69267bb3acea66fbfa5782b0",
+      "size_bytes": 3455
     },
     {
       "path": "evidence/reports/report-gov-006-32a08945ab47.json",
@@ -3289,7 +3359,7 @@
     },
     {
       "path": "evidence/gates/GATE-M3.json",
-      "sha256": "f181aa44abb2f357a08b8782b08e1db3f843251bafd7dde7fd7420fa3afc5130",
+      "sha256": "2992354eaa867341536f7956aa5aea7e1809cb76e38471f475b876235ef168a9",
       "size_bytes": 2319
     },
     {
