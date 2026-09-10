@@ -1,0 +1,18 @@
+{
+  "BUS-002-A01": [
+    "tests/business/test_business_connectors.py::test_bus002_p01_authoritative_material_decomposes",
+    "tests/business/test_business_connectors.py::test_bus002_n01_contradiction_yields_explicit_conflict_not_invented_rules"
+  ],
+  "BUS-002-N01": [
+    "tests/business/test_business_connectors.py::test_bus002_n01_contradiction_yields_explicit_conflict_not_invented_rules"
+  ],
+  "BUS-002-P01": [
+    "tests/business/test_business_connectors.py::test_bus002_p01_authoritative_material_decomposes"
+  ],
+  "BUS-002-R01": [
+    "tests/business/test_business_connectors.py::test_bus003_r01_dependency_change_regen_preserves_stable_ids"
+  ],
+  "BUS-003-A01": [
+    "tests/business/test_business_connectors.py::test_bus003_p01_process_reconstruction_binds_skills_workflows"
+  ]
+}

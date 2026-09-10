@@ -36,6 +36,27 @@
     "quansio/machine_control/services.py",
     "tests/browser/test_browser_stack.py"
   ],
+  "BUS-001": [
+    "quansio/control/capability_packs.py",
+    "migrations/up/0017_business_connectors.sql",
+    "tests/business/test_business_connectors.py"
+  ],
+  "BUS-002": [
+    "quansio/control/capability_packs.py",
+    "tests/business/test_business_connectors.py"
+  ],
+  "BUS-003": [
+    "quansio/control/capability_packs.py",
+    "tests/business/test_business_connectors.py"
+  ],
+  "BUS-004": [
+    "quansio/control/capability_packs.py",
+    "tests/business/test_business_connectors.py"
+  ],
+  "BUS-005": [
+    "quansio/control/capability_packs.py",
+    "tests/business/test_business_connectors.py"
+  ],
   "CTX-001": [
     "quansio/context/search_program.py",
     "tests/context/test_context_stack.py"
@@ -126,6 +147,21 @@
     "tools/environment/qualenv.py",
     "deploy/compose/docker-compose.yml",
     "tests/environment/test_qualenv.py"
+  ],
+  "EXT-001": [
+    "quansio/control/connectors.py",
+    "migrations/up/0017_business_connectors.sql",
+    "tests/business/test_business_connectors.py"
+  ],
+  "EXT-002": [
+    "quansio/control/connectors.py",
+    "quansio/control/broker.py",
+    "quansio/control/effects.py",
+    "tests/business/test_business_connectors.py"
+  ],
+  "EXT-003": [
+    "quansio/control/connectors.py",
+    "tests/business/test_business_connectors.py"
   ],
   "GATE-M0": [
     "tools/governance/milestone_gate.py",

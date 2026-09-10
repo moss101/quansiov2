@@ -1,0 +1,22 @@
+{
+  "BUS-004-A01": [
+    "tests/business/test_business_connectors.py::test_bus004_p01_operations_bound_to_tools_rbac_policy_evidence"
+  ],
+  "BUS-005-A01": [
+    "tests/business/test_business_connectors.py::test_bus005_p01_publish_only_when_all_mandatory_pass",
+    "tests/business/test_business_connectors.py::test_bus005_n01_mandatory_failure_blocks_despite_high_aggregate",
+    "tests/business/test_business_connectors.py::test_bus005_r01_rollback_resolves_rollback_version"
+  ],
+  "BUS-005-N01": [
+    "tests/business/test_business_connectors.py::test_bus005_n01_mandatory_failure_blocks_despite_high_aggregate"
+  ],
+  "BUS-005-P01": [
+    "tests/business/test_business_connectors.py::test_bus005_p01_publish_only_when_all_mandatory_pass"
+  ],
+  "BUS-005-R01": [
+    "tests/business/test_business_connectors.py::test_bus005_r01_rollback_resolves_rollback_version"
+  ],
+  "BUS-006-A01": [
+    "tests/business/test_business_connectors.py::test_bus005_r01_rollback_resolves_rollback_version"
+  ]
+}

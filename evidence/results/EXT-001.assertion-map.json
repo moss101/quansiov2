@@ -1,0 +1,16 @@
+{
+  "EXT-001-A01": [
+    "tests/business/test_business_connectors.py::test_ext001_p01_register_and_resolve_operations",
+    "tests/business/test_business_connectors.py::test_ext001_n01_unsafe_declarations_rejected",
+    "tests/business/test_business_connectors.py::test_ext001_r01_deprecation_pins_running_steps"
+  ],
+  "EXT-001-N01": [
+    "tests/business/test_business_connectors.py::test_ext001_n01_unsafe_declarations_rejected"
+  ],
+  "EXT-001-P01": [
+    "tests/business/test_business_connectors.py::test_ext001_p01_register_and_resolve_operations"
+  ],
+  "EXT-001-R01": [
+    "tests/business/test_business_connectors.py::test_ext001_r01_deprecation_pins_running_steps"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "BUS-001-A01": [
+    "tests/business/test_business_connectors.py::test_bus001_p01_full_pack_reaches_draft",
+    "tests/business/test_business_connectors.py::test_bus001_n01_missing_thresholds_rbac_or_compatibility_never_publishable",
+    "tests/business/test_business_connectors.py::test_bus001_r01_rollback_loads_prior_version_preserving_identities"
+  ],
+  "BUS-001-N01": [
+    "tests/business/test_business_connectors.py::test_bus001_n01_missing_thresholds_rbac_or_compatibility_never_publishable"
+  ],
+  "BUS-001-P01": [
+    "tests/business/test_business_connectors.py::test_bus001_p01_full_pack_reaches_draft"
+  ],
+  "BUS-001-R01": [
+    "tests/business/test_business_connectors.py::test_bus001_r01_rollback_loads_prior_version_preserving_identities"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "BUS-003-A01": [
+    "tests/business/test_business_connectors.py::test_bus003_p01_process_reconstruction_binds_skills_workflows",
+    "tests/business/test_business_connectors.py::test_bus003_n01_workflow_with_absent_permission_stays_unresolved",
+    "tests/business/test_business_connectors.py::test_bus003_r01_dependency_change_regen_preserves_stable_ids"
+  ],
+  "BUS-003-N01": [
+    "tests/business/test_business_connectors.py::test_bus003_n01_workflow_with_absent_permission_stays_unresolved"
+  ],
+  "BUS-003-P01": [
+    "tests/business/test_business_connectors.py::test_bus003_p01_process_reconstruction_binds_skills_workflows"
+  ],
+  "BUS-003-R01": [
+    "tests/business/test_business_connectors.py::test_bus003_r01_dependency_change_regen_preserves_stable_ids"
+  ]
+}
