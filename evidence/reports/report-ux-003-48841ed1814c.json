@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "path_or_uri": "evidence/boundary/UX-003/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "path_or_uri": "evidence/boundary/UX-003/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "9432452f5248015985b23c4a87fdafd2966e75a983d64fb5dbfc6884222812ad",
+      "path_or_uri": "quansio/worker_gateway/browser.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "3b2ffdb3469b854e4a2ab7e0f325a6fa3f7fbead0452b26c66e5aa44d6bc5b9c",
+      "path_or_uri": "tests/uxclients/test_client_surfaces.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "BRW-002-A01",
+      "blocking": true,
+      "details": "executed: tests/browser/test_browser_stack.py::test_brw002_p01_structured_actions_correlated; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "UX-003-N01",
+      "blocking": true,
+      "details": "executed: tests/uxclients/test_client_surfaces.py::test_ux003_p01_and_n01_pane_respects_controller_lease; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "UX-003-P01",
+      "blocking": true,
+      "details": "executed: tests/uxclients/test_client_surfaces.py::test_ux003_p01_and_n01_pane_respects_controller_lease; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "UX-003-R01",
+      "blocking": true,
+      "details": "executed: tests/uxclients/test_client_surfaces.py::test_ux003_p01_and_n01_pane_respects_controller_lease; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "UX-004-A01",
+      "blocking": true,
+      "details": "executed: tests/uxclients/test_client_surfaces.py::test_ux004_p01_exact_scope_displayed_and_submitted; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T12:31:37Z",
+  "git_commit": "48841ed1814c8d6bba6abf450f3ca9241ed7d4d2",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-ux-003-48841ed1814c",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "UX-003"
+}
