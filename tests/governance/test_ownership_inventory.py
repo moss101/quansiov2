@@ -118,12 +118,16 @@ def test_r01_tracked_input_change_is_detected_then_recovery_is_clean():
 
 
 def test_r01_planned_path_adopted_only_through_registry():
-    probe_dir = REPO_ROOT / "clients"
-    probe_dir.mkdir(exist_ok=False)
+    probe_file = REPO_ROOT / "services" / "quansio_notify" / "main.py"
+    probe_file.parent.mkdir(parents=True, exist_ok=True)
+    probe_file.write_text("entrypoint probe\n")
     try:
         _, errors = inv.validate()
-        assert any("planned path now exists" in e and "client_path:clients" in e for e in errors), errors
+        assert any("planned path now exists" in e
+                   and "entrypoint:services/quansio_notify/main.py" in e for e in errors), errors
     finally:
-        probe_dir.rmdir()
+        probe_file.unlink()
+        if not any((REPO_ROOT / "services" / "quansio_notify").iterdir()):
+            (REPO_ROOT / "services" / "quansio_notify").rmdir()
     _, errors = inv.validate()
     assert errors == []

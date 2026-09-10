@@ -219,8 +219,8 @@
     },
     {
       "path": "tests/governance/test_ownership_inventory.py",
-      "sha256": "5fbdbc7638060a340ea17f80ee98116c886c18208228f4d4bcef76aeb6044a2b",
-      "size_bytes": 5354
+      "sha256": "ab5d219bd8c7832971e7f7e530e734b3026697807729ced8b011e4f476e0cb09",
+      "size_bytes": 5639
     },
     {
       "path": "tests/governance/test_ownership_map.py",
