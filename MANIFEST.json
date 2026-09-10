@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 605,
+  "file_count": 609,
   "files": [
     {
       "path": ".gitignore",
@@ -2138,6 +2138,26 @@
       "size_bytes": 2546
     },
     {
+      "path": "evidence/environment/qual-20260910T020049/health-transcript.json",
+      "sha256": "8a5eb37e48f0a3a495e059086ab0af1878c3534d781a8e978aa6c52f0d12713c",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/environment/qual-20260910T020049/manifest.json",
+      "sha256": "979e79f46de7bae6b230cef8774d09eb71179fe7e5d018c7488ef2904dad426b",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T020004/health-transcript.json",
+      "sha256": "3240a3cd2977d4b280b4be0946accb86258a99ad71f1fa2487c461b60c25f8d7",
+      "size_bytes": 1400
+    },
+    {
+      "path": "evidence/environment/qual-20260910T020004/manifest.json",
+      "sha256": "8bd0ca65695ba312c0d56fb7e4941f48cbc34a13d6e57a653b1e23bf20db866f",
+      "size_bytes": 1701
+    },
+    {
       "path": "evidence/environment/qual-20260910T015945/health-transcript.json",
       "sha256": "107c0198b3d96315df216bd93598d3369bcbc851c864dfdb28da390b9aa9fcbb",
       "size_bytes": 1403
@@ -3014,7 +3034,7 @@
     },
     {
       "path": "deploy/compose/.env.qual",
-      "sha256": "e2f2d8fabf42b0b3304d4b0ef42b82e5c7c52ffe53923ef6c3b81ceed930a607",
+      "sha256": "c0ee4e957769c0a7a2eb958540248a8ab0515f1928192a3367aca9f30ac8eb58",
       "size_bytes": 216
     },
     {
