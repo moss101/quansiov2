@@ -1,0 +1,17 @@
+{
+  "MAC-003-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac003_n01_unknown_version_protected_path_ambient_secret_rejected"
+  ],
+  "MAC-005-N01": [
+    "tests/machines/test_machine_fabric.py::test_mac005_n01_internal_access_and_unbrokered_credentials_blocked"
+  ],
+  "MAC-005-P01": [
+    "tests/machines/test_machine_fabric.py::test_mac005_p01_provision_isolated_environment_from_declared_inputs"
+  ],
+  "MAC-005-R01": [
+    "tests/machines/test_machine_fabric.py::test_mac005_r01_recreate_from_declared_inputs_only"
+  ],
+  "SEC-006-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac005_n01_internal_access_and_unbrokered_credentials_blocked"
+  ]
+}

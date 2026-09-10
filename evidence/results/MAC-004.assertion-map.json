@@ -1,0 +1,17 @@
+{
+  "MAC-002-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac002_p01_lease_and_fence_validated_for_actions"
+  ],
+  "MAC-003-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac003_p01_typed_guest_operations_execute_in_sandbox"
+  ],
+  "MAC-004-N01": [
+    "tests/machines/test_machine_fabric.py::test_mac004_n01_dropped_ack_redelivers_original_result_without_reexecution"
+  ],
+  "MAC-004-P01": [
+    "tests/machines/test_machine_fabric.py::test_mac004_p01_deliver_ack_only_after_durable_result"
+  ],
+  "MAC-004-R01": [
+    "tests/machines/test_machine_fabric.py::test_mac004_r01_gateway_restart_redelivery_respects_expiry_generation_idempotency"
+  ]
+}

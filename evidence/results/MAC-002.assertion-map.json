@@ -1,0 +1,17 @@
+{
+  "MAC-001-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac002_n01_stale_generation_expired_lease_prior_fence_rejected"
+  ],
+  "MAC-002-N01": [
+    "tests/machines/test_machine_fabric.py::test_mac002_n01_stale_generation_expired_lease_prior_fence_rejected"
+  ],
+  "MAC-002-P01": [
+    "tests/machines/test_machine_fabric.py::test_mac002_p01_lease_and_fence_validated_for_actions"
+  ],
+  "MAC-002-R01": [
+    "tests/machines/test_machine_fabric.py::test_mac002_r01_crash_superseded_by_higher_generation"
+  ],
+  "SEC-007-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac002_r01_crash_superseded_by_higher_generation"
+  ]
+}

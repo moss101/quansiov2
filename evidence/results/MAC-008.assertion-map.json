@@ -1,0 +1,15 @@
+{
+  "MAC-008-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac008_p01_private_target_uses_same_protocol",
+    "tests/machines/test_machine_fabric.py::test_mac008_n01_unqualified_private_target_stays_disabled"
+  ],
+  "MAC-008-N01": [
+    "tests/machines/test_machine_fabric.py::test_mac008_n01_unqualified_private_target_stays_disabled"
+  ],
+  "MAC-008-P01": [
+    "tests/machines/test_machine_fabric.py::test_mac008_p01_private_target_uses_same_protocol"
+  ],
+  "MAC-008-R01": [
+    "tests/machines/test_machine_fabric.py::test_mac008_r01_disconnect_preserves_pending_work"
+  ]
+}

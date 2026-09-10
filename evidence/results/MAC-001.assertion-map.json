@@ -1,0 +1,18 @@
+{
+  "MAC-001-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac001_p01_registration_lifecycle_audit",
+    "tests/machines/test_machine_fabric.py::test_mac001_n01_placement_rejects_unregistered_wrong_tenant_disabled"
+  ],
+  "MAC-001-N01": [
+    "tests/machines/test_machine_fabric.py::test_mac001_n01_placement_rejects_unregistered_wrong_tenant_disabled"
+  ],
+  "MAC-001-P01": [
+    "tests/machines/test_machine_fabric.py::test_mac001_p01_registration_lifecycle_audit"
+  ],
+  "MAC-001-R01": [
+    "tests/machines/test_machine_fabric.py::test_mac001_r01_reconstruct_after_restart_without_memory"
+  ],
+  "SEC-007-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac001_p01_registration_lifecycle_audit"
+  ]
+}

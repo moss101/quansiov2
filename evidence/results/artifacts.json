@@ -156,6 +156,41 @@
     "docs/decisions/0003-decision-and-threat-model-workflow.md",
     "tests/governance/test_decision_gate.py"
   ],
+  "MAC-001": [
+    "quansio/machine_control/inventory.py",
+    "migrations/up/0014_machine_fabric.sql",
+    "tests/machines/test_machine_fabric.py"
+  ],
+  "MAC-002": [
+    "quansio/machine_control/inventory.py",
+    "tests/machines/test_machine_fabric.py"
+  ],
+  "MAC-003": [
+    "quansio/qworkerd/protocol.py",
+    "tests/machines/test_machine_fabric.py"
+  ],
+  "MAC-004": [
+    "quansio/machine_control/services.py",
+    "migrations/up/0014_machine_fabric.sql",
+    "tests/machines/test_machine_fabric.py"
+  ],
+  "MAC-005": [
+    "quansio/machine_control/services.py",
+    "tests/machines/test_machine_fabric.py"
+  ],
+  "MAC-006": [
+    "quansio/machine_control/services.py",
+    "tests/machines/test_machine_fabric.py"
+  ],
+  "MAC-007": [
+    "quansio/machine_control/services.py",
+    "tests/machines/test_machine_fabric.py"
+  ],
+  "MAC-008": [
+    "quansio/machine_control/services.py",
+    "quansio/qworkerd/protocol.py",
+    "tests/machines/test_machine_fabric.py"
+  ],
   "MOD-001": [
     "quansio/model_gateway/gateway.py",
     "quansio/model_gateway/credentials.py",
