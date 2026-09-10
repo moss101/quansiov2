@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "34ff135780a2159494c7e2c91cc35b23e2884ba1efc6fa2f1998cd3ec35bcc7e",
+      "path_or_uri": "evidence/boundary/MOD-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "4296f1e2139e90d141693f1ed9b9714d532d206e17cd148ad6d67769e0174978",
+      "path_or_uri": "evidence/boundary/MOD-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "bc4b6ea47eed031eabc2d28cd172644c141c1259aba440ddbdc7467be6035e10",
+      "path_or_uri": "quansio/model_gateway/gateway.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "9c8aa867187d35a8d8576587e4ac78e76b614eec71c457d8c10acc1144351ecb",
+      "path_or_uri": "quansio/model_gateway/credentials.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "61976e83ba76356d37292e49b190cb4de2920c586c546a669ec589ee0e61c1ce",
+      "path_or_uri": "tests/model_gateway/test_boundary.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "INV-005-A01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_boundary.py::test_mod001_p01_no_provider_credential_path_outside_gateway; tests/model_gateway/test_boundary.py::test_mod001_r01_gateway_restart_yields_typed_interruption_without_credential_transfer; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-001-A01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_boundary.py::test_mod001_p01_no_provider_credential_path_outside_gateway; tests/model_gateway/test_boundary.py::test_mod001_p01_admitted_request_flows_through_gateway; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-001-N01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_boundary.py::test_mod001_n01_direct_provider_call_from_worker_path_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-001-P01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_boundary.py::test_mod001_p01_no_provider_credential_path_outside_gateway; tests/model_gateway/test_boundary.py::test_mod001_p01_admitted_request_flows_through_gateway; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-001-R01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_boundary.py::test_mod001_r01_gateway_restart_yields_typed_interruption_without_credential_transfer; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T04:19:11Z",
+  "git_commit": "8c9d6ae9e53a6cf13d82784392a9280888f19a05",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-mod-001-8c9d6ae9e53a",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "MOD-001"
+}
