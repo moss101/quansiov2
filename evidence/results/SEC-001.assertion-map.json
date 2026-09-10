@@ -1,0 +1,19 @@
+{
+  "INV-009-A01": [
+    "tests/runtime/test_foundation.py::test_sec001_p01_snapshot_immutability_and_strict_child_subset",
+    "tests/runtime/test_foundation.py::test_sec001_r01_expired_snapshot_requires_fresh_admission"
+  ],
+  "SEC-001-A01": [
+    "tests/runtime/test_foundation.py::test_sec001_p01_snapshot_immutability_and_strict_child_subset",
+    "tests/runtime/test_foundation.py::test_sec001_n01_child_escalation_and_mutation_denied"
+  ],
+  "SEC-001-N01": [
+    "tests/runtime/test_foundation.py::test_sec001_n01_child_escalation_and_mutation_denied"
+  ],
+  "SEC-001-P01": [
+    "tests/runtime/test_foundation.py::test_sec001_p01_snapshot_immutability_and_strict_child_subset"
+  ],
+  "SEC-001-R01": [
+    "tests/runtime/test_foundation.py::test_sec001_r01_expired_snapshot_requires_fresh_admission"
+  ]
+}

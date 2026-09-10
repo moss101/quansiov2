@@ -1,0 +1,21 @@
+{
+  "DAT-001-A01": [
+    "tests/api/test_identity.py::test_dat001_p01_commands_carry_server_resolved_identity",
+    "tests/api/test_identity.py::test_dat001_p01_session_resolves_from_server_state"
+  ],
+  "DAT-001-N01": [
+    "tests/api/test_identity.py::test_dat001_n01_client_supplied_identity_is_rejected_before_authority",
+    "tests/api/test_identity.py::test_dat001_n01_wrong_tenant_credentials_do_not_authenticate"
+  ],
+  "DAT-001-P01": [
+    "tests/api/test_identity.py::test_dat001_p01_commands_carry_server_resolved_identity",
+    "tests/api/test_identity.py::test_dat001_p01_session_resolves_from_server_state"
+  ],
+  "DAT-001-R01": [
+    "tests/api/test_identity.py::test_dat001_r01_session_survives_api_process_restart"
+  ],
+  "SEC-006-A01": [
+    "tests/api/test_identity.py::test_dat001_n01_client_supplied_identity_is_rejected_before_authority",
+    "tests/api/test_identity.py::test_dat001_n01_wrong_tenant_credentials_do_not_authenticate"
+  ]
+}

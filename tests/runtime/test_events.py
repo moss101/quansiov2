@@ -127,3 +127,45 @@ def migrated_outbox_state(log: EventLog, context: IdentityContext, event_id: str
         (event_id,),
     )
     return {"attempts": row[0], "published_at": row[1]} if row else None
+
+
+def test_dat004_n01_rollback_after_outbox_preparation_leaves_no_transport_trace(log, context):
+    run_id = _run(context)
+    committed = log.append(context, run_id, "e.first", {"n": 1})
+    # Duplicate event identity fails at the event insert, after the outbox
+    # announcement row was already prepared inside the same transaction.
+    with pytest.raises(EventAppendError):
+        log.append(context, run_id, "e.dupe", {"n": 2}, event_id=committed.event_id)
+    # The rolled-back mutation has no outbox row and no transport delivery.
+    outbox_rows = log._db.query_one(
+        "SELECT count(*) FROM event_outbox WHERE event_id = %s", (committed.event_id,)
+    )[0]
+    assert outbox_rows == 1, "only the committed append may keep its announcement"
+    transport = log._db.query_one(
+        "SELECT count(*) FROM delivered_events WHERE event_id = %s",
+        (committed.event_id,),
+    )[0]
+    assert transport == 0, "nothing may be published before delivery is performed"
+    replayed = log.replay(context.tenant_id, run_id)
+    assert [e.sequence for e in replayed] == [1]
+
+
+def test_dat004_r01_crash_between_publish_and_ack_redelivers_deduplicated(log, context):
+    run_id = _run(context)
+    event = log.append(context, run_id, "f.crash", {"n": 1})
+    # Publisher crash after transport publish, before outbox acknowledgement.
+    published = log.publish_pending_outbox(crash_after_publish=True)
+    assert event.event_id in published
+    # Restart: redelivery of the still-unacknowledged row is deduplicated by
+    # event identity on the durable transport.
+    republished = log.publish_pending_outbox()
+    assert republished.count(event.event_id) == 1, "redelivery must not duplicate the event"
+    deliveries = log._db.query_one(
+        "SELECT count(*) FROM delivered_events WHERE tenant_id = %s AND event_id = %s",
+        (context.tenant_id, event.event_id),
+    )[0]
+    assert deliveries == 1
+    assert log._db.query_one(
+        "SELECT published_at IS NOT NULL FROM event_outbox WHERE event_id = %s",
+        (event.event_id,),
+    )[0] is True

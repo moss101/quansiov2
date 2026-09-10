@@ -1,0 +1,18 @@
+{
+  "DAT-002-A01": [
+    "tests/runtime/test_foundation.py::test_dat007_r01_leases_reacquire_from_authoritative_state_after_restart"
+  ],
+  "DAT-007-N01": [
+    "tests/runtime/test_foundation.py::test_dat007_p01_and_n01_cache_flush_loses_no_canonical_truth"
+  ],
+  "DAT-007-P01": [
+    "tests/runtime/test_foundation.py::test_dat007_p01_and_n01_cache_flush_loses_no_canonical_truth"
+  ],
+  "DAT-007-R01": [
+    "tests/runtime/test_foundation.py::test_dat007_r01_leases_reacquire_from_authoritative_state_after_restart"
+  ],
+  "INV-007-A01": [
+    "tests/runtime/test_foundation.py::test_dat007_p01_and_n01_cache_flush_loses_no_canonical_truth",
+    "tests/runtime/test_foundation.py::test_dat007_r01_leases_reacquire_from_authoritative_state_after_restart"
+  ]
+}

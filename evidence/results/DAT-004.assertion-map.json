@@ -1,0 +1,16 @@
+{
+  "DAT-004-A01": [
+    "tests/runtime/test_events.py::test_dat004_p01_outbox_marks_exactly_the_committed_delivery",
+    "tests/runtime/test_events.py::test_dat004_n01_rollback_after_outbox_preparation_leaves_no_transport_trace",
+    "tests/runtime/test_events.py::test_dat004_r01_crash_between_publish_and_ack_redelivers_deduplicated"
+  ],
+  "DAT-004-N01": [
+    "tests/runtime/test_events.py::test_dat004_n01_rollback_after_outbox_preparation_leaves_no_transport_trace"
+  ],
+  "DAT-004-P01": [
+    "tests/runtime/test_events.py::test_dat004_p01_outbox_marks_exactly_the_committed_delivery"
+  ],
+  "DAT-004-R01": [
+    "tests/runtime/test_events.py::test_dat004_r01_crash_between_publish_and_ack_redelivers_deduplicated"
+  ]
+}

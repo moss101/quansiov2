@@ -90,6 +90,14 @@ class EventLog:
                             raise EventAppendError(
                                 f"non-monotonic sequence {sequence} for run {run_id} (next is {current_max + 1})"
                             )
+                    if outbox:
+                        # The announcement is prepared before the mutation it
+                        # announces; a deferred FK keeps the pair atomic, so a
+                        # rollback after this point leaves no transport trace.
+                        connection.execute(
+                            "INSERT INTO event_outbox (tenant_id, event_id) VALUES (%s, %s)",
+                            (context.tenant_id, event_id),
+                        )
                     row = connection.execute(
                         """
                         INSERT INTO runtime_events
@@ -111,11 +119,6 @@ class EventLog:
                             Json(payload),
                         ),
                     ).fetchone()
-                    if outbox:
-                        connection.execute(
-                            "INSERT INTO event_outbox (tenant_id, event_id) VALUES (%s, %s)",
-                            (context.tenant_id, event_id),
-                        )
             except psycopg.errors.UniqueViolation as error:
                 raise EventAppendError(f"duplicate event identity: {error.diag.constraint_name}") from error
         return RuntimeEvent(

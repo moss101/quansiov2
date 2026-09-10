@@ -1,0 +1,19 @@
+{
+  "DAT-005-A01": [
+    "tests/runtime/test_foundation.py::test_dat005_p01_protocol_objects_persist_independently",
+    "tests/runtime/test_foundation.py::test_dat005_n01_semantic_memory_loss_preserves_protocol_resumption"
+  ],
+  "DAT-005-N01": [
+    "tests/runtime/test_foundation.py::test_dat005_n01_semantic_memory_loss_preserves_protocol_resumption"
+  ],
+  "DAT-005-P01": [
+    "tests/runtime/test_foundation.py::test_dat005_p01_protocol_objects_persist_independently"
+  ],
+  "DAT-005-R01": [
+    "tests/runtime/test_foundation.py::test_dat005_r01_runtime_restart_restores_wait_without_duplicate"
+  ],
+  "INV-003-A01": [
+    "tests/runtime/test_foundation.py::test_dat005_r01_runtime_restart_restores_wait_without_duplicate",
+    "tests/runtime/test_events.py::test_dat004_r01_committed_event_delivered_exactly_once_after_reconnect"
+  ]
+}

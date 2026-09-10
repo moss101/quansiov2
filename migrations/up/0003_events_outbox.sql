@@ -39,7 +39,7 @@ CREATE TABLE event_outbox (
     published_at TIMESTAMPTZ,
     attempts    INT NOT NULL DEFAULT 0,
     created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
-    FOREIGN KEY (tenant_id, event_id) REFERENCES runtime_events(tenant_id, event_id)
+    FOREIGN KEY (tenant_id, event_id) REFERENCES runtime_events(tenant_id, event_id) DEFERRABLE INITIALLY DEFERRED
 );
 CREATE INDEX idx_outbox_unpublished ON event_outbox(outbox_id) WHERE published_at IS NULL;
 COMMIT;

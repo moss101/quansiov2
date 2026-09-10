@@ -1,0 +1,19 @@
+{
+  "DAT-003-A01": [
+    "tests/runtime/test_events.py::test_dat003_p01_append_and_canonical_replay",
+    "tests/runtime/test_events.py::test_dat003_n01_duplicate_event_id_fails_without_corrupting_replay"
+  ],
+  "DAT-003-N01": [
+    "tests/runtime/test_events.py::test_dat003_n01_duplicate_event_id_fails_without_corrupting_replay",
+    "tests/runtime/test_events.py::test_dat003_n01_non_monotonic_sequence_fails"
+  ],
+  "DAT-003-P01": [
+    "tests/runtime/test_events.py::test_dat003_p01_append_and_canonical_replay"
+  ],
+  "DAT-003-R01": [
+    "tests/runtime/test_events.py::test_dat004_r01_committed_event_delivered_exactly_once_after_reconnect"
+  ],
+  "RUN-008-A01": [
+    "tests/runtime/test_events.py::test_dat004_r01_committed_event_delivered_exactly_once_after_reconnect"
+  ]
+}

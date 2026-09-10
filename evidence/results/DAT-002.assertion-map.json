@@ -1,0 +1,19 @@
+{
+  "DAT-002-A01": [
+    "tests/runtime/test_schema.py::test_dat002_p01_all_governed_schema_areas_exist",
+    "tests/runtime/test_schema.py::test_dat002_n01_cross_tenant_reference_is_rejected"
+  ],
+  "DAT-002-N01": [
+    "tests/runtime/test_schema.py::test_dat002_n01_cross_tenant_reference_is_rejected"
+  ],
+  "DAT-002-P01": [
+    "tests/runtime/test_schema.py::test_dat002_p01_all_governed_schema_areas_exist"
+  ],
+  "DAT-002-R01": [
+    "tests/runtime/test_schema.py::test_dat002_r01_latest_reversible_migration_round_trip"
+  ],
+  "INV-007-A01": [
+    "tests/runtime/test_schema.py::test_dat002_p01_all_governed_schema_areas_exist",
+    "tests/runtime/test_schema.py::test_dat002_r01_latest_reversible_migration_round_trip"
+  ]
+}

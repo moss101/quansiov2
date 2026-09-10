@@ -1,0 +1,44 @@
+{
+  "DAT-001": [
+    "quansio/control/identity.py",
+    "quansio/api/app.py",
+    "tests/api/test_identity.py"
+  ],
+  "DAT-002": [
+    "migrations/up/0001_identities.sql",
+    "migrations/up/0002_work_runtime.sql",
+    "quansio/platform/migrate.py",
+    "tests/runtime/test_schema.py"
+  ],
+  "DAT-003": [
+    "quansio/runtime/events.py",
+    "migrations/up/0003_events_outbox.sql",
+    "tests/runtime/test_events.py"
+  ],
+  "DAT-004": [
+    "quansio/runtime/events.py",
+    "tests/runtime/test_events.py"
+  ],
+  "DAT-005": [
+    "quansio/runtime/protocol.py",
+    "tests/runtime/test_foundation.py"
+  ],
+  "DAT-006": [
+    "quansio/artifact/store.py",
+    "migrations/up/0005_artifacts.sql",
+    "tests/runtime/test_foundation.py"
+  ],
+  "DAT-007": [
+    "quansio/platform/cache.py",
+    "tests/runtime/test_foundation.py"
+  ],
+  "DAT-008": [
+    "quansio/platform/repository.py",
+    "tests/runtime/test_foundation.py"
+  ],
+  "SEC-001": [
+    "quansio/control/capability.py",
+    "migrations/up/0006_capability_snapshots.sql",
+    "tests/runtime/test_foundation.py"
+  ]
+}
