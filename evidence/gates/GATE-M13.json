@@ -1,0 +1,69 @@
+{
+  "gate": "GATE-M13",
+  "git_commit": "87d1aee680087a3caa3972a8a7f25d4b06193e35",
+  "predecessor_evidence_index": [
+    {
+      "evidence": null,
+      "status": "MISSING",
+      "task": "GATE-M12"
+    },
+    {
+      "evidence": "evidence/reports/evidence-qa-001-298a4813d2ef.json",
+      "evidence_digest": "c1272327eb1bdb85b59adb57685ed553bcf45240c3f7579d1395f4cc90fb40ea",
+      "status": "PASS",
+      "task": "QA-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-qa-002-298a4813d2ef.json",
+      "evidence_digest": "a7ae4c4002e22d2986a954683867ded9766444c2635cb90fced9001cdbb8324e",
+      "status": "PASS",
+      "task": "QA-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-qa-003-298a4813d2ef.json",
+      "evidence_digest": "371727e95d8a23b39820f2f25f48308e5b11d77cd7451de0b7028f0fd7b66d4e",
+      "status": "PASS",
+      "task": "QA-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-qa-004-298a4813d2ef.json",
+      "evidence_digest": "6c8df108374367b30f2f0897b4e88a841e96a04d49d1e2f17e6333610becc532",
+      "status": "PASS",
+      "task": "QA-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-qa-005-298a4813d2ef.json",
+      "evidence_digest": "88f36be79225cfb66802be47e124b5de4c9eb305efbc7c6e4e19500d9fe10b2d",
+      "status": "PASS",
+      "task": "QA-005"
+    },
+    {
+      "evidence": "evidence/reports/evidence-qa-006-298a4813d2ef.json",
+      "evidence_digest": "df51bfef7e6fe7cf0035b722088d4912658afb631fd483263eac7e18374a42ff",
+      "status": "PASS",
+      "task": "QA-006"
+    },
+    {
+      "evidence": "evidence/reports/evidence-qa-007-298a4813d2ef.json",
+      "evidence_digest": "d11168f0afc1c09b5711edca52c13d46506318c938331a60d210934382ab839a",
+      "status": "PASS",
+      "task": "QA-007"
+    },
+    {
+      "evidence": "evidence/reports/evidence-qa-008-298a4813d2ef.json",
+      "evidence_digest": "398ae752171a671754fcee212d1f8449dec3655c0259091976b918ad0e1c99d2",
+      "status": "PASS",
+      "task": "QA-008"
+    }
+  ],
+  "problems": [
+    {
+      "reason": "no completion evidence recorded; task may not close the milestone",
+      "task": "GATE-M12"
+    }
+  ],
+  "protected_ref": "HEAD",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "result": "FAIL",
+  "schema_revision": "9.0.0"
+}
