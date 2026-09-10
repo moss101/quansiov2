@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "0bdbb6fad75eecb7f6ece20a35e5b984f1de76ccf86b3720ee9388b73b042217",
+      "path_or_uri": "evidence/boundary/SEC-004/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "8d483c3ee5c4df9b533dd529ecad6385861d3d7fa1a9d1fceb3902889ebb742a",
+      "path_or_uri": "evidence/boundary/SEC-004/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "a56b1cedcbafa844a25cca3bfb4965d1b2260c55fc4a76f19780bc1da247f6f7",
+      "path_or_uri": "quansio/control/broker.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "489d198a1968597fca2f9006b09b4f32396af3fdf536468a00cd0d160364cdb2",
+      "path_or_uri": "tests/control/test_policy_effects.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "SEC-004-A01",
+      "blocking": true,
+      "details": "executed: tests/control/test_policy_effects.py::test_sec004_p01_handle_bound_without_secret_disclosure; tests/control/test_policy_effects.py::test_sec004_n01_expired_or_misbound_handle_refused; tests/control/test_policy_effects.py::test_sec004_r01_rotation_invalidates_outstanding_handles; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-004-N01",
+      "blocking": true,
+      "details": "executed: tests/control/test_policy_effects.py::test_sec004_n01_expired_or_misbound_handle_refused; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-004-P01",
+      "blocking": true,
+      "details": "executed: tests/control/test_policy_effects.py::test_sec004_p01_handle_bound_without_secret_disclosure; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-004-R01",
+      "blocking": true,
+      "details": "executed: tests/control/test_policy_effects.py::test_sec004_r01_rotation_invalidates_outstanding_handles; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T06:34:12Z",
+  "git_commit": "4be98e131f5eece620b6cd8c80ff8b2a53b56293",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-sec-004-4be98e131f5e",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "SEC-004"
+}
