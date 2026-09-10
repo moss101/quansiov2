@@ -974,13 +974,13 @@
     },
     {
       "path": "quansio/runtime/graphs.py",
-      "sha256": "3556ca6ecf5c2eba6aa32ca0fafba038a85029aaa8328021d5779a90b04b0e55",
-      "size_bytes": 11384
+      "sha256": "a7e0649f0709a7d97295e06320d6b55ed1a6361a367b65d4069fa9e2ea12a81e",
+      "size_bytes": 11382
     },
     {
       "path": "quansio/runtime/orchestration.py",
-      "sha256": "c7bb51a1ba8688410ce903bb393e24842df49393b47bd24c7b5db898f5983681",
-      "size_bytes": 24025
+      "sha256": "97eded9d1f72fe04d87ae150697e002270f924d3b49266bb8f821b6d96c83254",
+      "size_bytes": 24083
     },
     {
       "path": "quansio/runtime/protocol.py",

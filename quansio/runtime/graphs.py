@@ -41,7 +41,7 @@ class NodeUpdate:
     payload_merge: dict = field(default_factory=dict)
 
 
-class GraphTransaction:
+class GraphTransition:
     """All-or-nothing multi-object transition over one WorkGraph."""
 
     def __init__(
@@ -58,7 +58,7 @@ class GraphTransaction:
         self._updates: list[NodeUpdate] = []
         self._committed = False
 
-    def update_node(self, node_id: str, expected_status: str, new_status: str, payload_merge: dict | None = None) -> "GraphTransaction":
+    def update_node(self, node_id: str, expected_status: str, new_status: str, payload_merge: dict | None = None) -> "GraphTransition":
         self._updates.append(
             NodeUpdate(node_id, expected_status, new_status, payload_merge or {})
         )

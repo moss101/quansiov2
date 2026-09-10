@@ -35,7 +35,7 @@ class AdmissionError(Exception):
 
 
 class BudgetExceededError(AdmissionError):
-    pass
+    """The parent run's budget ceiling refused the reservation."""
 
 
 class WorkerAdmission:
