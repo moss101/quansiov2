@@ -208,6 +208,11 @@
     "tests/governance/test_milestone_gate.py",
     "evidence/gates/GATE-M1.json"
   ],
+  "GATE-M10": [
+    "tools/governance/milestone_gate.py",
+    "tests/governance/test_milestone_gate.py",
+    "evidence/gates/GATE-M10.json"
+  ],
   "GATE-M2": [
     "tools/governance/milestone_gate.py",
     "tests/governance/test_milestone_gate.py",
