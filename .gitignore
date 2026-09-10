@@ -10,3 +10,4 @@ node_modules/
 # Editor
 .idea/
 .vscode/
+deploy/compose/.env.qual

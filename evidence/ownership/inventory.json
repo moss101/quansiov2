@@ -169,6 +169,46 @@
       "status": "present"
     },
     {
+      "kind": "deploy_path",
+      "owner": "deploy",
+      "path": "deploy",
+      "role": "deployment topology definitions",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "durable_store",
+      "owner": "quansio-artifact",
+      "path": "deploy/compose/docker-compose.yml#minio",
+      "role": "immutable artifact and evidence object storage",
+      "state_class": "artifact_object_store",
+      "status": "present"
+    },
+    {
+      "kind": "durable_store",
+      "owner": "platform",
+      "path": "deploy/compose/docker-compose.yml#postgres",
+      "role": "authoritative relational store; logical per-area ownership tracked by schema ownership registry",
+      "state_class": "relational_primary",
+      "status": "present"
+    },
+    {
+      "kind": "durable_store",
+      "owner": "platform",
+      "path": "deploy/compose/docker-compose.yml#redis",
+      "role": "leases, rate limits and reconstruction-safe cache only",
+      "state_class": "non_authoritative_coordination",
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
+      "owner": "deploy",
+      "path": "deploy/compose/docker-compose.yml",
+      "role": "qualification environment topology",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "evidence_path",
       "owner": "evidence",
       "path": "evidence",
@@ -201,9 +241,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 25,
+  "entry_count": 30,
   "inventory_version": "1.0.0",
-  "registry_sha256": "5815e00f70711834815fe1c247e956d8afeb6bdbfbac0582c64c2a1c533827c5",
+  "registry_sha256": "8f579edc4e66088e7a915c7d972b1d5e8a30b68ceae6dea2bbef0b96e3ad5fce",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "dace0f359ac8803fb7a08186f8cc5f669c300af399c41356f3c49908ba1262db"

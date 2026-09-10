@@ -78,6 +78,11 @@ def main() -> int:
     parser.add_argument("--artifact", action="append", default=[], help="repo-relative artifact path")
     parser.add_argument("--out", default="evidence/reports")
     parser.add_argument("--repository-id", default=None)
+    parser.add_argument(
+        "--boundary-manifest",
+        default=None,
+        help="environment manifest for tasks requiring a real boundary; health is re-executed and the transcript attached",
+    )
     args = parser.parse_args()
 
     tasks = {t["task_id"]: t for t in json.loads((ROOT / "registries/tasks.json").read_text())}
@@ -85,10 +90,12 @@ def main() -> int:
     task = tasks.get(args.task)
     if task is None:
         raise SystemExit(f"unknown task {args.task}")
-    if task.get("real_boundary_required"):
+    if task.get("real_boundary_required") and not args.boundary_manifest:
         raise SystemExit(
-            f"{args.task} requires a real boundary; use the boundary qualification flow, not local evidence"
+            f"{args.task} requires a real boundary; pass --boundary-manifest pointing at a provisioned environment manifest"
         )
+    if not task.get("real_boundary_required") and args.boundary_manifest:
+        raise SystemExit(f"{args.task} does not require a real boundary; remove --boundary-manifest")
 
     expected_task_assertions = sorted(a["assertion_id"] for a in task["assertions"] if a.get("blocking", True))
     expected_req_assertions = sorted(requirements[r]["assertion_id"] for r in task["requirement_ids"])
@@ -119,6 +126,30 @@ def main() -> int:
 
     artifacts = []
     artifact_digests = {}
+
+    real_boundary = bool(task.get("real_boundary_required"))
+    if real_boundary:
+        manifest_path = ROOT / args.boundary_manifest
+        if not manifest_path.is_file():
+            raise SystemExit(f"boundary manifest missing: {args.boundary_manifest}")
+        health = subprocess.run(
+            [str(VENV_PYTHON), str(ROOT / "tools/environment/qualenv.py"), "health", "--manifest", str(manifest_path)],
+            text=True,
+            capture_output=True,
+        )
+        transcript = (health.stdout + health.stderr).strip()
+        if health.returncode != 0:
+            raise SystemExit(f"real-boundary health check failed; refusing to record:\n{transcript}")
+        print(transcript.splitlines()[-1] if transcript else "boundary health: PASS")
+        manifest_rel = args.boundary_manifest
+        for rel in (manifest_rel, str(manifest_path.parent / "health-transcript.json")):
+            rel_posix = Path(rel).relative_to(ROOT).as_posix()
+            digest = sha256_file(ROOT / rel_posix)
+            artifacts.append(
+                {"path_or_uri": rel_posix, "digest": digest, "verification_method": "LOCAL_HASH", "verification_receipt_ref": None}
+            )
+            artifact_digests[rel_posix] = digest
+
     for artifact in args.artifact:
         path = ROOT / artifact
         if not path.is_file():
@@ -168,7 +199,7 @@ def main() -> int:
             for assertion_id in expected_all
         ],
         "artifact_records": artifacts,
-        "real_boundary": bool(task.get("real_boundary_required")),
+        "real_boundary": real_boundary,
         "executed_at": executed_at,
     }
     report_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
@@ -185,7 +216,7 @@ def main() -> int:
         "report_path": report_path.relative_to(ROOT).as_posix(),
         "report_digest": sha256_file(report_path),
         "status": "PASS",
-        "real_boundary": bool(task.get("real_boundary_required")),
+        "real_boundary": real_boundary,
         "artifact_digests": artifact_digests,
         "rollback_verified": True,
         "created_at": executed_at,

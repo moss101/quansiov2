@@ -1,0 +1,47 @@
+{
+  "executed_at": "2026-09-10T00:32:08+00:00",
+  "checks": [
+    {
+      "boundary": "relational_primary",
+      "check": "connect as quansio_app to quansio_platform; SELECT version(), current_user, current_database()",
+      "status": "PASS",
+      "latency_ms": 9.8,
+      "detail": {
+        "server": "PostgreSQL 17.11 on aarch64-unknown-linux-musl",
+        "user": "quansio_app",
+        "database": "quansio_platform"
+      }
+    },
+    {
+      "boundary": "durable_event_transport",
+      "check": "connect as quansio_app to quansio_events; SELECT version(), current_user, current_database()",
+      "status": "PASS",
+      "latency_ms": 6.4,
+      "detail": {
+        "server": "PostgreSQL 17.11 on aarch64-unknown-linux-musl",
+        "user": "quansio_app",
+        "database": "quansio_events"
+      }
+    },
+    {
+      "boundary": "non_authoritative_coordination",
+      "check": "PING, SET/GET/DELETE probe key with isolated password",
+      "status": "PASS",
+      "latency_ms": 3.6,
+      "detail": {
+        "server": "redis 8.10.0",
+        "mode": "standalone"
+      }
+    },
+    {
+      "boundary": "artifact_object_store",
+      "check": "bucket_exists/make_bucket quansio-artifacts; put/get/remove probe object",
+      "status": "PASS",
+      "latency_ms": 4.9,
+      "detail": {
+        "bucket": "quansio-artifacts",
+        "endpoint": "127.0.0.1:54331"
+      }
+    }
+  ]
+}

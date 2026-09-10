@@ -405,7 +405,7 @@
       "kind": "deploy_path",
       "path": "deploy",
       "owner": "deploy",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "deployment topology definitions"
     },
@@ -637,7 +637,7 @@
       "kind": "entrypoint",
       "path": "deploy/compose/docker-compose.yml",
       "owner": "deploy",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "qualification environment topology"
     },
@@ -645,7 +645,7 @@
       "kind": "durable_store",
       "path": "deploy/compose/docker-compose.yml#postgres",
       "owner": "platform",
-      "status": "planned",
+      "status": "present",
       "state_class": "relational_primary",
       "role": "authoritative relational store; logical per-area ownership tracked by schema ownership registry"
     },
@@ -653,7 +653,7 @@
       "kind": "durable_store",
       "path": "deploy/compose/docker-compose.yml#redis",
       "owner": "platform",
-      "status": "planned",
+      "status": "present",
       "state_class": "non_authoritative_coordination",
       "role": "leases, rate limits and reconstruction-safe cache only"
     },
@@ -661,7 +661,7 @@
       "kind": "durable_store",
       "path": "deploy/compose/docker-compose.yml#minio",
       "owner": "quansio-artifact",
-      "status": "planned",
+      "status": "present",
       "state_class": "artifact_object_store",
       "role": "immutable artifact and evidence object storage"
     },
