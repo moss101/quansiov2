@@ -133,7 +133,7 @@ def test_bus001_r01_rollback_loads_prior_version_preserving_identities(migrated_
     result = service.rollback(context, "invoice-ops")
     assert result["active_version"] == base_version
     assert result["evidence_identities"] == ["receipt", "digest"]
-    active = service.get_pack(context, "invoice-ops", v1)
+    active = service.get_pack(context, "invoice-ops", base_version)
     assert active["lifecycle"] == "published"
 
 
@@ -424,7 +424,7 @@ def test_bus005_r01_rollback_resolves_rollback_version(migrated_db, workspace_se
         (base_version, context.tenant_id),
     )
     rolled = publisher.rollback_published(context, "invoice-ops")
-    assert rolled["active_version"] == v1
+    assert rolled["active_version"] == 1
     historical = migrated_db.query_one(
         "SELECT lifecycle FROM capability_packs WHERE tenant_id=%s AND pack_id='invoice-ops' AND version=2",
         (context.tenant_id,),
