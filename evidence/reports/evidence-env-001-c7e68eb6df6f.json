@@ -1,0 +1,33 @@
+{
+  "artifact_digests": {
+    "deploy/compose/docker-compose.yml": "af65e5a560108673e6ae7c7a020c9d500cac841a5faaa35e998e28d8c25bb029",
+    "evidence/boundary/ENV-001/health-transcript.json": "6061e3f199f78d428767783564b883edc3c9adfd12b526e185fcdb09ea0c9b1d",
+    "evidence/boundary/ENV-001/manifest.json": "b716846b0ef42cb49b1a59d02a1666097212a7795feff46db2f18a0f62454ec5",
+    "tests/environment/test_qualenv.py": "8fccb1753c1cf6397de4239f74293aa308927705ba6815bc75b57c23febcebd9",
+    "tools/environment/qualenv.py": "88038285ef75eb0f14156b03d4a85c0924a4c834eb2a36d892d0b1318a501723"
+  },
+  "created_at": "2026-09-10T01:35:09Z",
+  "evidence_id": "evidence-env-001-c7e68eb6df6f",
+  "git_commit": "c7e68eb6df6fe8925b99f9c4e5ea166b5f5c1f70",
+  "real_boundary": true,
+  "report_digest": "631dddec58b7a93cb4f5f08f99cc929ba639dd0d2dc1758195fb58d4478a47fe",
+  "report_path": "evidence/reports/report-env-001-c7e68eb6df6f.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "DAT-002-A01",
+    "GOV-004-A01"
+  ],
+  "requirement_ids": [
+    "DAT-002",
+    "GOV-004"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "ENV-001-N01",
+    "ENV-001-P01",
+    "ENV-001-R01"
+  ],
+  "task_id": "ENV-001"
+}
