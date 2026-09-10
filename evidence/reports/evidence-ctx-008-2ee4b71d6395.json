@@ -1,0 +1,31 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/CTX-008/health-transcript.json": "620e14f11e6d2bae57d25411c3c749ba0e3853707d93b66f61816b20fb00b2c9",
+    "evidence/boundary/CTX-008/manifest.json": "95c49fbc7bfb325f80425c924601bb89472deff744a752ad9058e6dfc2270fee",
+    "quansio/context/scoring.py": "a2f69046bd615c5065625cf837ce868f217ebb964b33fe07dffc87520e4c0b26",
+    "tests/context/corpus.py": "fc9c235f1a303d49729541c3c764b3d7e422f1c0ed1588b3126c0dcb5f48ff98",
+    "tests/context/test_context_stack.py": "842d5af7412199d8ef6e829f9332d1f48a9d98b13c68f9cb31941d71859e3c5f"
+  },
+  "created_at": "2026-09-10T05:49:48Z",
+  "evidence_id": "evidence-ctx-008-2ee4b71d6395",
+  "git_commit": "2ee4b71d63957b32c23f5f4a234f33d0fad9d0f8",
+  "real_boundary": true,
+  "report_digest": "3a09746efc52c6f5082f217a64e6be3d9b0196324e2c8a831ec6b15eafe33c9c",
+  "report_path": "evidence/reports/report-ctx-008-2ee4b71d6395.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "CTX-006-A01"
+  ],
+  "requirement_ids": [
+    "CTX-006"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "CTX-008-N01",
+    "CTX-008-P01",
+    "CTX-008-R01"
+  ],
+  "task_id": "CTX-008"
+}
