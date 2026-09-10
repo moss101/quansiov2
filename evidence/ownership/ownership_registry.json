@@ -517,7 +517,7 @@
       "kind": "package_path",
       "path": "quansio/qworkerd",
       "owner": "qworkerd",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "guest actuator implementation"
     },
@@ -629,7 +629,7 @@
       "kind": "entrypoint",
       "path": "services/qworkerd/main.py",
       "owner": "qworkerd",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "guest actuator entrypoint"
     },
