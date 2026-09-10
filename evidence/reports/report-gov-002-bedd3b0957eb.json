@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c6d7d0442d70b9dfb7c4254cace0267fce6731ee90353cabe97069f4ab2a03fd",
+      "path_or_uri": "evidence/ownership/ownership_registry.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "b122545b12890a3813e7c90799f8d5481c833a9ff69bbf56e0080ef8321537ea",
+      "path_or_uri": "tools/governance/ownership_map.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "b0d86ba3c79b77a128d0e30459d7690581b6c5ee9cd1ac7b09ba36078bd75ed8",
+      "path_or_uri": "tests/governance/test_ownership_map.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "GOV-001-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_map.py::test_p02_map_covers_services_stores_producers_actuators_without_duplicates; tests/governance/test_ownership_map.py::test_n02_duplicate_authoritative_store_owner_is_rejected_with_both_identifiers; tests/governance/test_ownership_map.py::test_r02_removing_canonical_owner_invalidates_wiring_then_restore_is_clean; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-002-N01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_map.py::test_n02_duplicate_authoritative_store_owner_is_rejected_with_both_identifiers; tests/governance/test_ownership_map.py::test_n02_duplicate_effect_class_is_rejected_with_both_identifiers; tests/governance/test_ownership_map.py::test_n02_duplicate_event_producer_is_rejected_with_both_identifiers; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-002-P01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_map.py::test_p02_map_covers_services_stores_producers_actuators_without_duplicates; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-002-R01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_map.py::test_r02_removing_canonical_owner_invalidates_wiring_then_restore_is_clean; tests/governance/test_ownership_map.py::test_r02_unknown_wiring_participant_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-001-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_map.py::test_n02_duplicate_effect_class_is_rejected_with_both_identifiers; tests/governance/test_ownership_map.py::test_n02_duplicate_event_producer_is_rejected_with_both_identifiers; tests/governance/test_ownership_map.py::test_n02_duplicate_authoritative_store_owner_is_rejected_with_both_identifiers; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-006-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_map.py::test_p02_map_covers_services_stores_producers_actuators_without_duplicates; tests/governance/test_ownership_map.py::test_r02_unknown_wiring_participant_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T14:11:49Z",
+  "git_commit": "bedd3b0957eb79070f12034c4e3a8541a6d8f01a",
+  "protected_ref": "HEAD",
+  "real_boundary": false,
+  "report_id": "report-gov-002-bedd3b0957eb",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "GOV-002"
+}
