@@ -129,8 +129,7 @@
   "MOD-008": [
     "quansio/model_gateway/adapters.py",
     "quansio/model_gateway/gateway.py",
-    "tests/model_gateway/test_real_provider_qualification.py",
-    "evidence/model_gateway/mod008-real-stream.json"
+    "tests/model_gateway/test_real_provider_qualification.py"
   ],
   "RUN-001": [
     "quansio/runtime/graphs.py",
