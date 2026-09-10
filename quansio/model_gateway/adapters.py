@@ -117,7 +117,7 @@ class OpenAICompatibleAdapter(ProviderAdapter):
             with httpx.Client(timeout=httpx.Timeout(60.0)) as client:
                 with client.stream(
                     "POST",
-                    f"{self._credentials.base_url.rstrip('/')}/v1/chat/completions",
+                    f"{self._credentials.base_url.rstrip('/')}/chat/completions",
                     content=content,
                     headers=headers,
                 ) as response:
@@ -195,7 +195,7 @@ class OpenAICompatibleAdapter(ProviderAdapter):
                 response = client.get(f"{self._credentials.base_url.rstrip('/')}/health")
                 if response.status_code == 200:
                     return True
-                response = client.get(f"{self._credentials.base_url.rstrip('/')}/v1/models")
+                response = client.get(f"{self._credentials.base_url.rstrip('/')}/models")
                 return response.status_code == 200
         except Exception:  # noqa: BLE001 - probe failures are health signal
             return False

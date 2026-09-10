@@ -1,7 +1,7 @@
 # Quansio V9 Specification Seal
 
 **Schema revision:** `9.0.0`  
-**Manifest SHA-256:** `805393a820ff6af02c772c8b9d51e5ee99524c01ce0b1d2740cce4d7b6e1b6b5`  
+**Manifest SHA-256:** `44a31b56a39ac53152804a2678d4f1a1845cc81888ea56ee6f3bfc35919ea9b1`  
 **Canonical tasks:** 135  
 **Normative requirements:** 111  
 **Canonical schemas:** 43  

@@ -10,15 +10,16 @@
     "OUTPUT_DELTA",
     "OUTPUT_DELTA",
     "OUTPUT_DELTA",
+    "OUTPUT_DELTA",
     "MODEL_COMPLETED"
   ],
-  "output_sha256": "05322956c5b1c62ca2c38af344f182562b75ffacaed42c6087cbe00dfaa8bad8",
-  "output_text": "Nile\nAmazon\nYangtze",
+  "output_sha256": "acd617f3c5ba9dd806ac1a35d224f22be6238a21a15237e6e42c7e818636e8d7",
+  "output_text": "The Nile\nThe Amazon\nThe Yangtze",
   "profile": "quansio-local-lfm",
-  "request_id": "1cd9160b-9df3-4d8b-bd31-e24864bde798",
+  "request_id": "cfb90d40-c00f-4f0d-90e0-80fe7c2e9189",
   "usage": {
-    "completion_tokens": 9,
+    "completion_tokens": 10,
     "prompt_tokens": 17,
-    "total_tokens": 26
+    "total_tokens": 27
   }
 }

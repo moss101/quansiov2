@@ -90,7 +90,7 @@ def test_mod001_n01_direct_provider_call_from_worker_path_is_rejected(tmp_path):
         "import httpx\n"
         "def call_provider_directly(prompt):\n"
         "    api_key = 'QUAL_PROVIDER_X_KEY'\n"
-        "    return httpx.post('https://api.example.provider/v1/chat',"
+        "    return httpx.post('https://api.example.provider/chat',"
         " headers={'Authorization': 'Bearer ' + api_key})\n"
     )
     # Run the boundary scan over the tmp tree: the rogue module is a direct

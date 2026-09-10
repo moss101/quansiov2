@@ -10,7 +10,7 @@ cd "$(dirname "$0")/../.."
 PY="${PY:-python3}"
 VPY=".venv/bin/python"
 
-for round in 1 2 3; do
+for round in 1 2 3 4 5 6; do
   echo "== settle round $round =="
   "$PY" tools/governance/ownership_inventory.py --write >/dev/null 2>&1 || true
   "$PY" tools/governance/generate_authority.py --write >/dev/null
@@ -35,10 +35,17 @@ for round in 1 2 3; do
     git add -A
     git commit -q "Settle: refresh evidence, gates and integrity artifacts (round ${round})" || true
   fi
-  "$VPY" -m pytest tests/ -q || { echo "SETTLE: tests failing"; exit 1; }
-  if [ "$(git status --porcelain | wc -l | tr -d ' ')" = "0" ]; then
-    echo "SETTLE: clean"
-    exit 0
+  if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
+    git add -A
+    git commit -q "Settle round ${round}: evidence and gates" || true
+  fi
+  if "$VPY" -m pytest tests/ -q; then
+    if [ "$(git status --porcelain | wc -l | tr -d ' ')" = "0" ]; then
+      echo "SETTLE: clean and green"
+      exit 0
+    fi
+  else
+    echo "SETTLE round ${round}: tests still failing; iterating"
   fi
 done
 if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
