@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "73024275ac351d65cb40aaa397eba7a59b23d46048627f5c9f1d0b24f4565627",
+      "path_or_uri": "evidence/boundary/QA-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "751e9c163e02e63c75c8f38796d52f9d23eedec7f7938ee3004f892f870ec815",
+      "path_or_uri": "evidence/boundary/QA-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "aa096dc567a595744cd7d7f7e94fd7a0f3bef7edcf3ec29a21b3dfe5efd424b5",
+      "path_or_uri": "tests/qa/test_qa_verticals.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "QA-001-N01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa001_n01_duplicate_results_and_stale_commands_consistent; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "QA-001-P01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa001_p01_teammate_with_32_workers_disconnect_partial_cancel_restart; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "QA-001-R01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa001_r01_restart_completes_from_durable_state; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-004-A01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa001_n01_duplicate_results_and_stale_commands_consistent; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-008-A01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa001_r01_restart_completes_from_durable_state; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T17:39:44Z",
+  "git_commit": "bc33fa6925051f1289bf14ce8ee37e437070084d",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-qa-001-bc33fa692505",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "QA-001"
+}
