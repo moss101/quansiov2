@@ -1,10 +1,10 @@
 {
   "gate": "GATE-M6",
-  "git_commit": "716cb43eb75bb01ff83597f62e71bc349fd97a0c",
+  "git_commit": "5fb292e182e0974087be6dced4753965d43da8ed",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m5-39b906360908.json",
-      "evidence_digest": "1d532ab83128766c364bb54a4811aab223542035c56a0b274ab50f246bc23362",
+      "evidence": "evidence/reports/evidence-gate-m5-53807a31ed60.json",
+      "evidence_digest": "060d9fc51651fa54092698a9b87b1e545304ca4e0e1c37ce15c5d2ecb5ae9982",
       "status": "PASS",
       "task": "GATE-M5"
     },
@@ -51,15 +51,20 @@
       "task": "MAC-007"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-008-29b5146d856b.json",
-      "evidence_digest": "3b83a31791246c2f55d657344d94eac396c7830666592bb64c22eddf1d1d36a5",
+      "evidence": "evidence/reports/evidence-mac-008-c2eca17cf9dd.json",
+      "evidence_digest": "cdf1b792be88e69c4f6ea0fba3528b8c7ebb06274275a15b78fc63dbba2d16f6",
       "status": "PASS",
       "task": "MAC-008"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-003/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-003/health-transcript.json', '- local artifact mismatch: quansio/qworkerd/protocol.py']",
+      "task": "MAC-003"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }
