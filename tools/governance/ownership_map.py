@@ -42,17 +42,23 @@ def validate(registry: dict | None = None, wiring: dict | None = None, root: Pat
     services = reg["canonical_services"]
     schema_names = {p.stem.removesuffix(".schema") for p in (root / "schemas").glob("*.schema.json")}
 
-    # Canonical services: package/deployable registered, decision recorded.
+    # Canonical services: package/deployable registered, decision recorded and accepted.
     inventory_entries = {(e["kind"], e["path"]) for e in reg["entries"]}
-    decision_files = {p.name.lower() for p in DECISIONS_DIR.glob("*.md")}
+    import decision_gate
+
+    records = decision_gate.load_records()
     for service, spec in services.items():
         decision = spec.get("decision_id")
         if not decision:
             errors.append(f"canonical service {service} lacks decision_id")
-        else:
-            numeric_id = decision.lower().replace("adr-", "")
-            if not any(name.startswith(numeric_id + "-") for name in decision_files):
-                errors.append(f"canonical service {service} cites unknown decision {decision}")
+            continue
+        record = records.get(decision)
+        if record is None:
+            errors.append(f"canonical service {service} cites unknown decision {decision}")
+        elif record["status"] != "ACCEPTED":
+            errors.append(
+                f"canonical service {service} cites decision {decision} with status {record['status']}; accepted decision required"
+            )
         if ("package_path", spec["package"]) not in inventory_entries and not (root / spec["package"]).is_dir():
             errors.append(f"canonical service {service} package not registered: {spec['package']}")
         if not (root / spec["deployable"]).is_dir():

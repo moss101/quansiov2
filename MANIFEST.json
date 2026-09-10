@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 341,
+  "file_count": 354,
   "files": [
     {
       "path": ".gitignore",
@@ -63,6 +63,11 @@
       "size_bytes": 3474
     },
     {
+      "path": "tools/governance/decision_gate.py",
+      "sha256": "b4f28cd1a7af9fb3b321c9ffd858c38cb408bac442878b336ad733798f236ec0",
+      "size_bytes": 5403
+    },
+    {
       "path": "tools/governance/generate_authority.py",
       "sha256": "6aa7581f82d32d27b7c8ebaa68472e88d18de12840f441834e73721d46a9cc96",
       "size_bytes": 5432
@@ -79,8 +84,8 @@
     },
     {
       "path": "tools/governance/ownership_map.py",
-      "sha256": "75dc695cd9c40c6ac5ec1b8308dff01db063285550a65cbe99a357525ff15f7b",
-      "size_bytes": 5814
+      "sha256": "b122545b12890a3813e7c90799f8d5481c833a9ff69bbf56e0080ef8321537ea",
+      "size_bytes": 5961
     },
     {
       "path": "tools/governance/record_evidence.py",
@@ -108,6 +113,16 @@
       "size_bytes": 4434
     },
     {
+      "path": "tests/governance/test_decision_gate.py",
+      "sha256": "cb48595017cc2cba486e852769ca7645ca2b30f6d6bd46d742bacda811a1ab56",
+      "size_bytes": 4031
+    },
+    {
+      "path": "tests/governance/test_evidence_gate.py",
+      "sha256": "a5d3cf56700abb04b926edaeb1eae674aa46944b996fb502969459edb7ec9c0f",
+      "size_bytes": 7710
+    },
+    {
       "path": "tests/governance/test_ownership_inventory.py",
       "sha256": "ddc37fa6e1db183b6ae5a9ec3bb09ea7713b32e45cc3d0cd85790e989ddef6d3",
       "size_bytes": 5230
@@ -116,6 +131,11 @@
       "path": "tests/governance/test_ownership_map.py",
       "sha256": "b0d86ba3c79b77a128d0e30459d7690581b6c5ee9cd1ac7b09ba36078bd75ed8",
       "size_bytes": 4024
+    },
+    {
+      "path": "tests/governance/test_source_scan.py",
+      "sha256": "885941965f3da591352afa3c4ba0085b46044c129e1fefc0544a73e745c0016d",
+      "size_bytes": 3780
     },
     {
       "path": "tests/fixtures/valid/AgentGraph.json",
@@ -1398,6 +1418,16 @@
       "size_bytes": 1012
     },
     {
+      "path": "evidence/results/GOV-005.assertion-map.json",
+      "sha256": "d7056037a6022308269369b494604cc43ae9c08a397fb4e0cf12623f0d4c8697",
+      "size_bytes": 1142
+    },
+    {
+      "path": "evidence/results/GOV-006.assertion-map.json",
+      "sha256": "2519db130015ec28cdf125e54802e6478d0f491f3c8b08c620a4912449ef2371",
+      "size_bytes": 1060
+    },
+    {
       "path": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",
       "sha256": "14839996dd5cab1c77b7ae9e10cca4a7e364b83c46b560288581637df3e5faf0",
       "size_bytes": 1207
@@ -1413,6 +1443,21 @@
       "size_bytes": 1081
     },
     {
+      "path": "evidence/reports/evidence-gov-004-a5c0eaa97711.json",
+      "sha256": "a48d6d2e1249be1ea4d9e1c850bf81c3ef50ad4dda44189a1d6927aa03d7ebde",
+      "size_bytes": 1061
+    },
+    {
+      "path": "evidence/reports/evidence-gov-005-4c33c00b7859.json",
+      "sha256": "2490956693ee68af51a94e0cfe48c80e8f136289c6e160161a0e676bf5b1f4ad",
+      "size_bytes": 1076
+    },
+    {
+      "path": "evidence/reports/evidence-gov-006-53d49aec1545.json",
+      "sha256": "16326553a5ec9d55375100d212af6bc7ac811e1a7c04c125e88fea414a695f01",
+      "size_bytes": 1089
+    },
+    {
       "path": "evidence/reports/report-gov-001-054ee9a63fa0.json",
       "sha256": "e68c4e982c5f5e864d4b4218f70b29809803c93aa68a0f35e587e49dabebcb19",
       "size_bytes": 4212
@@ -1426,6 +1471,21 @@
       "path": "evidence/reports/report-gov-003-c2d1ad837f8a.json",
       "sha256": "7f91ef9bf6858e085f73f73e06979df4f9b5af860cf9815b65106fca155f349d",
       "size_bytes": 3490
+    },
+    {
+      "path": "evidence/reports/report-gov-004-a5c0eaa97711.json",
+      "sha256": "ba80781eee1a7523f8fb026b33d39e4dc6745b885580d064d3a5a8eb99daafbb",
+      "size_bytes": 3180
+    },
+    {
+      "path": "evidence/reports/report-gov-005-4c33c00b7859.json",
+      "sha256": "6bdda73b05bf44db5e3f0300c1f477ee7edd97bc7bcd84c81dd2e458dadf16bb",
+      "size_bytes": 3518
+    },
+    {
+      "path": "evidence/reports/report-gov-006-53d49aec1545.json",
+      "sha256": "ffeb12a02afb35b3f4121cea4c74a6e1d5cc08aed533b7a33b34b87c552b5d2f",
+      "size_bytes": 3455
     },
     {
       "path": "evidence/ownership/inventory.json",
@@ -1699,13 +1759,18 @@
     },
     {
       "path": "docs/decisions/0001-payload-traversal-and-integrity-regeneration.md",
-      "sha256": "208e575e46122d2236c5d3479ff6d8d922fd7b5f642e2943eda551e37d125f77",
-      "size_bytes": 3304
+      "sha256": "12da9af82aeddbbe9fe6fb8d536138fcbbf33428dcb565dc4d619bec79298baa",
+      "size_bytes": 2570
     },
     {
       "path": "docs/decisions/0002-implementation-stack-and-layout.md",
-      "sha256": "ab381d930a46fbaee30267dc5bfac2e3c162887e8ee6592e9de8d12445ec900c",
-      "size_bytes": 3248
+      "sha256": "edbe98a810d8ea806b909acaa1b3e64b802c6a13240583314c83396793300ff8",
+      "size_bytes": 2842
+    },
+    {
+      "path": "docs/decisions/0003-decision-and-threat-model-workflow.md",
+      "sha256": "a98ba248831e2d5f6f70d1570edbee681d830a80ed08a46a07d207b7c9cb3dcd",
+      "size_bytes": 2750
     }
   ],
   "schema_revision": "9.0.0"
