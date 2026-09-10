@@ -1,0 +1,70 @@
+{
+  "gate": "GATE-M2",
+  "git_commit": "4cc8fbc860cd797d02006669e43f1cfb86bf9767",
+  "predecessor_evidence_index": [
+    {
+      "evidence": "evidence/reports/evidence-gate-m1-d49e572c3c90.json",
+      "evidence_digest": "0905822f63d22d8a643a90cba9cb9c8be7d2c2bb639d141fd301b16b62b187e4",
+      "status": "PASS",
+      "task": "GATE-M1"
+    },
+    {
+      "evidence": "evidence/reports/evidence-run-001-a0117584050d.json",
+      "evidence_digest": "31e9f236a2c2c8e20ee3b1d1445912493fca3a0a3515cb5a6418ad9c312debc9",
+      "status": "PASS",
+      "task": "RUN-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-run-002-a0117584050d.json",
+      "evidence_digest": "416dcde522e9579d891fffe809025e6c942247aa28fc3db6c7d0d2b6129fa904",
+      "status": "PASS",
+      "task": "RUN-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-run-003-a0117584050d.json",
+      "evidence_digest": "f509479b30c3485b096e8056671fc21a507ef62bcbb0ff339db2ffd0fe064cd8",
+      "status": "PASS",
+      "task": "RUN-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-run-004-a0117584050d.json",
+      "evidence_digest": "7cb9da86effb8a186411d4b5a0c5812c16ce535ae9db28d578903d0603d67652",
+      "status": "PASS",
+      "task": "RUN-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-run-005-a0117584050d.json",
+      "evidence_digest": "d200abdd3ece706db067a8e7c7274db65f26a47e5a0da1043ca96859c407c21d",
+      "status": "PASS",
+      "task": "RUN-005"
+    },
+    {
+      "evidence": "evidence/reports/evidence-run-006-a0117584050d.json",
+      "evidence_digest": "88afc8405a2029159822bc9deb9d941c9fa643e2a0bbcee433d43a9365c17ee5",
+      "status": "PASS",
+      "task": "RUN-006"
+    },
+    {
+      "evidence": "evidence/reports/evidence-run-007-a0117584050d.json",
+      "evidence_digest": "73a713fd6a0cb21551354d1ae2c0a4e9b1bed719637be6e31e7b9ac7bde6bafa",
+      "status": "PASS",
+      "task": "RUN-007"
+    },
+    {
+      "evidence": "evidence/reports/evidence-run-008-a0117584050d.json",
+      "evidence_digest": "cc3293cc8026b8fe690b801feab05719a327528ddd29a4a9ebd7d0a12481421b",
+      "status": "PASS",
+      "task": "RUN-008"
+    }
+  ],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/gates/GATE-M1.json']",
+      "task": "GATE-M1"
+    }
+  ],
+  "protected_ref": "HEAD",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "result": "FAIL",
+  "schema_revision": "9.0.0"
+}
