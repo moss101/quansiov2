@@ -501,7 +501,7 @@
       "kind": "package_path",
       "path": "quansio/model_gateway",
       "owner": "quansio-model-gateway",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "exclusive model fulfillment boundary"
     },
@@ -597,7 +597,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_model_gateway/main.py",
       "owner": "quansio-model-gateway",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "model gateway entrypoint"
     },

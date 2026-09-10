@@ -39,7 +39,7 @@ CREATE TABLE budget_reservations (
     parent_run_id    UUID NOT NULL,
     idempotency_key  TEXT NOT NULL,
     amount_cents     BIGINT NOT NULL CHECK (amount_cents > 0),
-    status           TEXT NOT NULL CHECK (status IN ('reserved','settling','settled','released','expired')),
+    status           TEXT NOT NULL CHECK (status IN ('reserved','settling','settled','released','expired','cancelled')),
     reserved_cents   BIGINT NOT NULL,
     committed_cents  BIGINT NOT NULL DEFAULT 0,
     worker_generation BIGINT NOT NULL DEFAULT 1,
