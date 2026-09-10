@@ -1,0 +1,83 @@
+{
+  "artifact_records": [
+    {
+      "digest": "8cd84f1fc9f8784d38a7bd4d17f6cdee9e970f8eae0e215e3a9d4143012ead52",
+      "path_or_uri": "evidence/environment/qual-20260910T012822/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "e56a08ba96fd010bae44f944ff96e450f81668a663a3dfaff913eb9ac3c0b7d6",
+      "path_or_uri": "evidence/environment/qual-20260910T012822/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "ec5b3439f14e6860e3ba92b7e395366fed3f0f4a5382cdc5a7517a32854260dc",
+      "path_or_uri": "migrations/up/0001_identities.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "b9fe7f3ae5051a6aed8b475508b4ef16d7b5c4ca10c2310da41e86b5cb201955",
+      "path_or_uri": "migrations/up/0002_work_runtime.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "3bfe4abaff7bbf49835d1b7a1aaaae5380375c6704c908e1586509196e1b41d7",
+      "path_or_uri": "quansio/platform/migrate.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "03bfae6d824808b721491f2a2872a37c663f9281f48309a25fe339b8b641f33e",
+      "path_or_uri": "tests/runtime/test_schema.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "DAT-002-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_schema.py::test_dat002_p01_all_governed_schema_areas_exist; tests/runtime/test_schema.py::test_dat002_n01_cross_tenant_reference_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-002-N01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_schema.py::test_dat002_n01_cross_tenant_reference_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-002-P01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_schema.py::test_dat002_p01_all_governed_schema_areas_exist; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-002-R01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_schema.py::test_dat002_r01_latest_reversible_migration_round_trip; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-007-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_schema.py::test_dat002_p01_all_governed_schema_areas_exist; tests/runtime/test_schema.py::test_dat002_r01_latest_reversible_migration_round_trip; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T01:28:44Z",
+  "git_commit": "361ba54dd45a0216e4e65c9332e8a8c1355f1ac0",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-dat-002-361ba54dd45a",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "DAT-002"
+}

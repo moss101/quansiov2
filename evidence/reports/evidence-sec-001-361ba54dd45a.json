@@ -1,0 +1,33 @@
+{
+  "artifact_digests": {
+    "evidence/environment/qual-20260910T012822/health-transcript.json": "3b99bc74a30e769a5fd03655551ba6ae6e798c8b0a179e49312c714044a54b9b",
+    "evidence/environment/qual-20260910T012822/manifest.json": "438a3f395c1eac0c6ca4a1fc10c77ebea4f9a03e96512161532e4ba24c528d2a",
+    "migrations/up/0006_capability_snapshots.sql": "4f47433eae397423f7976c9d854773d9878346cc66b9802b487d1df9b05688d2",
+    "quansio/control/capability.py": "91766ebe0293fef116429724e15381c70e74d1c7087438a8454d30e4ccb78735",
+    "tests/runtime/test_foundation.py": "3c796add73123c3a23b93b6462dc9e2aa141e3cb7a7c08ebaeacc6d7bf8d39b0"
+  },
+  "created_at": "2026-09-10T01:28:51Z",
+  "evidence_id": "evidence-sec-001-361ba54dd45a",
+  "git_commit": "361ba54dd45a0216e4e65c9332e8a8c1355f1ac0",
+  "real_boundary": true,
+  "report_digest": "34f548a45b1d7f75a53ca715d7675ba5b140134dd110944c8d99ea1ea435e40a",
+  "report_path": "evidence/reports/report-sec-001-361ba54dd45a.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "INV-009-A01",
+    "SEC-001-A01"
+  ],
+  "requirement_ids": [
+    "INV-009",
+    "SEC-001"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "SEC-001-N01",
+    "SEC-001-P01",
+    "SEC-001-R01"
+  ],
+  "task_id": "SEC-001"
+}

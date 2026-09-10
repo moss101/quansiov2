@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "438a3f395c1eac0c6ca4a1fc10c77ebea4f9a03e96512161532e4ba24c528d2a",
+      "path_or_uri": "evidence/environment/qual-20260910T012822/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "3b99bc74a30e769a5fd03655551ba6ae6e798c8b0a179e49312c714044a54b9b",
+      "path_or_uri": "evidence/environment/qual-20260910T012822/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "91766ebe0293fef116429724e15381c70e74d1c7087438a8454d30e4ccb78735",
+      "path_or_uri": "quansio/control/capability.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "4f47433eae397423f7976c9d854773d9878346cc66b9802b487d1df9b05688d2",
+      "path_or_uri": "migrations/up/0006_capability_snapshots.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "3c796add73123c3a23b93b6462dc9e2aa141e3cb7a7c08ebaeacc6d7bf8d39b0",
+      "path_or_uri": "tests/runtime/test_foundation.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "INV-009-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_sec001_p01_snapshot_immutability_and_strict_child_subset; tests/runtime/test_foundation.py::test_sec001_r01_expired_snapshot_requires_fresh_admission; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-001-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_sec001_p01_snapshot_immutability_and_strict_child_subset; tests/runtime/test_foundation.py::test_sec001_n01_child_escalation_and_mutation_denied; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-001-N01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_sec001_n01_child_escalation_and_mutation_denied; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-001-P01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_sec001_p01_snapshot_immutability_and_strict_child_subset; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-001-R01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_sec001_r01_expired_snapshot_requires_fresh_admission; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T01:28:51Z",
+  "git_commit": "361ba54dd45a0216e4e65c9332e8a8c1355f1ac0",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-sec-001-361ba54dd45a",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "SEC-001"
+}
