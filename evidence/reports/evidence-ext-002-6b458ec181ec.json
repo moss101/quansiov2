@@ -1,0 +1,36 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/EXT-002/health-transcript.json": "d7b2466f4e102777529a04871df01a88864c8955222519dcd5d106795eb23801",
+    "evidence/boundary/EXT-002/manifest.json": "e1fca3ccd7022fa958efd86578383e84cdd42f8655da6e61ab0ce57549d22e56",
+    "quansio/control/broker.py": "a56b1cedcbafa844a25cca3bfb4965d1b2260c55fc4a76f19780bc1da247f6f7",
+    "quansio/control/connectors.py": "5f61032bda7e88aba9823289b929a26f51456f586dbaead62fe4f700c5ffbb54",
+    "quansio/control/effects.py": "45f0c90248c794fee411e90b1d32b30e3ad9f1c8062cee7a0b16646749c4183d",
+    "tests/business/test_business_connectors.py": "c6a641bf94b7f68dd00587da3ca34faffa99516da3cb426f457db2addbf3db35"
+  },
+  "created_at": "2026-09-10T10:37:26Z",
+  "evidence_id": "evidence-ext-002-6b458ec181ec",
+  "git_commit": "6b458ec181ec1432426c86228f1225a29d64a422",
+  "real_boundary": true,
+  "report_digest": "516a0879d8bde216766115645c87e732027560ea2fe6f6a52cbc6bb8ece62ab1",
+  "report_path": "evidence/reports/report-ext-002-6b458ec181ec.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "EFF-001-A01",
+    "EXT-002-A01",
+    "SEC-004-A01"
+  ],
+  "requirement_ids": [
+    "EFF-001",
+    "EXT-002",
+    "SEC-004"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "EXT-002-N01",
+    "EXT-002-P01",
+    "EXT-002-R01"
+  ],
+  "task_id": "EXT-002"
+}
