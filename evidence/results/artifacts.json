@@ -223,6 +223,11 @@
     "tests/governance/test_milestone_gate.py",
     "evidence/gates/GATE-M12.json"
   ],
+  "GATE-M13": [
+    "tools/governance/milestone_gate.py",
+    "tests/governance/test_milestone_gate.py",
+    "evidence/gates/GATE-M13.json"
+  ],
   "GATE-M2": [
     "tools/governance/milestone_gate.py",
     "tests/governance/test_milestone_gate.py",
