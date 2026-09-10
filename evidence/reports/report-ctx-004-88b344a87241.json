@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "0c591d04539b2f7e02440cffe40f8320e51ab0bc8dfe10dd887930af5ef426a7",
+      "path_or_uri": "evidence/boundary/CTX-004/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "6f5b0084968a9809fd18bb97cefc5b06ec7e294f5eb731ee5f6bd47634bcc4b7",
+      "path_or_uri": "evidence/boundary/CTX-004/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "9d63a65ab44499a29d3c28fe4b888ac9905a82e5a16637f18e8054550bf1f776",
+      "path_or_uri": "quansio/context/executor.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "bf843afc6deb91cedc427c1801bf7f93a902f3dcb366d185e3aead41c565400d",
+      "path_or_uri": "tests/context/test_context_stack.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "CTX-004-A01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx004_p01_wide_fan_out_discovers_100_plus_candidates; tests/context/test_context_stack.py::test_ctx004_n01_budget_and_timeout_branches_record_missing_data; tests/context/test_context_stack.py::test_ctx004_r01_restart_continues_from_persisted_intermediates; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-004-N01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx004_n01_budget_and_timeout_branches_record_missing_data; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-004-P01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx004_p01_wide_fan_out_discovers_100_plus_candidates; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-004-R01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx004_r01_restart_continues_from_persisted_intermediates; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T05:25:54Z",
+  "git_commit": "88b344a872418f142d4ad892d34e64d0f6359601",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-ctx-004-88b344a87241",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "CTX-004"
+}
