@@ -1,0 +1,33 @@
+{
+  "artifact_digests": {
+    "clients/pyapp/surface.py": "db68ae26e29f82455b180e9db1feb4bdad58853d1efbbf16b6044976ce77c6d9",
+    "evidence/boundary/UX-005/health-transcript.json": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+    "evidence/boundary/UX-005/manifest.json": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+    "quansio/artifact/store.py": "60eaf26063655b50be545d344cd5caabc920fbe58e6007a9aa207af05078c154",
+    "tests/uxclients/test_client_surfaces.py": "3b2ffdb3469b854e4a2ab7e0f325a6fa3f7fbead0452b26c66e5aa44d6bc5b9c"
+  },
+  "created_at": "2026-09-10T12:31:07Z",
+  "evidence_id": "evidence-ux-005-a88e224f97a0",
+  "git_commit": "a88e224f97a05e458d2bab13450ad9f8e8edf332",
+  "real_boundary": true,
+  "report_digest": "1d60a2d030806bc8e655d03d09b6d753e79c0229cf086b4e073fed8153e1e406",
+  "report_path": "evidence/reports/report-ux-005-a88e224f97a0.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "DAT-006-A01",
+    "UX-001-A01"
+  ],
+  "requirement_ids": [
+    "DAT-006",
+    "UX-001"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "UX-005-N01",
+    "UX-005-P01",
+    "UX-005-R01"
+  ],
+  "task_id": "UX-005"
+}
