@@ -1,0 +1,19 @@
+{
+  "SEC-007-A01": [
+    "tests/sre/test_sre_security.py::test_sec007_p01_provenance_binds_inputs",
+    "tests/sre/test_sre_security.py::test_sec007_n01_substituted_artifact_or_foreign_bindings_fail",
+    "tests/sre/test_sre_security.py::test_sec007_r01_declared_nondeterminism_excluded"
+  ],
+  "SEC-007-N01": [
+    "tests/sre/test_sre_security.py::test_sec007_n01_substituted_artifact_or_foreign_bindings_fail"
+  ],
+  "SEC-007-P01": [
+    "tests/sre/test_sre_security.py::test_sec007_p01_provenance_binds_inputs"
+  ],
+  "SEC-007-R01": [
+    "tests/sre/test_sre_security.py::test_sec007_r01_declared_nondeterminism_excluded"
+  ],
+  "SEC-008-A01": [
+    "tests/sre/test_sre_security.py::test_sec007_n01_substituted_artifact_or_foreign_bindings_fail"
+  ]
+}

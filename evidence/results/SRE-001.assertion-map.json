@@ -1,0 +1,16 @@
+{
+  "SRE-001-A01": [
+    "tests/sre/test_sre_security.py::test_sre001_p01_full_trace_correlation_without_leakage",
+    "tests/sre/test_sre_security.py::test_sre001_n01_missing_boundary_fails_completeness",
+    "tests/sre/test_sre_security.py::test_sre001_r01_bounded_buffer_during_backend_outage"
+  ],
+  "SRE-001-N01": [
+    "tests/sre/test_sre_security.py::test_sre001_n01_missing_boundary_fails_completeness"
+  ],
+  "SRE-001-P01": [
+    "tests/sre/test_sre_security.py::test_sre001_p01_full_trace_correlation_without_leakage"
+  ],
+  "SRE-001-R01": [
+    "tests/sre/test_sre_security.py::test_sre001_r01_bounded_buffer_during_backend_outage"
+  ]
+}

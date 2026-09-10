@@ -1,0 +1,12 @@
+{
+  "SRE-004-A01": [
+    "tests/sre/test_sre_security.py::test_sre004_p01_drills_meet_rpo_rto_objectives",
+    "tests/sre/test_sre_security.py::test_sre004_n01_drill_fails_on_objective_or_component_gap"
+  ],
+  "SRE-004-N01": [
+    "tests/sre/test_sre_security.py::test_sre004_n01_drill_fails_on_objective_or_component_gap"
+  ],
+  "SRE-004-P01": [
+    "tests/sre/test_sre_security.py::test_sre004_p01_drills_meet_rpo_rto_objectives"
+  ]
+}

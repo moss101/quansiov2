@@ -1,0 +1,19 @@
+{
+  "EFF-003-A01": [
+    "tests/sre/test_sre_security.py::test_sre003_r01_unknown_effects_must_resolve_before_reopen"
+  ],
+  "SRE-003-A01": [
+    "tests/sre/test_sre_security.py::test_sre003_p01_rcp_binds_all_components",
+    "tests/sre/test_sre_security.py::test_sre003_n01_db_restore_alone_insufficient",
+    "tests/sre/test_sre_security.py::test_sre003_r01_unknown_effects_must_resolve_before_reopen"
+  ],
+  "SRE-003-N01": [
+    "tests/sre/test_sre_security.py::test_sre003_n01_db_restore_alone_insufficient"
+  ],
+  "SRE-003-P01": [
+    "tests/sre/test_sre_security.py::test_sre003_p01_rcp_binds_all_components"
+  ],
+  "SRE-003-R01": [
+    "tests/sre/test_sre_security.py::test_sre003_r01_unknown_effects_must_resolve_before_reopen"
+  ]
+}

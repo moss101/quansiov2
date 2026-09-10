@@ -1,0 +1,15 @@
+{
+  "SEC-006-A01": [
+    "tests/sre/test_sre_security.py::test_sec006_p01_and_n01_cross_tenant_probes_all_denied",
+    "tests/sre/test_sre_security.py::test_sec006_r01_probes_repeated_after_failover"
+  ],
+  "SEC-006-N01": [
+    "tests/sre/test_sre_security.py::test_sec006_p01_and_n01_cross_tenant_probes_all_denied"
+  ],
+  "SEC-006-P01": [
+    "tests/sre/test_sre_security.py::test_sec006_p01_and_n01_cross_tenant_probes_all_denied"
+  ],
+  "SEC-006-R01": [
+    "tests/sre/test_sre_security.py::test_sec006_r01_probes_repeated_after_failover"
+  ]
+}

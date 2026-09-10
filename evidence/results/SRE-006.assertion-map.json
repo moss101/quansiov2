@@ -1,0 +1,19 @@
+{
+  "RUN-006-A01": [
+    "tests/sre/test_sre_security.py::test_sre006_n01_tenant_isolation_under_shared_limit"
+  ],
+  "SRE-006-A01": [
+    "tests/sre/test_sre_security.py::test_sre006_p01_quota_enforcement_with_audit",
+    "tests/sre/test_sre_security.py::test_sre006_n01_tenant_isolation_under_shared_limit",
+    "tests/sre/test_sre_security.py::test_sre006_r01_restart_preserves_spend_counters"
+  ],
+  "SRE-006-N01": [
+    "tests/sre/test_sre_security.py::test_sre006_n01_tenant_isolation_under_shared_limit"
+  ],
+  "SRE-006-P01": [
+    "tests/sre/test_sre_security.py::test_sre006_p01_quota_enforcement_with_audit"
+  ],
+  "SRE-006-R01": [
+    "tests/sre/test_sre_security.py::test_sre006_r01_restart_preserves_spend_counters"
+  ]
+}

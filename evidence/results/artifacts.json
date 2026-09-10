@@ -435,6 +435,14 @@
     "quansio/control/guard.py",
     "tests/control/test_policy_effects.py"
   ],
+  "SEC-006": [
+    "quansio/observability/sre.py",
+    "tests/sre/test_sre_security.py"
+  ],
+  "SEC-007": [
+    "quansio/observability/sre.py",
+    "tests/sre/test_sre_security.py"
+  ],
   "SKL-001": [
     "quansio/control/skills.py",
     "tests/knowledge/test_knowledge_skills.py"
@@ -456,6 +464,31 @@
     "quansio/control/skills.py",
     "quansio/qworkerd/protocol.py",
     "tests/knowledge/test_knowledge_skills.py"
+  ],
+  "SRE-001": [
+    "quansio/observability/telemetry.py",
+    "migrations/up/0019_sre_security.sql",
+    "tests/sre/test_sre_security.py"
+  ],
+  "SRE-002": [
+    "quansio/observability/telemetry.py",
+    "tests/sre/test_sre_security.py"
+  ],
+  "SRE-003": [
+    "quansio/observability/sre.py",
+    "tests/sre/test_sre_security.py"
+  ],
+  "SRE-004": [
+    "quansio/observability/sre.py",
+    "tests/sre/test_sre_security.py"
+  ],
+  "SRE-005": [
+    "quansio/observability/sre.py",
+    "tests/sre/test_sre_security.py"
+  ],
+  "SRE-006": [
+    "quansio/observability/sre.py",
+    "tests/sre/test_sre_security.py"
   ],
   "UX-001": [
     "clients/pyapp/engine.py",
