@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 649,
+  "file_count": 655,
   "files": [
     {
       "path": ".gitignore",
@@ -109,8 +109,8 @@
     },
     {
       "path": "tools/governance/settle.sh",
-      "sha256": "49a2b997e05ee82858b3b8787749fc04019725828ebc4e6baaea80d95debe334",
-      "size_bytes": 1712
+      "sha256": "b25f5ac62b31516beb4c460c5edb640f2f01c62e5c2d7ba9e0064d7d7df5e523",
+      "size_bytes": 1799
     },
     {
       "path": "tools/governance/verify_all.sh",
@@ -1998,6 +1998,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m0-f66e8bd40b15.json",
+      "sha256": "a78ea1e590bad07a94318d6b1004e9e57f2a3d13a71610332ac734d5891aafd4",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m0-f95552a18fff.json",
       "sha256": "d6a7945dc435b6ff016030ed3c02deaf563fbc88fc9ee8e2e47f75c16c334786",
       "size_bytes": 1039
@@ -2050,6 +2055,11 @@
     {
       "path": "evidence/reports/evidence-gate-m2-a815f356e64c.json",
       "sha256": "6f43deeb3f92d2397208fddede574ea9b9264cb90e6cda3cc46623c455200fff",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m2-f66e8bd40b15.json",
+      "sha256": "acdbfd7af3e83761331822069ca96b50c98060851a30781e7a89e6ea5d8dae5e",
       "size_bytes": 1039
     },
     {
@@ -2115,6 +2125,11 @@
     {
       "path": "evidence/reports/evidence-gov-002-e1040c389acf.json",
       "sha256": "6661ff9fdf4dc25cf8a1ec929c9c078ec14ab4454402f17fdfa247ae57817f5e",
+      "size_bytes": 1120
+    },
+    {
+      "path": "evidence/reports/evidence-gov-002-f66e8bd40b15.json",
+      "sha256": "52cae3f62ec8c13c5f83972085e1b22330d483f83c9830a0c983a5f5fcee3021",
       "size_bytes": 1120
     },
     {
@@ -2473,6 +2488,11 @@
       "size_bytes": 3023
     },
     {
+      "path": "evidence/reports/report-gate-m0-f66e8bd40b15.json",
+      "sha256": "44147d79dfc8740b94cc538c80e0da4e759ca0be8c1c67a73ea7174bca43e99a",
+      "size_bytes": 3023
+    },
+    {
       "path": "evidence/reports/report-gate-m0-f95552a18fff.json",
       "sha256": "c608e8558379153c9a584980c0433e675f7db7e86648ad01aabbd018949d94b5",
       "size_bytes": 3023
@@ -2525,6 +2545,11 @@
     {
       "path": "evidence/reports/report-gate-m2-a815f356e64c.json",
       "sha256": "be76e837b31c4b2c4d1ce655ce30bd91c3016973810b8ec33b7d422680edf566",
+      "size_bytes": 2887
+    },
+    {
+      "path": "evidence/reports/report-gate-m2-f66e8bd40b15.json",
+      "sha256": "54eddbf85af833677d0aaa9fc0a29679fe5852b224e15f434a6bded22ab6d66b",
       "size_bytes": 2887
     },
     {
@@ -2590,6 +2615,11 @@
     {
       "path": "evidence/reports/report-gov-002-e1040c389acf.json",
       "sha256": "59b1834c4a16bacc847c3f5b3b0417c3f0a870d5dc51c2c23d3c0dde0d3f7423",
+      "size_bytes": 4382
+    },
+    {
+      "path": "evidence/reports/report-gov-002-f66e8bd40b15.json",
+      "sha256": "bcce9582e45920f6a0f3377be5a8a93c3471f98bfe363074bf553b97428deb2d",
       "size_bytes": 4382
     },
     {
