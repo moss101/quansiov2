@@ -1,10 +1,11 @@
 {
   "gate": "GATE-M13",
-  "git_commit": "87d1aee680087a3caa3972a8a7f25d4b06193e35",
+  "git_commit": "5faa57043a2932c9dbbbd998ae162f6da9ab12f6",
   "predecessor_evidence_index": [
     {
-      "evidence": null,
-      "status": "MISSING",
+      "evidence": "evidence/reports/evidence-gate-m12-87d1aee68008.json",
+      "evidence_digest": "8eaaec448cb1358909a055aaa4837ca087c20f2b6c1f3c6ae4c5af3f1adcab8e",
+      "status": "PASS",
       "task": "GATE-M12"
     },
     {
@@ -56,14 +57,9 @@
       "task": "QA-008"
     }
   ],
-  "problems": [
-    {
-      "reason": "no completion evidence recorded; task may not close the milestone",
-      "task": "GATE-M12"
-    }
-  ],
+  "problems": [],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "FAIL",
+  "result": "PASS",
   "schema_revision": "9.0.0"
 }
