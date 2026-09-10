@@ -1,0 +1,14 @@
+{
+  "RUN-008-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col003_r01_outage_recovery_delivers_pending_without_state_change"
+  ],
+  "UX-005-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux005_p01_artifact_metadata_with_grants"
+  ],
+  "UX-007-N01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux007_n01_mobile_unsupported_surface_gated"
+  ],
+  "UX-007-P01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux007_n01_mobile_unsupported_surface_gated"
+  ]
+}

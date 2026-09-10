@@ -1,0 +1,17 @@
+{
+  "INV-002-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux006_n01_web_local_mutation_rejected"
+  ],
+  "UX-005-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux005_p01_artifact_metadata_with_grants"
+  ],
+  "UX-006-N01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux006_n01_web_local_mutation_rejected"
+  ],
+  "UX-006-P01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux006_p01_web_same_convergence_path"
+  ],
+  "UX-006-R01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux001_r01_reconnect_from_durable_cursor_without_duplicates"
+  ]
+}

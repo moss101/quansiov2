@@ -1,0 +1,17 @@
+{
+  "DAT-006-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux005_p01_artifact_metadata_with_grants"
+  ],
+  "UX-001-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux005_p01_artifact_metadata_with_grants"
+  ],
+  "UX-005-N01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux005_n01_wrong_tenant_artifact_not_exposed"
+  ],
+  "UX-005-P01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux005_p01_artifact_metadata_with_grants"
+  ],
+  "UX-005-R01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux005_p01_artifact_metadata_with_grants"
+  ]
+}

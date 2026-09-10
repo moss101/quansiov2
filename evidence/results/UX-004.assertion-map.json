@@ -1,0 +1,17 @@
+{
+  "EFF-002-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux004_n01_changed_scope_after_render_rejected"
+  ],
+  "UX-003-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux003_p01_and_n01_pane_respects_controller_lease"
+  ],
+  "UX-004-N01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux004_n01_changed_scope_after_render_rejected"
+  ],
+  "UX-004-P01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux004_p01_exact_scope_displayed_and_submitted"
+  ],
+  "UX-004-R01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux004_r01_resolved_on_other_client_updates_first"
+  ]
+}

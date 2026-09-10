@@ -451,5 +451,41 @@
     "quansio/control/skills.py",
     "quansio/qworkerd/protocol.py",
     "tests/knowledge/test_knowledge_skills.py"
+  ],
+  "UX-001": [
+    "clients/pyapp/engine.py",
+    "tests/uxclients/test_client_surfaces.py"
+  ],
+  "UX-002": [
+    "clients/pyapp/engine.py",
+    "tests/uxclients/test_client_surfaces.py"
+  ],
+  "UX-003": [
+    "quansio/worker_gateway/browser.py",
+    "tests/uxclients/test_client_surfaces.py"
+  ],
+  "UX-004": [
+    "quansio/control/effects.py",
+    "clients/pyapp/surface.py",
+    "tests/uxclients/test_client_surfaces.py"
+  ],
+  "UX-005": [
+    "quansio/artifact/store.py",
+    "clients/pyapp/surface.py",
+    "tests/uxclients/test_client_surfaces.py"
+  ],
+  "UX-006": [
+    "clients/pyapp/engine.py",
+    "clients/pyapp/surface.py",
+    "tests/uxclients/test_client_surfaces.py"
+  ],
+  "UX-007": [
+    "clients/pyapp/surface.py",
+    "tests/uxclients/test_client_surfaces.py"
+  ],
+  "UX-008": [
+    "clients/pyapp/surface.py",
+    "clients/pyapp/engine.py",
+    "tests/uxclients/test_client_surfaces.py"
   ]
 }

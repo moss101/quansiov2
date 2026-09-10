@@ -1,0 +1,16 @@
+{
+  "UX-002-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux002_p01_two_clients_converge_identically",
+    "tests/uxclients/test_client_surfaces.py::test_ux002_n01_duplicate_and_out_of_order_never_invent_sequence",
+    "tests/uxclients/test_client_surfaces.py::test_ux002_r01_cache_clear_rebuilds_from_snapshot"
+  ],
+  "UX-002-N01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux002_n01_duplicate_and_out_of_order_never_invent_sequence"
+  ],
+  "UX-002-P01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux002_p01_two_clients_converge_identically"
+  ],
+  "UX-002-R01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux002_r01_cache_clear_rebuilds_from_snapshot"
+  ]
+}

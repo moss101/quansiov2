@@ -1,0 +1,18 @@
+{
+  "INV-002-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux008_n01_cli_package_has_no_execution_authority"
+  ],
+  "UX-005-A01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux005_p01_artifact_metadata_with_grants"
+  ],
+  "UX-008-N01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux008_n01_cli_package_has_no_execution_authority"
+  ],
+  "UX-008-P01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux008_p01_cli_commands_parse_over_canonical_schemas",
+    "tests/uxclients/test_client_surfaces.py::test_ux008_p01_cli_task_status_and_cancel"
+  ],
+  "UX-008-R01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux008_r01_event_follow_resume_from_stored_cursor"
+  ]
+}
