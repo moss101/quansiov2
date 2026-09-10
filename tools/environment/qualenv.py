@@ -308,12 +308,13 @@ def cmd_health(args: argparse.Namespace) -> int:
         return 1
     material = load_passwords()
     checks = health_checks_against(material)
-    transcript_path = manifest_path.parent / "health-transcript.json"
-    transcript_path.write_text(
-        json.dumps({"executed_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "checks": checks}, indent=2) + "\n"
-    )
-    manifest["health_transcript_digest"] = sha256_file(transcript_path)
-    manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
+    if not getattr(args, "no_write", False):
+        transcript_path = manifest_path.parent / "health-transcript.json"
+        transcript_path.write_text(
+            json.dumps({"executed_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "checks": checks}, indent=2) + "\n"
+        )
+        manifest["health_transcript_digest"] = sha256_file(transcript_path)
+        manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
     print(f"QUAL ENVIRONMENT: HEALTHY ({len(checks)} real boundaries verified; {manifest_path})")
     return 0
 
@@ -386,6 +387,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=["provision", "health", "verify", "teardown"])
     parser.add_argument("--manifest", default=None, help="explicit manifest path")
+    parser.add_argument("--no-write", action="store_true", help="verify without mutating the manifest/transcript")
     args = parser.parse_args()
     return {"provision": cmd_provision, "health": cmd_health, "verify": cmd_verify, "teardown": cmd_teardown}[args.command](args)
 

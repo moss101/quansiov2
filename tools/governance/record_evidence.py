@@ -122,7 +122,7 @@ def main() -> int:
         if not manifest_path.is_file():
             raise SystemExit(f"boundary manifest missing: {args.boundary_manifest}")
         health = subprocess.run(
-            [str(VENV_PYTHON), str(ROOT / "tools/environment/qualenv.py"), "health", "--manifest", str(manifest_path)],
+            [str(VENV_PYTHON), str(ROOT / "tools/environment/qualenv.py"), "health", "--manifest", str(manifest_path), "--no-write"],
             text=True,
             capture_output=True,
         )

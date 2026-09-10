@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M1",
-  "git_commit": "3bf6e18ef1afbaf7ffb164a93f34997af9819caa",
+  "git_commit": "d8a6b50764807323f05a5e92854849c84b7ed7c0",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-dat-001-361ba54dd45a.json",
@@ -95,6 +95,10 @@
     {
       "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
       "task": "DAT-008"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
+      "task": "SEC-001"
     }
   ],
   "protected_ref": "HEAD",
