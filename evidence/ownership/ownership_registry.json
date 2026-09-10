@@ -421,7 +421,7 @@
       "kind": "client_path",
       "path": "clients",
       "owner": "clients",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "client application workspace"
     },

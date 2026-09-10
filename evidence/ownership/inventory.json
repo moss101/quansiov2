@@ -169,6 +169,14 @@
       "status": "present"
     },
     {
+      "kind": "client_path",
+      "owner": "clients",
+      "path": "clients",
+      "role": "client application workspace",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "deploy_path",
       "owner": "deploy",
       "path": "deploy",
@@ -401,9 +409,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 50,
+  "entry_count": 51,
   "inventory_version": "1.0.0",
-  "registry_sha256": "44f077b1fdb47c186922ad53bb5436c0734342c778a49e0f46ef19a7bdcf0c77",
+  "registry_sha256": "c6d7d0442d70b9dfb7c4254cace0267fce6731ee90353cabe97069f4ab2a03fd",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "71696e5be24ac6a6e2893727cba9edf608ff8c56d4d406b2aa092b7b87793eae"
