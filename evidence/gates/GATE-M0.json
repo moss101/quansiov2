@@ -1,0 +1,77 @@
+{
+  "evaluated_at": "2026-09-10T00:36:15Z",
+  "gate": "GATE-M0",
+  "git_commit": "79ac679486c5e3cab2031e912c7c40183b1d87e7",
+  "predecessor_evidence_index": [
+    {
+      "evidence": "evidence/reports/evidence-env-001-72761ce487c9.json",
+      "evidence_digest": "5a7dabb3631a5da483c45a99420e645158f25dfb3abbed55a9750e55086d54be",
+      "status": "PASS",
+      "task": "ENV-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",
+      "evidence_digest": "14839996dd5cab1c77b7ae9e10cca4a7e364b83c46b560288581637df3e5faf0",
+      "status": "PASS",
+      "task": "GOV-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gov-002-fb6d77873346.json",
+      "evidence_digest": "d2be0acc397124636b884309d08e2ddabe45352b2d8d4ad3ab51aaf8dc2622d1",
+      "status": "PASS",
+      "task": "GOV-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gov-003-c2d1ad837f8a.json",
+      "evidence_digest": "b5de4a4ec9b4e22ca0140049c3f72109408d65f5d5281fd7ab0106b6ff613c65",
+      "status": "PASS",
+      "task": "GOV-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gov-004-a5c0eaa97711.json",
+      "evidence_digest": "a48d6d2e1249be1ea4d9e1c850bf81c3ef50ad4dda44189a1d6927aa03d7ebde",
+      "status": "PASS",
+      "task": "GOV-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gov-005-4c33c00b7859.json",
+      "evidence_digest": "2490956693ee68af51a94e0cfe48c80e8f136289c6e160161a0e676bf5b1f4ad",
+      "status": "PASS",
+      "task": "GOV-005"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gov-006-53d49aec1545.json",
+      "evidence_digest": "16326553a5ec9d55375100d212af6bc7ac811e1a7c04c125e88fea414a695f01",
+      "status": "PASS",
+      "task": "GOV-006"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gov-007-36a3a7adeae9.json",
+      "evidence_digest": "004911ebd0bdd09f9aa02619ecf5f58b65b861ce36bbd8666fc18ae3604f9e7f",
+      "status": "PASS",
+      "task": "GOV-007"
+    }
+  ],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/ownership/inventory.json', '- local artifact mismatch: evidence/ownership/ownership_registry.json']",
+      "task": "GOV-001"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/ownership/ownership_registry.json', '- local artifact mismatch: tools/governance/ownership_map.py']",
+      "task": "GOV-002"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tools/governance/record_evidence.py']",
+      "task": "GOV-006"
+    },
+    {
+      "reason": "qualification suite Q-AUTH requires ['DAT-001', 'DAT-008', 'SEC-006'] which are not in this gate",
+      "task": "Q-AUTH"
+    }
+  ],
+  "protected_ref": "HEAD",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "result": "FAIL",
+  "schema_revision": "9.0.0"
+}

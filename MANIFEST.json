@@ -1,11 +1,11 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 354,
+  "file_count": 391,
   "files": [
     {
       "path": ".gitignore",
-      "sha256": "fac2ea265c4bbc5e9a9638fa3645ec85e28302826b96dfa8527e8835a060baf0",
-      "size_bytes": 105
+      "sha256": "551f8e82ebe94bdc905b2ae8b23e5a3349ca7554f32fe7745da6dc4417e0ddc9",
+      "size_bytes": 130
     },
     {
       "path": "00_README.md",
@@ -78,6 +78,11 @@
       "size_bytes": 7664
     },
     {
+      "path": "tools/governance/milestone_gate.py",
+      "sha256": "849be2b77ca5fae2d70cda318ce32a074925944211ee157c91b2593ae5a028e0",
+      "size_bytes": 5517
+    },
+    {
       "path": "tools/governance/ownership_inventory.py",
       "sha256": "d165ed28dc4936f39949df32c918758159851b6c695317381d8b42d698762a1f",
       "size_bytes": 11705
@@ -89,8 +94,8 @@
     },
     {
       "path": "tools/governance/record_evidence.py",
-      "sha256": "515e91921bffcdf8cbcb7ebd77e45fd3897df1e23ec0e80160b8b630339741c8",
-      "size_bytes": 8482
+      "sha256": "da9ed6a7fc9d81f9123727a152554cd71ba6ec1817d3f8272c032949e851a038",
+      "size_bytes": 10253
     },
     {
       "path": "tools/governance/repo_paths.py",
@@ -101,6 +106,11 @@
       "path": "tools/governance/verify_all.sh",
       "sha256": "ea002f97b6c724ce2f71642499ddf72b79376641f05b4204f849d31f43cedec3",
       "size_bytes": 815
+    },
+    {
+      "path": "tools/environment/qualenv.py",
+      "sha256": "54bd6c85b429073d9b23acea479efd25e087e37fa92041a626eec82919f52b63",
+      "size_bytes": 16326
     },
     {
       "path": "tests/governance/test_authority_generation.py",
@@ -124,8 +134,8 @@
     },
     {
       "path": "tests/governance/test_ownership_inventory.py",
-      "sha256": "ddc37fa6e1db183b6ae5a9ec3bb09ea7713b32e45cc3d0cd85790e989ddef6d3",
-      "size_bytes": 5230
+      "sha256": "618d10e9f702ccea385798067c435fea58966fda39cc7647c8808fcfee629a1b",
+      "size_bytes": 5229
     },
     {
       "path": "tests/governance/test_ownership_map.py",
@@ -566,6 +576,11 @@
       "path": "tests/fixtures/invalid/WorkerLease.json",
       "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
       "size_bytes": 3
+    },
+    {
+      "path": "tests/environment/test_qualenv.py",
+      "sha256": "8fccb1753c1cf6397de4239f74293aa308927705ba6815bc75b57c23febcebd9",
+      "size_bytes": 4973
     },
     {
       "path": "scripts/finalize_package.py",
@@ -1398,6 +1413,11 @@
       "size_bytes": 3756
     },
     {
+      "path": "evidence/results/ENV-001.assertion-map.json",
+      "sha256": "5a274b37f557561a74a9012a31a944bb6c34dfa3c34663ff796e4c72632b63ef",
+      "size_bytes": 791
+    },
+    {
       "path": "evidence/results/GOV-001.assertion-map.json",
       "sha256": "aaa6def370042a6d0ab5243a24a0eb101d2edc426483a07736c9c66283ddcebf",
       "size_bytes": 1595
@@ -1428,14 +1448,34 @@
       "size_bytes": 1060
     },
     {
+      "path": "evidence/results/GOV-007.assertion-map.json",
+      "sha256": "2ed83efe6194dce10678e69be59282dda2e6381809ba3e28ebfa5906c670173b",
+      "size_bytes": 1313
+    },
+    {
+      "path": "evidence/reports/evidence-env-001-72761ce487c9.json",
+      "sha256": "5a7dabb3631a5da483c45a99420e645158f25dfb3abbed55a9750e55086d54be",
+      "size_bytes": 1337
+    },
+    {
       "path": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",
       "sha256": "14839996dd5cab1c77b7ae9e10cca4a7e364b83c46b560288581637df3e5faf0",
       "size_bytes": 1207
     },
     {
+      "path": "evidence/reports/evidence-gov-002-79ac679486c5.json",
+      "sha256": "53cda1280805f7b7b7e5d3172124dd363fae41ebd26ca6d08bda213ce7ce969d",
+      "size_bytes": 1120
+    },
+    {
       "path": "evidence/reports/evidence-gov-002-fb6d77873346.json",
       "sha256": "d2be0acc397124636b884309d08e2ddabe45352b2d8d4ad3ab51aaf8dc2622d1",
       "size_bytes": 1120
+    },
+    {
+      "path": "evidence/reports/evidence-gov-003-79ac679486c5.json",
+      "sha256": "e38e4d49b184a7a1ab420d094f17f9facd67990f7aa2736d6441ba16421755ae",
+      "size_bytes": 1081
     },
     {
       "path": "evidence/reports/evidence-gov-003-c2d1ad837f8a.json",
@@ -1458,14 +1498,39 @@
       "size_bytes": 1089
     },
     {
+      "path": "evidence/reports/evidence-gov-006-79ac679486c5.json",
+      "sha256": "88a8d84569517395ec39c66b3da3111f17d802d51b476cf7ab3ffd06f045aedb",
+      "size_bytes": 1089
+    },
+    {
+      "path": "evidence/reports/evidence-gov-007-36a3a7adeae9.json",
+      "sha256": "004911ebd0bdd09f9aa02619ecf5f58b65b861ce36bbd8666fc18ae3604f9e7f",
+      "size_bytes": 1169
+    },
+    {
+      "path": "evidence/reports/report-env-001-72761ce487c9.json",
+      "sha256": "d8d4899da276963a5c8602acda8ddd2df5e93d5dfdf01ff20ec18a9013c99db7",
+      "size_bytes": 3708
+    },
+    {
       "path": "evidence/reports/report-gov-001-054ee9a63fa0.json",
       "sha256": "e68c4e982c5f5e864d4b4218f70b29809803c93aa68a0f35e587e49dabebcb19",
       "size_bytes": 4212
     },
     {
+      "path": "evidence/reports/report-gov-002-79ac679486c5.json",
+      "sha256": "7606edb531424686c4c755073803f2bb683f53ce2976d94afcd3b3110e5388f9",
+      "size_bytes": 4382
+    },
+    {
       "path": "evidence/reports/report-gov-002-fb6d77873346.json",
       "sha256": "8e479366ddb633ca6c76ecadcb74b6f8d50dec538df55fd18d165139ffbb2753",
       "size_bytes": 4382
+    },
+    {
+      "path": "evidence/reports/report-gov-003-79ac679486c5.json",
+      "sha256": "5244c88ad028b1c0b6420be70c4720f59f07ad455bd8dcad15309d47893dfddb",
+      "size_bytes": 3490
     },
     {
       "path": "evidence/reports/report-gov-003-c2d1ad837f8a.json",
@@ -1488,14 +1553,119 @@
       "size_bytes": 3455
     },
     {
+      "path": "evidence/reports/report-gov-006-79ac679486c5.json",
+      "sha256": "dfb34cbcbcd12b5658dedf607d527fdfa0a53f0c3188cdc867d789169a10530e",
+      "size_bytes": 3455
+    },
+    {
+      "path": "evidence/reports/report-gov-007-36a3a7adeae9.json",
+      "sha256": "c69d942423ae0a9f7109788eb7c58207449440ff7eb80bda126194ba7ecdfc87",
+      "size_bytes": 4186
+    },
+    {
       "path": "evidence/ownership/inventory.json",
-      "sha256": "d42f5b45a7bb1996d5f8981b0b3fb54a69148fce94a75d9bf28a2f6942dd951b",
-      "size_bytes": 5366
+      "sha256": "ced73009e8d0a7773f54da69b057be55648a9efbd0247f2df6c9b27fc3e54a06",
+      "size_bytes": 6647
     },
     {
       "path": "evidence/ownership/ownership_registry.json",
-      "sha256": "5815e00f70711834815fe1c247e956d8afeb6bdbfbac0582c64c2a1c533827c5",
+      "sha256": "8f579edc4e66088e7a915c7d972b1d5e8a30b68ceae6dea2bbef0b96e3ad5fce",
       "size_bytes": 22270
+    },
+    {
+      "path": "evidence/gates/GATE-M0.json",
+      "sha256": "141d956db7c0166a3d2956e7e336f04b79e33653315d07d5761b44de328b1e87",
+      "size_bytes": 2970
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003457/health-transcript.json",
+      "sha256": "d5efa3c180b51dd66e8f2c6a3f60f6ec3404e6b15d31893ad04b6525e353586c",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003457/manifest.json",
+      "sha256": "19f33ede699a5e772edb58fded0a7bdf41b6ed56e4c7775d096ef44ae7d51304",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003453/health-transcript.json",
+      "sha256": "bc7ee0ac52c0233dc76b9efb5125b67753aeb27305383341ebb39a824648e66a",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003453/manifest.json",
+      "sha256": "30698ee1cad9400984f6388061157e47338a51ac74dafcd84231e28042422783",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003433/health-transcript.json",
+      "sha256": "c9aabcb8e054ec2f8c4245a9e14a335be16bda5b62fdbaff8390a17d150c8879",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003433/manifest.json",
+      "sha256": "5d794add15d2c5737e5364d116fa2907177c674dd0c46db36f069db345a2aca2",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003429/health-transcript.json",
+      "sha256": "d16387234e4354c62ef12ea649b517aee5bfae12466ecfbe5ecf7a632496ee43",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003429/manifest.json",
+      "sha256": "752f06114b8150202ee5c77ca35276c44399bd2d66d8df43fa35c8935ffa6747",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003412/health-transcript.json",
+      "sha256": "e41ef5a916913cb612a1d1cd433da53154e1e044660276eba38b4fa50f4277a6",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003412/manifest.json",
+      "sha256": "42e5c68706bcccf120f1059396060f6057569f14482fca1a58b89ca71a69bff9",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003251/health-transcript.json",
+      "sha256": "fd49cd232af13e0259e25052c09d7790be4b17cbad2c2add8eb6b0a9132a325e",
+      "size_bytes": 1400
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003251/manifest.json",
+      "sha256": "e73d7e1f8441ab83f5690df334e84cdaf325f12a1f63d52a212ae5e3c3a9577c",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003235/health-transcript.json",
+      "sha256": "ac4297d2101ed4cb044d84a6380956a6f28e72c78ac61c4ef1525a6d87feb866",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003235/manifest.json",
+      "sha256": "687db755851844b65f62cf578fc0a26273b4f48ec826d3fbfc4ec37a16419d83",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003201/health-transcript.json",
+      "sha256": "a178d08a05bddf7bed74b623b7592e9f55fb1937b1dfde4659e3fc58701ee0d0",
+      "size_bytes": 1400
+    },
+    {
+      "path": "evidence/environment/qual-20260910T003201/manifest.json",
+      "sha256": "6b39b0aa7ad7b6b00f45c92aa356c2b87a5defaeac1ccd6fa2b92eae2d7075f7",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T002854/health-transcript.json",
+      "sha256": "a48f32029a4aec5c9b91af590db98c1753137657a70b05aeba7bc2ba567a61f7",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T002854/manifest.json",
+      "sha256": "bf1c4e84dc5aacf509ae53cb2188c430392e72cd1d09309f550a2362364d4d8d",
+      "size_bytes": 1549
     },
     {
       "path": "docs/01_PRODUCT_CONTRACT.md",
@@ -1771,6 +1941,21 @@
       "path": "docs/decisions/0003-decision-and-threat-model-workflow.md",
       "sha256": "a98ba248831e2d5f6f70d1570edbee681d830a80ed08a46a07d207b7c9cb3dcd",
       "size_bytes": 2750
+    },
+    {
+      "path": "deploy/compose/.env.qual",
+      "sha256": "7612e36b685868cd0347da85eeb7d7d923b3a682a7f644c7fbb9a38419dfd7c2",
+      "size_bytes": 216
+    },
+    {
+      "path": "deploy/compose/docker-compose.yml",
+      "sha256": "af65e5a560108673e6ae7c7a020c9d500cac841a5faaa35e998e28d8c25bb029",
+      "size_bytes": 1426
+    },
+    {
+      "path": "deploy/compose/initdb/01-identities.sh",
+      "sha256": "55771f94410b04a1edd611df5ab1a583c82d6ff47dac884976718b4a47c66445",
+      "size_bytes": 468
     }
   ],
   "schema_revision": "9.0.0"

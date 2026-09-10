@@ -115,12 +115,12 @@ def test_r01_tracked_input_change_is_detected_then_recovery_is_clean():
 
 
 def test_r01_planned_path_adopted_only_through_registry():
-    deploy_dir = REPO_ROOT / "deploy"
-    deploy_dir.mkdir(exist_ok=False)
+    probe_dir = REPO_ROOT / "clients"
+    probe_dir.mkdir(exist_ok=False)
     try:
         _, errors = inv.validate()
-        assert any("planned path now exists" in e and "deploy_path:deploy" in e for e in errors), errors
+        assert any("planned path now exists" in e and "client_path:clients" in e for e in errors), errors
     finally:
-        deploy_dir.rmdir()
+        probe_dir.rmdir()
     _, errors = inv.validate()
     assert errors == []
