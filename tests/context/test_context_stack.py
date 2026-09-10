@@ -190,11 +190,11 @@ def test_ctx002_n01_duplicate_content_merges_with_distinct_provenance(corpus):
 def test_ctx002_r01_inaccessible_source_preserved_as_stale(corpus):
     adapter = HttpRetrievalAdapter()
     # The vanishing page exists until removed from the corpus server.
-    candidate = adapter.retrieve(f"{corpus['base']}/vanishing/v1")
+    candidate = adapter.retrieve(f"{corpus['base']}/vanishing/first")
     assert candidate.access_status == "accessible"
     # Remove it server-side, then retrieve again: stale/inaccessible, not fresh.
-    corpus["server"].RequestHandlerClass.removed.add("/vanishing/v1")
-    gone = adapter.retrieve(f"{corpus['base']}/vanishing/v1")
+    corpus["server"].RequestHandlerClass.removed.add("/vanishing/first")
+    gone = adapter.retrieve(f"{corpus['base']}/vanishing/first")
     assert gone.access_status == "inaccessible"
     assert gone.freshness == "stale"
     assert gone.digest == "", "inaccessible sources must not claim fresh content"
@@ -389,15 +389,15 @@ def test_ctx005_r01_accessible_to_inaccessible_keeps_last_digest(migrated_db, wo
     context = _ctx(workspace_setup)
     records = ResearchRecordStore(migrated_db)
     adapter = ContentCacheAdapter()
-    url = f"{corpus['base']}/vanishing/v1"
-    corpus["server"].RequestHandlerClass.removed.discard("/vanishing/v1")
+    url = f"{corpus['base']}/vanishing/first"
+    corpus["server"].RequestHandlerClass.removed.discard("/vanishing/first")
     candidate = adapter.retrieve(url)
     program_id = _open_program_run(migrated_db, context)
     claim_id = records.add_claim(context, program_id, "k2",
                                  "vanishing source was accessible", [url])
     claim = records.get_claim(context, claim_id)
     verifier = ClaimVerifier(migrated_db, adapter)
-    corpus["server"].RequestHandlerClass.removed.add("/vanishing/v1")
+    corpus["server"].RequestHandlerClass.removed.add("/vanishing/first")
     outcome = verifier.verify(context, str(uuid.uuid4()), claim,
                               {url: candidate.digest})
     assert outcome.state == "inaccessible", outcome.details
