@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "23523af07fa7b15a33951e5f4372a3bc6a526a64490896e3da88310556b7d567",
+      "path_or_uri": "evidence/boundary/RUN-002/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "4d756fa81bb35ca539c4bff5b6cd0b58f812ccf1a8fe692939957c7d7ad12b57",
+      "path_or_uri": "evidence/boundary/RUN-002/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "25194292f379d7cbae5561785502ed2c7865fa2dd8a942cbd7a8de38db6f4c1e",
+      "path_or_uri": "quansio/runtime/agents.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "703b8a2c48b684e62953431a1a66ce8bfb12bfdb9a37a40c49377b241d53b388",
+      "path_or_uri": "migrations/up/0008_agent_admissions.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "d6070231f0d7bc2438ac8eb6883364633c9f0f1bcbeb060391bbfdbc18f21d35",
+      "path_or_uri": "tests/runtime/test_graphs_agents.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "RUN-002-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_graphs_agents.py::test_run002_p01_teammate_and_worker_have_distinct_lifecycles; tests/runtime/test_graphs_agents.py::test_run002_n01_expired_worker_identity_cannot_become_teammate; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-002-N01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_graphs_agents.py::test_run002_n01_expired_worker_identity_cannot_become_teammate; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-002-P01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_graphs_agents.py::test_run002_p01_teammate_and_worker_have_distinct_lifecycles; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-002-R01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_graphs_agents.py::test_run002_r01_restart_preserves_teammate_and_cleans_expired_worker; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T02:40:05Z",
+  "git_commit": "a0117584050d084889eed8bfa22dd1331fc9ab5f",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-run-002-a0117584050d",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "RUN-002"
+}
