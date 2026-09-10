@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "517e5b9b1c12afe6738186e74d4d6271214f22c16a4f1805eec036edce012083",
+      "path_or_uri": "evidence/boundary/MOD-004/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "191af4ca56a3b49717533cbbf3b4df4df7f2c691b9e3d3b246f73cd3f081b1e0",
+      "path_or_uri": "evidence/boundary/MOD-004/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "e36e60e5ac7f8c46fe2bf78bb606287f83f46b7a432fb09bcd082a6ca6ca04da",
+      "path_or_uri": "quansio/model_gateway/streaming.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "4509f652c199337945c9bf9e879faf80a03ad9bee0055f18f11213e3fe057a03",
+      "path_or_uri": "tests/model_gateway/test_gateway.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "MOD-004-A01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod004_p01_canonical_order_with_backpressure; tests/model_gateway/test_gateway.py::test_mod004_n01_injected_invalid_streams_never_reach_runtime; tests/model_gateway/test_gateway.py::test_mod004_r01_cancel_during_blocked_consumption; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-004-N01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod004_n01_injected_invalid_streams_never_reach_runtime; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-004-P01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod004_p01_canonical_order_with_backpressure; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-004-R01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod004_r01_cancel_during_blocked_consumption; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T04:31:55Z",
+  "git_commit": "baa9bf388e6098826dc5f3d2fe8b5e776b9980b2",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-mod-004-baa9bf388e60",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "MOD-004"
+}
