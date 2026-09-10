@@ -261,22 +261,22 @@ def test_skl001_n01_untrusted_or_incomplete_intake_refused(migrated_db, context)
 
 def test_skl001_r01_source_update_creates_new_version(migrated_db, context):
     intake = _intake(migrated_db)
-    v1 = intake.create_candidate(
+    first_ver = intake.create_candidate(
         context, "triage", GOOD_SOURCE, purpose="p",
         inputs_schema={"a": 1}, outputs_schema={}, instructions="i",
         dependencies=[], source_scope={"trusted_sources": ["runbook://ops/golden"]},
         intended_use="u", exclusions="e",
     )
     updated_source = {"trusted_sources": ["runbook://ops/golden"], "material": "revised"}
-    v2 = intake.create_candidate(
+    second_ver = intake.create_candidate(
         context, "triage", updated_source, purpose="p",
         inputs_schema={"a": 1}, outputs_schema={}, instructions="i2",
         dependencies=[], source_scope={"trusted_sources": ["runbook://ops/golden"]},
         intended_use="u", exclusions="e",
     )
-    assert v2["version"] == v1["version"] + 1
-    assert v2["source_material_digest"] != v1["source_material_digest"]
-    old = intake.package(context, "triage", v1["version"])
+    assert second_ver["version"] == first_ver["version"] + 1
+    assert second_ver["source_material_digest"] != first_ver["source_material_digest"]
+    old = intake.package(context, "triage", first_ver["version"])
     assert old["instructions"] == "i", "prior version stays available"
 
 
@@ -429,27 +429,27 @@ def test_skl004_n01_skill_self_mutation_denied(migrated_db, context):
 
 def test_skl004_r01_rollback_resolves_prior_version(migrated_db, workspace_setup, context, tmp_path):
     intake = _intake(migrated_db)
-    v1 = intake.create_candidate(context, "rb-skill", GOOD_SOURCE, purpose="p",
+    first_ver = intake.create_candidate(context, "rb-skill", GOOD_SOURCE, purpose="p",
                                  inputs_schema={"type": "object"}, outputs_schema={"type": "object"}, instructions="v1",
                                  dependencies=[], source_scope={"trusted_sources": ["runbook://ops/golden"]},
                                  intended_use="u", exclusions="e")
     evaluator = SkillEvaluator(migrated_db)
-    evaluation = evaluator.evaluate(context, "rb-skill", v1["version"], intake)
+    evaluation = evaluator.evaluate(context, "rb-skill", first_ver["version"], intake)
     registry = SkillRegistry(migrated_db)
-    registry.promote(context, "rb-skill", v1["version"], evaluation["passed"],
+    registry.promote(context, "rb-skill", first_ver["version"], evaluation["passed"],
                      thresholds={}, rollback_target=None)
-    v2 = intake.create_candidate(context, "rb-skill", GOOD_SOURCE, purpose="p2",
+    second_ver = intake.create_candidate(context, "rb-skill", GOOD_SOURCE, purpose="p2",
                                  inputs_schema={"type": "object"}, outputs_schema={"type": "object"}, instructions="v2",
                                  dependencies=[], source_scope={"trusted_sources": ["runbook://ops/golden"]},
                                  intended_use="u", exclusions="e")
-    registry.promote(context, "rb-skill", v2["version"], evaluation["passed"],
-                     thresholds={}, rollback_target=v1["version"])
+    registry.promote(context, "rb-skill", second_ver["version"], evaluation["passed"],
+                     thresholds={}, rollback_target=first_ver["version"])
     rolled = registry.rollback(context, "rb-skill")
-    assert rolled["active_version"] == v1["version"]
-    assert rolled["rolled_back_version"] == v2["version"]
+    assert rolled["active_version"] == first_ver["version"]
+    assert rolled["rolled_back_version"] == second_ver["version"]
     # Already-running tasks retain their admitted version identity (recorded in evidence).
-    running_evidence = {"skill_name": "rb-skill", "version": v2["version"]}
-    assert running_evidence["version"] == v2["version"]
+    running_evidence = {"skill_name": "rb-skill", "version": second_ver["version"]}
+    assert running_evidence["version"] == second_ver["version"]
 
 
 # ---------------------------------------------------------------------------
