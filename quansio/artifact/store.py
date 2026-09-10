@@ -44,9 +44,10 @@ class ArtifactStore:
         with self._db.connection() as connection:
             existing = connection.execute(
                 """
-                SELECT digest, size_bytes, scan_state FROM artifact_records WHERE digest = %s
+                SELECT digest, size_bytes, scan_state FROM artifact_records
+                WHERE tenant_id = %s AND digest = %s
                 """,
-                (digest,),
+                (context.tenant_id, digest),
             ).fetchone()
             if existing is None:
                 self._client.put_object(

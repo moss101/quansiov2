@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 2644,
+  "file_count": 2650,
   "files": [
     {
       "path": ".gitignore",
@@ -126,6 +126,16 @@
       "path": "tests/conftest.py",
       "sha256": "9fded87606c037ee0d1d2b4c05e73c528f79b44cd011eaa4ab3420f60be5ea04",
       "size_bytes": 3905
+    },
+    {
+      "path": "tests/uxclients/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "tests/uxclients/test_client_surfaces.py",
+      "sha256": "3b2ffdb3469b854e4a2ab7e0f325a6fa3f7fbead0452b26c66e5aa44d6bc5b9c",
+      "size_bytes": 18140
     },
     {
       "path": "tests/runtime/test_events.py",
@@ -1319,8 +1329,8 @@
     },
     {
       "path": "quansio/artifact/store.py",
-      "sha256": "4e52917d91ba1e6b05c58aa348c1804496adb752504db9036a129f8dcedc6887",
-      "size_bytes": 6243
+      "sha256": "60eaf26063655b50be545d344cd5caabc920fbe58e6007a9aa207af05078c154",
+      "size_bytes": 6296
     },
     {
       "path": "quansio/api/__init__.py",
@@ -13221,6 +13231,26 @@
       "path": "deploy/compose/initdb/01-identities.sh",
       "sha256": "55771f94410b04a1edd611df5ab1a583c82d6ff47dac884976718b4a47c66445",
       "size_bytes": 468
+    },
+    {
+      "path": "clients/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "clients/pyapp/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "clients/pyapp/engine.py",
+      "sha256": "352bbb28aae18e7d6f81f2d5aaa715a218ef31022f66b637ade0a7d3898ed84a",
+      "size_bytes": 4303
+    },
+    {
+      "path": "clients/pyapp/surface.py",
+      "sha256": "db68ae26e29f82455b180e9db1feb4bdad58853d1efbbf16b6044976ce77c6d9",
+      "size_bytes": 7203
     }
   ],
   "schema_revision": "9.0.0"
