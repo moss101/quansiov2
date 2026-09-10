@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M8",
-  "git_commit": "f13266a96f6288ec5f3a7d5c5873bc18ad8a95dc",
+  "git_commit": "70bc7381b5bf638067b4814efb4e6a6414cb023a",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-gate-m7-ed05c22cd50b.json",
