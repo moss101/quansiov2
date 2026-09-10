@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 1215,
+  "file_count": 1217,
   "files": [
     {
       "path": ".gitignore",
@@ -1169,8 +1169,8 @@
     },
     {
       "path": "quansio/control/privacy_gate.py",
-      "sha256": "e11ad246cb5776b38a3d4f0a6b9cf06a7e0feeaefd2a3e0fbeb051fe4d3a0cb4",
-      "size_bytes": 5741
+      "sha256": "222a9a60962dbb716deccf20c3ed6e2242f254f2ba59a02ec684127c2325f901",
+      "size_bytes": 5746
     },
     {
       "path": "quansio/context/__init__.py",
@@ -3008,6 +3008,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m5-e6a03e4bb0c1.json",
+      "sha256": "a769cf21dcfa3f6066f76240a3426d96294e5a956b1e651084f5306fb1c17f6d",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",
       "sha256": "14839996dd5cab1c77b7ae9e10cca4a7e364b83c46b560288581637df3e5faf0",
       "size_bytes": 1207
@@ -4605,6 +4610,11 @@
     {
       "path": "evidence/reports/report-gate-m4-dc3e45d3ade8.json",
       "sha256": "c5a03f8edc7bc503e741e7646cdb955efc21c954028c9810ff4b5e136515e600",
+      "size_bytes": 2887
+    },
+    {
+      "path": "evidence/reports/report-gate-m5-e6a03e4bb0c1.json",
+      "sha256": "7b0a9bbd52563af976d26f6cec5cc035f5cc70ba26c8f71bc3992281f4a366bb",
       "size_bytes": 2887
     },
     {

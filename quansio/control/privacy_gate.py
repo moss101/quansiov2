@@ -40,7 +40,7 @@ class Route(str, Enum):
 
 
 _SECRET_PATTERNS = [
-    (re.compile(r"\b(?:sk|pk|rk)-[A-Za-z0-9]{16,}\b"), "api_key"),
+    (re.compile(r"\b(?:sk|pk|rk)-[A-Za-z0-9]{16,}\b"), "key_material"),
     (re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"), "private_key"),
     (re.compile(r"\b\d{3}-\d{2}-\d{4}\b"), "ssn"),
     (re.compile(r"\b[\w.+-]+@[\w-]+\.[\w.]+\b"), "email"),
