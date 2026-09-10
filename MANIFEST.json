@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 393,
+  "file_count": 413,
   "files": [
     {
       "path": ".gitignore",
@@ -79,13 +79,13 @@
     },
     {
       "path": "tools/governance/milestone_gate.py",
-      "sha256": "849be2b77ca5fae2d70cda318ce32a074925944211ee157c91b2593ae5a028e0",
-      "size_bytes": 5517
+      "sha256": "0799f5f49ab000ef1ef2670732e87c25fd8da530bb3cfe8b91ebd233cb2a58e6",
+      "size_bytes": 6224
     },
     {
       "path": "tools/governance/ownership_inventory.py",
-      "sha256": "d165ed28dc4936f39949df32c918758159851b6c695317381d8b42d698762a1f",
-      "size_bytes": 11705
+      "sha256": "0fcba63d72fc26d637e32cfc88ef93e05c747307fed60f314e6896b56062edfe",
+      "size_bytes": 11757
     },
     {
       "path": "tools/governance/ownership_map.py",
@@ -133,9 +133,14 @@
       "size_bytes": 7710
     },
     {
+      "path": "tests/governance/test_milestone_gate.py",
+      "sha256": "07d4702799df01aa2a09b78c11b7b8ecab564441b0f90d510f523d0d1db5abc1",
+      "size_bytes": 4180
+    },
+    {
       "path": "tests/governance/test_ownership_inventory.py",
-      "sha256": "618d10e9f702ccea385798067c435fea58966fda39cc7647c8808fcfee629a1b",
-      "size_bytes": 5229
+      "sha256": "5fbdbc7638060a340ea17f80ee98116c886c18208228f4d4bcef76aeb6044a2b",
+      "size_bytes": 5354
     },
     {
       "path": "tests/governance/test_ownership_map.py",
@@ -583,6 +588,11 @@
       "size_bytes": 4973
     },
     {
+      "path": "services/quansio_api/main.py",
+      "sha256": "bfa63f06b76705ff282753aab95c4b204ab90377955363f5b55f2c49075a29b9",
+      "size_bytes": 232
+    },
+    {
       "path": "scripts/finalize_package.py",
       "sha256": "5de7b0c4298f97014f2291b8600d26ccd755d94bebe1c04894699c033eff4685",
       "size_bytes": 3827
@@ -903,6 +913,51 @@
       "size_bytes": 202994
     },
     {
+      "path": "quansio/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/platform/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/platform/context.py",
+      "sha256": "deb5e3db4dc9a9ac3aae215eee21b03fb561f52216a64a3d4af84a83e0e8d3ea",
+      "size_bytes": 925
+    },
+    {
+      "path": "quansio/platform/db.py",
+      "sha256": "3d8a9becea27b4457e81bdd5967daf92f41431608630f7b7e5a1c9f62bc88462",
+      "size_bytes": 3492
+    },
+    {
+      "path": "quansio/platform/migrate.py",
+      "sha256": "a2197230d8301485e40ab123805c2def6d869dde5137a2547906ebad991ace68",
+      "size_bytes": 4823
+    },
+    {
+      "path": "quansio/control/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/control/identity.py",
+      "sha256": "4573d606f5ab7bdeecc9c3ae75353e2b06e2d0c4a307372c8b35a2852abbf168",
+      "size_bytes": 8042
+    },
+    {
+      "path": "quansio/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/api/app.py",
+      "sha256": "e3fc6c3d850885f7bd8afd0c4de0707668d40286150f10e955a16ca58381c55b",
+      "size_bytes": 4940
+    },
+    {
       "path": "protocols/ERROR_CODES.md",
       "sha256": "f5d3771d7af27e28975216aaafba58eef286f18de1bed072de85a0ea2d8cf848",
       "size_bytes": 891
@@ -926,6 +981,36 @@
       "path": "prompts/IMPLEMENTATION_MASTER_PROMPT.md",
       "sha256": "4c372032042b1c3e26935516c8f61069e4c97ac4d2d619e67d7e2c4dc7051ab0",
       "size_bytes": 4718
+    },
+    {
+      "path": "migrations/up/0001_identities.sql",
+      "sha256": "40a065b6cf5f110c29d81da0534dc1f701626107cf931d8d5cc63151b6008809",
+      "size_bytes": 2235
+    },
+    {
+      "path": "migrations/up/0002_work_runtime.sql",
+      "sha256": "b9fe7f3ae5051a6aed8b475508b4ef16d7b5c4ca10c2310da41e86b5cb201955",
+      "size_bytes": 6583
+    },
+    {
+      "path": "migrations/up/0003_events_outbox.sql",
+      "sha256": "57a140ca80d9f18c849166d632f122da52a307405207399e83ea4ac96bf8af49",
+      "size_bytes": 1744
+    },
+    {
+      "path": "migrations/down/0001_identities.sql",
+      "sha256": "e1ff5ccfeec910a5a291618151b4c11ca089aa51efb8f085b02ae3ad3ef35ce4",
+      "size_bytes": 228
+    },
+    {
+      "path": "migrations/down/0002_work_runtime.sql",
+      "sha256": "7d0166a3c822d340fecfc8db86567ffba2f520dfd0f956c5b88b8073dd66aa87",
+      "size_bytes": 319
+    },
+    {
+      "path": "migrations/down/0003_events_outbox.sql",
+      "sha256": "b1f9d16d2813729633fdec09b53fedd324623655d51197c4e26d38f5d7016358",
+      "size_bytes": 138
     },
     {
       "path": "graphs/business-capability-compiler.mmd",
@@ -1418,6 +1503,11 @@
       "size_bytes": 791
     },
     {
+      "path": "evidence/results/GATE-M0.assertion-map.json",
+      "sha256": "f21b1932414bada039d5f84af50e1f7953ac01a4d1db7c144f7743fdbe230f10",
+      "size_bytes": 805
+    },
+    {
       "path": "evidence/results/GOV-001.assertion-map.json",
       "sha256": "aaa6def370042a6d0ab5243a24a0eb101d2edc426483a07736c9c66283ddcebf",
       "size_bytes": 1595
@@ -1456,6 +1546,11 @@
       "path": "evidence/reports/evidence-env-001-72761ce487c9.json",
       "sha256": "5a7dabb3631a5da483c45a99420e645158f25dfb3abbed55a9750e55086d54be",
       "size_bytes": 1337
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m0-ab1148c362e3.json",
+      "sha256": "4e406d8ad24bfc75a05c0353e980294fef4ba246f68983779fcec71271c13e77",
+      "size_bytes": 1039
     },
     {
       "path": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",
@@ -1518,6 +1613,11 @@
       "size_bytes": 3708
     },
     {
+      "path": "evidence/reports/report-gate-m0-ab1148c362e3.json",
+      "sha256": "26603b65f23f93f02edbf73717adf0d0a6bae0c4ce9e0906ca3489d9b44bcec0",
+      "size_bytes": 2969
+    },
+    {
       "path": "evidence/reports/report-gov-001-054ee9a63fa0.json",
       "sha256": "e68c4e982c5f5e864d4b4218f70b29809803c93aa68a0f35e587e49dabebcb19",
       "size_bytes": 4212
@@ -1574,18 +1674,18 @@
     },
     {
       "path": "evidence/ownership/inventory.json",
-      "sha256": "ced73009e8d0a7773f54da69b057be55648a9efbd0247f2df6c9b27fc3e54a06",
-      "size_bytes": 6647
+      "sha256": "2fe8796e2cadbef314d3b1bf7d4964c73608610c8c3a1466d57f918bbefbbdca",
+      "size_bytes": 8235
     },
     {
       "path": "evidence/ownership/ownership_registry.json",
-      "sha256": "8f579edc4e66088e7a915c7d972b1d5e8a30b68ceae6dea2bbef0b96e3ad5fce",
-      "size_bytes": 22270
+      "sha256": "2957653fcb368ade4a9a474770919f57c140ebce3833456b2a28dcf4ef0eb130",
+      "size_bytes": 22613
     },
     {
       "path": "evidence/gates/GATE-M0.json",
-      "sha256": "141d956db7c0166a3d2956e7e336f04b79e33653315d07d5761b44de328b1e87",
-      "size_bytes": 2970
+      "sha256": "bd20d6184a2afe8aec5543233f52b0e64752445022dddfdc00bc6937f169897e",
+      "size_bytes": 2092
     },
     {
       "path": "evidence/environment/qual-20260910T003457/health-transcript.json",

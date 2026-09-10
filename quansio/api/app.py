@@ -56,7 +56,7 @@ def create_app(database: PlatformDatabase | None = None) -> FastAPI:
         except Exception as error:  # noqa: BLE001 - readiness reports, never masks
             raise HTTPException(status_code=503, detail=f"not ready: {error}") from error
 
-    @app.post("/v1/sessions")
+    @app.post("/v9/sessions")
     def open_session(body: LoginRequest) -> dict:
         try:
             token, context = control.authenticate(
@@ -72,18 +72,18 @@ def create_app(database: PlatformDatabase | None = None) -> FastAPI:
             "identity": _identity_view(context),
         }
 
-    @app.delete("/v1/sessions/current")
+    @app.delete("/v9/sessions/current")
     def close_session(authorization: str = Header(default="")) -> dict:
         context = _resolve(authorization, control)
         control.revoke_session(context.session_id)
         return {"revoked": context.session_id}
 
-    @app.get("/v1/identity")
+    @app.get("/v9/identity")
     def identity(authorization: str = Header(default="")) -> dict:
         context = _resolve(authorization, control)
         return {"identity": _identity_view(context)}
 
-    @app.post("/v1/commands")
+    @app.post("/v9/commands")
     def admit_command(body: CommandRequest, authorization: str = Header(default="")) -> dict:
         # Reject client-supplied authoritative identity before any
         # authoritative read or write happens in this handler.
