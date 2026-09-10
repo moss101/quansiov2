@@ -1,0 +1,17 @@
+{
+  "RUN-004-A01": [
+    "tests/runtime/test_orchestration.py::test_run005_p01_fan_out_32_turns_with_independent_outcomes"
+  ],
+  "RUN-005-N01": [
+    "tests/runtime/test_orchestration.py::test_run005_n01_duplicate_and_late_deliveries_do_not_corrupt_aggregate"
+  ],
+  "RUN-005-P01": [
+    "tests/runtime/test_orchestration.py::test_run005_p01_fan_out_32_turns_with_independent_outcomes"
+  ],
+  "RUN-005-R01": [
+    "tests/runtime/test_orchestration.py::test_run005_r01_reconnect_sees_durable_outcomes_without_child_reexecution"
+  ],
+  "RUN-008-A01": [
+    "tests/runtime/test_orchestration.py::test_run005_r01_reconnect_sees_durable_outcomes_without_child_reexecution"
+  ]
+}

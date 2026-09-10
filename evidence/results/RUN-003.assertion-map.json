@@ -1,0 +1,15 @@
+{
+  "RUN-001-A01": [
+    "tests/runtime/test_graphs_agents.py::test_run003_p01_multi_object_transition_is_atomic_and_emits_one_event",
+    "tests/runtime/test_graphs_agents.py::test_run003_r01_transaction_identity_prevents_second_mutation"
+  ],
+  "RUN-003-N01": [
+    "tests/runtime/test_graphs_agents.py::test_run003_n01_precondition_failure_commits_nothing"
+  ],
+  "RUN-003-P01": [
+    "tests/runtime/test_graphs_agents.py::test_run003_p01_multi_object_transition_is_atomic_and_emits_one_event"
+  ],
+  "RUN-003-R01": [
+    "tests/runtime/test_graphs_agents.py::test_run003_r01_transaction_identity_prevents_second_mutation"
+  ]
+}

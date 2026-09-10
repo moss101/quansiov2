@@ -36,6 +36,43 @@
     "quansio/platform/repository.py",
     "tests/runtime/test_foundation.py"
   ],
+  "RUN-001": [
+    "quansio/runtime/graphs.py",
+    "migrations/up/0007_graph_transactions.sql",
+    "tests/runtime/test_graphs_agents.py"
+  ],
+  "RUN-002": [
+    "quansio/runtime/agents.py",
+    "migrations/up/0008_agent_admissions.sql",
+    "tests/runtime/test_graphs_agents.py"
+  ],
+  "RUN-003": [
+    "quansio/runtime/graphs.py",
+    "tests/runtime/test_graphs_agents.py"
+  ],
+  "RUN-004": [
+    "quansio/runtime/orchestration.py",
+    "tests/runtime/test_orchestration.py"
+  ],
+  "RUN-005": [
+    "quansio/runtime/orchestration.py",
+    "migrations/up/0009_m2_runtime.sql",
+    "tests/runtime/test_orchestration.py"
+  ],
+  "RUN-006": [
+    "quansio/runtime/orchestration.py",
+    "migrations/up/0010_effects_guard.sql",
+    "tests/runtime/test_orchestration.py"
+  ],
+  "RUN-007": [
+    "quansio/runtime/orchestration.py",
+    "tests/runtime/test_orchestration.py"
+  ],
+  "RUN-008": [
+    "quansio/runtime/orchestration.py",
+    "quansio/runtime/protocol.py",
+    "tests/runtime/test_orchestration.py"
+  ],
   "SEC-001": [
     "quansio/control/capability.py",
     "migrations/up/0006_capability_snapshots.sql",

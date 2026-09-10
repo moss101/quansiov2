@@ -1,0 +1,15 @@
+{
+  "RUN-002-A01": [
+    "tests/runtime/test_graphs_agents.py::test_run002_p01_teammate_and_worker_have_distinct_lifecycles",
+    "tests/runtime/test_graphs_agents.py::test_run002_n01_expired_worker_identity_cannot_become_teammate"
+  ],
+  "RUN-002-N01": [
+    "tests/runtime/test_graphs_agents.py::test_run002_n01_expired_worker_identity_cannot_become_teammate"
+  ],
+  "RUN-002-P01": [
+    "tests/runtime/test_graphs_agents.py::test_run002_p01_teammate_and_worker_have_distinct_lifecycles"
+  ],
+  "RUN-002-R01": [
+    "tests/runtime/test_graphs_agents.py::test_run002_r01_restart_preserves_teammate_and_cleans_expired_worker"
+  ]
+}

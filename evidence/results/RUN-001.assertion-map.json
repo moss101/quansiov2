@@ -1,0 +1,19 @@
+{
+  "INV-001-A01": [
+    "tests/runtime/test_graphs_agents.py::test_run001_n01_direct_node_update_outside_transaction_is_rejected",
+    "tests/runtime/test_graphs_agents.py::test_run001_r01_replay_resumes_from_last_committed_transition"
+  ],
+  "RUN-001-A01": [
+    "tests/runtime/test_graphs_agents.py::test_run001_p01_create_version_and_resume_graph",
+    "tests/runtime/test_graphs_agents.py::test_run001_n01_direct_node_update_outside_transaction_is_rejected"
+  ],
+  "RUN-001-N01": [
+    "tests/runtime/test_graphs_agents.py::test_run001_n01_direct_node_update_outside_transaction_is_rejected"
+  ],
+  "RUN-001-P01": [
+    "tests/runtime/test_graphs_agents.py::test_run001_p01_create_version_and_resume_graph"
+  ],
+  "RUN-001-R01": [
+    "tests/runtime/test_graphs_agents.py::test_run001_r01_replay_resumes_from_last_committed_transition"
+  ]
+}

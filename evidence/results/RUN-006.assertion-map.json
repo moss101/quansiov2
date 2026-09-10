@@ -1,0 +1,17 @@
+{
+  "EFF-004-A01": [
+    "tests/runtime/test_orchestration.py::test_run006_n01_committed_effect_cannot_be_rolled_back_by_cancellation"
+  ],
+  "RUN-005-A01": [
+    "tests/runtime/test_orchestration.py::test_run005_p01_fan_out_32_turns_with_independent_outcomes"
+  ],
+  "RUN-006-N01": [
+    "tests/runtime/test_orchestration.py::test_run006_n01_committed_effect_cannot_be_rolled_back_by_cancellation"
+  ],
+  "RUN-006-P01": [
+    "tests/runtime/test_orchestration.py::test_run006_p01_cancel_parent_with_mixed_children"
+  ],
+  "RUN-006-R01": [
+    "tests/runtime/test_orchestration.py::test_run006_r01_restart_during_cancellation_settles_every_child"
+  ]
+}

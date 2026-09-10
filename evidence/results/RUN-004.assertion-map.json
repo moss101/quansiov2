@@ -1,0 +1,21 @@
+{
+  "INV-009-A01": [
+    "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility"
+  ],
+  "RUN-003-A01": [
+    "tests/runtime/test_orchestration.py::test_run004_p01_admission_reserves_capacity_budget_capability_atomically",
+    "tests/runtime/test_orchestration.py::test_run004_r01_orphaned_reservation_recovered"
+  ],
+  "RUN-004-N01": [
+    "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility"
+  ],
+  "RUN-004-P01": [
+    "tests/runtime/test_orchestration.py::test_run004_p01_admission_reserves_capacity_budget_capability_atomically"
+  ],
+  "RUN-004-R01": [
+    "tests/runtime/test_orchestration.py::test_run004_r01_orphaned_reservation_recovered"
+  ],
+  "SEC-001-A01": [
+    "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility"
+  ]
+}

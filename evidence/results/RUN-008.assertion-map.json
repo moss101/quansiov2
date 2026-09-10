@@ -1,0 +1,14 @@
+{
+  "RUN-007-A01": [
+    "tests/runtime/test_orchestration.py::test_run007_r01_late_usage_settles_exactly_once_and_releases_unused"
+  ],
+  "RUN-008-N01": [
+    "tests/runtime/test_orchestration.py::test_run008_n01_duplicate_and_expired_callbacks_never_advance"
+  ],
+  "RUN-008-P01": [
+    "tests/runtime/test_orchestration.py::test_run008_p01_suspend_on_timer_approval_and_callback_resumes_once"
+  ],
+  "RUN-008-R01": [
+    "tests/runtime/test_orchestration.py::test_run008_r01_restart_during_pending_wait_resumes_exactly_once"
+  ]
+}
