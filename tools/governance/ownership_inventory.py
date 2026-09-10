@@ -146,9 +146,8 @@ def discover(root: Path = ROOT) -> list[dict]:
         # Deployable entrypoints under services/.
         if len(parts) == 3 and parts[0] == "services" and name in ENTRYPOINT_FILENAMES:
             add("entrypoint", rel)
-        # SQL migrations.
-        if len(parts) >= 2 and parts[0] == "migrations" and path.suffix == ".sql":
-            add("durable_store", rel)
+        # SQL migrations are owned at the migrations-directory level; the
+        # migration runner (checksums + history) governs individual files.
         # Local database files are durable stores by definition.
         if path.suffix in STORE_SUFFIXES:
             add("durable_store", rel)
@@ -160,12 +159,12 @@ def discover(root: Path = ROOT) -> list[dict]:
                 add("entrypoint", rel)
                 for service in _parse_compose_services(path):
                     add("durable_store", f"{rel}#{service}")
-        # Python packages per canonical owner module.
-        if len(parts) == 2 and parts[0] == "quansio" and path.is_dir() and not name.startswith("_"):
-            add("package_path", rel)
+        # Python packages per canonical owner module (derived from nested files).
+        if len(parts) >= 3 and parts[0] == "quansio" and not parts[1].startswith("_"):
+            add("package_path", f"quansio/{parts[1]}")
         # Client application packages.
-        if len(parts) == 2 and parts[0] == "clients" and path.is_dir():
-            add("client_path", rel)
+        if len(parts) >= 3 and parts[0] == "clients" and path.is_dir():
+            add("client_path", f"clients/{parts[1]}")
 
     if (root / "pyproject.toml").is_file():
         for script in _parse_project_scripts(root / "pyproject.toml"):

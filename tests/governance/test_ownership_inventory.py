@@ -45,11 +45,11 @@ def test_p01_committed_inventory_matches_regenerated():
 
 def test_p01_every_canonical_service_has_adoption_plan():
     registry = json.loads(inv.REGISTRY_PATH.read_text())
-    planned_paths = {e["path"] for e in registry["entries"] if e["status"] == "planned"}
+    registered_paths = {e["path"] for e in registry["entries"]}
     for service, spec in registry["canonical_services"].items():
-        assert spec["package"] in planned_paths, f"{service} has no planned package path"
-        assert spec["deployable"] in planned_paths or f"{spec['deployable']}/main.py" in planned_paths, (
-            f"{service} has no planned deployable"
+        assert spec["package"] in registered_paths, f"{service} has no registered package path"
+        assert spec["deployable"] in registered_paths or f"{spec['deployable']}/main.py" in registered_paths, (
+            f"{service} has no registered deployable"
         )
 
 
@@ -65,13 +65,16 @@ def test_n01_unregistered_entrypoint_is_rejected(tmp_path):
 
 def test_n01_live_repo_rejects_unowned_entrypoint():
     rogue_dir = REPO_ROOT / "services" / "rogue_probe"
-    rogue_dir.mkdir(parents=True, exist_ok=False)
+    rogue_dir.mkdir(parents=True, exist_ok=True)
     try:
         (rogue_dir / "main.py").write_text("print('unregistered probe')\n")
         _, errors = inv.validate()
         assert any("UNOWNED PATH" in e and "services/rogue_probe/main.py" in e for e in errors), errors
     finally:
-        shutil.rmtree(REPO_ROOT / "services")
+        shutil.rmtree(rogue_dir)
+        services_dir = REPO_ROOT / "services"
+        if services_dir.is_dir() and not any(services_dir.iterdir()):
+            services_dir.rmdir()
     _, errors = inv.validate()
     assert errors == []
 

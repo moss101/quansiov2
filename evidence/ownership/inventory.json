@@ -177,6 +177,14 @@
       "status": "present"
     },
     {
+      "kind": "deploy_path",
+      "owner": "deploy",
+      "path": "services",
+      "role": "deployable service containers",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "durable_store",
       "owner": "quansio-artifact",
       "path": "deploy/compose/docker-compose.yml#minio",
@@ -201,10 +209,26 @@
       "status": "present"
     },
     {
+      "kind": "durable_store",
+      "owner": "quansio-control",
+      "path": "migrations",
+      "role": "authoritative relational schema migrations",
+      "state_class": "relational_migrations",
+      "status": "present"
+    },
+    {
       "kind": "entrypoint",
       "owner": "deploy",
       "path": "deploy/compose/docker-compose.yml",
       "role": "qualification environment topology",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
+      "owner": "quansio-api",
+      "path": "services/quansio_api/main.py",
+      "role": "API deployable entrypoint",
       "state_class": null,
       "status": "present"
     },
@@ -233,6 +257,38 @@
       "status": "present"
     },
     {
+      "kind": "package_path",
+      "owner": "platform",
+      "path": "quansio",
+      "role": "shared platform kernel (db, context, migrations) supporting all canonical owners",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
+      "owner": "quansio-api",
+      "path": "quansio/api",
+      "role": "public command admission",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
+      "owner": "quansio-control",
+      "path": "quansio/control",
+      "role": "tenant/identity/policy/approval authority",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
+      "owner": "platform",
+      "path": "quansio/platform",
+      "role": "shared platform kernel: pooled database access, identity context, migration runner (no domain authority)",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "test_path",
       "owner": "tests",
       "path": "tests",
@@ -241,10 +297,10 @@
       "status": "present"
     }
   ],
-  "entry_count": 30,
+  "entry_count": 37,
   "inventory_version": "1.0.0",
-  "registry_sha256": "8f579edc4e66088e7a915c7d972b1d5e8a30b68ceae6dea2bbef0b96e3ad5fce",
+  "registry_sha256": "2957653fcb368ade4a9a474770919f57c140ebce3833456b2a28dcf4ef0eb130",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
-  "tooling_sha256": "dace0f359ac8803fb7a08186f8cc5f669c300af399c41356f3c49908ba1262db"
+  "tooling_sha256": "665604288cc6723e743a179243e76f1853fe7d995076022c5bb8e98b82410413"
 }

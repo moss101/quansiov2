@@ -1,0 +1,12 @@
+-- 0002 (down)
+BEGIN;
+DROP TABLE IF EXISTS registry_entries;
+DROP TABLE IF EXISTS schedules;
+DROP TABLE IF EXISTS effects;
+DROP TABLE IF EXISTS approvals;
+DROP TABLE IF EXISTS protocol_state;
+DROP TABLE IF EXISTS graph_nodes;
+DROP TABLE IF EXISTS graphs;
+DROP TABLE IF EXISTS runs;
+DROP TABLE IF EXISTS agents;
+COMMIT;

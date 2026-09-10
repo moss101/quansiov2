@@ -198,7 +198,7 @@
     "evidence": "Executed verification reports and implementation evidence records",
     "clients": "Desktop/web/mobile/CLI client applications (projections only)",
     "deploy": "Deployment topology, compose topology and CI definitions",
-    "platform": "Shared infrastructure instances hosting multiple logical state areas (logical per-area ownership tracked by schema ownership registry)"
+    "platform": "Shared infrastructure instances and the shared platform kernel hosting logical state areas (logical per-area ownership tracked by schema ownership registry)"
   },
   "entries": [
     {
@@ -397,7 +397,7 @@
       "kind": "durable_store",
       "path": "migrations",
       "owner": "quansio-control",
-      "status": "planned",
+      "status": "present",
       "state_class": "relational_migrations",
       "role": "authoritative relational schema migrations"
     },
@@ -413,7 +413,7 @@
       "kind": "deploy_path",
       "path": "services",
       "owner": "deploy",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "deployable service containers"
     },
@@ -436,16 +436,16 @@
     {
       "kind": "package_path",
       "path": "quansio",
-      "owner": "authority",
-      "status": "planned",
+      "owner": "platform",
+      "status": "present",
       "state_class": null,
-      "role": "canonical implementation package root"
+      "role": "shared platform kernel (db, context, migrations) supporting all canonical owners"
     },
     {
       "kind": "package_path",
       "path": "quansio/api",
       "owner": "quansio-api",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "public command admission"
     },
@@ -469,7 +469,7 @@
       "kind": "package_path",
       "path": "quansio/control",
       "owner": "quansio-control",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "tenant/identity/policy/approval authority"
     },
@@ -541,7 +541,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_api/main.py",
       "owner": "quansio-api",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "API deployable entrypoint"
     },
@@ -696,6 +696,14 @@
       "status": "planned",
       "state_class": null,
       "role": "web client"
+    },
+    {
+      "kind": "package_path",
+      "path": "quansio/platform",
+      "owner": "platform",
+      "status": "present",
+      "state_class": null,
+      "role": "shared platform kernel: pooled database access, identity context, migration runner (no domain authority)"
     }
   ],
   "wiring_actors": {
