@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 730,
+  "file_count": 725,
   "files": [
     {
       "path": ".gitignore",
@@ -94,8 +94,8 @@
     },
     {
       "path": "tools/governance/record_evidence.py",
-      "sha256": "5e4cc4552c782ed67547dae42b60378869e48d0db9b0a362f21639014a1591eb",
-      "size_bytes": 11900
+      "sha256": "b81f2ac8016f3f3681a5394b9559c784fece349759e9e6e6b1bc0558cd2682c4",
+      "size_bytes": 10934
     },
     {
       "path": "tools/governance/refresh_evidence.py",
@@ -169,8 +169,8 @@
     },
     {
       "path": "tests/model_gateway/test_real_provider_qualification.py",
-      "sha256": "816c012a563273b297f651873452958045972261ed4b71e90912e4b24934420a",
-      "size_bytes": 14089
+      "sha256": "9cd49a0aecfc322c00da39f826202b03cc5ac5f132ca0b68ce8ee8efa8674702",
+      "size_bytes": 14099
     },
     {
       "path": "tests/governance/test_authority_generation.py",
@@ -3124,18 +3124,13 @@
     },
     {
       "path": "evidence/boundary/RUN-005/health-transcript.json",
-      "sha256": "089529391adbdeb6869d2130e917b66741d17415100f309482570957b0d09963",
-      "size_bytes": 1401
+      "sha256": "4f977e3852f9fa38fe6533f2e1e718b7afc96d98f22589fda04fb0a59eb4919d",
+      "size_bytes": 1400
     },
     {
       "path": "evidence/boundary/RUN-005/manifest.json",
-      "sha256": "a065b0cd821d5272596b0dfd336601e38b3a626b1da5328c0a08df6e5472f0a5",
+      "sha256": "fab89649b6adbce30c5c6f71a3e504593d8adfd586f2ff83634a31cefe56e318",
       "size_bytes": 1549
-    },
-    {
-      "path": "evidence/boundary/RUN-005/model_gateway/mod008-real-stream.json",
-      "sha256": "4377fd7ec5bc5fe590ba7079da9d1fbad2187bf1623ae810cbea718b3dca28d4",
-      "size_bytes": 583
     },
     {
       "path": "evidence/boundary/RUN-004/health-transcript.json",
@@ -3179,33 +3174,23 @@
     },
     {
       "path": "evidence/boundary/MOD-008/health-transcript.json",
-      "sha256": "089529391adbdeb6869d2130e917b66741d17415100f309482570957b0d09963",
-      "size_bytes": 1401
+      "sha256": "4f977e3852f9fa38fe6533f2e1e718b7afc96d98f22589fda04fb0a59eb4919d",
+      "size_bytes": 1400
     },
     {
       "path": "evidence/boundary/MOD-008/manifest.json",
-      "sha256": "a065b0cd821d5272596b0dfd336601e38b3a626b1da5328c0a08df6e5472f0a5",
+      "sha256": "fab89649b6adbce30c5c6f71a3e504593d8adfd586f2ff83634a31cefe56e318",
       "size_bytes": 1549
-    },
-    {
-      "path": "evidence/boundary/MOD-008/model_gateway/mod008-real-stream.json",
-      "sha256": "7703774f030f103421c276f7c297df7288c811d77351670b5625aa7ccad5ddf1",
-      "size_bytes": 616
     },
     {
       "path": "evidence/boundary/MOD-007/health-transcript.json",
-      "sha256": "7155b89f37c376384566d67cd4231447c0f48a90ad5df4957326542543b3a56a",
-      "size_bytes": 1401
+      "sha256": "4f977e3852f9fa38fe6533f2e1e718b7afc96d98f22589fda04fb0a59eb4919d",
+      "size_bytes": 1400
     },
     {
       "path": "evidence/boundary/MOD-007/manifest.json",
-      "sha256": "bc7eb4af9e55311b4278aa965e973d22a4b0d1de0e0072285d9753dae08cc1c9",
+      "sha256": "fab89649b6adbce30c5c6f71a3e504593d8adfd586f2ff83634a31cefe56e318",
       "size_bytes": 1549
-    },
-    {
-      "path": "evidence/boundary/MOD-007/model_gateway/mod008-real-stream.json",
-      "sha256": "1abac48f4918fcdb5125ff5c8eae0a4be05fd945f1d8076813f2cb76f56e41c5",
-      "size_bytes": 599
     },
     {
       "path": "evidence/boundary/MOD-006/health-transcript.json",
@@ -3249,33 +3234,23 @@
     },
     {
       "path": "evidence/boundary/MOD-002/health-transcript.json",
-      "sha256": "089529391adbdeb6869d2130e917b66741d17415100f309482570957b0d09963",
-      "size_bytes": 1401
+      "sha256": "4f977e3852f9fa38fe6533f2e1e718b7afc96d98f22589fda04fb0a59eb4919d",
+      "size_bytes": 1400
     },
     {
       "path": "evidence/boundary/MOD-002/manifest.json",
-      "sha256": "a065b0cd821d5272596b0dfd336601e38b3a626b1da5328c0a08df6e5472f0a5",
+      "sha256": "fab89649b6adbce30c5c6f71a3e504593d8adfd586f2ff83634a31cefe56e318",
       "size_bytes": 1549
-    },
-    {
-      "path": "evidence/boundary/MOD-002/model_gateway/mod008-real-stream.json",
-      "sha256": "4377fd7ec5bc5fe590ba7079da9d1fbad2187bf1623ae810cbea718b3dca28d4",
-      "size_bytes": 583
     },
     {
       "path": "evidence/boundary/MOD-001/health-transcript.json",
-      "sha256": "089529391adbdeb6869d2130e917b66741d17415100f309482570957b0d09963",
-      "size_bytes": 1401
+      "sha256": "4f977e3852f9fa38fe6533f2e1e718b7afc96d98f22589fda04fb0a59eb4919d",
+      "size_bytes": 1400
     },
     {
       "path": "evidence/boundary/MOD-001/manifest.json",
-      "sha256": "a065b0cd821d5272596b0dfd336601e38b3a626b1da5328c0a08df6e5472f0a5",
+      "sha256": "fab89649b6adbce30c5c6f71a3e504593d8adfd586f2ff83634a31cefe56e318",
       "size_bytes": 1549
-    },
-    {
-      "path": "evidence/boundary/MOD-001/model_gateway/mod008-real-stream.json",
-      "sha256": "4377fd7ec5bc5fe590ba7079da9d1fbad2187bf1623ae810cbea718b3dca28d4",
-      "size_bytes": 583
     },
     {
       "path": "evidence/boundary/ENV-001/health-transcript.json",
