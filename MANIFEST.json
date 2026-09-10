@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 1454,
+  "file_count": 1460,
   "files": [
     {
       "path": ".gitignore",
@@ -673,6 +673,11 @@
       "size_bytes": 28072
     },
     {
+      "path": "tests/browser/test_browser_stack.py",
+      "sha256": "a6a59c24dca8cae5e8e45a465e1b93ee2d4d52c62d69c861a9b186dbb02f961a",
+      "size_bytes": 21757
+    },
+    {
       "path": "tests/api/test_identity.py",
       "sha256": "b24e43e81bd72a03bf0518da8e5642d01eafc0d0f861ffdb69a23143d1126045",
       "size_bytes": 7866
@@ -1028,6 +1033,21 @@
       "size_bytes": 0
     },
     {
+      "path": "quansio/worker_gateway/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/worker_gateway/browser.py",
+      "sha256": "9432452f5248015985b23c4a87fdafd2966e75a983d64fb5dbfc6884222812ad",
+      "size_bytes": 13876
+    },
+    {
+      "path": "quansio/worker_gateway/transfer_relay.py",
+      "sha256": "a0c02642710330d2d47ffea16f99c88d96858854ff4bbf89336b9e7158de4964",
+      "size_bytes": 8604
+    },
+    {
       "path": "quansio/runtime/__init__.py",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "size_bytes": 0
@@ -1358,6 +1378,11 @@
       "size_bytes": 4168
     },
     {
+      "path": "migrations/up/0015_browser_stack.sql",
+      "sha256": "d298848de14ee09984f774e6afd2ce110f9f57ea0a8c9291e80e39f44152bec0",
+      "size_bytes": 1763
+    },
+    {
       "path": "migrations/down/0001_identities.sql",
       "sha256": "e1ff5ccfeec910a5a291618151b4c11ca089aa51efb8f085b02ae3ad3ef35ce4",
       "size_bytes": 228
@@ -1426,6 +1451,11 @@
       "path": "migrations/down/0014_machine_fabric.sql",
       "sha256": "fb1cae2008e1c08a13aa8bff4775410aa14ddcb5ab333a7d7da4e95327f2617b",
       "size_bytes": 372
+    },
+    {
+      "path": "migrations/down/0015_browser_stack.sql",
+      "sha256": "54aa8cc4d3fb0a2e0012d98f5803e8813a5e5879caad948e96516663f8a7d01e",
+      "size_bytes": 152
     },
     {
       "path": "graphs/business-capability-compiler.mmd",
@@ -6454,12 +6484,12 @@
     },
     {
       "path": "evidence/ownership/inventory.json",
-      "sha256": "5b9953707e88eabd927d0177bbe7a36873906ea9de3d7bd5630367819febdd11",
-      "size_bytes": 10645
+      "sha256": "118a1b776e7a6e0a0ddb31a5cbb79674896c9987322befb4400aa39dd277b98e",
+      "size_bytes": 10880
     },
     {
       "path": "evidence/ownership/ownership_registry.json",
-      "sha256": "2860ce85066165ed9768e3e8742c06c09c7dac6283c10e15672e63bbead98c9d",
+      "sha256": "edf093529f5f5d9629b9cbf5de5d2cfb6bf5fa18d3c31e236c9bc58b1ceb7147",
       "size_bytes": 22613
     },
     {

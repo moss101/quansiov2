@@ -533,7 +533,7 @@
       "kind": "package_path",
       "path": "quansio/worker_gateway",
       "owner": "quansio-worker-gateway",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "worker transport, leases, ACK/redelivery"
     },

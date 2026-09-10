@@ -377,6 +377,14 @@
       "status": "present"
     },
     {
+      "kind": "package_path",
+      "owner": "quansio-worker-gateway",
+      "path": "quansio/worker_gateway",
+      "role": "worker transport, leases, ACK/redelivery",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "test_path",
       "owner": "tests",
       "path": "tests",
@@ -385,9 +393,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 48,
+  "entry_count": 49,
   "inventory_version": "1.0.0",
-  "registry_sha256": "2860ce85066165ed9768e3e8742c06c09c7dac6283c10e15672e63bbead98c9d",
+  "registry_sha256": "edf093529f5f5d9629b9cbf5de5d2cfb6bf5fa18d3c31e236c9bc58b1ceb7147",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "71696e5be24ac6a6e2893727cba9edf608ff8c56d4d406b2aa092b7b87793eae"
