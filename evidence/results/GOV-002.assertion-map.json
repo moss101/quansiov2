@@ -1,0 +1,28 @@
+{
+  "GOV-002-P01": [
+    "tests/governance/test_ownership_map.py::test_p02_map_covers_services_stores_producers_actuators_without_duplicates"
+  ],
+  "GOV-002-N01": [
+    "tests/governance/test_ownership_map.py::test_n02_duplicate_authoritative_store_owner_is_rejected_with_both_identifiers",
+    "tests/governance/test_ownership_map.py::test_n02_duplicate_effect_class_is_rejected_with_both_identifiers",
+    "tests/governance/test_ownership_map.py::test_n02_duplicate_event_producer_is_rejected_with_both_identifiers"
+  ],
+  "GOV-002-R01": [
+    "tests/governance/test_ownership_map.py::test_r02_removing_canonical_owner_invalidates_wiring_then_restore_is_clean",
+    "tests/governance/test_ownership_map.py::test_r02_unknown_wiring_participant_is_rejected"
+  ],
+  "INV-001-A01": [
+    "tests/governance/test_ownership_map.py::test_n02_duplicate_effect_class_is_rejected_with_both_identifiers",
+    "tests/governance/test_ownership_map.py::test_n02_duplicate_event_producer_is_rejected_with_both_identifiers",
+    "tests/governance/test_ownership_map.py::test_n02_duplicate_authoritative_store_owner_is_rejected_with_both_identifiers"
+  ],
+  "INV-006-A01": [
+    "tests/governance/test_ownership_map.py::test_p02_map_covers_services_stores_producers_actuators_without_duplicates",
+    "tests/governance/test_ownership_map.py::test_r02_unknown_wiring_participant_is_rejected"
+  ],
+  "GOV-001-A01": [
+    "tests/governance/test_ownership_map.py::test_p02_map_covers_services_stores_producers_actuators_without_duplicates",
+    "tests/governance/test_ownership_map.py::test_n02_duplicate_authoritative_store_owner_is_rejected_with_both_identifiers",
+    "tests/governance/test_ownership_map.py::test_r02_removing_canonical_owner_invalidates_wiring_then_restore_is_clean"
+  ]
+}
