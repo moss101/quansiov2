@@ -17,8 +17,27 @@ from quansio.platform.db import PlatformDatabase, database_config  # noqa: E402
 from quansio.platform import migrate as migrate_module  # noqa: E402
 
 
+import subprocess
+
+
+def _env_healthy() -> bool:
+    result = subprocess.run(
+        [sys.executable, "tools/environment/qualenv.py", "health", "--no-write"],
+        capture_output=True, text=True, cwd=REPO_ROOT,
+    )
+    return result.returncode == 0
+
+
 @pytest.fixture(scope="session")
 def platform_db():
+    # Ensure the real qualification environment is up before any suite that
+    # touches authoritative state; if it is down, provision it fresh.
+    if not _env_healthy():
+        result = subprocess.run(
+            [sys.executable, "tools/environment/qualenv.py", "provision"],
+            capture_output=True, text=True, cwd=REPO_ROOT,
+        )
+        assert result.returncode == 0, result.stdout + result.stderr
     database = PlatformDatabase(database_config())
     yield database
     database.close()
@@ -66,3 +85,13 @@ def workspace_setup(control):
         "admin_email": f"admin-{suffix}@qual.invalid",
         "member_email": f"member-{suffix}@qual.invalid",
     }
+
+
+def pytest_collection_modifyitems(items):
+    """Environment lifecycle tests run last: they provision and tear down
+    the shared qualification stack, which other suites must not depend on
+    during teardown."""
+    environment = [item for item in items if "tests/environment" in str(item.fspath)]
+    if environment:
+        rest = [item for item in items if "tests/environment" not in str(item.fspath)]
+        items[:] = rest + environment
