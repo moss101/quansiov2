@@ -591,14 +591,14 @@ def test_ctx008_n01_changed_identity_is_non_comparable(migrated_db, workspace_se
     metrics = {"discovery_recall": 0.95, "entity_precision": 0.97, "claim_precision": 0.96,
                "citation_support": 0.99, "freshness": 0.99, "duplicate_rate": 0.01,
                "hard_completion": 0.9}
-    scorer.record(context, "bench-cmp", "digest-A", "policy/v1", metrics, "out-digest")
-    comparison = scorer.compare(context, "bench-cmp", "digest-A", "policy/v1",
+    scorer.record(context, "bench-cmp", "digest-A", "policy/one", metrics, "out-digest")
+    comparison = scorer.compare(context, "bench-cmp", "digest-A", "policy/one",
                                 metrics, "out-digest")
     assert comparison["comparable"] and comparison["metrics_identical"]
     # Changed dataset digest or source policy: different identity, non-comparable.
-    changed = scorer.compare(context, "bench-cmp", "digest-B", "policy/v1", metrics, "out-digest")
+    changed = scorer.compare(context, "bench-cmp", "digest-B", "policy/one", metrics, "out-digest")
     assert changed["comparable"] is False
-    changed_policy = scorer.compare(context, "bench-cmp", "digest-A", "policy/v2", metrics, "out-digest")
+    changed_policy = scorer.compare(context, "bench-cmp", "digest-A", "policy/two", metrics, "out-digest")
     assert changed_policy["comparable"] is False
 
 
