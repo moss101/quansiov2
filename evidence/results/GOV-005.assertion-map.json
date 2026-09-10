@@ -1,0 +1,23 @@
+{
+  "GOV-005-P01": [
+    "tests/governance/test_source_scan.py::test_p05_fails_on_production_marker",
+    "tests/governance/test_source_scan.py::test_p05_excludes_only_registered_classes",
+    "tests/governance/test_source_scan.py::test_p05_live_repo_scan_is_clean",
+    "tests/governance/test_source_scan.py::test_p05_unregistered_exclusion_reason_class_is_rejected"
+  ],
+  "GOV-005-N01": [
+    "tests/governance/test_source_scan.py::test_n05_reachable_api_marker_fails_despite_pass_metadata"
+  ],
+  "GOV-005-R01": [
+    "tests/governance/test_source_scan.py::test_r05_marker_in_test_fixture_keeps_production_clean"
+  ],
+  "GOV-003-A01": [
+    "tests/governance/test_source_scan.py::test_p05_fails_on_production_marker",
+    "tests/governance/test_source_scan.py::test_p05_excludes_only_registered_classes",
+    "tests/governance/test_source_scan.py::test_p05_unregistered_exclusion_reason_class_is_rejected"
+  ],
+  "INV-008-A01": [
+    "tests/governance/test_source_scan.py::test_n05_reachable_api_marker_fails_despite_pass_metadata",
+    "tests/governance/test_source_scan.py::test_r05_marker_in_test_fixture_keeps_production_clean"
+  ]
+}
