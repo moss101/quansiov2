@@ -1,0 +1,33 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/RUN-005/health-transcript.json": "d41d42d844b89d4d98b35d37e388064fde5254e0e318d1b52401e536ece5cfea",
+    "evidence/boundary/RUN-005/manifest.json": "aa4582f360346c42a7e5f2ab4e8bcedc96c361e5313b8b0cdece2bf67b136ef9",
+    "migrations/up/0009_m2_runtime.sql": "cbbd597271cf98b66944ccfc1064a2bc912b9433553f9cc48297f50ab17405f6",
+    "quansio/runtime/orchestration.py": "97eded9d1f72fe04d87ae150697e002270f924d3b49266bb8f821b6d96c83254",
+    "tests/runtime/test_orchestration.py": "a4510b62e032ff003c70c672f4291fec91835c30b14dc99a6634361f43bd05a4"
+  },
+  "created_at": "2026-09-10T04:22:10Z",
+  "evidence_id": "evidence-run-005-811c8f85a670",
+  "git_commit": "811c8f85a6706fa56f15db61848eb371eb1c1385",
+  "real_boundary": true,
+  "report_digest": "cfbd488a5eb71c8a1f2eacf71f03096aeba2517fe931b302b83a366a307849de",
+  "report_path": "evidence/reports/report-run-005-811c8f85a670.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "RUN-004-A01",
+    "RUN-008-A01"
+  ],
+  "requirement_ids": [
+    "RUN-004",
+    "RUN-008"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "RUN-005-N01",
+    "RUN-005-P01",
+    "RUN-005-R01"
+  ],
+  "task_id": "RUN-005"
+}
