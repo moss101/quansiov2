@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
+      "path_or_uri": "evidence/boundary/MAC-007/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "path_or_uri": "evidence/boundary/MAC-007/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "804919a0467ce905634efc1e29c7e8110f80d97b1ad707817ffffde1e57a38d3",
+      "path_or_uri": "quansio/machine_control/services.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "1c9404cd05b59a1807bc9249c5befa11c121aad3b0234a52526698f7f799a685",
+      "path_or_uri": "tests/machines/test_machine_fabric.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "MAC-006-A01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac006_p01_workspace_binding_and_state_survive_hibernation; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MAC-007-A01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac007_p01_workspace_and_full_checkpoints_restorable; tests/machines/test_machine_fabric.py::test_mac007_n01_missing_artifact_or_uncommitted_watermark_rejected; tests/machines/test_machine_fabric.py::test_mac007_r01_restore_to_new_generation_fails_stale_actions; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MAC-007-N01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac007_n01_missing_artifact_or_uncommitted_watermark_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MAC-007-P01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac007_p01_workspace_and_full_checkpoints_restorable; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MAC-007-R01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac007_r01_restore_to_new_generation_fails_stale_actions; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-003-A01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac007_r01_restore_to_new_generation_fails_stale_actions; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T07:33:17Z",
+  "git_commit": "de382c182c87d487fe27f8ab8975e6ebb1e5ff22",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-mac-007-de382c182c87",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "MAC-007"
+}
