@@ -111,7 +111,7 @@ class GuestProtocol:
             if command.split(" ")[0] == token:
                 raise GuestRejection(f"command {token!r} refused by guest policy")
         completed = subprocess.run(
-            ["/bin/sh", "-c", command], cwd=self._root / "workspace",
+            ["/bin/sh", "-c", command], cwd=self._root,
             capture_output=True, timeout=30,
             env={"PATH": "/usr/bin:/bin", "HOME": str(self._root / "workspace")},
         )
