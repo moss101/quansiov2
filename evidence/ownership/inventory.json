@@ -234,6 +234,22 @@
     },
     {
       "kind": "entrypoint",
+      "owner": "quansio-context",
+      "path": "services/quansio_context/main.py",
+      "role": "context service entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
+      "owner": "quansio-indexer",
+      "path": "services/quansio_indexer/main.py",
+      "role": "indexer service entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
       "owner": "quansio-model-gateway",
       "path": "services/quansio_model_gateway/main.py",
       "role": "model gateway entrypoint",
@@ -290,9 +306,25 @@
     },
     {
       "kind": "package_path",
+      "owner": "quansio-context",
+      "path": "quansio/context",
+      "role": "context projection and research",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
       "owner": "quansio-control",
       "path": "quansio/control",
       "role": "tenant/identity/policy/approval authority",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
+      "owner": "quansio-indexer",
+      "path": "quansio/indexer",
+      "role": "ingestion and index freshness",
       "state_class": null,
       "status": "present"
     },
@@ -329,9 +361,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 41,
+  "entry_count": 45,
   "inventory_version": "1.0.0",
-  "registry_sha256": "e3ea38881c1bf070285742ccb955f91ce3d3cb4be469cbc4204a2bc6e8b0512d",
+  "registry_sha256": "5ae159e8660b8c69e08b7b2d3e7ed346ead71a384597671fe2cd38d11eb7a98f",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "71696e5be24ac6a6e2893727cba9edf608ff8c56d4d406b2aa092b7b87793eae"

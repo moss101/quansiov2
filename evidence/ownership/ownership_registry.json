@@ -461,7 +461,7 @@
       "kind": "package_path",
       "path": "quansio/context",
       "owner": "quansio-context",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "context projection and research"
     },
@@ -477,7 +477,7 @@
       "kind": "package_path",
       "path": "quansio/indexer",
       "owner": "quansio-indexer",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "ingestion and index freshness"
     },
@@ -557,7 +557,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_context/main.py",
       "owner": "quansio-context",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "context service entrypoint"
     },
@@ -573,7 +573,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_indexer/main.py",
       "owner": "quansio-indexer",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "indexer service entrypoint"
     },
