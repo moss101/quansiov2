@@ -46,7 +46,24 @@ def sha256_file(path: Path) -> str:
 
 def evidence_for_task(task_id: str) -> Path | None:
     candidates = sorted(REPORTS_DIR.glob(f"evidence-{task_id.lower()}-*.json"))
-    return candidates[-1] if candidates else None
+    if not candidates:
+        return None
+    # Prefer the evidence whose bound commit is the newest descendant.
+    newest = candidates[0]
+    for candidate in candidates[1:]:
+        try:
+            commit_new = json.loads(candidate.read_text()).get("git_commit", "")
+            commit_old = json.loads(newest.read_text()).get("git_commit", "")
+        except json.JSONDecodeError:
+            continue
+        if commit_new and commit_old:
+            descendant = subprocess.run(
+                ["git", "-C", str(ROOT), "merge-base", "--is-ancestor", commit_old, commit_new],
+                capture_output=True,
+            )
+            if descendant.returncode == 0:
+                newest = candidate
+    return newest
 
 
 def validate_evidence(evidence_path: Path) -> tuple[bool, str]:
