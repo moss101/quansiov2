@@ -1,0 +1,65 @@
+{
+  "gate": "GATE-M12",
+  "git_commit": "f0a6c63195f5abb481d0d5225938027d76b7fbe5",
+  "predecessor_evidence_index": [
+    {
+      "evidence": "evidence/reports/evidence-gate-m11-e7b991c99ead.json",
+      "evidence_digest": "52a2cf0bf14d05dbc7a0beef344e1ea63c04d9c42da593057d908784c9dfcb57",
+      "status": "PASS",
+      "task": "GATE-M11"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sec-006-a23192bed4eb.json",
+      "evidence_digest": "c6175273726eb017794c822944a70c7c0e01f49494a557a047d7f20ac9be5f07",
+      "status": "PASS",
+      "task": "SEC-006"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sec-007-dfa963d74e82.json",
+      "evidence_digest": "7a55705e410dd126e3f8bb351801bdc5f3bf2999af7c61d204b4ebe9dbf82f83",
+      "status": "PASS",
+      "task": "SEC-007"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sre-001-a23192bed4eb.json",
+      "evidence_digest": "f0a0b4b683486608ed2e524d115b7334447ba147b845768dcacd315c5abf9222",
+      "status": "PASS",
+      "task": "SRE-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sre-002-dfa963d74e82.json",
+      "evidence_digest": "7c465b78b9538474ec4653dbc2173e6d34061f126cf2ce6d86702ca6c7243398",
+      "status": "PASS",
+      "task": "SRE-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sre-003-a23192bed4eb.json",
+      "evidence_digest": "4b624dcb3f0796cc00f76e34f90e671be49ac30fa7b8a4a8b7cc18fc6843ce7b",
+      "status": "PASS",
+      "task": "SRE-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sre-004-4bf2c3b5ec5f.json",
+      "evidence_digest": "e6082bf6eb6452542709f786c3e81e01e036640f2a5874c0baaa3a993c7a30bf",
+      "status": "PASS",
+      "task": "SRE-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sre-005-dfa963d74e82.json",
+      "evidence_digest": "4ac5988332ab798d03d56f58b59b237cd95c17f6871bcffd483baf1b3ac7bebd",
+      "status": "PASS",
+      "task": "SRE-005"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sre-006-dfa963d74e82.json",
+      "evidence_digest": "e55157c883e1f85f380c12d765b430318d0dce94349f2bff06c547349e6a7dd9",
+      "status": "PASS",
+      "task": "SRE-006"
+    }
+  ],
+  "problems": [],
+  "protected_ref": "HEAD",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "result": "PASS",
+  "schema_revision": "9.0.0"
+}
