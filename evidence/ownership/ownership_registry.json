@@ -493,7 +493,7 @@
       "kind": "package_path",
       "path": "quansio/machine_control",
       "owner": "quansio-machine-control",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "execution-target inventory and leases"
     },

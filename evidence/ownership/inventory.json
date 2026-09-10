@@ -257,6 +257,14 @@
       "status": "present"
     },
     {
+      "kind": "entrypoint",
+      "owner": "qworkerd",
+      "path": "services/qworkerd/main.py",
+      "role": "guest actuator entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "evidence_path",
       "owner": "evidence",
       "path": "evidence",
@@ -330,6 +338,14 @@
     },
     {
       "kind": "package_path",
+      "owner": "quansio-machine-control",
+      "path": "quansio/machine_control",
+      "role": "execution-target inventory and leases",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
       "owner": "quansio-model-gateway",
       "path": "quansio/model_gateway",
       "role": "exclusive model fulfillment boundary",
@@ -341,6 +357,14 @@
       "owner": "platform",
       "path": "quansio/platform",
       "role": "shared platform kernel: pooled database access, identity context, migration runner (no domain authority)",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
+      "owner": "qworkerd",
+      "path": "quansio/qworkerd",
+      "role": "guest actuator implementation",
       "state_class": null,
       "status": "present"
     },
@@ -361,9 +385,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 45,
+  "entry_count": 48,
   "inventory_version": "1.0.0",
-  "registry_sha256": "5ae159e8660b8c69e08b7b2d3e7ed346ead71a384597671fe2cd38d11eb7a98f",
+  "registry_sha256": "2860ce85066165ed9768e3e8742c06c09c7dac6283c10e15672e63bbead98c9d",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "71696e5be24ac6a6e2893727cba9edf608ff8c56d4d406b2aa092b7b87793eae"
