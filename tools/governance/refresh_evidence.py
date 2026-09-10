@@ -102,10 +102,6 @@ def main() -> int:
         return 0
 
     print(f"REFRESH: re-recording {len(stale)} stale tasks: {', '.join(stale)}")
-    # Settle derived artifacts first: registry adoptions and generation must
-    # be consistent before any evidence binds them.
-    for settle in ("tools/governance/ownership_inventory.py", "tools/governance/generate_authority.py"):
-        subprocess.run([sys.executable, settle, "--write"], capture_output=True, text=True, cwd=ROOT)
     failures = 0
     def sort_key(entry):
         m, task_id, _e = entry

@@ -12,6 +12,12 @@ VPY=".venv/bin/python"
 
 for round in 1 2 3; do
   echo "== settle round $round =="
+  "$PY" tools/governance/ownership_inventory.py --write >/dev/null 2>&1 || true
+  "$PY" tools/governance/generate_authority.py --write >/dev/null
+  if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
+    git add -A
+    git commit -q "Settle round ${round}: derived artifacts" || true
+  fi
   "$PY" tools/governance/refresh_evidence.py || true
   "$PY" tools/governance/generate_authority.py --write >/dev/null
   # Gate reports bind the current commit; rewrite and refresh their evidence
