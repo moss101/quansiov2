@@ -144,8 +144,8 @@
     },
     {
       "path": "tests/sre/test_sre_security.py",
-      "sha256": "47f4731d525f697b8aef21400c17c7d1682f26fc0636a42330178d54b7e8371a",
-      "size_bytes": 21119
+      "sha256": "f997f4b93499734081cd601af72ce6617906947fbacf9b862341692a548a91a3",
+      "size_bytes": 21115
     },
     {
       "path": "tests/runtime/test_events.py",

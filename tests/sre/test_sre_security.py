@@ -18,9 +18,9 @@ from quansio.observability.sre import (  # noqa: E402
     DrillRunner,
     ProvenanceService,
     QuotaService,
-    RecoveryConsistencyPoint,
     RecoveryPointIncomplete,
     AdversarialProber,
+    RecoveryPointService,
 )
 from quansio.observability.telemetry import (  # noqa: E402
     MeasurementRejected,
