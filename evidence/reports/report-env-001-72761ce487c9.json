@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "30698ee1cad9400984f6388061157e47338a51ac74dafcd84231e28042422783",
+      "path_or_uri": "evidence/environment/qual-20260910T003453/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "bc7ee0ac52c0233dc76b9efb5125b67753aeb27305383341ebb39a824648e66a",
+      "path_or_uri": "evidence/environment/qual-20260910T003453/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "54bd6c85b429073d9b23acea479efd25e087e37fa92041a626eec82919f52b63",
+      "path_or_uri": "tools/environment/qualenv.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "af65e5a560108673e6ae7c7a020c9d500cac841a5faaa35e998e28d8c25bb029",
+      "path_or_uri": "deploy/compose/docker-compose.yml",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "8fccb1753c1cf6397de4239f74293aa308927705ba6815bc75b57c23febcebd9",
+      "path_or_uri": "tests/environment/test_qualenv.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "DAT-002-A01",
+      "blocking": true,
+      "details": "executed: tests/environment/test_qualenv.py::test_p01_four_real_boundaries_healthy_with_isolated_identities; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "ENV-001-N01",
+      "blocking": true,
+      "details": "executed: tests/environment/test_qualenv.py::test_n01_in_memory_substitution_is_refused; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "ENV-001-P01",
+      "blocking": true,
+      "details": "executed: tests/environment/test_qualenv.py::test_p01_four_real_boundaries_healthy_with_isolated_identities; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "ENV-001-R01",
+      "blocking": true,
+      "details": "executed: tests/environment/test_qualenv.py::test_r01_dependency_restart_is_detected_and_recovered; tests/environment/test_qualenv.py::test_r01_teardown_leaves_no_falsely_passing_state; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-004-A01",
+      "blocking": true,
+      "details": "executed: tests/environment/test_qualenv.py::test_p01_four_real_boundaries_healthy_with_isolated_identities; tests/environment/test_qualenv.py::test_n01_in_memory_substitution_is_refused; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T00:35:05Z",
+  "git_commit": "72761ce487c909d437d2e7d6ace99f593c296ff1",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-env-001-72761ce487c9",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "ENV-001"
+}
