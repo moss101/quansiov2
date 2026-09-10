@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 1123,
+  "file_count": 1132,
   "files": [
     {
       "path": ".gitignore",
@@ -648,6 +648,16 @@
       "size_bytes": 4973
     },
     {
+      "path": "tests/control/effect_target.py",
+      "sha256": "e310f528a9049060a152c65705fea08bf2639ec26868f280032ce776a41ea3f3",
+      "size_bytes": 2404
+    },
+    {
+      "path": "tests/control/test_policy_effects.py",
+      "sha256": "489d198a1968597fca2f9006b09b4f32396af3fdf536468a00cd0d160364cdb2",
+      "size_bytes": 28045
+    },
+    {
       "path": "tests/context/corpus.py",
       "sha256": "fc9c235f1a303d49729541c3c764b3d7e422f1c0ed1588b3126c0dcb5f48ff98",
       "size_bytes": 2613
@@ -1128,14 +1138,39 @@
       "size_bytes": 0
     },
     {
+      "path": "quansio/control/broker.py",
+      "sha256": "a56b1cedcbafa844a25cca3bfb4965d1b2260c55fc4a76f19780bc1da247f6f7",
+      "size_bytes": 6206
+    },
+    {
       "path": "quansio/control/capability.py",
       "sha256": "91766ebe0293fef116429724e15381c70e74d1c7087438a8454d30e4ccb78735",
       "size_bytes": 8013
     },
     {
+      "path": "quansio/control/effects.py",
+      "sha256": "45f0c90248c794fee411e90b1d32b30e3ad9f1c8062cee7a0b16646749c4183d",
+      "size_bytes": 15353
+    },
+    {
+      "path": "quansio/control/guard.py",
+      "sha256": "cfa776c85fca15a2872a2fd2a5ebfc6e744bc249836552305426ed52b3067eb1",
+      "size_bytes": 4720
+    },
+    {
       "path": "quansio/control/identity.py",
       "sha256": "0afd1c7901f5c67f9f561fe7b6e8644e62d3d9642f063ae13caa4779fc792d13",
       "size_bytes": 8109
+    },
+    {
+      "path": "quansio/control/policy.py",
+      "sha256": "b5f3a562beb446760b26160ba6abb2025d54149fa88ccea919b9f7fefea0fa71",
+      "size_bytes": 5117
+    },
+    {
+      "path": "quansio/control/privacy_gate.py",
+      "sha256": "e11ad246cb5776b38a3d4f0a6b9cf06a7e0feeaefd2a3e0fbeb051fe4d3a0cb4",
+      "size_bytes": 5741
     },
     {
       "path": "quansio/context/__init__.py",
@@ -1278,6 +1313,11 @@
       "size_bytes": 5000
     },
     {
+      "path": "migrations/up/0013_policy_effects.sql",
+      "sha256": "1eb68d3edf133728691991ed9042248213d5aebcb0938fb0359b7571abbf6500",
+      "size_bytes": 4189
+    },
+    {
       "path": "migrations/down/0001_identities.sql",
       "sha256": "e1ff5ccfeec910a5a291618151b4c11ca089aa51efb8f085b02ae3ad3ef35ce4",
       "size_bytes": 228
@@ -1336,6 +1376,11 @@
       "path": "migrations/down/0012_context_research.sql",
       "sha256": "95d3d3f6266a853b10390c1c06f154d2c4f32d269dc415a652c95fc9a240a1c6",
       "size_bytes": 388
+    },
+    {
+      "path": "migrations/down/0013_policy_effects.sql",
+      "sha256": "005fa2bfa3001243db4f6161e38d53e76fadf7380f38e265e573b0624dc59019",
+      "size_bytes": 840
     },
     {
       "path": "graphs/business-capability-compiler.mmd",
