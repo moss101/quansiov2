@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M6",
-  "git_commit": "5fb292e182e0974087be6dced4753965d43da8ed",
+  "git_commit": "64e7893e71adba66e950b17950b19b6131477b7f",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-gate-m5-53807a31ed60.json",
@@ -61,6 +61,26 @@
     {
       "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-003/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-003/health-transcript.json', '- local artifact mismatch: quansio/qworkerd/protocol.py']",
       "task": "MAC-003"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-004/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-004/health-transcript.json']",
+      "task": "MAC-004"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-005/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-005/health-transcript.json']",
+      "task": "MAC-005"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-006/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-006/health-transcript.json']",
+      "task": "MAC-006"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-007/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-007/health-transcript.json']",
+      "task": "MAC-007"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-008/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-008/health-transcript.json']",
+      "task": "MAC-008"
     }
   ],
   "protected_ref": "HEAD",
