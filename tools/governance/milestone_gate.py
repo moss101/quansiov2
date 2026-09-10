@@ -140,7 +140,6 @@ def evaluate(gate_id: str) -> dict:
         "result": "PASS" if not problems else "FAIL",
         "problems": problems,
         "predecessor_evidence_index": index,
-        "evaluated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
     }
 
 

@@ -1,7 +1,6 @@
 {
-  "evaluated_at": "2026-09-10T00:41:18Z",
   "gate": "GATE-M0",
-  "git_commit": "f2918dd8cfe475c6ef86027c8a470c09a7940ce9",
+  "git_commit": "2a3a08678c196e358c65689c4bb5b52abfb10afd",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-env-001-72761ce487c9.json",
