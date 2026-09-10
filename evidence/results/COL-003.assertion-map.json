@@ -1,9 +1,4 @@
 {
-  "COL-003-A01": [
-    "tests/automation/test_automation_collaboration.py::test_col003_p01_notification_created_delivered_acknowledged",
-    "tests/automation/test_automation_collaboration.py::test_col003_n01_duplicate_delivery_and_wrong_tenant_ack",
-    "tests/automation/test_automation_collaboration.py::test_col003_r01_outage_recovery_delivers_pending_without_state_change"
-  ],
   "COL-003-N01": [
     "tests/automation/test_automation_collaboration.py::test_col003_n01_duplicate_delivery_and_wrong_tenant_ack"
   ],
