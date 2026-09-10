@@ -55,7 +55,7 @@ from quansio_contracts import ModelEvent as ModelEventContract
 
 
 class GatewayError(Exception):
-    pass
+    """Gateway-level fulfillment failure."""
 
 
 class ModelGateway:
@@ -199,9 +199,6 @@ class ModelGateway:
                     channel.put_error(error)
                 finally:
                     channel.close()
-
-            def _put_error(self_container=channel):
-                pass
 
             worker = threading.Thread(target=_produce, daemon=True)
             worker.start()

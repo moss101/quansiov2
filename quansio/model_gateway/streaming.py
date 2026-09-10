@@ -121,7 +121,7 @@ class BoundedEventChannel:
             while True:
                 self._queue.get_nowait()
         except queue.Empty:
-            pass
+            return  # already empty
 
 
 _FINISH_SENTINEL = object()

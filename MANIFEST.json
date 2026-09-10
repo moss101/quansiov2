@@ -1069,8 +1069,8 @@
     },
     {
       "path": "quansio/model_gateway/gateway.py",
-      "sha256": "bc4b6ea47eed031eabc2d28cd172644c141c1259aba440ddbdc7467be6035e10",
-      "size_bytes": 15010
+      "sha256": "cd13c0ec1064b58dea73588b69e8911f116be309fbe9b6e0384d4eb16567d06c",
+      "size_bytes": 14972
     },
     {
       "path": "quansio/model_gateway/privacy.py",
@@ -1084,8 +1084,8 @@
     },
     {
       "path": "quansio/model_gateway/streaming.py",
-      "sha256": "5fe21b437b278b7dc860b52fa3d29424766cd0bb4837f6b8b61eea3051cdec9f",
-      "size_bytes": 5263
+      "sha256": "e36e60e5ac7f8c46fe2bf78bb606287f83f46b7a432fb09bcd082a6ca6ca04da",
+      "size_bytes": 5282
     },
     {
       "path": "quansio/model_gateway/usage.py",
