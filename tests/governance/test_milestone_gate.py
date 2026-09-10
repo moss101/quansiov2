@@ -25,6 +25,9 @@ GATES_UNDER_TEST = ["GATE-M0", "GATE-M1"]
 EXPECTED_M0 = {"ENV-001", "GOV-001", "GOV-002", "GOV-003", "GOV-004", "GOV-005", "GOV-006", "GOV-007"}
 EXPECTED_M1 = EXPECTED_M0 | {"DAT-001", "DAT-002", "DAT-003", "DAT-004", "DAT-005", "DAT-006", "DAT-007", "DAT-008", "SEC-001"}
 EXPECTED = {"GATE-M0": EXPECTED_M0, "GATE-M1": EXPECTED_M1}
+# a direct predecessor whose evidence removal must fail the gate
+PROBE_PREDECESSOR = {"GATE-M0": "gov-003", "GATE-M1": "dat-003"}
+PROBE_NAME = {"GATE-M0": "GOV-003", "GATE-M1": "DAT-003"}
 
 
 def run_gate(*args: str, gate: str = "GATE-M0", out: Path | None = None) -> subprocess.CompletedProcess:
@@ -58,7 +61,7 @@ def test_gate_p01_all_predecessors_have_valid_evidence(gate_report):
 
 def test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified(gate_report):
     gate_id, _report = gate_report
-    evidences = sorted((REPO_ROOT / "evidence/reports").glob("evidence-gov-003-*.json"))
+    evidences = sorted((REPO_ROOT / "evidence/reports").glob(f"evidence-{PROBE_PREDECESSOR[gate_id]}-*.json"))
     stash_dir = REPO_ROOT / "evidence/reports/.stash"
     stash_dir.mkdir(exist_ok=True)
     moved = []
@@ -69,7 +72,7 @@ def test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified(g
     try:
         result = run_gate(gate=gate_id)
         assert result.returncode != 0
-        assert "GOV-003" in result.stdout
+        assert PROBE_NAME[gate_id] in result.stdout
         assert "no completion evidence" in result.stdout
     finally:
         for target, evidence in moved:
@@ -82,7 +85,8 @@ def test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified(g
 def test_gate_r01_restored_gate_matches_prior_evaluation_without_touching_other_evidence(gate_report, tmp_path):
     gate_id, committed_report = gate_report
     before = {e["task"]: e.get("evidence_digest") for e in committed_report["predecessor_evidence_index"]}
-    evidences = sorted((REPO_ROOT / "evidence/reports").glob("evidence-gov-005-*.json"))
+    probe = PROBE_PREDECESSOR[gate_id]
+    evidences = sorted((REPO_ROOT / "evidence/reports").glob(f"evidence-{probe}-*.json"))
     stash_dir = REPO_ROOT / "evidence/reports/.stash"
     stash_dir.mkdir(exist_ok=True)
     moved = []
