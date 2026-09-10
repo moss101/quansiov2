@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "e0a4bde11999d03c4488885ced8013a0c5c1cd245d67634074793e7582c65d1b",
+      "path_or_uri": "evidence/boundary/EXT-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "34a699c9b94d43794da0180acf8df14546b5afd960b23505efaf34aa7b158b6c",
+      "path_or_uri": "evidence/boundary/EXT-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "5f61032bda7e88aba9823289b929a26f51456f586dbaead62fe4f700c5ffbb54",
+      "path_or_uri": "quansio/control/connectors.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "14faa79f61dfab13e18dcf88604c48a1416fb59529977dcded88b0ae9f81bbf9",
+      "path_or_uri": "migrations/up/0017_business_connectors.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "54a3a9ff2df4e1423490839d645ba589f1645a5b2b5f9c6849ac43b5364bd8b8",
+      "path_or_uri": "tests/business/test_business_connectors.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "EXT-001-A01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_ext001_p01_register_and_resolve_operations; tests/business/test_business_connectors.py::test_ext001_n01_unsafe_declarations_rejected; tests/business/test_business_connectors.py::test_ext001_r01_deprecation_pins_running_steps; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "EXT-001-N01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_ext001_n01_unsafe_declarations_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "EXT-001-P01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_ext001_p01_register_and_resolve_operations; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "EXT-001-R01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_ext001_r01_deprecation_pins_running_steps; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T09:56:39Z",
+  "git_commit": "ee61404f6fa0f90c512a566229f1f623c8bbf3c6",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-ext-001-ee61404f6fa0",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "EXT-001"
+}
