@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 2453,
+  "file_count": 2458,
   "files": [
     {
       "path": ".gitignore",
@@ -688,6 +688,11 @@
       "size_bytes": 21757
     },
     {
+      "path": "tests/automation/test_automation_collaboration.py",
+      "sha256": "2d0d32f0966e885b0e710d22f044eafd980ba2ca441dc3e54573d8f3f8d945da",
+      "size_bytes": 20911
+    },
+    {
       "path": "tests/api/test_identity.py",
       "sha256": "b24e43e81bd72a03bf0518da8e5642d01eafc0d0f861ffdb69a23143d1126045",
       "size_bytes": 7866
@@ -1263,6 +1268,11 @@
       "size_bytes": 0
     },
     {
+      "path": "quansio/context/collaboration.py",
+      "sha256": "6fe164c6b54d0cf2dbccd9e90277be67aec83ca9ce50677f8b1591b06d5685dc",
+      "size_bytes": 13266
+    },
+    {
       "path": "quansio/context/executor.py",
       "sha256": "9d63a65ab44499a29d3c28fe4b888ac9905a82e5a16637f18e8054550bf1f776",
       "size_bytes": 10879
@@ -1286,6 +1296,11 @@
       "path": "quansio/context/retrieval.py",
       "sha256": "f79de188cba9c06b6a4ebf9d7e057bf3ba9432ca49f9ae8b0e1ed342c52ea74c",
       "size_bytes": 4754
+    },
+    {
+      "path": "quansio/context/scheduler.py",
+      "sha256": "760243db835bac3eacd1217c9e3b97a4ea3b11f23ad74e0a88e480d7e903107f",
+      "size_bytes": 14571
     },
     {
       "path": "quansio/context/scoring.py",
@@ -1428,6 +1443,11 @@
       "size_bytes": 3508
     },
     {
+      "path": "migrations/up/0018_automation_collaboration.sql",
+      "sha256": "57ada1b380b53157b8eee713f49cede45d0fed4c2a62f0b90372065ab0682272",
+      "size_bytes": 3268
+    },
+    {
       "path": "migrations/down/0001_identities.sql",
       "sha256": "e1ff5ccfeec910a5a291618151b4c11ca089aa51efb8f085b02ae3ad3ef35ce4",
       "size_bytes": 228
@@ -1511,6 +1531,11 @@
       "path": "migrations/down/0017_business_connectors.sql",
       "sha256": "99a244af70283cab1e7cfbadc08187c9b14fe6a38dd76f46e8b276bc64fa8380",
       "size_bytes": 216
+    },
+    {
+      "path": "migrations/down/0018_automation_collaboration.sql",
+      "sha256": "3ce4a21997c9f0e22fb21a57b02515a9a8306f0562a81fa99c17df33e7108256",
+      "size_bytes": 262
     },
     {
       "path": "graphs/business-capability-compiler.mmd",
