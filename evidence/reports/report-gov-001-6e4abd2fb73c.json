@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c3bc03a980f41a815c40316e90ab95332031d322ac9055ba4b09b4216d896314",
+      "path_or_uri": "evidence/ownership/inventory.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "44f077b1fdb47c186922ad53bb5436c0734342c778a49e0f46ef19a7bdcf0c77",
+      "path_or_uri": "evidence/ownership/ownership_registry.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "0fcba63d72fc26d637e32cfc88ef93e05c747307fed60f314e6896b56062edfe",
+      "path_or_uri": "tools/governance/ownership_inventory.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "5fbdbc7638060a340ea17f80ee98116c886c18208228f4d4bcef76aeb6044a2b",
+      "path_or_uri": "tests/governance/test_ownership_inventory.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "GOV-001-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_inventory.py::test_p01_inventory_is_deterministic_and_fully_owned; tests/governance/test_ownership_inventory.py::test_p01_every_canonical_service_has_adoption_plan; tests/governance/test_ownership_inventory.py::test_n01_unowned_second_authoritative_store_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-001-N01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_inventory.py::test_n01_unregistered_entrypoint_is_rejected; tests/governance/test_ownership_inventory.py::test_n01_live_repo_rejects_unowned_entrypoint; tests/governance/test_ownership_inventory.py::test_n01_unowned_second_authoritative_store_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-001-P01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_inventory.py::test_p01_inventory_is_deterministic_and_fully_owned; tests/governance/test_ownership_inventory.py::test_p01_committed_inventory_matches_regenerated; tests/governance/test_ownership_inventory.py::test_p01_every_canonical_service_has_adoption_plan; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-001-R01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_inventory.py::test_r01_tracked_input_change_is_detected_then_recovery_is_clean; tests/governance/test_ownership_inventory.py::test_r01_planned_path_adopted_only_through_registry; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-007-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_ownership_inventory.py::test_p01_inventory_is_deterministic_and_fully_owned; tests/governance/test_ownership_inventory.py::test_n01_unowned_second_authoritative_store_is_rejected; tests/governance/test_ownership_inventory.py::test_r01_planned_path_adopted_only_through_registry; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T08:30:08Z",
+  "git_commit": "6e4abd2fb73cbfb4dc1bd192668a5a5cceed08c7",
+  "protected_ref": "HEAD",
+  "real_boundary": false,
+  "report_id": "report-gov-001-6e4abd2fb73c",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "GOV-001"
+}
