@@ -1049,8 +1049,8 @@
     },
     {
       "path": "registries/release-state-machine.json",
-      "sha256": "9162bfe6d405b66712702e6f0563abc778b9e5ac0b2d809585a3adc243871531",
-      "size_bytes": 1061
+      "sha256": "b82b74b468946d993cff8e3b50b326fde35ede986f682e5fc8bc5034ae89ff47",
+      "size_bytes": 1752
     },
     {
       "path": "registries/requirements.json",

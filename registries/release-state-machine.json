@@ -1,51 +1,20 @@
 {
+  "states": ["CANDIDATE_CREATED", "CANDIDATE_QUALIFIED", "CANARY_DEPLOYED", "ROLLBACK_PROVEN", "GO_APPROVED", "READINESS_EVIDENCE_SEALED", "PRODUCTION_READY"],
+  "initial_state": "CANDIDATE_CREATED",
   "production_ready_owner": "GATE-M14",
-  "schema_revision": "9.0.0",
-  "states": [
-    "CANDIDATE_CREATED",
-    "CANDIDATE_QUALIFIED",
-    "CANARY_DEPLOYED",
-    "CANARY_QUALIFIED",
-    "GO_APPROVED",
-    "READINESS_EVIDENCE_SEALED",
-    "PRODUCTION_READY",
-    "PRODUCTION_RELEASED"
-  ],
   "transitions": [
-    {
-      "from": "CANDIDATE_CREATED",
-      "owner": "REL-002",
-      "to": "CANDIDATE_QUALIFIED"
-    },
-    {
-      "from": "CANDIDATE_QUALIFIED",
-      "owner": "REL-003",
-      "to": "CANARY_DEPLOYED"
-    },
-    {
-      "from": "CANARY_DEPLOYED",
-      "owner": "REL-004",
-      "to": "CANARY_QUALIFIED"
-    },
-    {
-      "from": "CANARY_QUALIFIED",
-      "owner": "REL-005",
-      "to": "GO_APPROVED"
-    },
-    {
-      "from": "GO_APPROVED",
-      "owner": "REL-006",
-      "to": "READINESS_EVIDENCE_SEALED"
-    },
-    {
-      "from": "READINESS_EVIDENCE_SEALED",
-      "owner": "GATE-M14",
-      "to": "PRODUCTION_READY"
-    },
-    {
-      "from": "PRODUCTION_READY",
-      "owner": "REL-008",
-      "to": "PRODUCTION_RELEASED"
-    }
+    {"from": "CANDIDATE_CREATED", "to": "CANDIDATE_QUALIFIED", "owner": "release-control", "condition": "all mapped blocking suites pass for exact candidate"},
+    {"from": "CANDIDATE_QUALIFIED", "to": "CANARY_DEPLOYED", "owner": "canary-controller", "condition": "exact qualified artifacts deployed; post-deploy health checks pass"},
+    {"from": "CANARY_DEPLOYED", "to": "ROLLBACK_PROVEN", "owner": "canary-controller", "condition": "rollback drill under representative traffic passes; irreversible migrations rejected earlier"},
+    {"from": "ROLLBACK_PROVEN", "to": "GO_APPROVED", "owner": "release-board", "condition": "all blocking reports, SLO, security, DR, canary and rollback evidence evaluated"},
+    {"from": "GO_APPROVED", "to": "ROLLBACK_PROVEN", "owner": "release-board", "condition": "NO_GO invalidation of a prior GO on blocking failure"},
+    {"from": "GO_APPROVED", "to": "READINESS_EVIDENCE_SEALED", "owner": "release-control", "condition": "digest-bound readiness bundle sealed"},
+    {"from": "READINESS_EVIDENCE_SEALED", "to": "PRODUCTION_READY", "owner": "GATE-M14", "condition": "gate evaluation verifies sealed bundle, promotion identity and all gate dependencies; sole writer of this transition"}
+  ],
+  "rules": [
+    "no other component may write PRODUCTION_READY",
+    "candidate identity changes invalidate prior qualification",
+    "irreversible migrations without rollback path fail before GO",
+    "committed effects are never replayed after restore"
   ]
 }
