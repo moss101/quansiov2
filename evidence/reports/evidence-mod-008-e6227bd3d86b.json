@@ -1,0 +1,31 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/MOD-008/health-transcript.json": "4f0314dd3326683996657d3cca9440e444b371e84665fe62619a7d71efc0b3b8",
+    "evidence/boundary/MOD-008/manifest.json": "7d09f7744dfc006fc875d3dfdc3c9a284303a7417fb0f6691fdd4763dc68d611",
+    "quansio/model_gateway/adapters.py": "75ae14598646a92fd87e913fad9540803c33217dff665af0fbd893134833b86f",
+    "quansio/model_gateway/gateway.py": "cd13c0ec1064b58dea73588b69e8911f116be309fbe9b6e0384d4eb16567d06c",
+    "tests/model_gateway/test_real_provider_qualification.py": "9cd49a0aecfc322c00da39f826202b03cc5ac5f132ca0b68ce8ee8efa8674702"
+  },
+  "created_at": "2026-09-10T16:46:26Z",
+  "evidence_id": "evidence-mod-008-e6227bd3d86b",
+  "git_commit": "e6227bd3d86bed2e96c3f16e13808ff8dff09aa8",
+  "real_boundary": true,
+  "report_digest": "4e9f146f124d2353106b22a539c3014ce87aa63d710b91474ec9e594e9dfad15",
+  "report_path": "evidence/reports/report-mod-008-e6227bd3d86b.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "MOD-007-A01"
+  ],
+  "requirement_ids": [
+    "MOD-007"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "MOD-008-N01",
+    "MOD-008-P01",
+    "MOD-008-R01"
+  ],
+  "task_id": "MOD-008"
+}
