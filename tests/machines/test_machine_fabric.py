@@ -184,9 +184,9 @@ def test_mac003_p01_typed_guest_operations_execute_in_sandbox(tmp_path):
                          {"path": "workspace/notes.txt"}, {"task_id": "task-1"})
     assert read["output"]["content"] == "hello guest"
     exec_result = guest.execute("terminal.exec", "guest-rpc/1",
-                                {"command": "ls"}, {"task_id": "task-1"})
+                                {"command": "cat workspace/notes.txt"}, {"task_id": "task-1"})
     assert exec_result["output"]["exit_code"] == 0
-    assert "notes.txt" in exec_result["output"]["stdout"]
+    assert "hello guest" in exec_result["output"]["stdout"]
 
 
 def test_mac003_n01_unknown_version_protected_path_ambient_secret_rejected(tmp_path):
