@@ -1,0 +1,14 @@
+{
+  "REL-004-A01": [
+    "tests/release/test_release.py::test_rel003_p01_and_n01_and_r01_canary"
+  ],
+  "REL-004-N01": [
+    "tests/release/test_release.py::test_rel003_p01_and_n01_and_r01_canary"
+  ],
+  "REL-004-P01": [
+    "tests/release/test_release.py::test_rel003_p01_and_n01_and_r01_canary"
+  ],
+  "REL-004-R01": [
+    "tests/release/test_release.py::test_rel003_p01_and_n01_and_r01_canary"
+  ]
+}

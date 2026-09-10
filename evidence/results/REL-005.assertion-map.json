@@ -1,0 +1,14 @@
+{
+  "REL-003-A01": [
+    "tests/release/test_release.py::test_rel002_p01_qualify_exact_candidate"
+  ],
+  "REL-005-N01": [
+    "tests/release/test_release.py::test_rel005_p01_and_n01_go_decision"
+  ],
+  "REL-005-P01": [
+    "tests/release/test_release.py::test_rel005_p01_and_n01_go_decision"
+  ],
+  "REL-005-R01": [
+    "tests/release/test_release.py::test_rel005_p01_and_n01_go_decision"
+  ]
+}

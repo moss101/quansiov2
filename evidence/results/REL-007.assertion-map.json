@@ -1,0 +1,14 @@
+{
+  "REL-005-A01": [
+    "tests/release/test_release.py::test_rel005_p01_and_n01_go_decision"
+  ],
+  "REL-007-N01": [
+    "tests/release/test_release.py::test_rel007_p01_and_n01_and_r01_sole_owner_and_restart"
+  ],
+  "REL-007-P01": [
+    "tests/release/test_release.py::test_rel007_p01_and_n01_and_r01_sole_owner_and_restart"
+  ],
+  "REL-007-R01": [
+    "tests/release/test_release.py::test_rel007_p01_and_n01_and_r01_sole_owner_and_restart"
+  ]
+}

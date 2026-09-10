@@ -1,0 +1,14 @@
+{
+  "REL-002-N01": [
+    "tests/release/test_release.py::test_rel002_n01_omitted_suite_blocks_qualification"
+  ],
+  "REL-002-P01": [
+    "tests/release/test_release.py::test_rel002_p01_qualify_exact_candidate"
+  ],
+  "REL-002-R01": [
+    "tests/release/test_release.py::test_rel002_p01_qualify_exact_candidate"
+  ],
+  "REL-003-A01": [
+    "tests/release/test_release.py::test_rel002_p01_qualify_exact_candidate"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "REL-001-A01": [
+    "tests/release/test_release.py::test_rel001_p01_and_r01_candidate_identity_and_rematerialization",
+    "tests/release/test_release.py::test_rel001_n01_changed_input_is_a_different_candidate"
+  ],
+  "REL-001-N01": [
+    "tests/release/test_release.py::test_rel001_n01_changed_input_is_a_different_candidate"
+  ],
+  "REL-001-P01": [
+    "tests/release/test_release.py::test_rel001_p01_and_r01_candidate_identity_and_rematerialization"
+  ],
+  "REL-001-R01": [
+    "tests/release/test_release.py::test_rel001_p01_and_r01_candidate_identity_and_rematerialization"
+  ],
+  "REL-002-A01": [
+    "tests/release/test_release.py::test_rel001_n01_changed_input_is_a_different_candidate"
+  ],
+  "SEC-008-A01": [
+    "tests/release/test_release.py::test_rel001_p01_and_r01_candidate_identity_and_rematerialization"
+  ]
+}

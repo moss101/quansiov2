@@ -1,0 +1,17 @@
+{
+  "REL-004-A01": [
+    "tests/release/test_release.py::test_rel003_p01_and_n01_and_r01_canary"
+  ],
+  "REL-006-A01": [
+    "tests/release/test_release.py::test_rel006_p01_and_n01_and_r01_readiness_bundle"
+  ],
+  "REL-008-N01": [
+    "tests/release/test_release.py::test_rel008_p01_and_n01_and_r01_promotion_exact_identity"
+  ],
+  "REL-008-P01": [
+    "tests/release/test_release.py::test_rel008_p01_and_n01_and_r01_promotion_exact_identity"
+  ],
+  "REL-008-R01": [
+    "tests/release/test_release.py::test_rel008_p01_and_n01_and_r01_promotion_exact_identity"
+  ]
+}

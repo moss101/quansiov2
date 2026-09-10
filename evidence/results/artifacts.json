@@ -419,6 +419,39 @@
     "tests/qa/test_qa_verticals.py",
     "quansio/observability/sre.py"
   ],
+  "REL-001": [
+    "quansio/control/release.py",
+    "migrations/up/0020_release.sql",
+    "tests/release/test_release.py"
+  ],
+  "REL-002": [
+    "quansio/control/release.py",
+    "tests/release/test_release.py"
+  ],
+  "REL-003": [
+    "quansio/control/release.py",
+    "tests/release/test_release.py"
+  ],
+  "REL-004": [
+    "quansio/control/release.py",
+    "tests/release/test_release.py"
+  ],
+  "REL-005": [
+    "quansio/control/release.py",
+    "tests/release/test_release.py"
+  ],
+  "REL-006": [
+    "quansio/control/release.py",
+    "tests/release/test_release.py"
+  ],
+  "REL-007": [
+    "quansio/control/release.py",
+    "tests/release/test_release.py"
+  ],
+  "REL-008": [
+    "quansio/control/release.py",
+    "tests/release/test_release.py"
+  ],
   "RUN-001": [
     "quansio/runtime/graphs.py",
     "migrations/up/0007_graph_transactions.sql",

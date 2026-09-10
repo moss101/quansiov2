@@ -1,0 +1,17 @@
+{
+  "REL-001-A01": [
+    "tests/release/test_release.py::test_rel001_p01_and_r01_candidate_identity_and_rematerialization"
+  ],
+  "REL-003-A01": [
+    "tests/release/test_release.py::test_rel002_p01_qualify_exact_candidate"
+  ],
+  "REL-006-N01": [
+    "tests/release/test_release.py::test_rel006_p01_and_n01_and_r01_readiness_bundle"
+  ],
+  "REL-006-P01": [
+    "tests/release/test_release.py::test_rel006_p01_and_n01_and_r01_readiness_bundle"
+  ],
+  "REL-006-R01": [
+    "tests/release/test_release.py::test_rel006_p01_and_n01_and_r01_readiness_bundle"
+  ]
+}
