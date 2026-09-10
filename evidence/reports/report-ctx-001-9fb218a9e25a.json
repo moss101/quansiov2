@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "a470815c0af3fc40d0234125d9aea1afc648cfd4f9e2d1c10b53b008755cfc14",
+      "path_or_uri": "evidence/boundary/CTX-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "803fd6e37dca0ed8cb83cfc004c5616bf775ba2aafbc009db77955a7358acce6",
+      "path_or_uri": "evidence/boundary/CTX-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "3a767e1736655aa3d7df7f79d7090d9a77861af985d888d4d01b2ac4477db232",
+      "path_or_uri": "quansio/context/search_program.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "842d5af7412199d8ef6e829f9332d1f48a9d98b13c68f9cb31941d71859e3c5f",
+      "path_or_uri": "tests/context/test_context_stack.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "CTX-001-A01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx001_p01_valid_program_parses_and_executes; tests/context/test_context_stack.py::test_ctx001_n01_invalid_programs_fail_before_execution; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-001-N01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx001_n01_invalid_programs_fail_before_execution; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-001-P01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx001_p01_valid_program_parses_and_executes; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-001-R01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx001_r01_restart_resumes_from_durable_operator_outputs; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T05:47:56Z",
+  "git_commit": "9fb218a9e25a7642ed0ab9f34d4867e1b410865d",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-ctx-001-9fb218a9e25a",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "CTX-001"
+}
