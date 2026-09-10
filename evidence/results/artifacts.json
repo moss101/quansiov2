@@ -1,4 +1,41 @@
 {
+  "BRW-001": [
+    "quansio/worker_gateway/browser.py",
+    "migrations/up/0015_browser_stack.sql",
+    "tests/browser/test_browser_stack.py"
+  ],
+  "BRW-002": [
+    "quansio/worker_gateway/browser.py",
+    "tests/browser/test_browser_stack.py"
+  ],
+  "BRW-003": [
+    "quansio/worker_gateway/browser.py",
+    "quansio/control/effects.py",
+    "tests/browser/test_browser_stack.py"
+  ],
+  "BRW-004": [
+    "quansio/worker_gateway/browser.py",
+    "tests/browser/test_browser_stack.py"
+  ],
+  "BRW-005": [
+    "quansio/worker_gateway/transfer_relay.py",
+    "tests/browser/test_browser_stack.py"
+  ],
+  "BRW-006": [
+    "quansio/worker_gateway/transfer_relay.py",
+    "tests/browser/test_browser_stack.py"
+  ],
+  "BRW-007": [
+    "quansio/worker_gateway/transfer_relay.py",
+    "migrations/up/0015_browser_stack.sql",
+    "tests/browser/test_browser_stack.py"
+  ],
+  "BRW-008": [
+    "quansio/worker_gateway/browser.py",
+    "quansio/worker_gateway/transfer_relay.py",
+    "quansio/machine_control/services.py",
+    "tests/browser/test_browser_stack.py"
+  ],
   "CTX-001": [
     "quansio/context/search_program.py",
     "tests/context/test_context_stack.py"

@@ -1,0 +1,14 @@
+{
+  "BRW-001-A01": [
+    "tests/browser/test_browser_stack.py::test_brw001_p01_durable_session_with_channels_and_control"
+  ],
+  "BRW-002-N01": [
+    "tests/browser/test_browser_stack.py::test_brw002_n01_stale_page_epoch_rejected"
+  ],
+  "BRW-002-P01": [
+    "tests/browser/test_browser_stack.py::test_brw002_p01_structured_actions_correlated"
+  ],
+  "BRW-002-R01": [
+    "tests/browser/test_browser_stack.py::test_brw002_r01_degraded_mode_and_recovery"
+  ]
+}

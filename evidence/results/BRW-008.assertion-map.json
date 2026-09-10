@@ -1,0 +1,17 @@
+{
+  "BRW-002-A01": [
+    "tests/browser/test_browser_stack.py::test_brw002_p01_structured_actions_correlated"
+  ],
+  "BRW-006-A01": [
+    "tests/browser/test_browser_stack.py::test_brw006_p01_fully_bound_envelope_dispatches"
+  ],
+  "BRW-008-N01": [
+    "tests/browser/test_browser_stack.py::test_brw008_n01_unqualified_profile_stays_disabled"
+  ],
+  "BRW-008-P01": [
+    "tests/browser/test_browser_stack.py::test_brw008_p01_enabled_profile_passes_all_mapped_tests"
+  ],
+  "BRW-008-R01": [
+    "tests/browser/test_browser_stack.py::test_brw008_r01_restart_keeps_durable_identities"
+  ]
+}

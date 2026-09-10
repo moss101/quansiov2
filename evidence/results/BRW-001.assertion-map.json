@@ -1,0 +1,18 @@
+{
+  "BRW-001-A01": [
+    "tests/browser/test_browser_stack.py::test_brw001_p01_durable_session_with_channels_and_control",
+    "tests/browser/test_browser_stack.py::test_brw001_n01_wrong_tenant_or_stale_generation_denied"
+  ],
+  "BRW-001-N01": [
+    "tests/browser/test_browser_stack.py::test_brw001_n01_wrong_tenant_or_stale_generation_denied"
+  ],
+  "BRW-001-P01": [
+    "tests/browser/test_browser_stack.py::test_brw001_p01_durable_session_with_channels_and_control"
+  ],
+  "BRW-001-R01": [
+    "tests/browser/test_browser_stack.py::test_brw001_r01_reconnect_to_same_session"
+  ],
+  "BRW-002-A01": [
+    "tests/browser/test_browser_stack.py::test_brw002_p01_structured_actions_correlated"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "BRW-002-A01": [
+    "tests/browser/test_browser_stack.py::test_brw002_p01_structured_actions_correlated"
+  ],
+  "BRW-004-N01": [
+    "tests/browser/test_browser_stack.py::test_brw004_n01_agent_blocked_while_human_holds_control"
+  ],
+  "BRW-004-P01": [
+    "tests/browser/test_browser_stack.py::test_brw004_p01_takeover_and_return"
+  ],
+  "BRW-004-R01": [
+    "tests/browser/test_browser_stack.py::test_brw004_r01_bounded_release_after_disconnect"
+  ]
+}

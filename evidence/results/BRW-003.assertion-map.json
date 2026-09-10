@@ -1,0 +1,18 @@
+{
+  "BRW-003-A01": [
+    "tests/browser/test_browser_stack.py::test_brw003_p01_and_n01_consequential_action_requires_effect",
+    "tests/browser/test_browser_stack.py::test_brw003_r01_semantic_target_changed_refuses_resume"
+  ],
+  "BRW-003-N01": [
+    "tests/browser/test_browser_stack.py::test_brw003_p01_and_n01_consequential_action_requires_effect"
+  ],
+  "BRW-003-P01": [
+    "tests/browser/test_browser_stack.py::test_brw003_p01_and_n01_consequential_action_requires_effect"
+  ],
+  "BRW-003-R01": [
+    "tests/browser/test_browser_stack.py::test_brw003_r01_semantic_target_changed_refuses_resume"
+  ],
+  "EFF-006-A01": [
+    "tests/browser/test_browser_stack.py::test_brw003_p01_and_n01_consequential_action_requires_effect"
+  ]
+}

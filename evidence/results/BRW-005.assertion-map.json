@@ -1,0 +1,17 @@
+{
+  "BRW-003-A01": [
+    "tests/browser/test_browser_stack.py::test_brw003_p01_and_n01_consequential_action_requires_effect"
+  ],
+  "BRW-005-N01": [
+    "tests/browser/test_browser_stack.py::test_brw005_n01_unscanned_artifact_denied_before_selection"
+  ],
+  "BRW-005-P01": [
+    "tests/browser/test_browser_stack.py::test_brw005_p01_governed_transfer_with_digest"
+  ],
+  "BRW-005-R01": [
+    "tests/browser/test_browser_stack.py::test_brw005_r01_interrupted_download_resumes_with_digest_match"
+  ],
+  "DAT-006-A01": [
+    "tests/browser/test_browser_stack.py::test_brw005_p01_governed_transfer_with_digest"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "BRW-004-A01": [
+    "tests/browser/test_browser_stack.py::test_brw004_p01_takeover_and_return"
+  ],
+  "BRW-006-N01": [
+    "tests/browser/test_browser_stack.py::test_brw006_n01_stripped_fence_or_altered_argument_refused"
+  ],
+  "BRW-006-P01": [
+    "tests/browser/test_browser_stack.py::test_brw006_p01_fully_bound_envelope_dispatches"
+  ],
+  "BRW-006-R01": [
+    "tests/browser/test_browser_stack.py::test_brw006_r01_dropped_response_replays_original_result"
+  ],
+  "SEC-007-A01": [
+    "tests/browser/test_browser_stack.py::test_brw006_n01_stripped_fence_or_altered_argument_refused"
+  ]
+}

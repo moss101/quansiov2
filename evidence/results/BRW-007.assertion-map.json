@@ -1,0 +1,17 @@
+{
+  "BRW-005-A01": [
+    "tests/browser/test_browser_stack.py::test_brw005_p01_governed_transfer_with_digest"
+  ],
+  "BRW-007-N01": [
+    "tests/browser/test_browser_stack.py::test_brw007_n01_observation_replay_has_no_actuation"
+  ],
+  "BRW-007-P01": [
+    "tests/browser/test_browser_stack.py::test_brw007_p01_observations_stored_as_evidence_only"
+  ],
+  "BRW-007-R01": [
+    "tests/browser/test_browser_stack.py::test_brw007_r01_backfill_after_evidence_store_outage"
+  ],
+  "DAT-006-A01": [
+    "tests/browser/test_browser_stack.py::test_brw007_p01_observations_stored_as_evidence_only"
+  ]
+}
