@@ -1,0 +1,31 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/DAT-006/health-transcript.json": "7539efc02f44af6f771a131b20df755fb26b4f224ff5256f83de43451a19c913",
+    "evidence/boundary/DAT-006/manifest.json": "79f47de3150a5aa4ee9c004a3f50292cc4bc7fbd3a693b1b0f7715d29a30f0f3",
+    "migrations/up/0005_artifacts.sql": "4d4a1aa6dc3d740043883df35e5845eb805921cc16162f6cf212cbe845fb7ca6",
+    "quansio/artifact/store.py": "4e52917d91ba1e6b05c58aa348c1804496adb752504db9036a129f8dcedc6887",
+    "tests/runtime/test_foundation.py": "3c796add73123c3a23b93b6462dc9e2aa141e3cb7a7c08ebaeacc6d7bf8d39b0"
+  },
+  "created_at": "2026-09-10T01:32:18Z",
+  "evidence_id": "evidence-dat-006-20882bb890ba",
+  "git_commit": "20882bb890baac314f79df0e165c913e9d5224e5",
+  "real_boundary": true,
+  "report_digest": "49bf7f78c24106b53dfcb7da9bf826d70a3e5c21d2766ba58458523816bb71f8",
+  "report_path": "evidence/reports/report-dat-006-20882bb890ba.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "DAT-006-A01"
+  ],
+  "requirement_ids": [
+    "DAT-006"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "DAT-006-N01",
+    "DAT-006-P01",
+    "DAT-006-R01"
+  ],
+  "task_id": "DAT-006"
+}
