@@ -1,0 +1,59 @@
+{
+  "artifact_records": [
+    {
+      "digest": "0799f5f49ab000ef1ef2670732e87c25fd8da530bb3cfe8b91ebd233cb2a58e6",
+      "path_or_uri": "tools/governance/milestone_gate.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "0fdb64944ca0c6e69490a19e9f686cae09402af73a5227a5149d106f3181f62e",
+      "path_or_uri": "tests/governance/test_milestone_gate.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "34053d5a896a39049da1c901ab01cb55a303d8d7beac48068ce19e14716bbbca",
+      "path_or_uri": "evidence/gates/GATE-M5.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "GATE-M5-N01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_milestone_gate.py::test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified[GATE-M5]; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GATE-M5-P01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_milestone_gate.py::test_gate_p01_all_predecessors_have_valid_evidence[GATE-M5]; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GATE-M5-R01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_milestone_gate.py::test_gate_r01_restored_gate_matches_prior_evaluation_without_touching_other_evidence[GATE-M5]; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-008-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_milestone_gate.py::test_gate_p01_all_predecessors_have_valid_evidence[GATE-M5]; tests/governance/test_milestone_gate.py::test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified[GATE-M5]; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T14:35:22Z",
+  "git_commit": "71975f2b69a6d2285962e1e52d3d627a2396935c",
+  "protected_ref": "HEAD",
+  "real_boundary": false,
+  "report_id": "report-gate-m5-71975f2b69a6",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "GATE-M5"
+}
