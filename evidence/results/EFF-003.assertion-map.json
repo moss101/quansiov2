@@ -1,0 +1,19 @@
+{
+  "EFF-003-A01": [
+    "tests/control/test_policy_effects.py::test_eff003_p01_unknown_timeout_reconciles_via_probe",
+    "tests/control/test_policy_effects.py::test_eff003_n01_blind_retry_of_unknown_blocked",
+    "tests/control/test_policy_effects.py::test_eff003_r01_reconciliation_worker_restart_continues_same_identity"
+  ],
+  "EFF-003-N01": [
+    "tests/control/test_policy_effects.py::test_eff003_n01_blind_retry_of_unknown_blocked"
+  ],
+  "EFF-003-P01": [
+    "tests/control/test_policy_effects.py::test_eff003_p01_unknown_timeout_reconciles_via_probe"
+  ],
+  "EFF-003-R01": [
+    "tests/control/test_policy_effects.py::test_eff003_r01_reconciliation_worker_restart_continues_same_identity"
+  ],
+  "EFF-007-A01": [
+    "tests/control/test_policy_effects.py::test_eff003_r01_reconciliation_worker_restart_continues_same_identity"
+  ]
+}

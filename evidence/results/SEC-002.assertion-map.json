@@ -1,0 +1,16 @@
+{
+  "SEC-002-A01": [
+    "tests/control/test_policy_effects.py::test_sec002_p01_decision_binds_all_inputs",
+    "tests/control/test_policy_effects.py::test_sec002_n01_changed_argument_breaks_scope_binding",
+    "tests/control/test_policy_effects.py::test_sec002_r01_policy_outage_requires_fresh_decision"
+  ],
+  "SEC-002-N01": [
+    "tests/control/test_policy_effects.py::test_sec002_n01_changed_argument_breaks_scope_binding"
+  ],
+  "SEC-002-P01": [
+    "tests/control/test_policy_effects.py::test_sec002_p01_decision_binds_all_inputs"
+  ],
+  "SEC-002-R01": [
+    "tests/control/test_policy_effects.py::test_sec002_r01_policy_outage_requires_fresh_decision"
+  ]
+}

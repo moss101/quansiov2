@@ -1,0 +1,15 @@
+{
+  "SEC-005-A01": [
+    "tests/control/test_policy_effects.py::test_sec005_p01_and_n01_dangerous_sequence_blocked",
+    "tests/control/test_policy_effects.py::test_sec005_r01_rule_update_reevaluates_without_deleting_history"
+  ],
+  "SEC-005-N01": [
+    "tests/control/test_policy_effects.py::test_sec005_p01_and_n01_dangerous_sequence_blocked"
+  ],
+  "SEC-005-P01": [
+    "tests/control/test_policy_effects.py::test_sec005_p01_and_n01_dangerous_sequence_blocked"
+  ],
+  "SEC-005-R01": [
+    "tests/control/test_policy_effects.py::test_sec005_r01_rule_update_reevaluates_without_deleting_history"
+  ]
+}

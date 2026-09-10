@@ -1,0 +1,19 @@
+{
+  "EFF-002-A01": [
+    "tests/control/test_policy_effects.py::test_eff002_p01_financial_approval_binds_payee_amount_currency_ceiling",
+    "tests/control/test_policy_effects.py::test_eff002_n01_amount_or_payee_change_denied_before_invocation",
+    "tests/control/test_policy_effects.py::test_eff002_r01_other_surface_approves_waiting_effect_without_duplicates"
+  ],
+  "EFF-002-N01": [
+    "tests/control/test_policy_effects.py::test_eff002_n01_amount_or_payee_change_denied_before_invocation"
+  ],
+  "EFF-002-P01": [
+    "tests/control/test_policy_effects.py::test_eff002_p01_financial_approval_binds_payee_amount_currency_ceiling"
+  ],
+  "EFF-002-R01": [
+    "tests/control/test_policy_effects.py::test_eff002_r01_other_surface_approves_waiting_effect_without_duplicates"
+  ],
+  "EFF-005-A01": [
+    "tests/control/test_policy_effects.py::test_eff002_r01_other_surface_approves_waiting_effect_without_duplicates"
+  ]
+}

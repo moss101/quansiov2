@@ -1,0 +1,16 @@
+{
+  "SEC-004-A01": [
+    "tests/control/test_policy_effects.py::test_sec004_p01_handle_bound_without_secret_disclosure",
+    "tests/control/test_policy_effects.py::test_sec004_n01_expired_or_misbound_handle_refused",
+    "tests/control/test_policy_effects.py::test_sec004_r01_rotation_invalidates_outstanding_handles"
+  ],
+  "SEC-004-N01": [
+    "tests/control/test_policy_effects.py::test_sec004_n01_expired_or_misbound_handle_refused"
+  ],
+  "SEC-004-P01": [
+    "tests/control/test_policy_effects.py::test_sec004_p01_handle_bound_without_secret_disclosure"
+  ],
+  "SEC-004-R01": [
+    "tests/control/test_policy_effects.py::test_sec004_r01_rotation_invalidates_outstanding_handles"
+  ]
+}

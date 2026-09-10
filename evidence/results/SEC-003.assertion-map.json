@@ -1,0 +1,19 @@
+{
+  "MOD-006-A01": [
+    "tests/control/test_policy_effects.py::test_sec003_p01_gate_classifies_and_redacts_all_routes"
+  ],
+  "SEC-003-A01": [
+    "tests/control/test_policy_effects.py::test_sec003_p01_gate_classifies_and_redacts_all_routes",
+    "tests/control/test_policy_effects.py::test_sec003_n01_denied_secret_blocked_on_alternate_routes",
+    "tests/control/test_policy_effects.py::test_sec003_r01_classifier_recovery_reevaluates_pending"
+  ],
+  "SEC-003-N01": [
+    "tests/control/test_policy_effects.py::test_sec003_n01_denied_secret_blocked_on_alternate_routes"
+  ],
+  "SEC-003-P01": [
+    "tests/control/test_policy_effects.py::test_sec003_p01_gate_classifies_and_redacts_all_routes"
+  ],
+  "SEC-003-R01": [
+    "tests/control/test_policy_effects.py::test_sec003_r01_classifier_recovery_reevaluates_pending"
+  ]
+}

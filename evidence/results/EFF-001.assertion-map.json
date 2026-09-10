@@ -1,0 +1,19 @@
+{
+  "EFF-001-A01": [
+    "tests/control/test_policy_effects.py::test_eff001_p01_effect_record_precedes_actuation_with_correlation",
+    "tests/control/test_policy_effects.py::test_eff001_n01_actuation_without_effect_id_rejected",
+    "tests/control/test_policy_effects.py::test_eff001_r01_restart_during_executing_reconciles_same_identity"
+  ],
+  "EFF-001-N01": [
+    "tests/control/test_policy_effects.py::test_eff001_n01_actuation_without_effect_id_rejected"
+  ],
+  "EFF-001-P01": [
+    "tests/control/test_policy_effects.py::test_eff001_p01_effect_record_precedes_actuation_with_correlation"
+  ],
+  "EFF-001-R01": [
+    "tests/control/test_policy_effects.py::test_eff001_r01_restart_during_executing_reconciles_same_identity"
+  ],
+  "EFF-004-A01": [
+    "tests/control/test_policy_effects.py::test_eff001_n01_actuation_without_effect_id_rejected"
+  ]
+}

@@ -70,6 +70,21 @@
     "quansio/platform/repository.py",
     "tests/runtime/test_foundation.py"
   ],
+  "EFF-001": [
+    "quansio/control/effects.py",
+    "migrations/up/0013_policy_effects.sql",
+    "tests/control/effect_target.py",
+    "tests/control/test_policy_effects.py"
+  ],
+  "EFF-002": [
+    "quansio/control/effects.py",
+    "tests/control/test_policy_effects.py"
+  ],
+  "EFF-003": [
+    "quansio/control/effects.py",
+    "tests/control/effect_target.py",
+    "tests/control/test_policy_effects.py"
+  ],
   "ENV-001": [
     "tools/environment/qualenv.py",
     "deploy/compose/docker-compose.yml",
@@ -211,5 +226,22 @@
     "quansio/control/capability.py",
     "migrations/up/0006_capability_snapshots.sql",
     "tests/runtime/test_foundation.py"
+  ],
+  "SEC-002": [
+    "quansio/control/policy.py",
+    "migrations/up/0013_policy_effects.sql",
+    "tests/control/test_policy_effects.py"
+  ],
+  "SEC-003": [
+    "quansio/control/privacy_gate.py",
+    "tests/control/test_policy_effects.py"
+  ],
+  "SEC-004": [
+    "quansio/control/broker.py",
+    "tests/control/test_policy_effects.py"
+  ],
+  "SEC-005": [
+    "quansio/control/guard.py",
+    "tests/control/test_policy_effects.py"
   ]
 }
