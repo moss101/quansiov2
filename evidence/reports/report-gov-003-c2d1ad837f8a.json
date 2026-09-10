@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "33ec6848ff1f30993f9dfd7cbfded68236715a93474a08d501e069038455515f",
+      "path_or_uri": "tools/governance/generate_bindings.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "2f43d295db4b3667d877eae2bd731a0dee84dd70ac8c99a0b7c8211f89bc6164",
+      "path_or_uri": "tools/governance/contract_gate.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "12e8b6c4c1f98d7c022ac586d000c642159d46bd152a0c0a10e942b8e6be8731",
+      "path_or_uri": "tests/governance/test_contract_gate.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "GOV-002-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_contract_gate.py::test_p03_generation_is_deterministic; tests/governance/test_contract_gate.py::test_r03_schema_edit_makes_bindings_stale_then_regeneration_restores; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-003-N01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_contract_gate.py::test_n03_shadow_dto_is_rejected; tests/governance/test_contract_gate.py::test_n03_live_repo_rejects_shadow_dto; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-003-P01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_contract_gate.py::test_p03_every_schema_has_fresh_binding_and_valid_fixtures; tests/governance/test_contract_gate.py::test_p03_generation_is_deterministic; tests/governance/test_contract_gate.py::test_p03_no_competing_dtos_in_production_tree; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-003-R01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_contract_gate.py::test_r03_schema_edit_makes_bindings_stale_then_regeneration_restores; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-007-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_contract_gate.py::test_p03_every_schema_has_fresh_binding_and_valid_fixtures; tests/governance/test_contract_gate.py::test_r03_schema_edit_makes_bindings_stale_then_regeneration_restores; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T00:08:42Z",
+  "git_commit": "c2d1ad837f8a36cca6aba998d95c6d2dbff402f9",
+  "protected_ref": "HEAD",
+  "real_boundary": false,
+  "report_id": "report-gov-003-c2d1ad837f8a",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "GOV-003"
+}
