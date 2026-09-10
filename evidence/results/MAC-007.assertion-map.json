@@ -2,6 +2,11 @@
   "MAC-006-A01": [
     "tests/machines/test_machine_fabric.py::test_mac006_p01_workspace_binding_and_state_survive_hibernation"
   ],
+  "MAC-007-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac007_p01_workspace_and_full_checkpoints_restorable",
+    "tests/machines/test_machine_fabric.py::test_mac007_n01_missing_artifact_or_uncommitted_watermark_rejected",
+    "tests/machines/test_machine_fabric.py::test_mac007_r01_restore_to_new_generation_fails_stale_actions"
+  ],
   "MAC-007-N01": [
     "tests/machines/test_machine_fabric.py::test_mac007_n01_missing_artifact_or_uncommitted_watermark_rejected"
   ],

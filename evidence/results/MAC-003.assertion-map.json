@@ -1,4 +1,7 @@
 {
+  "MAC-002-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac002_p01_lease_and_fence_validated_for_actions"
+  ],
   "MAC-003-A01": [
     "tests/machines/test_machine_fabric.py::test_mac003_p01_typed_guest_operations_execute_in_sandbox",
     "tests/machines/test_machine_fabric.py::test_mac003_n01_unknown_version_protected_path_ambient_secret_rejected"
@@ -11,5 +14,8 @@
   ],
   "MAC-003-R01": [
     "tests/machines/test_machine_fabric.py::test_mac003_r01_restart_reconnects_with_same_authority"
+  ],
+  "MAC-005-A01": [
+    "tests/machines/test_machine_fabric.py::test_mac005_p01_provision_isolated_environment_from_declared_inputs"
   ]
 }
