@@ -37,6 +37,13 @@ EXCLUDED_DIR_NAMES = {
     ".quansio-venv",
 }
 
+# Repo-relative prefixes that are operational state rather than authority
+# payload (provisioned environment manifests rotate on every provision; the
+# committed real-boundary proof lives in evidence/boundary/ snapshots).
+EXCLUDED_PREFIXES = {
+    "evidence/environment/",
+}
+
 # Files never treated as payload by the inventory (integrity artifacts cover
 # themselves cyclically or are reporting views).
 INVENTORY_EXCLUDED_FILES = set()
@@ -57,6 +64,9 @@ def iter_payload_files(root: Path):
                 if is_payload_dir(entry.name):
                     stack.append(entry)
             elif entry.is_file():
+                rel = entry.relative_to(root).as_posix()
+                if any(rel.startswith(prefix) for prefix in EXCLUDED_PREFIXES):
+                    continue
                 yield entry
 
 
