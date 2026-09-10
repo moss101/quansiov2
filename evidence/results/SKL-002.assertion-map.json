@@ -1,0 +1,19 @@
+{
+  "SKL-002-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl002_p01_clean_package_passes_evaluation",
+    "tests/knowledge/test_knowledge_skills.py::test_skl002_n01_forbidden_helpers_block_promotion",
+    "tests/knowledge/test_knowledge_skills.py::test_skl002_r01_reevaluation_appends_without_rewriting"
+  ],
+  "SKL-002-N01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl002_n01_forbidden_helpers_block_promotion"
+  ],
+  "SKL-002-P01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl002_p01_clean_package_passes_evaluation"
+  ],
+  "SKL-002-R01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl002_r01_reevaluation_appends_without_rewriting"
+  ],
+  "SKL-003-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl002_r01_reevaluation_appends_without_rewriting"
+  ]
+}

@@ -203,6 +203,19 @@
     "docs/decisions/0003-decision-and-threat-model-workflow.md",
     "tests/governance/test_decision_gate.py"
   ],
+  "KNW-001": [
+    "quansio/context/knowledge.py",
+    "migrations/up/0016_knowledge_skills.sql",
+    "tests/knowledge/test_knowledge_skills.py"
+  ],
+  "KNW-002": [
+    "quansio/context/knowledge.py",
+    "tests/knowledge/test_knowledge_skills.py"
+  ],
+  "KNW-003": [
+    "quansio/context/knowledge.py",
+    "tests/knowledge/test_knowledge_skills.py"
+  ],
   "MAC-001": [
     "quansio/machine_control/inventory.py",
     "migrations/up/0014_machine_fabric.sql",
@@ -330,5 +343,27 @@
   "SEC-005": [
     "quansio/control/guard.py",
     "tests/control/test_policy_effects.py"
+  ],
+  "SKL-001": [
+    "quansio/control/skills.py",
+    "tests/knowledge/test_knowledge_skills.py"
+  ],
+  "SKL-002": [
+    "quansio/control/skills.py",
+    "tests/knowledge/test_knowledge_skills.py"
+  ],
+  "SKL-003": [
+    "quansio/control/skills.py",
+    "quansio/qworkerd/protocol.py",
+    "tests/knowledge/test_knowledge_skills.py"
+  ],
+  "SKL-004": [
+    "quansio/control/skills.py",
+    "tests/knowledge/test_knowledge_skills.py"
+  ],
+  "SKL-005": [
+    "quansio/control/skills.py",
+    "quansio/qworkerd/protocol.py",
+    "tests/knowledge/test_knowledge_skills.py"
   ]
 }

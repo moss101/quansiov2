@@ -1,0 +1,16 @@
+{
+  "KNW-002-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw002_p01_matching_epochs_commit",
+    "tests/knowledge/test_knowledge_skills.py::test_knw002_n01_epoch_change_blocks_stale_result",
+    "tests/knowledge/test_knowledge_skills.py::test_knw002_r01_worker_restart_recomputes_from_current_epoch"
+  ],
+  "KNW-002-N01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw002_n01_epoch_change_blocks_stale_result"
+  ],
+  "KNW-002-P01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw002_p01_matching_epochs_commit"
+  ],
+  "KNW-002-R01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw002_r01_worker_restart_recomputes_from_current_epoch"
+  ]
+}

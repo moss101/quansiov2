@@ -1,0 +1,16 @@
+{
+  "SKL-001-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl001_p01_candidate_created_with_full_metadata",
+    "tests/knowledge/test_knowledge_skills.py::test_skl001_n01_untrusted_or_incomplete_intake_refused",
+    "tests/knowledge/test_knowledge_skills.py::test_skl001_r01_source_update_creates_new_version"
+  ],
+  "SKL-001-N01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl001_n01_untrusted_or_incomplete_intake_refused"
+  ],
+  "SKL-001-P01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl001_p01_candidate_created_with_full_metadata"
+  ],
+  "SKL-001-R01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl001_r01_source_update_creates_new_version"
+  ]
+}

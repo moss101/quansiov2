@@ -1,0 +1,19 @@
+{
+  "INV-003-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw003_n01_recovery_from_knowledge_refused"
+  ],
+  "KNW-003-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw003_p01_one_fabric_all_kinds_queryable",
+    "tests/knowledge/test_knowledge_skills.py::test_knw003_n01_recovery_from_knowledge_refused",
+    "tests/knowledge/test_knowledge_skills.py::test_knw003_r01_projection_rebuild_preserves_identity"
+  ],
+  "KNW-003-N01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw003_n01_recovery_from_knowledge_refused"
+  ],
+  "KNW-003-P01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw003_p01_one_fabric_all_kinds_queryable"
+  ],
+  "KNW-003-R01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw003_r01_projection_rebuild_preserves_identity"
+  ]
+}

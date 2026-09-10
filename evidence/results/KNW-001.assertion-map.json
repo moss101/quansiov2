@@ -1,0 +1,16 @@
+{
+  "KNW-001-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw001_p01_candidate_with_full_provenance_accepted",
+    "tests/knowledge/test_knowledge_skills.py::test_knw001_n01_missing_provenance_or_authority_rejected",
+    "tests/knowledge/test_knowledge_skills.py::test_knw001_r01_evidence_withdrawal_preserves_history"
+  ],
+  "KNW-001-N01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw001_n01_missing_provenance_or_authority_rejected"
+  ],
+  "KNW-001-P01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw001_p01_candidate_with_full_provenance_accepted"
+  ],
+  "KNW-001-R01": [
+    "tests/knowledge/test_knowledge_skills.py::test_knw001_r01_evidence_withdrawal_preserves_history"
+  ]
+}

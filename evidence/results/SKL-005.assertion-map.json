@@ -1,0 +1,19 @@
+{
+  "SEC-001-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl005_n01_unqualified_or_capability_exceeding_denied"
+  ],
+  "SKL-005-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl005_p01_qualified_skill_materializes_with_version_evidence",
+    "tests/knowledge/test_knowledge_skills.py::test_skl005_n01_unqualified_or_capability_exceeding_denied",
+    "tests/knowledge/test_knowledge_skills.py::test_skl005_r01_teardown_removes_materialization_registry_intact"
+  ],
+  "SKL-005-N01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl005_n01_unqualified_or_capability_exceeding_denied"
+  ],
+  "SKL-005-P01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl005_p01_qualified_skill_materializes_with_version_evidence"
+  ],
+  "SKL-005-R01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl005_r01_teardown_removes_materialization_registry_intact"
+  ]
+}

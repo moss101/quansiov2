@@ -1,0 +1,19 @@
+{
+  "SKL-003-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl003_p01_isolated_cases_with_real_boundary"
+  ],
+  "SKL-004-A01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl004_p01_promotion_separate_from_execution",
+    "tests/knowledge/test_knowledge_skills.py::test_skl004_n01_skill_self_mutation_denied",
+    "tests/knowledge/test_knowledge_skills.py::test_skl004_r01_rollback_resolves_prior_version"
+  ],
+  "SKL-004-N01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl004_n01_skill_self_mutation_denied"
+  ],
+  "SKL-004-P01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl004_p01_promotion_separate_from_execution"
+  ],
+  "SKL-004-R01": [
+    "tests/knowledge/test_knowledge_skills.py::test_skl004_r01_rollback_resolves_prior_version"
+  ]
+}
