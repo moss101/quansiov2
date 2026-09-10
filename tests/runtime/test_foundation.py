@@ -36,30 +36,9 @@ def _load_qualenv_passwords() -> dict[str, str]:
 
 
 @pytest.fixture(scope="module")
-def minio_client():
-    material = _load_qualenv_passwords()
-    client = Minio(
-        "127.0.0.1:54331",
-        access_key="quansio_qual_admin",
-        secret_key=material["QUAL_MINIO_PASSWORD"],
-        secure=False,
-    )
-    return client
-
-
-@pytest.fixture(scope="module")
 def redis_url():
     material = _load_qualenv_passwords()
     return f"redis://:{material['QUAL_REDIS_PASSWORD']}@127.0.0.1:54330/0"
-
-
-@pytest.fixture(scope="module")
-def events_db():
-    from quansio.platform.db import PlatformDatabase
-
-    database = PlatformDatabase(database_config("quansio_events"))
-    yield database
-    database.close()
 
 
 # ---------------------------------------------------------------------------

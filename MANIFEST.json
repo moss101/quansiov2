@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 518,
+  "file_count": 531,
   "files": [
     {
       "path": ".gitignore",
@@ -114,8 +114,8 @@
     },
     {
       "path": "tests/conftest.py",
-      "sha256": "081c3e66472a5c34235f0f0dde6d9232c12b4ebad989f8a330157d0c376ce371",
-      "size_bytes": 3170
+      "sha256": "9fded87606c037ee0d1d2b4c05e73c528f79b44cd011eaa4ab3420f60be5ea04",
+      "size_bytes": 3905
     },
     {
       "path": "tests/runtime/test_events.py",
@@ -124,8 +124,18 @@
     },
     {
       "path": "tests/runtime/test_foundation.py",
-      "sha256": "3c796add73123c3a23b93b6462dc9e2aa141e3cb7a7c08ebaeacc6d7bf8d39b0",
-      "size_bytes": 18470
+      "sha256": "99af1c9592d6148f931eb40079e66d04b97ad048c1569ba1d64c21c3e51c0570",
+      "size_bytes": 17977
+    },
+    {
+      "path": "tests/runtime/test_graphs_agents.py",
+      "sha256": "d6070231f0d7bc2438ac8eb6883364633c9f0f1bcbeb060391bbfdbc18f21d35",
+      "size_bytes": 12789
+    },
+    {
+      "path": "tests/runtime/test_orchestration.py",
+      "sha256": "a4510b62e032ff003c70c672f4291fec91835c30b14dc99a6634361f43bd05a4",
+      "size_bytes": 20331
     },
     {
       "path": "tests/runtime/test_schema.py",
@@ -948,9 +958,24 @@
       "size_bytes": 0
     },
     {
+      "path": "quansio/runtime/agents.py",
+      "sha256": "25194292f379d7cbae5561785502ed2c7865fa2dd8a942cbd7a8de38db6f4c1e",
+      "size_bytes": 5948
+    },
+    {
       "path": "quansio/runtime/events.py",
       "sha256": "beb71e3cee344014eb84828ffc97d64c169261cb27647db9d14ca3854b45cd23",
       "size_bytes": 10877
+    },
+    {
+      "path": "quansio/runtime/graphs.py",
+      "sha256": "3556ca6ecf5c2eba6aa32ca0fafba038a85029aaa8328021d5779a90b04b0e55",
+      "size_bytes": 11384
+    },
+    {
+      "path": "quansio/runtime/orchestration.py",
+      "sha256": "c7bb51a1ba8688410ce903bb393e24842df49393b47bd24c7b5db898f5983681",
+      "size_bytes": 24025
     },
     {
       "path": "quansio/runtime/protocol.py",
@@ -1073,6 +1098,26 @@
       "size_bytes": 1872
     },
     {
+      "path": "migrations/up/0007_graph_transactions.sql",
+      "sha256": "e86cee648a613d6bd183d3ef1caa1171ae11720b1e78e012f677b9ab837abe4b",
+      "size_bytes": 1709
+    },
+    {
+      "path": "migrations/up/0008_agent_admissions.sql",
+      "sha256": "703b8a2c48b684e62953431a1a66ce8bfb12bfdb9a37a40c49377b241d53b388",
+      "size_bytes": 352
+    },
+    {
+      "path": "migrations/up/0009_m2_runtime.sql",
+      "sha256": "dd18a3fbc0b2250d077063c25edb3714cc9101f16804a3dd2e0a56890e92e4cd",
+      "size_bytes": 2352
+    },
+    {
+      "path": "migrations/up/0010_effects_guard.sql",
+      "sha256": "bd919b04cfa1b68b56c0e8cc5d0cd19754486023ca6bc5bfff4895e04b38049c",
+      "size_bytes": 835
+    },
+    {
       "path": "migrations/down/0001_identities.sql",
       "sha256": "e1ff5ccfeec910a5a291618151b4c11ca089aa51efb8f085b02ae3ad3ef35ce4",
       "size_bytes": 228
@@ -1101,6 +1146,26 @@
       "path": "migrations/down/0006_capability_snapshots.sql",
       "sha256": "4b7ae70f873d1e625c9a742c4b9aa0f8ee93b64cdbd87be5c5ad2d65f10ef80b",
       "size_bytes": 125
+    },
+    {
+      "path": "migrations/down/0007_graph_transactions.sql",
+      "sha256": "859a149005c7ed5791f03c02303bbd4b8489ec78948453e1ba3e820844097833",
+      "size_bytes": 364
+    },
+    {
+      "path": "migrations/down/0008_agent_admissions.sql",
+      "sha256": "742f471ea8c15519c4dfb10b005a3803fd9a2af9f495fe5e021809c480ad56eb",
+      "size_bytes": 207
+    },
+    {
+      "path": "migrations/down/0009_m2_runtime.sql",
+      "sha256": "dc8a741fa1f8906b2eff6f9ff0fb9779fb85219c7ecc57edaab0f118829e210b",
+      "size_bytes": 136
+    },
+    {
+      "path": "migrations/down/0010_effects_guard.sql",
+      "sha256": "6eb881c7dfcd10da7877080eaa4ded6799f3d1e924295f78c9aa44d97f00d176",
+      "size_bytes": 149
     },
     {
       "path": "graphs/business-capability-compiler.mmd",

@@ -29,6 +29,35 @@ def _env_healthy() -> bool:
 
 
 @pytest.fixture(scope="session")
+def events_db():
+    database = PlatformDatabase(database_config("quansio_events"))
+    yield database
+    database.close()
+
+
+@pytest.fixture(scope="session")
+def minio_client():
+    from minio import Minio
+    from quansio.platform.db import load_qualenv_passwords
+
+    material = load_qualenv_passwords()
+    return Minio(
+        "127.0.0.1:54331",
+        access_key="quansio_qual_admin",
+        secret_key=material["QUAL_MINIO_PASSWORD"],
+        secure=False,
+    )
+
+
+@pytest.fixture(scope="session")
+def redis_url():
+    from quansio.platform.db import load_qualenv_passwords
+
+    material = load_qualenv_passwords()
+    return f"redis://:{material['QUAL_REDIS_PASSWORD']}@127.0.0.1:54330/0"
+
+
+@pytest.fixture(scope="session")
 def platform_db():
     # Ensure the real qualification environment is up before any suite that
     # touches authoritative state; if it is down, provision it fresh.
