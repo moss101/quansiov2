@@ -152,7 +152,15 @@ def main() -> int:
         raise SystemExit("mapped tests did not pass; refusing to record evidence")
 
     status = git("status", "--porcelain")
-    dirty = [line for line in status.splitlines() if line and not line.startswith("??")]
+    dirty = [
+        line
+        for line in status.splitlines()
+        if line
+        and not line.startswith("??")
+        # boundary proof snapshots are rewritten by this same recording batch
+        # and committed immediately after it completes
+        and "evidence/boundary/" not in line
+    ]
     if dirty:
         raise SystemExit(f"working tree has modified tracked files; commit first: {dirty[:5]}")
 
