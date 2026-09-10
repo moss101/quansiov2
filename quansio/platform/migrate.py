@@ -33,13 +33,30 @@ def _ensure_history(connection: psycopg.Connection) -> None:
     connection.execute(
         """
         CREATE TABLE IF NOT EXISTS schema_migrations (
-            migration_id TEXT PRIMARY KEY,
+            migration_id TEXT NOT NULL,
             direction    TEXT NOT NULL CHECK (direction IN ('up','down')),
             checksum     TEXT NOT NULL,
-            applied_at   TIMESTAMPTZ NOT NULL DEFAULT now()
+            applied_at   TIMESTAMPTZ NOT NULL DEFAULT now(),
+            PRIMARY KEY (migration_id, direction)
         )
         """
     )
+    # Older single-column PK shape (pre-release) is upgraded in place.
+    has_direction_pk = connection.execute(
+        """
+        SELECT COUNT(*) FROM pg_constraint c
+        JOIN pg_class t ON t.oid = c.conrelid
+        WHERE t.relname = 'schema_migrations' AND c.contype = 'p'
+          AND (SELECT count(*) FROM pg_attribute a WHERE a.attrelid = t.oid AND a.attnum = ANY(c.conkey)) = 2
+        """
+    ).fetchone()[0]
+    if not has_direction_pk:
+        with connection.transaction():
+            connection.execute("DELETE FROM schema_migrations WHERE direction = 'down'")
+            connection.execute("ALTER TABLE schema_migrations DROP CONSTRAINT schema_migrations_pkey")
+            connection.execute(
+                "ALTER TABLE schema_migrations ADD PRIMARY KEY (migration_id, direction)"
+            )
 
 
 def _applied(connection: psycopg.Connection) -> dict[str, str]:
@@ -62,15 +79,27 @@ def up(connection: psycopg.Connection, steps: int | None = None) -> list[str]:
         if not migration_id:
             raise RuntimeError(f"migration file does not match <id>.sql: {path.name}")
         migration_id = migration_id.group(1)
-        if migration_id not in applied:
-            pending.append((migration_id, path))
+        if migration_id in applied:
+            if applied[migration_id] != _checksum(path):
+                raise RuntimeError(
+                    f"migration {migration_id} changed after being applied"
+                    f" (recorded checksum {applied[migration_id][:12]} != file {_checksum(path)[:12]});"
+                    " applied migrations are immutable — write a new migration instead"
+                )
+            continue
+        pending.append((migration_id, path))
     pending = pending[:steps] if steps is not None else pending
     applied_now = []
     for migration_id, path in pending:
         with connection.transaction():
             connection.execute(path.read_text())
             connection.execute(
-                "INSERT INTO schema_migrations (migration_id, direction, checksum) VALUES (%s, 'up', %s)",
+                """
+                INSERT INTO schema_migrations (migration_id, direction, checksum)
+                VALUES (%s, 'up', %s)
+                ON CONFLICT (migration_id, direction)
+                DO UPDATE SET checksum = EXCLUDED.checksum, applied_at = now()
+                """,
                 (migration_id, _checksum(path)),
             )
         applied_now.append(migration_id)
@@ -88,7 +117,12 @@ def down(connection: psycopg.Connection, steps: int = 1) -> list[str]:
         with connection.transaction():
             connection.execute(path.read_text())
             connection.execute(
-                "INSERT INTO schema_migrations (migration_id, direction, checksum) VALUES (%s, 'down', %s)",
+                """
+                INSERT INTO schema_migrations (migration_id, direction, checksum)
+                VALUES (%s, 'down', %s)
+                ON CONFLICT (migration_id, direction)
+                DO UPDATE SET checksum = EXCLUDED.checksum, applied_at = now()
+                """,
                 (migration_id, _checksum(path)),
             )
             connection.execute("DELETE FROM schema_migrations WHERE migration_id = %s AND direction = 'up'", (migration_id,))

@@ -84,6 +84,7 @@ class ControlService:
         if len(password) < MIN_PASSWORD_LENGTH:
             raise ValueError(f"password must be at least {MIN_PASSWORD_LENGTH} characters")
         user_id = str(uuid.uuid4())
+        binding_id = str(uuid.uuid4())
         try:
             with self._db.connection() as connection:
                 with connection.transaction():
@@ -93,9 +94,9 @@ class ControlService:
                         (tenant_id, user_id, email, display_name, _hash_password(password)),
                     )
                     connection.execute(
-                        "INSERT INTO role_bindings (tenant_id, user_id, workspace_id, role)"
-                        " VALUES (%s, %s, %s, %s)",
-                        (tenant_id, user_id, workspace_id, role),
+                        "INSERT INTO role_bindings (binding_id, tenant_id, user_id, workspace_id, role)"
+                        " VALUES (%s, %s, %s, %s, %s)",
+                        (binding_id, tenant_id, user_id, workspace_id, role),
                     )
         except psycopg.errors.UniqueViolation as error:
             raise ValueError("user already exists for tenant") from error

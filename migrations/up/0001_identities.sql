@@ -30,16 +30,20 @@ CREATE TABLE users (
 );
 
 CREATE TABLE role_bindings (
+    binding_id   UUID PRIMARY KEY,
     tenant_id  UUID NOT NULL REFERENCES tenants(tenant_id),
     user_id    UUID NOT NULL,
     workspace_id UUID,
     role       TEXT NOT NULL CHECK (role IN ('tenant_admin', 'workspace_admin', 'member', 'observer')),
     granted_by UUID,
     granted_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    PRIMARY KEY (tenant_id, user_id, role, workspace_id),
     FOREIGN KEY (tenant_id, user_id) REFERENCES users(tenant_id, user_id) ON DELETE CASCADE,
     FOREIGN KEY (tenant_id, workspace_id) REFERENCES workspaces(tenant_id, workspace_id)
 );
+CREATE UNIQUE INDEX idx_role_bindings_unique
+    ON role_bindings(tenant_id, user_id, role, workspace_id);
+CREATE INDEX idx_role_bindings_tenant_wide
+    ON role_bindings(tenant_id, user_id, role) WHERE workspace_id IS NULL;
 
 CREATE TABLE sessions (
     session_id   UUID PRIMARY KEY,

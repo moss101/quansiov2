@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 413,
+  "file_count": 435,
   "files": [
     {
       "path": ".gitignore",
@@ -111,6 +111,21 @@
       "path": "tools/environment/qualenv.py",
       "sha256": "54bd6c85b429073d9b23acea479efd25e087e37fa92041a626eec82919f52b63",
       "size_bytes": 16326
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "dc2e4ba16ac6337c36a1e67a5686004926d77010a7a08afe459858427f81cb4d",
+      "size_bytes": 2048
+    },
+    {
+      "path": "tests/runtime/test_events.py",
+      "sha256": "a159ae9b2b539a0e45772ab15235b9262baae6868cb0cb81a03ea30c70d10aeb",
+      "size_bytes": 5413
+    },
+    {
+      "path": "tests/runtime/test_schema.py",
+      "sha256": "4f2822ed04def949323b6d080f97f19fa11bfd1e6eb56b446bd79d985baabf9f",
+      "size_bytes": 5673
     },
     {
       "path": "tests/governance/test_authority_generation.py",
@@ -588,6 +603,11 @@
       "size_bytes": 4973
     },
     {
+      "path": "tests/api/test_identity.py",
+      "sha256": "b24e43e81bd72a03bf0518da8e5642d01eafc0d0f861ffdb69a23143d1126045",
+      "size_bytes": 7866
+    },
+    {
       "path": "services/quansio_api/main.py",
       "sha256": "bfa63f06b76705ff282753aab95c4b204ab90377955363f5b55f2c49075a29b9",
       "size_bytes": 232
@@ -918,6 +938,16 @@
       "size_bytes": 0
     },
     {
+      "path": "quansio/runtime/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/runtime/events.py",
+      "sha256": "29392c0b6f4c524b366385bf6925b5d366ee535b276538b53ca0688ec3961cf2",
+      "size_bytes": 8046
+    },
+    {
       "path": "quansio/platform/__init__.py",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "size_bytes": 0
@@ -934,8 +964,8 @@
     },
     {
       "path": "quansio/platform/migrate.py",
-      "sha256": "a2197230d8301485e40ab123805c2def6d869dde5137a2547906ebad991ace68",
-      "size_bytes": 4823
+      "sha256": "3bfe4abaff7bbf49835d1b7a1aaaae5380375c6704c908e1586509196e1b41d7",
+      "size_bytes": 6461
     },
     {
       "path": "quansio/control/__init__.py",
@@ -944,8 +974,8 @@
     },
     {
       "path": "quansio/control/identity.py",
-      "sha256": "4573d606f5ab7bdeecc9c3ae75353e2b06e2d0c4a307372c8b35a2852abbf168",
-      "size_bytes": 8042
+      "sha256": "0afd1c7901f5c67f9f561fe7b6e8644e62d3d9642f063ae13caa4779fc792d13",
+      "size_bytes": 8109
     },
     {
       "path": "quansio/api/__init__.py",
@@ -984,8 +1014,8 @@
     },
     {
       "path": "migrations/up/0001_identities.sql",
-      "sha256": "40a065b6cf5f110c29d81da0534dc1f701626107cf931d8d5cc63151b6008809",
-      "size_bytes": 2235
+      "sha256": "ec5b3439f14e6860e3ba92b7e395366fed3f0f4a5382cdc5a7517a32854260dc",
+      "size_bytes": 2437
     },
     {
       "path": "migrations/up/0002_work_runtime.sql",
@@ -1563,6 +1593,16 @@
       "size_bytes": 1207
     },
     {
+      "path": "evidence/reports/evidence-gov-001-4d151d50ab68.json",
+      "sha256": "45dd4c90c131167a9442c03d144fcaaf5f11844205c8905613bdf7576aab1393",
+      "size_bytes": 1207
+    },
+    {
+      "path": "evidence/reports/evidence-gov-002-4d151d50ab68.json",
+      "sha256": "fcc629563b527ca673690748e016fdc05720e421df695e22b5ccc388c5c608c1",
+      "size_bytes": 1120
+    },
+    {
       "path": "evidence/reports/evidence-gov-002-79ac679486c5.json",
       "sha256": "53cda1280805f7b7b7e5d3172124dd363fae41ebd26ca6d08bda213ce7ce969d",
       "size_bytes": 1120
@@ -1591,6 +1631,11 @@
       "path": "evidence/reports/evidence-gov-005-4c33c00b7859.json",
       "sha256": "2490956693ee68af51a94e0cfe48c80e8f136289c6e160161a0e676bf5b1f4ad",
       "size_bytes": 1076
+    },
+    {
+      "path": "evidence/reports/evidence-gov-006-4d151d50ab68.json",
+      "sha256": "680997ac34df7c792a159d7038ebe48280ad6fe9829e6d7a5f6e5e2f723f3bee",
+      "size_bytes": 1089
     },
     {
       "path": "evidence/reports/evidence-gov-006-53d49aec1545.json",
@@ -1628,6 +1673,16 @@
       "size_bytes": 4212
     },
     {
+      "path": "evidence/reports/report-gov-001-4d151d50ab68.json",
+      "sha256": "efab600d42d635fd793f44ad73bd1ad8ad8a4029997b693869b4a866b44cea17",
+      "size_bytes": 4212
+    },
+    {
+      "path": "evidence/reports/report-gov-002-4d151d50ab68.json",
+      "sha256": "44d7e900cafd486075388d9d48d2a03367ea059bde47dddec32efa912584607b",
+      "size_bytes": 4382
+    },
+    {
       "path": "evidence/reports/report-gov-002-79ac679486c5.json",
       "sha256": "7606edb531424686c4c755073803f2bb683f53ce2976d94afcd3b3110e5388f9",
       "size_bytes": 4382
@@ -1658,6 +1713,11 @@
       "size_bytes": 3518
     },
     {
+      "path": "evidence/reports/report-gov-006-4d151d50ab68.json",
+      "sha256": "63088ea2da1f389a1b02fc08f4778e8e94fc5fd7f9b26a80519ca5f9ba8c675d",
+      "size_bytes": 3455
+    },
+    {
       "path": "evidence/reports/report-gov-006-53d49aec1545.json",
       "sha256": "ffeb12a02afb35b3f4121cea4c74a6e1d5cc08aed533b7a33b34b87c552b5d2f",
       "size_bytes": 3455
@@ -1686,6 +1746,56 @@
       "path": "evidence/gates/GATE-M0.json",
       "sha256": "bd20d6184a2afe8aec5543233f52b0e64752445022dddfdc00bc6937f169897e",
       "size_bytes": 2092
+    },
+    {
+      "path": "evidence/environment/qual-20260910T011049/health-transcript.json",
+      "sha256": "a4fc3ab1935ca0505fff33180dfe4b8f3054939ba6a6f21ac6079ba906a5d6ff",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/environment/qual-20260910T011049/manifest.json",
+      "sha256": "d14e7b3846f24eb104cba1a402999acf2026526778b93bfe2083d16dca5008e6",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T010718/health-transcript.json",
+      "sha256": "d9dd0a143593d1c280c92b213682e916d9090710e694cf04e6d1a8a6c1c3b48b",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/environment/qual-20260910T010718/manifest.json",
+      "sha256": "9b56fd3e211f1a4b6cfb7db59e78d4cde63503428d5b4ab51c5169e1cac1f36c",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T010454/health-transcript.json",
+      "sha256": "3703ea032a6b5a888640bcc8c725b55cc9c699a8a407b78944395bfc732feb9d",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/environment/qual-20260910T010454/manifest.json",
+      "sha256": "6f7dd3696182b61ca8be8734a58c8e65849a1fde638259195b5374cc3dbb18b1",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T005923/health-transcript.json",
+      "sha256": "f9dfcdaec3a5800d850207fddf90673205d7498407aeeadcb58d528905ba49c5",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/environment/qual-20260910T005923/manifest.json",
+      "sha256": "ec166ad7384a2072facbef093e4b36444aa981780f98eb61b8ae787c7d7e9fcb",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T005701/health-transcript.json",
+      "sha256": "57eac9f0c092a6cf1e62cf8dc26a4f8f2df4766e22944fda0d7b591a1bc4d2bb",
+      "size_bytes": 1404
+    },
+    {
+      "path": "evidence/environment/qual-20260910T005701/manifest.json",
+      "sha256": "46c37b2b56f1a5e836e5d1bdf56ad01e091ef41557d63d3aa3567274c64599f4",
+      "size_bytes": 1549
     },
     {
       "path": "evidence/environment/qual-20260910T003457/health-transcript.json",
@@ -2054,7 +2164,7 @@
     },
     {
       "path": "deploy/compose/.env.qual",
-      "sha256": "7612e36b685868cd0347da85eeb7d7d923b3a682a7f644c7fbb9a38419dfd7c2",
+      "sha256": "cf0fc350ca7ce8baa1d62b597587ad8856aa35fb38eade108af74ce2fe74ea2e",
       "size_bytes": 216
     },
     {
