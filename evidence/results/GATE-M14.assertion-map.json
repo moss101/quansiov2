@@ -11,5 +11,8 @@
   "INV-008-A01": [
     "tests/governance/test_milestone_gate.py::test_gate_p01_all_predecessors_have_valid_evidence[GATE-M14]",
     "tests/governance/test_milestone_gate.py::test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified[GATE-M14]"
+  ],
+  "REL-005-A01": [
+    "tests/release/test_release.py::test_rel005_p01_and_n01_go_decision"
   ]
 }
