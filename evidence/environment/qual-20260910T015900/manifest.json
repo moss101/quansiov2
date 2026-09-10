@@ -1,0 +1,54 @@
+{
+  "boundaries": [
+    {
+      "class": "relational_primary",
+      "endpoint": "127.0.0.1:54329",
+      "identity": {
+        "admin_role": "quansio_admin",
+        "database": "quansio_platform",
+        "role": "quansio_app"
+      },
+      "implementation": "postgres:17-alpine",
+      "kind": "real"
+    },
+    {
+      "class": "durable_event_transport",
+      "endpoint": "127.0.0.1:54329",
+      "identity": {
+        "database": "quansio_events",
+        "role": "quansio_app"
+      },
+      "implementation": "postgres:17-alpine",
+      "kind": "real"
+    },
+    {
+      "class": "non_authoritative_coordination",
+      "endpoint": "127.0.0.1:54330",
+      "identity": {
+        "password_rotated_per_provision": true,
+        "protected": true
+      },
+      "implementation": "redis:8-alpine",
+      "kind": "real"
+    },
+    {
+      "class": "artifact_object_store",
+      "endpoint": "127.0.0.1:54331",
+      "identity": {
+        "bucket": "quansio-artifacts",
+        "root_user": "quansio_qual_admin"
+      },
+      "implementation": "quay.io/minio/minio:latest",
+      "kind": "real"
+    }
+  ],
+  "created_at": "2026-09-10T01:59:00+00:00",
+  "environment_id": "qual-20260910T015900",
+  "health_transcript": "health-transcript.json",
+  "health_transcript_digest": "c47d281794337ceca6364f16a247137be33ecdf144b04ae15ee820a03416818f",
+  "isolated_identities": true,
+  "project": "quansio-qual",
+  "schema_revision": "9.0.0",
+  "secrets_digest": "5f1ace34f1c271adea8e777ebb46feb20b41aae38f291631b33f627cea2d5172",
+  "torn_down": false
+}
