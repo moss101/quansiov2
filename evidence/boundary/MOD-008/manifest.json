@@ -42,13 +42,13 @@
       "kind": "real"
     }
   ],
-  "created_at": "2026-09-10T08:42:40+00:00",
-  "environment_id": "qual-20260910T084240",
+  "created_at": "2026-09-10T08:43:43+00:00",
+  "environment_id": "qual-20260910T084343",
   "health_transcript": "health-transcript.json",
-  "health_transcript_digest": "4918257bbf15d719355e68314c8909127b067840fdeec8bf402f06b6d413eca6",
+  "health_transcript_digest": "cd376d66e0fcfcf4648326b12ef788e943f1c1a557eb35153bd672b324cf835f",
   "isolated_identities": true,
   "project": "quansio-qual",
   "schema_revision": "9.0.0",
-  "secrets_digest": "a0cd94731c77a57dc9f1685cc242b21c54e1b1e6fed706d2a5246e6dea3058ba",
+  "secrets_digest": "8d01fb3574a666d7be3c2c1ce89c0b56164ed1f128ae2d289c5c1bcac58d28f8",
   "torn_down": false
 }
