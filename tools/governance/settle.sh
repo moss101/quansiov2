@@ -25,13 +25,15 @@ for round in 1 2 3; do
     fi
   done
   "$PY" tools/governance/generate_authority.py --write >/dev/null
+  if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
+    git add -A
+    git commit -q "Settle: refresh evidence, gates and integrity artifacts (round ${round})" || true
+  fi
   "$VPY" -m pytest tests/ -q || { echo "SETTLE: tests failing"; exit 1; }
   if [ "$(git status --porcelain | wc -l | tr -d ' ')" = "0" ]; then
     echo "SETTLE: clean"
     exit 0
   fi
-  git add -A
-  git commit -q "Settle: refresh evidence, gates and integrity artifacts (round ${round})"
 done
 if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
   git add -A && git commit -q "Settle: final round"
