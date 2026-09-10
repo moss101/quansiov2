@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c7132165da3a4ba6b9067a269f9bf87c56e0c0834f8794915e2cb014f3841df7",
+      "path_or_uri": "evidence/boundary/DAT-003/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "fbe22aaad6c38205167ddc887ff7febb0937761e32fc2b6ff40056ecd7f496c9",
+      "path_or_uri": "evidence/boundary/DAT-003/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "beb71e3cee344014eb84828ffc97d64c169261cb27647db9d14ca3854b45cd23",
+      "path_or_uri": "quansio/runtime/events.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "d39d1ba2c994239aca444093612befcf775cbc975f861c527a48aefd4076392b",
+      "path_or_uri": "migrations/up/0003_events_outbox.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "ba9f0ff3b3c17bffdc017566dbdc35f35928a1488ebf158014db413dc5d01bab",
+      "path_or_uri": "tests/runtime/test_events.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "DAT-003-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_events.py::test_dat003_p01_append_and_canonical_replay; tests/runtime/test_events.py::test_dat003_n01_duplicate_event_id_fails_without_corrupting_replay; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-003-N01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_events.py::test_dat003_n01_duplicate_event_id_fails_without_corrupting_replay; tests/runtime/test_events.py::test_dat003_n01_non_monotonic_sequence_fails; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-003-P01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_events.py::test_dat003_p01_append_and_canonical_replay; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-003-R01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_events.py::test_dat004_r01_committed_event_delivered_exactly_once_after_reconnect; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-008-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_events.py::test_dat004_r01_committed_event_delivered_exactly_once_after_reconnect; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T02:03:44Z",
+  "git_commit": "2afae4ada4cdcc03575f427d087ddafc374d91f6",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-dat-003-2afae4ada4cd",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "DAT-003"
+}
