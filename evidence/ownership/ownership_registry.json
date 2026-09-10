@@ -704,6 +704,14 @@
       "status": "present",
       "state_class": null,
       "role": "shared platform kernel: pooled database access, identity context, migration runner (no domain authority)"
+    },
+    {
+      "kind": "package_path",
+      "path": "quansio/observability",
+      "owner": "quansio-context",
+      "status": "present",
+      "state_class": null,
+      "role": "telemetry correlation, SLI/SLO measurement, recovery points"
     }
   ],
   "wiring_actors": {

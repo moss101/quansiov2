@@ -150,7 +150,7 @@ def test_sre002_r01_outage_gap_preserved_as_missing(migrated_db, workspace_setup
 
 
 def test_sre003_p01_rcp_binds_all_components(migrated_db, workspace_setup, context):
-    rcp = RecoveryConsistencyPoint(migrated_db)
+    rcp = RecoveryPointService(migrated_db)
     point = rcp.create(
         context, db_commit_position="0/ABC123", event_sequence=42,
         evidence_manifest_digest="a" * 64, snapshot_inventory_digest="b" * 64,
@@ -163,7 +163,7 @@ def test_sre003_p01_rcp_binds_all_components(migrated_db, workspace_setup, conte
 
 
 def test_sre003_n01_db_restore_alone_insufficient(migrated_db, workspace_setup, context):
-    rcp = RecoveryConsistencyPoint(migrated_db)
+    rcp = RecoveryPointService(migrated_db)
     point = rcp.create(
         context, db_commit_position="0/DEF456", event_sequence=10,
         evidence_manifest_digest="c" * 64, snapshot_inventory_digest="d" * 64,
@@ -180,7 +180,7 @@ def test_sre003_r01_unknown_effects_must_resolve_before_reopen(migrated_db, work
     from quansio.platform.repository import TenantRepository
 
     ledger = EffectLedger(migrated_db)
-    rcp = RecoveryConsistencyPoint(migrated_db)
+    rcp = RecoveryPointService(migrated_db)
     agent_id = str(uuid.uuid4())
     with migrated_db.connection() as connection:
         connection.execute(

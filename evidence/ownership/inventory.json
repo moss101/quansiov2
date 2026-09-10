@@ -370,6 +370,14 @@
     },
     {
       "kind": "package_path",
+      "owner": "quansio-context",
+      "path": "quansio/observability",
+      "role": "telemetry correlation, SLI/SLO measurement, recovery points",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
       "owner": "platform",
       "path": "quansio/platform",
       "role": "shared platform kernel: pooled database access, identity context, migration runner (no domain authority)",
@@ -409,9 +417,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 51,
+  "entry_count": 52,
   "inventory_version": "1.0.0",
-  "registry_sha256": "c6d7d0442d70b9dfb7c4254cace0267fce6731ee90353cabe97069f4ab2a03fd",
+  "registry_sha256": "337b5c1a2680ebcdafa030f415c3311f64be111cc1ae63846e13bb6a96dda679",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "71696e5be24ac6a6e2893727cba9edf608ff8c56d4d406b2aa092b7b87793eae"

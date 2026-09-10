@@ -25,7 +25,7 @@ class UnknownEffectsOpen(Exception):
     """Consequential execution cannot reopen while UNKNOWN effects exist."""
 
 
-class RecoveryConsistencyPoint:
+class RecoveryPointService:
     """Binds the DB commit position, canonical event sequence, evidence
     manifest digest, snapshot inventory digest, effect-settlement watermark
     and unresolved UNKNOWN effect ids into one verifiable recovery point."""
