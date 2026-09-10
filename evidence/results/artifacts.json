@@ -36,6 +36,21 @@
     "quansio/platform/repository.py",
     "tests/runtime/test_foundation.py"
   ],
+  "GATE-M0": [
+    "tools/governance/milestone_gate.py",
+    "tests/governance/test_milestone_gate.py",
+    "evidence/gates/GATE-M0.json"
+  ],
+  "GATE-M1": [
+    "tools/governance/milestone_gate.py",
+    "tests/governance/test_milestone_gate.py",
+    "evidence/gates/GATE-M1.json"
+  ],
+  "GATE-M2": [
+    "tools/governance/milestone_gate.py",
+    "tests/governance/test_milestone_gate.py",
+    "evidence/gates/GATE-M2.json"
+  ],
   "RUN-001": [
     "quansio/runtime/graphs.py",
     "migrations/up/0007_graph_transactions.sql",
