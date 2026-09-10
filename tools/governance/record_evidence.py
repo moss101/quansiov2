@@ -130,9 +130,17 @@ def main() -> int:
         if health.returncode != 0:
             raise SystemExit(f"real-boundary health check failed; refusing to record:\n{transcript}")
         print(transcript.splitlines()[-1] if transcript else "boundary health: PASS")
+        # Snapshot the boundary proof for this task: later health runs mutate
+        # the live manifest, so evidence binds an immutable per-task copy.
+        import shutil
+
+        snapshot_dir = ROOT / "evidence/boundary" / args.task
+        snapshot_dir.mkdir(parents=True, exist_ok=True)
         manifest_rel = args.boundary_manifest
-        for rel in (manifest_rel, str(manifest_path.parent / "health-transcript.json")):
-            rel_posix = Path(rel).resolve().relative_to(ROOT).as_posix()
+        shutil.copy2(manifest_path, snapshot_dir / "manifest.json")
+        shutil.copy2(manifest_path.parent / "health-transcript.json", snapshot_dir / "health-transcript.json")
+        for name in ("manifest.json", "health-transcript.json"):
+            rel_posix = (snapshot_dir / name).relative_to(ROOT).as_posix()
             digest = sha256_file(ROOT / rel_posix)
             artifacts.append(
                 {"path_or_uri": rel_posix, "digest": digest, "verification_method": "LOCAL_HASH", "verification_receipt_ref": None}
