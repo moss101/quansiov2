@@ -1,5 +1,478 @@
 [
   {
+    "assertion_id": "AUT-001-A01",
+    "domain": "automation",
+    "priority": "P0",
+    "requirement_id": "AUT-001",
+    "statement": "Automation schedules use explicit timezone and logical fire identity and define DST gap/fold behavior.",
+    "task_ids": [
+      "AUT-001"
+    ]
+  },
+  {
+    "assertion_id": "AUT-002-A01",
+    "domain": "automation",
+    "priority": "P0",
+    "requirement_id": "AUT-002",
+    "statement": "Missed-fire behavior is one of SKIP, FIRE_ONCE or CATCH_UP_BOUNDED with an explicit maximum catch-up count.",
+    "task_ids": [
+      "AUT-002"
+    ]
+  },
+  {
+    "assertion_id": "AUT-003-A01",
+    "domain": "automation",
+    "priority": "P1",
+    "requirement_id": "AUT-003",
+    "statement": "Every automation fire re-evaluates current capability, policy, support and environment rather than reusing stale authority.",
+    "task_ids": [
+      "AUT-003",
+      "COL-004"
+    ]
+  },
+  {
+    "assertion_id": "AUT-004-A01",
+    "domain": "automation",
+    "priority": "P1",
+    "requirement_id": "AUT-004",
+    "statement": "Pause, resume, delete and scheduler restart are durable and cannot create duplicate logical fires.",
+    "task_ids": [
+      "AUT-004",
+      "QA-007"
+    ]
+  },
+  {
+    "assertion_id": "BRW-001-A01",
+    "domain": "browser",
+    "priority": "P0",
+    "requirement_id": "BRW-001",
+    "statement": "The managed browser exposes structured control and observation and uses visual interpretation only when structural state is insufficient.",
+    "task_ids": [
+      "BRW-001",
+      "BRW-002"
+    ]
+  },
+  {
+    "assertion_id": "BRW-002-A01",
+    "domain": "browser",
+    "priority": "P0",
+    "requirement_id": "BRW-002",
+    "statement": "Browser sessions have durable identity and can be observed, taken over and returned without restarting the session.",
+    "task_ids": [
+      "BRW-001",
+      "BRW-004",
+      "BRW-008",
+      "UX-003"
+    ]
+  },
+  {
+    "assertion_id": "BRW-003-A01",
+    "domain": "browser",
+    "priority": "P1",
+    "requirement_id": "BRW-003",
+    "statement": "Downloads, uploads and file transfers use artifact grants and evidence rather than unscoped host paths.",
+    "task_ids": [
+      "BRW-003",
+      "BRW-005"
+    ]
+  },
+  {
+    "assertion_id": "BRW-004-A01",
+    "domain": "browser",
+    "priority": "P1",
+    "requirement_id": "BRW-004",
+    "statement": "Personal endpoint relay validates generation, lease, fence, capability, policy, effect, idempotency and approval binding before actuation.",
+    "task_ids": [
+      "BRW-006"
+    ]
+  },
+  {
+    "assertion_id": "BRW-005-A01",
+    "domain": "browser",
+    "priority": "P1",
+    "requirement_id": "BRW-005",
+    "statement": "Browser/computer observations are correlated to step, target and evidence identities and can be replayed as observations without replaying effects.",
+    "task_ids": [
+      "BRW-007"
+    ]
+  },
+  {
+    "assertion_id": "BRW-006-A01",
+    "domain": "browser",
+    "priority": "P1",
+    "requirement_id": "BRW-006",
+    "statement": "Every enabled browser or endpoint profile passes real navigation, structured action, consequential action, takeover, reconnect and stale-action qualification.",
+    "task_ids": [
+      "BRW-008",
+      "QA-005"
+    ]
+  },
+  {
+    "assertion_id": "BUS-001-A01",
+    "domain": "business",
+    "priority": "P0",
+    "requirement_id": "BUS-001",
+    "statement": "Business Capability Pack is a versioned composition of knowledge, skills, tools, connectors, RBAC, policy, approvals, workflow templates, I/O, evidence, evaluations and compatibility.",
+    "task_ids": [
+      "BUS-001"
+    ]
+  },
+  {
+    "assertion_id": "BUS-002-A01",
+    "domain": "business",
+    "priority": "P0",
+    "requirement_id": "BUS-002",
+    "statement": "Capability Compiler is an authoring/compilation pipeline and does not become a separate runtime or durable execution authority.",
+    "task_ids": [
+      "BUS-002"
+    ]
+  },
+  {
+    "assertion_id": "BUS-003-A01",
+    "domain": "business",
+    "priority": "P1",
+    "requirement_id": "BUS-003",
+    "statement": "Capability compilation reconstructs business process and binds tools, policies, RBAC and evidence without embedding credentials.",
+    "task_ids": [
+      "BUS-002",
+      "BUS-003",
+      "BUS-004"
+    ]
+  },
+  {
+    "assertion_id": "BUS-004-A01",
+    "domain": "business",
+    "priority": "P1",
+    "requirement_id": "BUS-004",
+    "statement": "A capability pack cannot publish until its dependencies resolve and its evaluation cases meet declared thresholds.",
+    "task_ids": [
+      "BUS-005",
+      "QA-006"
+    ]
+  },
+  {
+    "assertion_id": "BUS-005-A01",
+    "domain": "business",
+    "priority": "P1",
+    "requirement_id": "BUS-005",
+    "statement": "Installed capability packs execute exclusively through canonical WorkGraph, tools, policy, effect, evidence and recovery paths.",
+    "task_ids": [
+      "BUS-004",
+      "QA-006"
+    ]
+  },
+  {
+    "assertion_id": "BUS-006-A01",
+    "domain": "business",
+    "priority": "P1",
+    "requirement_id": "BUS-006",
+    "statement": "Capability compatibility, migration, deprecation and rollback are versioned and testable across pack updates.",
+    "task_ids": [
+      "BUS-005"
+    ]
+  },
+  {
+    "assertion_id": "CTX-001-A01",
+    "domain": "research",
+    "priority": "P0",
+    "requirement_id": "CTX-001",
+    "statement": "SearchProgram is a typed bounded program over canonical research operators; arbitrary executable expressions are forbidden.",
+    "task_ids": [
+      "CTX-001"
+    ]
+  },
+  {
+    "assertion_id": "CTX-002-A01",
+    "domain": "research",
+    "priority": "P0",
+    "requirement_id": "CTX-002",
+    "statement": "Research retrieval tracks source identity, freshness, provenance, access outcome and deduplication identity.",
+    "task_ids": [
+      "CTX-002",
+      "CTX-007"
+    ]
+  },
+  {
+    "assertion_id": "CTX-003-A01",
+    "domain": "research",
+    "priority": "P1",
+    "requirement_id": "CTX-003",
+    "statement": "ResearchRecord separates entity identity, attributes, claims, sources, freshness, confidence and verification outcome.",
+    "task_ids": [
+      "CTX-003"
+    ]
+  },
+  {
+    "assertion_id": "CTX-004-A01",
+    "domain": "research",
+    "priority": "P1",
+    "requirement_id": "CTX-004",
+    "statement": "Wide/deep research supports bounded fan-out, durable intermediate state, entity resolution, joins and independently verifiable evidence.",
+    "task_ids": [
+      "CTX-004"
+    ]
+  },
+  {
+    "assertion_id": "CTX-005-A01",
+    "domain": "research",
+    "priority": "P1",
+    "requirement_id": "CTX-005",
+    "statement": "Claim verification can independently refetch cited sources and distinguish supported, unsupported, inaccessible and stale evidence.",
+    "task_ids": [
+      "CTX-005"
+    ]
+  },
+  {
+    "assertion_id": "CTX-006-A01",
+    "domain": "research",
+    "priority": "P1",
+    "requirement_id": "CTX-006",
+    "statement": "Research qualification uses sealed dataset/source-policy/scorer identities and reproducible metric formulas with explicit thresholds.",
+    "task_ids": [
+      "CTX-008",
+      "QA-003"
+    ]
+  },
+  {
+    "assertion_id": "CTX-007-A01",
+    "domain": "context",
+    "priority": "P1",
+    "requirement_id": "CTX-007",
+    "statement": "Context Projection is bounded, task-scoped, capability-aware and separately versioned from canonical history and durable knowledge.",
+    "task_ids": [
+      "CTX-006"
+    ]
+  },
+  {
+    "assertion_id": "DAT-001-A01",
+    "domain": "data",
+    "priority": "P0",
+    "requirement_id": "DAT-001",
+    "statement": "Authentication establishes durable tenant, user, workspace and session identity before commands enter canonical services.",
+    "task_ids": [
+      "DAT-001"
+    ]
+  },
+  {
+    "assertion_id": "DAT-002-A01",
+    "domain": "data",
+    "priority": "P0",
+    "requirement_id": "DAT-002",
+    "statement": "Authoritative relational state is migration-managed, tenant-scoped, transactionally consistent and restorable.",
+    "task_ids": [
+      "DAT-002",
+      "DAT-007",
+      "DAT-008",
+      "ENV-001"
+    ]
+  },
+  {
+    "assertion_id": "DAT-003-A01",
+    "domain": "data",
+    "priority": "P1",
+    "requirement_id": "DAT-003",
+    "statement": "RuntimeEvent provides canonical ordered replay with stable event identity, producer identity, sequence, causality and execution generation.",
+    "task_ids": [
+      "DAT-003"
+    ]
+  },
+  {
+    "assertion_id": "DAT-004-A01",
+    "domain": "data",
+    "priority": "P1",
+    "requirement_id": "DAT-004",
+    "statement": "Transactional outbox delivery cannot publish an event that is absent from committed authoritative state and remains idempotent after crashes.",
+    "task_ids": [
+      "DAT-004"
+    ]
+  },
+  {
+    "assertion_id": "DAT-005-A01",
+    "domain": "data",
+    "priority": "P1",
+    "requirement_id": "DAT-005",
+    "statement": "Protocol state persists tool calls, approvals, questions, worker lifecycle, browser/computer control, waits and cancellation required for exact resume.",
+    "task_ids": [
+      "COL-002",
+      "DAT-005"
+    ]
+  },
+  {
+    "assertion_id": "DAT-006-A01",
+    "domain": "data",
+    "priority": "P1",
+    "requirement_id": "DAT-006",
+    "statement": "Artifacts and evidence are immutable by digest, tenant-scoped, scanned where applicable and lifecycle-managed independently of task memory.",
+    "task_ids": [
+      "BRW-005",
+      "BRW-007",
+      "DAT-006",
+      "UX-005"
+    ]
+  },
+  {
+    "assertion_id": "EFF-001-A01",
+    "domain": "effects",
+    "priority": "P0",
+    "requirement_id": "EFF-001",
+    "statement": "Every consequential semantic ToolOperation creates or references an EffectRecord before actuation.",
+    "task_ids": [
+      "EFF-001",
+      "EXT-002"
+    ]
+  },
+  {
+    "assertion_id": "EFF-002-A01",
+    "domain": "effects",
+    "priority": "P0",
+    "requirement_id": "EFF-002",
+    "statement": "Approval receipts bind exact semantic scope and cannot authorize changed payee, amount, target, arguments or effect identity.",
+    "task_ids": [
+      "EFF-002",
+      "UX-004"
+    ]
+  },
+  {
+    "assertion_id": "EFF-003-A01",
+    "domain": "effects",
+    "priority": "P1",
+    "requirement_id": "EFF-003",
+    "statement": "Ambiguous external timeouts enter UNKNOWN and reconcile provider/target state before any retry.",
+    "task_ids": [
+      "EFF-003",
+      "QA-004",
+      "SRE-003"
+    ]
+  },
+  {
+    "assertion_id": "EFF-004-A01",
+    "domain": "effects",
+    "priority": "P1",
+    "requirement_id": "EFF-004",
+    "statement": "Committed effects are immutable history and are not replayed by reconnect, retry, graph recovery or client refresh.",
+    "task_ids": [
+      "EFF-001",
+      "QA-008",
+      "RUN-006"
+    ]
+  },
+  {
+    "assertion_id": "EFF-005-A01",
+    "domain": "effects",
+    "priority": "P1",
+    "requirement_id": "EFF-005",
+    "statement": "Financial effects bind payee, amount in minor units, currency, purpose, funding handle, per-effect ceiling, cumulative budget and expiry.",
+    "task_ids": [
+      "EFF-002",
+      "QA-004"
+    ]
+  },
+  {
+    "assertion_id": "EFF-006-A01",
+    "domain": "effects",
+    "priority": "P1",
+    "requirement_id": "EFF-006",
+    "statement": "Low-level browser/computer primitives are classified by semantic outcome before consequential actuation.",
+    "task_ids": [
+      "BRW-003",
+      "QA-004"
+    ]
+  },
+  {
+    "assertion_id": "EFF-007-A01",
+    "domain": "effects",
+    "priority": "P1",
+    "requirement_id": "EFF-007",
+    "statement": "Effect receipts, failure outcomes and reconciliation evidence are durable and traceable to command, run, step and policy decision.",
+    "task_ids": [
+      "EFF-003"
+    ]
+  },
+  {
+    "assertion_id": "EXT-001-A01",
+    "domain": "tools",
+    "priority": "P0",
+    "requirement_id": "EXT-001",
+    "statement": "Every tool operation has a canonical typed contract, semantic effect class, fidelity classification, required capability and version.",
+    "task_ids": [
+      "BUS-004",
+      "EXT-001"
+    ]
+  },
+  {
+    "assertion_id": "EXT-002-A01",
+    "domain": "tools",
+    "priority": "P0",
+    "requirement_id": "EXT-002",
+    "statement": "Connector execution is mediated by the integration broker and cannot bypass capability, policy, privacy, approval or effect controls.",
+    "task_ids": [
+      "EXT-002"
+    ]
+  },
+  {
+    "assertion_id": "EXT-003-A01",
+    "domain": "tools",
+    "priority": "P1",
+    "requirement_id": "EXT-003",
+    "statement": "Webhook ingress authenticates source, deduplicates delivery and records canonical correlation before creating work.",
+    "task_ids": [
+      "EXT-003"
+    ]
+  },
+  {
+    "assertion_id": "GOV-001-A01",
+    "domain": "governance",
+    "priority": "P0",
+    "requirement_id": "GOV-001",
+    "statement": "Repository adoption records canonical ownership, existing-path disposition, durable stores, deployment entrypoints and duplicate authority before feature implementation.",
+    "task_ids": [
+      "GOV-001",
+      "GOV-002"
+    ]
+  },
+  {
+    "assertion_id": "GOV-002-A01",
+    "domain": "governance",
+    "priority": "P0",
+    "requirement_id": "GOV-002",
+    "statement": "Authority generation is deterministic: canonical registries generate reading views, task graphs, counts and integrity metadata without hand-maintained duplicates.",
+    "task_ids": [
+      "GOV-003",
+      "GOV-004"
+    ]
+  },
+  {
+    "assertion_id": "GOV-003-A01",
+    "domain": "governance",
+    "priority": "P1",
+    "requirement_id": "GOV-003",
+    "statement": "Production-source inspection rejects reachable incomplete implementation patterns while keeping tests, fixtures, generated output and vendor code separately scoped.",
+    "task_ids": [
+      "GOV-005"
+    ]
+  },
+  {
+    "assertion_id": "GOV-004-A01",
+    "domain": "governance",
+    "priority": "P1",
+    "requirement_id": "GOV-004",
+    "statement": "Completion evidence is reproducible and binds actual repository commit, report, assertions, environment and artifacts; cryptographic report signatures are not required.",
+    "task_ids": [
+      "ENV-001",
+      "GOV-006"
+    ]
+  },
+  {
+    "assertion_id": "GOV-005-A01",
+    "domain": "governance",
+    "priority": "P1",
+    "requirement_id": "GOV-005",
+    "statement": "Architecture decisions and threat-model changes record owner, context, decision, alternatives, affected invariants, migration/rollback impact and review trigger.",
+    "task_ids": [
+      "GOV-007"
+    ]
+  },
+  {
     "assertion_id": "INV-001-A01",
     "domain": "architecture",
     "priority": "P0",
@@ -127,123 +600,260 @@
     ]
   },
   {
-    "assertion_id": "GOV-001-A01",
-    "domain": "governance",
+    "assertion_id": "KNW-001-A01",
+    "domain": "knowledge",
     "priority": "P0",
-    "requirement_id": "GOV-001",
-    "statement": "Repository adoption records canonical ownership, existing-path disposition, durable stores, deployment entrypoints and duplicate authority before feature implementation.",
+    "requirement_id": "KNW-001",
+    "statement": "Knowledge candidates retain provenance, evidence references, source epoch, confidence, validity interval and conflict information.",
     "task_ids": [
-      "GOV-001",
-      "GOV-002"
+      "KNW-001"
     ]
   },
   {
-    "assertion_id": "GOV-002-A01",
-    "domain": "governance",
+    "assertion_id": "KNW-002-A01",
+    "domain": "knowledge",
     "priority": "P0",
-    "requirement_id": "GOV-002",
-    "statement": "Authority generation is deterministic: canonical registries generate reading views, task graphs, counts and integrity metadata without hand-maintained duplicates.",
+    "requirement_id": "KNW-002",
+    "statement": "Asynchronous knowledge synthesis rejects stale results when source epoch or relevant task state changed.",
     "task_ids": [
-      "GOV-003",
-      "GOV-004"
+      "KNW-002"
     ]
   },
   {
-    "assertion_id": "GOV-003-A01",
-    "domain": "governance",
+    "assertion_id": "KNW-003-A01",
+    "domain": "knowledge",
     "priority": "P1",
-    "requirement_id": "GOV-003",
-    "statement": "Production-source inspection rejects reachable incomplete implementation patterns while keeping tests, fixtures, generated output and vendor code separately scoped.",
+    "requirement_id": "KNW-003",
+    "statement": "Knowledge Fabric is the single durable semantic knowledge owner; transcript, protocol state and recovery state remain separate.",
     "task_ids": [
-      "GOV-005"
+      "KNW-003"
     ]
   },
   {
-    "assertion_id": "GOV-004-A01",
-    "domain": "governance",
-    "priority": "P1",
-    "requirement_id": "GOV-004",
-    "statement": "Completion evidence is reproducible and binds actual repository commit, report, assertions, environment and artifacts; cryptographic report signatures are not required.",
-    "task_ids": [
-      "ENV-001",
-      "GOV-006"
-    ]
-  },
-  {
-    "assertion_id": "GOV-005-A01",
-    "domain": "governance",
-    "priority": "P1",
-    "requirement_id": "GOV-005",
-    "statement": "Architecture decisions and threat-model changes record owner, context, decision, alternatives, affected invariants, migration/rollback impact and review trigger.",
-    "task_ids": [
-      "GOV-007"
-    ]
-  },
-  {
-    "assertion_id": "DAT-001-A01",
-    "domain": "data",
+    "assertion_id": "MAC-001-A01",
+    "domain": "machine",
     "priority": "P0",
-    "requirement_id": "DAT-001",
-    "statement": "Authentication establishes durable tenant, user, workspace and session identity before commands enter canonical services.",
+    "requirement_id": "MAC-001",
+    "statement": "Every execution target has tenant binding, target identity, lifecycle state, execution generation, lease and fence semantics.",
     "task_ids": [
-      "DAT-001"
+      "MAC-001",
+      "MAC-002"
     ]
   },
   {
-    "assertion_id": "DAT-002-A01",
-    "domain": "data",
+    "assertion_id": "MAC-002-A01",
+    "domain": "machine",
     "priority": "P0",
-    "requirement_id": "DAT-002",
-    "statement": "Authoritative relational state is migration-managed, tenant-scoped, transactionally consistent and restorable.",
+    "requirement_id": "MAC-002",
+    "statement": "Worker/guest transport is authenticated, typed, bounded, idempotent and supports ACK/redelivery and cancellation.",
     "task_ids": [
-      "DAT-002",
-      "DAT-007",
-      "DAT-008",
-      "ENV-001"
+      "MAC-003",
+      "MAC-004"
     ]
   },
   {
-    "assertion_id": "DAT-003-A01",
-    "domain": "data",
+    "assertion_id": "MAC-003-A01",
+    "domain": "machine",
     "priority": "P1",
-    "requirement_id": "DAT-003",
-    "statement": "RuntimeEvent provides canonical ordered replay with stable event identity, producer identity, sequence, causality and execution generation.",
+    "requirement_id": "MAC-003",
+    "statement": "Hosted isolated task runtimes enforce deny-by-default internal networking and policy-controlled egress.",
     "task_ids": [
-      "DAT-003"
+      "MAC-004",
+      "MAC-005"
     ]
   },
   {
-    "assertion_id": "DAT-004-A01",
-    "domain": "data",
+    "assertion_id": "MAC-004-A01",
+    "domain": "machine",
     "priority": "P1",
-    "requirement_id": "DAT-004",
-    "statement": "Transactional outbox delivery cannot publish an event that is absent from committed authoritative state and remains idempotent after crashes.",
+    "requirement_id": "MAC-004",
+    "statement": "Persistent workspace computers preserve user-authorized workspace state independently of conversational session lifetime.",
     "task_ids": [
-      "DAT-004"
+      "MAC-006"
     ]
   },
   {
-    "assertion_id": "DAT-005-A01",
-    "domain": "data",
+    "assertion_id": "MAC-005-A01",
+    "domain": "machine",
     "priority": "P1",
-    "requirement_id": "DAT-005",
-    "statement": "Protocol state persists tool calls, approvals, questions, worker lifecycle, browser/computer control, waits and cancellation required for exact resume.",
+    "requirement_id": "MAC-005",
+    "statement": "Credentials remain outside guest storage where feasible and guest actions receive only scoped capability handles.",
     "task_ids": [
-      "COL-002",
-      "DAT-005"
+      "MAC-003"
     ]
   },
   {
-    "assertion_id": "DAT-006-A01",
-    "domain": "data",
+    "assertion_id": "MAC-006-A01",
+    "domain": "machine",
     "priority": "P1",
-    "requirement_id": "DAT-006",
-    "statement": "Artifacts and evidence are immutable by digest, tenant-scoped, scanned where applicable and lifecycle-managed independently of task memory.",
+    "requirement_id": "MAC-006",
+    "statement": "Snapshots have explicit workspace-only and full-machine tiers; a checkpoint becomes restorable only after all referenced state is durably committed and verified.",
     "task_ids": [
-      "BRW-005",
-      "BRW-007",
-      "DAT-006",
-      "UX-005"
+      "MAC-007"
+    ]
+  },
+  {
+    "assertion_id": "MAC-007-A01",
+    "domain": "machine",
+    "priority": "P1",
+    "requirement_id": "MAC-007",
+    "statement": "Restore and migration advance execution generation so stale pre-restore actions cannot execute.",
+    "task_ids": [
+      "MAC-007",
+      "QA-005"
+    ]
+  },
+  {
+    "assertion_id": "MAC-008-A01",
+    "domain": "machine",
+    "priority": "P1",
+    "requirement_id": "MAC-008",
+    "statement": "Private execution targets use the same command, capability, effect, evidence and recovery semantics as hosted targets.",
+    "task_ids": [
+      "MAC-008"
+    ]
+  },
+  {
+    "assertion_id": "MOD-001-A01",
+    "domain": "model",
+    "priority": "P0",
+    "requirement_id": "MOD-001",
+    "statement": "The model gateway owns every provider call, credential handle, routing decision, stream and usage settlement.",
+    "task_ids": [
+      "MOD-001"
+    ]
+  },
+  {
+    "assertion_id": "MOD-002-A01",
+    "domain": "model",
+    "priority": "P0",
+    "requirement_id": "MOD-002",
+    "statement": "Provider adapters translate provider protocols only and cannot own task orchestration, policy, knowledge or business logic.",
+    "task_ids": [
+      "MOD-002"
+    ]
+  },
+  {
+    "assertion_id": "MOD-003-A01",
+    "domain": "model",
+    "priority": "P1",
+    "requirement_id": "MOD-003",
+    "statement": "Routing selects an allowed model profile from deterministic capability demand, policy, residency, availability and budget constraints without a mandatory prerequisite model call.",
+    "task_ids": [
+      "MOD-003",
+      "MOD-007"
+    ]
+  },
+  {
+    "assertion_id": "MOD-004-A01",
+    "domain": "model",
+    "priority": "P1",
+    "requirement_id": "MOD-004",
+    "statement": "Model streams use the canonical event vocabulary, monotonic sequence, explicit terminal state, backpressure and cancellation.",
+    "task_ids": [
+      "MOD-004",
+      "MOD-007"
+    ]
+  },
+  {
+    "assertion_id": "MOD-005-A01",
+    "domain": "model",
+    "priority": "P1",
+    "requirement_id": "MOD-005",
+    "statement": "Usage reservations and provider usage settle idempotently, including usage arriving after cancellation, without rewriting historical settlement.",
+    "task_ids": [
+      "MOD-005",
+      "QA-002",
+      "RUN-007"
+    ]
+  },
+  {
+    "assertion_id": "MOD-006-A01",
+    "domain": "model",
+    "priority": "P1",
+    "requirement_id": "MOD-006",
+    "statement": "Privacy/residency enforcement occurs before provider egress and denial results in zero protected bytes crossing the blocked boundary.",
+    "task_ids": [
+      "MOD-006",
+      "QA-002",
+      "SEC-003"
+    ]
+  },
+  {
+    "assertion_id": "MOD-007-A01",
+    "domain": "model",
+    "priority": "P1",
+    "requirement_id": "MOD-007",
+    "statement": "Every enabled provider profile passes real request, stream, cancellation, usage, malformed-response and outage qualification.",
+    "task_ids": [
+      "MOD-008",
+      "QA-002"
+    ]
+  },
+  {
+    "assertion_id": "REL-001-A01",
+    "domain": "release",
+    "priority": "P0",
+    "requirement_id": "REL-001",
+    "statement": "A release candidate binds exact source commit, generated bindings, service/client artifacts, images, configuration, migrations and support selection.",
+    "task_ids": [
+      "REL-001",
+      "REL-006"
+    ]
+  },
+  {
+    "assertion_id": "REL-002-A01",
+    "domain": "release",
+    "priority": "P0",
+    "requirement_id": "REL-002",
+    "statement": "Any rebuild or source/configuration change after candidate creation creates a new candidate and invalidates candidate-specific qualification.",
+    "task_ids": [
+      "REL-001"
+    ]
+  },
+  {
+    "assertion_id": "REL-003-A01",
+    "domain": "release",
+    "priority": "P1",
+    "requirement_id": "REL-003",
+    "statement": "Candidate qualification requires every mapped blocking suite to pass for the exact candidate and enabled support profiles.",
+    "task_ids": [
+      "REL-002",
+      "REL-005",
+      "REL-006"
+    ]
+  },
+  {
+    "assertion_id": "REL-004-A01",
+    "domain": "release",
+    "priority": "P1",
+    "requirement_id": "REL-004",
+    "statement": "Canary deployment and rollback operate on the exact qualified candidate and preserve data/effect compatibility.",
+    "task_ids": [
+      "REL-003",
+      "REL-004",
+      "REL-008"
+    ]
+  },
+  {
+    "assertion_id": "REL-005-A01",
+    "domain": "release",
+    "priority": "P1",
+    "requirement_id": "REL-005",
+    "statement": "Only GATE-M14 may transition an eligible candidate to PRODUCTION_READY.",
+    "task_ids": [
+      "GATE-M14",
+      "REL-007"
+    ]
+  },
+  {
+    "assertion_id": "REL-006-A01",
+    "domain": "release",
+    "priority": "P1",
+    "requirement_id": "REL-006",
+    "statement": "Production promotion is a separate authorized operation of the exact PRODUCTION_READY candidate and records post-deploy verification.",
+    "task_ids": [
+      "REL-008"
     ]
   },
   {
@@ -339,155 +949,6 @@
     ]
   },
   {
-    "assertion_id": "MOD-001-A01",
-    "domain": "model",
-    "priority": "P0",
-    "requirement_id": "MOD-001",
-    "statement": "The model gateway owns every provider call, credential handle, routing decision, stream and usage settlement.",
-    "task_ids": [
-      "MOD-001"
-    ]
-  },
-  {
-    "assertion_id": "MOD-002-A01",
-    "domain": "model",
-    "priority": "P0",
-    "requirement_id": "MOD-002",
-    "statement": "Provider adapters translate provider protocols only and cannot own task orchestration, policy, knowledge or business logic.",
-    "task_ids": [
-      "MOD-002"
-    ]
-  },
-  {
-    "assertion_id": "MOD-003-A01",
-    "domain": "model",
-    "priority": "P1",
-    "requirement_id": "MOD-003",
-    "statement": "Routing selects an allowed model profile from deterministic capability demand, policy, residency, availability and budget constraints without a mandatory prerequisite model call.",
-    "task_ids": [
-      "MOD-003",
-      "MOD-007"
-    ]
-  },
-  {
-    "assertion_id": "MOD-004-A01",
-    "domain": "model",
-    "priority": "P1",
-    "requirement_id": "MOD-004",
-    "statement": "Model streams use the canonical event vocabulary, monotonic sequence, explicit terminal state, backpressure and cancellation.",
-    "task_ids": [
-      "MOD-004",
-      "MOD-007"
-    ]
-  },
-  {
-    "assertion_id": "MOD-005-A01",
-    "domain": "model",
-    "priority": "P1",
-    "requirement_id": "MOD-005",
-    "statement": "Usage reservations and provider usage settle idempotently, including usage arriving after cancellation, without rewriting historical settlement.",
-    "task_ids": [
-      "MOD-005",
-      "QA-002",
-      "RUN-007"
-    ]
-  },
-  {
-    "assertion_id": "MOD-006-A01",
-    "domain": "model",
-    "priority": "P1",
-    "requirement_id": "MOD-006",
-    "statement": "Privacy/residency enforcement occurs before provider egress and denial results in zero protected bytes crossing the blocked boundary.",
-    "task_ids": [
-      "MOD-006",
-      "QA-002",
-      "SEC-003"
-    ]
-  },
-  {
-    "assertion_id": "MOD-007-A01",
-    "domain": "model",
-    "priority": "P1",
-    "requirement_id": "MOD-007",
-    "statement": "Every enabled provider profile passes real request, stream, cancellation, usage, malformed-response and outage qualification.",
-    "task_ids": [
-      "MOD-008",
-      "QA-002"
-    ]
-  },
-  {
-    "assertion_id": "CTX-001-A01",
-    "domain": "research",
-    "priority": "P0",
-    "requirement_id": "CTX-001",
-    "statement": "SearchProgram is a typed bounded program over canonical research operators; arbitrary executable expressions are forbidden.",
-    "task_ids": [
-      "CTX-001"
-    ]
-  },
-  {
-    "assertion_id": "CTX-002-A01",
-    "domain": "research",
-    "priority": "P0",
-    "requirement_id": "CTX-002",
-    "statement": "Research retrieval tracks source identity, freshness, provenance, access outcome and deduplication identity.",
-    "task_ids": [
-      "CTX-002",
-      "CTX-007"
-    ]
-  },
-  {
-    "assertion_id": "CTX-003-A01",
-    "domain": "research",
-    "priority": "P1",
-    "requirement_id": "CTX-003",
-    "statement": "ResearchRecord separates entity identity, attributes, claims, sources, freshness, confidence and verification outcome.",
-    "task_ids": [
-      "CTX-003"
-    ]
-  },
-  {
-    "assertion_id": "CTX-004-A01",
-    "domain": "research",
-    "priority": "P1",
-    "requirement_id": "CTX-004",
-    "statement": "Wide/deep research supports bounded fan-out, durable intermediate state, entity resolution, joins and independently verifiable evidence.",
-    "task_ids": [
-      "CTX-004"
-    ]
-  },
-  {
-    "assertion_id": "CTX-005-A01",
-    "domain": "research",
-    "priority": "P1",
-    "requirement_id": "CTX-005",
-    "statement": "Claim verification can independently refetch cited sources and distinguish supported, unsupported, inaccessible and stale evidence.",
-    "task_ids": [
-      "CTX-005"
-    ]
-  },
-  {
-    "assertion_id": "CTX-006-A01",
-    "domain": "research",
-    "priority": "P1",
-    "requirement_id": "CTX-006",
-    "statement": "Research qualification uses sealed dataset/source-policy/scorer identities and reproducible metric formulas with explicit thresholds.",
-    "task_ids": [
-      "CTX-008",
-      "QA-003"
-    ]
-  },
-  {
-    "assertion_id": "CTX-007-A01",
-    "domain": "context",
-    "priority": "P1",
-    "requirement_id": "CTX-007",
-    "statement": "Context Projection is bounded, task-scoped, capability-aware and separately versioned from canonical history and durable knowledge.",
-    "task_ids": [
-      "CTX-006"
-    ]
-  },
-  {
     "assertion_id": "SEC-001-A01",
     "domain": "security",
     "priority": "P0",
@@ -579,264 +1040,6 @@
     ]
   },
   {
-    "assertion_id": "EFF-001-A01",
-    "domain": "effects",
-    "priority": "P0",
-    "requirement_id": "EFF-001",
-    "statement": "Every consequential semantic ToolOperation creates or references an EffectRecord before actuation.",
-    "task_ids": [
-      "EFF-001",
-      "EXT-002"
-    ]
-  },
-  {
-    "assertion_id": "EFF-002-A01",
-    "domain": "effects",
-    "priority": "P0",
-    "requirement_id": "EFF-002",
-    "statement": "Approval receipts bind exact semantic scope and cannot authorize changed payee, amount, target, arguments or effect identity.",
-    "task_ids": [
-      "EFF-002",
-      "UX-004"
-    ]
-  },
-  {
-    "assertion_id": "EFF-003-A01",
-    "domain": "effects",
-    "priority": "P1",
-    "requirement_id": "EFF-003",
-    "statement": "Ambiguous external timeouts enter UNKNOWN and reconcile provider/target state before any retry.",
-    "task_ids": [
-      "EFF-003",
-      "QA-004",
-      "SRE-003"
-    ]
-  },
-  {
-    "assertion_id": "EFF-004-A01",
-    "domain": "effects",
-    "priority": "P1",
-    "requirement_id": "EFF-004",
-    "statement": "Committed effects are immutable history and are not replayed by reconnect, retry, graph recovery or client refresh.",
-    "task_ids": [
-      "EFF-001",
-      "QA-008",
-      "RUN-006"
-    ]
-  },
-  {
-    "assertion_id": "EFF-005-A01",
-    "domain": "effects",
-    "priority": "P1",
-    "requirement_id": "EFF-005",
-    "statement": "Financial effects bind payee, amount in minor units, currency, purpose, funding handle, per-effect ceiling, cumulative budget and expiry.",
-    "task_ids": [
-      "EFF-002",
-      "QA-004"
-    ]
-  },
-  {
-    "assertion_id": "EFF-006-A01",
-    "domain": "effects",
-    "priority": "P1",
-    "requirement_id": "EFF-006",
-    "statement": "Low-level browser/computer primitives are classified by semantic outcome before consequential actuation.",
-    "task_ids": [
-      "BRW-003",
-      "QA-004"
-    ]
-  },
-  {
-    "assertion_id": "EFF-007-A01",
-    "domain": "effects",
-    "priority": "P1",
-    "requirement_id": "EFF-007",
-    "statement": "Effect receipts, failure outcomes and reconciliation evidence are durable and traceable to command, run, step and policy decision.",
-    "task_ids": [
-      "EFF-003"
-    ]
-  },
-  {
-    "assertion_id": "MAC-001-A01",
-    "domain": "machine",
-    "priority": "P0",
-    "requirement_id": "MAC-001",
-    "statement": "Every execution target has tenant binding, target identity, lifecycle state, execution generation, lease and fence semantics.",
-    "task_ids": [
-      "MAC-001",
-      "MAC-002"
-    ]
-  },
-  {
-    "assertion_id": "MAC-002-A01",
-    "domain": "machine",
-    "priority": "P0",
-    "requirement_id": "MAC-002",
-    "statement": "Worker/guest transport is authenticated, typed, bounded, idempotent and supports ACK/redelivery and cancellation.",
-    "task_ids": [
-      "MAC-003",
-      "MAC-004"
-    ]
-  },
-  {
-    "assertion_id": "MAC-003-A01",
-    "domain": "machine",
-    "priority": "P1",
-    "requirement_id": "MAC-003",
-    "statement": "Hosted isolated task runtimes enforce deny-by-default internal networking and policy-controlled egress.",
-    "task_ids": [
-      "MAC-004",
-      "MAC-005"
-    ]
-  },
-  {
-    "assertion_id": "MAC-004-A01",
-    "domain": "machine",
-    "priority": "P1",
-    "requirement_id": "MAC-004",
-    "statement": "Persistent workspace computers preserve user-authorized workspace state independently of conversational session lifetime.",
-    "task_ids": [
-      "MAC-006"
-    ]
-  },
-  {
-    "assertion_id": "MAC-005-A01",
-    "domain": "machine",
-    "priority": "P1",
-    "requirement_id": "MAC-005",
-    "statement": "Credentials remain outside guest storage where feasible and guest actions receive only scoped capability handles.",
-    "task_ids": [
-      "MAC-003"
-    ]
-  },
-  {
-    "assertion_id": "MAC-006-A01",
-    "domain": "machine",
-    "priority": "P1",
-    "requirement_id": "MAC-006",
-    "statement": "Snapshots have explicit workspace-only and full-machine tiers; a checkpoint becomes restorable only after all referenced state is durably committed and verified.",
-    "task_ids": [
-      "MAC-007"
-    ]
-  },
-  {
-    "assertion_id": "MAC-007-A01",
-    "domain": "machine",
-    "priority": "P1",
-    "requirement_id": "MAC-007",
-    "statement": "Restore and migration advance execution generation so stale pre-restore actions cannot execute.",
-    "task_ids": [
-      "MAC-007",
-      "QA-005"
-    ]
-  },
-  {
-    "assertion_id": "MAC-008-A01",
-    "domain": "machine",
-    "priority": "P1",
-    "requirement_id": "MAC-008",
-    "statement": "Private execution targets use the same command, capability, effect, evidence and recovery semantics as hosted targets.",
-    "task_ids": [
-      "MAC-008"
-    ]
-  },
-  {
-    "assertion_id": "BRW-001-A01",
-    "domain": "browser",
-    "priority": "P0",
-    "requirement_id": "BRW-001",
-    "statement": "The managed browser exposes structured control and observation and uses visual interpretation only when structural state is insufficient.",
-    "task_ids": [
-      "BRW-001",
-      "BRW-002"
-    ]
-  },
-  {
-    "assertion_id": "BRW-002-A01",
-    "domain": "browser",
-    "priority": "P0",
-    "requirement_id": "BRW-002",
-    "statement": "Browser sessions have durable identity and can be observed, taken over and returned without restarting the session.",
-    "task_ids": [
-      "BRW-001",
-      "BRW-004",
-      "BRW-008",
-      "UX-003"
-    ]
-  },
-  {
-    "assertion_id": "BRW-003-A01",
-    "domain": "browser",
-    "priority": "P1",
-    "requirement_id": "BRW-003",
-    "statement": "Downloads, uploads and file transfers use artifact grants and evidence rather than unscoped host paths.",
-    "task_ids": [
-      "BRW-003",
-      "BRW-005"
-    ]
-  },
-  {
-    "assertion_id": "BRW-004-A01",
-    "domain": "browser",
-    "priority": "P1",
-    "requirement_id": "BRW-004",
-    "statement": "Personal endpoint relay validates generation, lease, fence, capability, policy, effect, idempotency and approval binding before actuation.",
-    "task_ids": [
-      "BRW-006"
-    ]
-  },
-  {
-    "assertion_id": "BRW-005-A01",
-    "domain": "browser",
-    "priority": "P1",
-    "requirement_id": "BRW-005",
-    "statement": "Browser/computer observations are correlated to step, target and evidence identities and can be replayed as observations without replaying effects.",
-    "task_ids": [
-      "BRW-007"
-    ]
-  },
-  {
-    "assertion_id": "BRW-006-A01",
-    "domain": "browser",
-    "priority": "P1",
-    "requirement_id": "BRW-006",
-    "statement": "Every enabled browser or endpoint profile passes real navigation, structured action, consequential action, takeover, reconnect and stale-action qualification.",
-    "task_ids": [
-      "BRW-008",
-      "QA-005"
-    ]
-  },
-  {
-    "assertion_id": "KNW-001-A01",
-    "domain": "knowledge",
-    "priority": "P0",
-    "requirement_id": "KNW-001",
-    "statement": "Knowledge candidates retain provenance, evidence references, source epoch, confidence, validity interval and conflict information.",
-    "task_ids": [
-      "KNW-001"
-    ]
-  },
-  {
-    "assertion_id": "KNW-002-A01",
-    "domain": "knowledge",
-    "priority": "P0",
-    "requirement_id": "KNW-002",
-    "statement": "Asynchronous knowledge synthesis rejects stale results when source epoch or relevant task state changed.",
-    "task_ids": [
-      "KNW-002"
-    ]
-  },
-  {
-    "assertion_id": "KNW-003-A01",
-    "domain": "knowledge",
-    "priority": "P1",
-    "requirement_id": "KNW-003",
-    "statement": "Knowledge Fabric is the single durable semantic knowledge owner; transcript, protocol state and recovery state remain separate.",
-    "task_ids": [
-      "KNW-003"
-    ]
-  },
-  {
     "assertion_id": "SKL-001-A01",
     "domain": "skills",
     "priority": "P0",
@@ -887,207 +1090,6 @@
     "statement": "Runtime materializes only task-required qualified skills through Capability Projection and removes task-scoped materialization after use.",
     "task_ids": [
       "SKL-005"
-    ]
-  },
-  {
-    "assertion_id": "BUS-001-A01",
-    "domain": "business",
-    "priority": "P0",
-    "requirement_id": "BUS-001",
-    "statement": "Business Capability Pack is a versioned composition of knowledge, skills, tools, connectors, RBAC, policy, approvals, workflow templates, I/O, evidence, evaluations and compatibility.",
-    "task_ids": [
-      "BUS-001"
-    ]
-  },
-  {
-    "assertion_id": "BUS-002-A01",
-    "domain": "business",
-    "priority": "P0",
-    "requirement_id": "BUS-002",
-    "statement": "Capability Compiler is an authoring/compilation pipeline and does not become a separate runtime or durable execution authority.",
-    "task_ids": [
-      "BUS-002"
-    ]
-  },
-  {
-    "assertion_id": "BUS-003-A01",
-    "domain": "business",
-    "priority": "P1",
-    "requirement_id": "BUS-003",
-    "statement": "Capability compilation reconstructs business process and binds tools, policies, RBAC and evidence without embedding credentials.",
-    "task_ids": [
-      "BUS-002",
-      "BUS-003",
-      "BUS-004"
-    ]
-  },
-  {
-    "assertion_id": "BUS-004-A01",
-    "domain": "business",
-    "priority": "P1",
-    "requirement_id": "BUS-004",
-    "statement": "A capability pack cannot publish until its dependencies resolve and its evaluation cases meet declared thresholds.",
-    "task_ids": [
-      "BUS-005",
-      "QA-006"
-    ]
-  },
-  {
-    "assertion_id": "BUS-005-A01",
-    "domain": "business",
-    "priority": "P1",
-    "requirement_id": "BUS-005",
-    "statement": "Installed capability packs execute exclusively through canonical WorkGraph, tools, policy, effect, evidence and recovery paths.",
-    "task_ids": [
-      "BUS-004",
-      "QA-006"
-    ]
-  },
-  {
-    "assertion_id": "BUS-006-A01",
-    "domain": "business",
-    "priority": "P1",
-    "requirement_id": "BUS-006",
-    "statement": "Capability compatibility, migration, deprecation and rollback are versioned and testable across pack updates.",
-    "task_ids": [
-      "BUS-005"
-    ]
-  },
-  {
-    "assertion_id": "EXT-001-A01",
-    "domain": "tools",
-    "priority": "P0",
-    "requirement_id": "EXT-001",
-    "statement": "Every tool operation has a canonical typed contract, semantic effect class, fidelity classification, required capability and version.",
-    "task_ids": [
-      "BUS-004",
-      "EXT-001"
-    ]
-  },
-  {
-    "assertion_id": "EXT-002-A01",
-    "domain": "tools",
-    "priority": "P0",
-    "requirement_id": "EXT-002",
-    "statement": "Connector execution is mediated by the integration broker and cannot bypass capability, policy, privacy, approval or effect controls.",
-    "task_ids": [
-      "EXT-002"
-    ]
-  },
-  {
-    "assertion_id": "EXT-003-A01",
-    "domain": "tools",
-    "priority": "P1",
-    "requirement_id": "EXT-003",
-    "statement": "Webhook ingress authenticates source, deduplicates delivery and records canonical correlation before creating work.",
-    "task_ids": [
-      "EXT-003"
-    ]
-  },
-  {
-    "assertion_id": "AUT-001-A01",
-    "domain": "automation",
-    "priority": "P0",
-    "requirement_id": "AUT-001",
-    "statement": "Automation schedules use explicit timezone and logical fire identity and define DST gap/fold behavior.",
-    "task_ids": [
-      "AUT-001"
-    ]
-  },
-  {
-    "assertion_id": "AUT-002-A01",
-    "domain": "automation",
-    "priority": "P0",
-    "requirement_id": "AUT-002",
-    "statement": "Missed-fire behavior is one of SKIP, FIRE_ONCE or CATCH_UP_BOUNDED with an explicit maximum catch-up count.",
-    "task_ids": [
-      "AUT-002"
-    ]
-  },
-  {
-    "assertion_id": "AUT-003-A01",
-    "domain": "automation",
-    "priority": "P1",
-    "requirement_id": "AUT-003",
-    "statement": "Every automation fire re-evaluates current capability, policy, support and environment rather than reusing stale authority.",
-    "task_ids": [
-      "AUT-003",
-      "COL-004"
-    ]
-  },
-  {
-    "assertion_id": "AUT-004-A01",
-    "domain": "automation",
-    "priority": "P1",
-    "requirement_id": "AUT-004",
-    "statement": "Pause, resume, delete and scheduler restart are durable and cannot create duplicate logical fires.",
-    "task_ids": [
-      "AUT-004",
-      "QA-007"
-    ]
-  },
-  {
-    "assertion_id": "UX-001-A01",
-    "domain": "frontend",
-    "priority": "P0",
-    "requirement_id": "UX-001",
-    "statement": "Desktop workbench provides persistent teammate, task, research, capability, automation, approval, evidence and live workspace surfaces over canonical APIs.",
-    "task_ids": [
-      "UX-001",
-      "UX-005"
-    ]
-  },
-  {
-    "assertion_id": "UX-002-A01",
-    "domain": "frontend",
-    "priority": "P0",
-    "requirement_id": "UX-002",
-    "statement": "Every client rebuilds from snapshot plus ordered RuntimeEvent cursor and tolerates duplicate/out-of-order delivery without becoming authority.",
-    "task_ids": [
-      "QA-007",
-      "UX-002"
-    ]
-  },
-  {
-    "assertion_id": "UX-003-A01",
-    "domain": "frontend",
-    "priority": "P1",
-    "requirement_id": "UX-003",
-    "statement": "Approval UI displays exact semantic effect scope and cannot approve a hidden or changed operation.",
-    "task_ids": [
-      "UX-004"
-    ]
-  },
-  {
-    "assertion_id": "UX-004-A01",
-    "domain": "frontend",
-    "priority": "P1",
-    "requirement_id": "UX-004",
-    "statement": "Live browser/computer UI exposes observation, takeover state, controller identity and return-of-control without restarting the session.",
-    "task_ids": [
-      "UX-003"
-    ]
-  },
-  {
-    "assertion_id": "UX-005-A01",
-    "domain": "frontend",
-    "priority": "P1",
-    "requirement_id": "UX-005",
-    "statement": "Web, mobile and CLI clients use the same canonical commands/events and may not introduce local shadow execution.",
-    "task_ids": [
-      "UX-006",
-      "UX-007",
-      "UX-008"
-    ]
-  },
-  {
-    "assertion_id": "UX-006-A01",
-    "domain": "frontend",
-    "priority": "P1",
-    "requirement_id": "UX-006",
-    "statement": "Supported client surfaces meet keyboard, focus, assistive-label, reduced-motion and non-color-only status requirements.",
-    "task_ids": [
-      "UX-001"
     ]
   },
   {
@@ -1159,69 +1161,67 @@
     ]
   },
   {
-    "assertion_id": "REL-001-A01",
-    "domain": "release",
+    "assertion_id": "UX-001-A01",
+    "domain": "frontend",
     "priority": "P0",
-    "requirement_id": "REL-001",
-    "statement": "A release candidate binds exact source commit, generated bindings, service/client artifacts, images, configuration, migrations and support selection.",
+    "requirement_id": "UX-001",
+    "statement": "Desktop workbench provides persistent teammate, task, research, capability, automation, approval, evidence and live workspace surfaces over canonical APIs.",
     "task_ids": [
-      "REL-001",
-      "REL-006"
+      "UX-001",
+      "UX-005"
     ]
   },
   {
-    "assertion_id": "REL-002-A01",
-    "domain": "release",
+    "assertion_id": "UX-002-A01",
+    "domain": "frontend",
     "priority": "P0",
-    "requirement_id": "REL-002",
-    "statement": "Any rebuild or source/configuration change after candidate creation creates a new candidate and invalidates candidate-specific qualification.",
+    "requirement_id": "UX-002",
+    "statement": "Every client rebuilds from snapshot plus ordered RuntimeEvent cursor and tolerates duplicate/out-of-order delivery without becoming authority.",
     "task_ids": [
-      "REL-001"
+      "QA-007",
+      "UX-002"
     ]
   },
   {
-    "assertion_id": "REL-003-A01",
-    "domain": "release",
+    "assertion_id": "UX-003-A01",
+    "domain": "frontend",
     "priority": "P1",
-    "requirement_id": "REL-003",
-    "statement": "Candidate qualification requires every mapped blocking suite to pass for the exact candidate and enabled support profiles.",
+    "requirement_id": "UX-003",
+    "statement": "Approval UI displays exact semantic effect scope and cannot approve a hidden or changed operation.",
     "task_ids": [
-      "REL-002",
-      "REL-005",
-      "REL-006"
+      "UX-004"
     ]
   },
   {
-    "assertion_id": "REL-004-A01",
-    "domain": "release",
+    "assertion_id": "UX-004-A01",
+    "domain": "frontend",
     "priority": "P1",
-    "requirement_id": "REL-004",
-    "statement": "Canary deployment and rollback operate on the exact qualified candidate and preserve data/effect compatibility.",
+    "requirement_id": "UX-004",
+    "statement": "Live browser/computer UI exposes observation, takeover state, controller identity and return-of-control without restarting the session.",
     "task_ids": [
-      "REL-003",
-      "REL-004",
-      "REL-008"
+      "UX-003"
     ]
   },
   {
-    "assertion_id": "REL-005-A01",
-    "domain": "release",
+    "assertion_id": "UX-005-A01",
+    "domain": "frontend",
     "priority": "P1",
-    "requirement_id": "REL-005",
-    "statement": "Only GATE-M14 may transition an eligible candidate to PRODUCTION_READY.",
+    "requirement_id": "UX-005",
+    "statement": "Web, mobile and CLI clients use the same canonical commands/events and may not introduce local shadow execution.",
     "task_ids": [
-      "GATE-M14",
-      "REL-007"
+      "UX-006",
+      "UX-007",
+      "UX-008"
     ]
   },
   {
-    "assertion_id": "REL-006-A01",
-    "domain": "release",
+    "assertion_id": "UX-006-A01",
+    "domain": "frontend",
     "priority": "P1",
-    "requirement_id": "REL-006",
-    "statement": "Production promotion is a separate authorized operation of the exact PRODUCTION_READY candidate and records post-deploy verification.",
+    "requirement_id": "UX-006",
+    "statement": "Supported client surfaces meet keyboard, focus, assistive-label, reduced-motion and non-color-only status requirements.",
     "task_ids": [
-      "REL-008"
+      "UX-001"
     ]
   }
 ]

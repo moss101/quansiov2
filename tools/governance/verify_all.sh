@@ -6,8 +6,9 @@ cd "$(dirname "$0")/../.."
 PY="${PY:-python3}"
 VENV_PY=".venv/bin/python"
 
-echo "== authority views + integrity artifacts =="
-"$PY" scripts/finalize_package.py
+echo "== authority generation (write then deterministic check) =="
+"$PY" tools/governance/generate_authority.py --write
+"$PY" tools/governance/generate_authority.py --check
 
 echo "== ownership inventory =="
 "$PY" tools/governance/ownership_inventory.py

@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 232,
+  "file_count": 340,
   "files": [
     {
       "path": ".gitignore",
@@ -58,9 +58,34 @@
       "size_bytes": 3201
     },
     {
+      "path": "tools/governance/contract_gate.py",
+      "sha256": "2f43d295db4b3667d877eae2bd731a0dee84dd70ac8c99a0b7c8211f89bc6164",
+      "size_bytes": 3474
+    },
+    {
+      "path": "tools/governance/generate_authority.py",
+      "sha256": "6aa7581f82d32d27b7c8ebaa68472e88d18de12840f441834e73721d46a9cc96",
+      "size_bytes": 5432
+    },
+    {
+      "path": "tools/governance/generate_bindings.py",
+      "sha256": "33ec6848ff1f30993f9dfd7cbfded68236715a93474a08d501e069038455515f",
+      "size_bytes": 7664
+    },
+    {
       "path": "tools/governance/ownership_inventory.py",
       "sha256": "d165ed28dc4936f39949df32c918758159851b6c695317381d8b42d698762a1f",
       "size_bytes": 11705
+    },
+    {
+      "path": "tools/governance/ownership_map.py",
+      "sha256": "75dc695cd9c40c6ac5ec1b8308dff01db063285550a65cbe99a357525ff15f7b",
+      "size_bytes": 5814
+    },
+    {
+      "path": "tools/governance/record_evidence.py",
+      "sha256": "515e91921bffcdf8cbcb7ebd77e45fd3897df1e23ec0e80160b8b630339741c8",
+      "size_bytes": 8482
     },
     {
       "path": "tools/governance/repo_paths.py",
@@ -69,13 +94,28 @@
     },
     {
       "path": "tools/governance/verify_all.sh",
-      "sha256": "447189a5ccdc42384a5769cdde92817162abc6821e967fb834120f4f3cd55571",
-      "size_bytes": 591
+      "sha256": "ea002f97b6c724ce2f71642499ddf72b79376641f05b4204f849d31f43cedec3",
+      "size_bytes": 815
+    },
+    {
+      "path": "tests/governance/test_authority_generation.py",
+      "sha256": "ecafaee7714fa65613de04ee2c98ad410e24c180fc7355313267d2cebbb33821",
+      "size_bytes": 3555
+    },
+    {
+      "path": "tests/governance/test_contract_gate.py",
+      "sha256": "12e8b6c4c1f98d7c022ac586d000c642159d46bd152a0c0a10e942b8e6be8731",
+      "size_bytes": 4434
     },
     {
       "path": "tests/governance/test_ownership_inventory.py",
       "sha256": "ddc37fa6e1db183b6ae5a9ec3bb09ea7713b32e45cc3d0cd85790e989ddef6d3",
       "size_bytes": 5230
+    },
+    {
+      "path": "tests/governance/test_ownership_map.py",
+      "sha256": "b0d86ba3c79b77a128d0e30459d7690581b6c5ee9cd1ac7b09ba36078bd75ed8",
+      "size_bytes": 4024
     },
     {
       "path": "tests/fixtures/valid/AgentGraph.json",
@@ -799,7 +839,7 @@
     },
     {
       "path": "registries/requirements.json",
-      "sha256": "e36688662155a94d1679c5135e7f671310ec0f2bd487071a6fbae6a3283dd48a",
+      "sha256": "62014c26a16bec44f7fd3448d504ee706a2231200336b85ea40b6342fa927dac",
       "size_bytes": 36689
     },
     {
@@ -893,14 +933,504 @@
       "size_bytes": 489
     },
     {
+      "path": "generated/contracts/typescript/AgentGraph.ts",
+      "sha256": "bb1c68c1c8e732ecf1a281f08e863a96187265942298f137272245cc6725e44a",
+      "size_bytes": 499
+    },
+    {
+      "path": "generated/contracts/typescript/ApprovalReceipt.ts",
+      "sha256": "9dafc3fd9a589bb914c7a58050df7e8fb18b319d34205f0fdbda1cbce6e6c8e4",
+      "size_bytes": 636
+    },
+    {
+      "path": "generated/contracts/typescript/ApprovalRequest.ts",
+      "sha256": "f69b967827585aa2a234f2ce67d9d1f139ec0f8ecdd45bd593616103dae62b55",
+      "size_bytes": 756
+    },
+    {
+      "path": "generated/contracts/typescript/ArtifactRecord.ts",
+      "sha256": "0ca4fde9e00f22c28986fcf5856bc0669b18ccc8c930124ce4d5444d973af273",
+      "size_bytes": 641
+    },
+    {
+      "path": "generated/contracts/typescript/AutomationFire.ts",
+      "sha256": "4e3e48dee1a3a11670bb5a2be9c029ce5d1fa9efc04c5d0b70133bb4e340f4fa",
+      "size_bytes": 657
+    },
+    {
+      "path": "generated/contracts/typescript/AutomationSchedule.ts",
+      "sha256": "49e4fa84717308b26fd8f9973c180be047b4d12e38f2784ba6dc6f5fc653984d",
+      "size_bytes": 684
+    },
+    {
+      "path": "generated/contracts/typescript/BrowserSession.ts",
+      "sha256": "e64a05f2ed0146034c71e4ef42570a5989cc01be29b150bef982b50633015878",
+      "size_bytes": 665
+    },
+    {
+      "path": "generated/contracts/typescript/BudgetReservation.ts",
+      "sha256": "7e2a6fd155d6080ce87e179b564bb8756f0d298fad86adef9e1d4cce8590acab",
+      "size_bytes": 644
+    },
+    {
+      "path": "generated/contracts/typescript/BusinessCapabilityPack.ts",
+      "sha256": "ba847ffa7713195494f1430e8623fac5d5ae9788de7c8269dc4ec39508ade4ea",
+      "size_bytes": 1068
+    },
+    {
+      "path": "generated/contracts/typescript/CapabilityDemand.ts",
+      "sha256": "22ca2a167550fa6f11b5de50b2e57e98ed41c8751e5ed6f6e458200a6a5d45f1",
+      "size_bytes": 584
+    },
+    {
+      "path": "generated/contracts/typescript/CapabilitySnapshot.ts",
+      "sha256": "2b04c10fef495dded2d1ba7628d27a9e670d42d2ce3f1f0c725d59b97e0487a2",
+      "size_bytes": 662
+    },
+    {
+      "path": "generated/contracts/typescript/Checkpoint.ts",
+      "sha256": "82ca5882d05276b63bc22643dbc7b60bd498e3cfbcbc5371e4ee3ca649f7f471",
+      "size_bytes": 683
+    },
+    {
+      "path": "generated/contracts/typescript/CommandEnvelope.ts",
+      "sha256": "6a7bd3f38e3a69af20103c9dc6e05867a4b3f6174ebb4762782e984dbbe31ac1",
+      "size_bytes": 616
+    },
+    {
+      "path": "generated/contracts/typescript/ContextProjection.ts",
+      "sha256": "45a69734aac2fb85b705145d5ff55c621db1c503cad1931869d0ee0291d0e5f1",
+      "size_bytes": 745
+    },
+    {
+      "path": "generated/contracts/typescript/EffectRecord.ts",
+      "sha256": "049d57c9ad6d2df281146840636d85b7d0e0e0e2b86c568d6af5f2f4f7714f3a",
+      "size_bytes": 817
+    },
+    {
+      "path": "generated/contracts/typescript/EndpointActionEnvelope.ts",
+      "sha256": "3811a1ae308d1a5606da642bd2d88b4904b7b5e861e45610daf978c5eb404ac8",
+      "size_bytes": 1079
+    },
+    {
+      "path": "generated/contracts/typescript/EndpointActionResult.ts",
+      "sha256": "f2d9b08edd5d36879185b411edddd66fb50cbe0dffac2f14fb4854625bee67cf",
+      "size_bytes": 656
+    },
+    {
+      "path": "generated/contracts/typescript/ExecutionTarget.ts",
+      "sha256": "d6eda212a00d371fd5f54b61edeff1f8a1160c73e80a4b49422f80e4a18fd3db",
+      "size_bytes": 702
+    },
+    {
+      "path": "generated/contracts/typescript/GraphTransaction.ts",
+      "sha256": "b879081ffc28aed31003dfc6cd8914d3eae0733c45e0ddafb09e8ec387fff431",
+      "size_bytes": 583
+    },
+    {
+      "path": "generated/contracts/typescript/ImplementationEvidence.ts",
+      "sha256": "792e6f0add436fbb2fdc09c6a84042c6fea4bdad2dbd0078f4700f4330390390",
+      "size_bytes": 846
+    },
+    {
+      "path": "generated/contracts/typescript/KnowledgeCandidate.ts",
+      "sha256": "b662efae3d9219d6007553614ae81e8ddc1d48989c907f3eab0fdbd495fb786a",
+      "size_bytes": 743
+    },
+    {
+      "path": "generated/contracts/typescript/ModelEvent.ts",
+      "sha256": "6fde6ee6c8d0fa2427d69126344eaae6babb5d9bc35d436fc832684eec34b092",
+      "size_bytes": 661
+    },
+    {
+      "path": "generated/contracts/typescript/ModelRequestEnvelope.ts",
+      "sha256": "9bb88b148b9cbf805d0ee4ab2f5a42289c6f42f8c0e155ed68f50b0505b304dc",
+      "size_bytes": 1029
+    },
+    {
+      "path": "generated/contracts/typescript/NotificationRecord.ts",
+      "sha256": "e78440e918247adad8b4d99dc00b4df9635e8132918433f1dd681cb5f1057b31",
+      "size_bytes": 688
+    },
+    {
+      "path": "generated/contracts/typescript/PolicyDecision.ts",
+      "sha256": "51ffeed9aeb40f8272476f3ea5e378036697087b6eeca4b231beb67833e20a71",
+      "size_bytes": 718
+    },
+    {
+      "path": "generated/contracts/typescript/QualificationResult.ts",
+      "sha256": "3365e8fae7a658c29456aaafa0f6f6ae4bb4956c59003108a4be7ead0278e29e",
+      "size_bytes": 678
+    },
+    {
+      "path": "generated/contracts/typescript/RecoveryConsistencyPoint.ts",
+      "sha256": "1d7a1cbb4c8330883251e53c1f165fd0c648c6895b697ee0e89fd0cf6e529ce8",
+      "size_bytes": 747
+    },
+    {
+      "path": "generated/contracts/typescript/ReleaseCandidate.ts",
+      "sha256": "138d52bd3ed2fd233e1cd4a375c1a794ac30d0fc32d4049e52a7bdda8becc5b4",
+      "size_bytes": 655
+    },
+    {
+      "path": "generated/contracts/typescript/ReleaseStateRecord.ts",
+      "sha256": "a083bb0bd2bd147f2b6fd588fba0d94c56b136538ec88b1daf93035f140df8ea",
+      "size_bytes": 620
+    },
+    {
+      "path": "generated/contracts/typescript/RemoteArtifactVerification.ts",
+      "sha256": "15075ae692ecd940620bb0d6adff81056d2a7b1fe51f5b2cf476d7dad5008341",
+      "size_bytes": 824
+    },
+    {
+      "path": "generated/contracts/typescript/ResearchRecord.ts",
+      "sha256": "874cbd5a165f65526601923f0bd510a59d77ad5a7c1dece14e2d4fc4cf9d4430",
+      "size_bytes": 620
+    },
+    {
+      "path": "generated/contracts/typescript/RuntimeEvent.ts",
+      "sha256": "eaadc56cc1c919d20e6946194f64088b026055a12cc4508a470fa87333964c2c",
+      "size_bytes": 751
+    },
+    {
+      "path": "generated/contracts/typescript/SearchProgram.ts",
+      "sha256": "46538c274ba748e929be28963e02111d1ef8ff20d8c031742c76bd2ff1d3afa9",
+      "size_bytes": 587
+    },
+    {
+      "path": "generated/contracts/typescript/SkillPackage.ts",
+      "sha256": "37294761f53563e79671d42bed524d595cfea6bdee605d5ba7a2db68fe3e023f",
+      "size_bytes": 927
+    },
+    {
+      "path": "generated/contracts/typescript/StateGraph.ts",
+      "sha256": "d6ca96555652f8656762a4a0ca3306b63e35cf2a511c3735ba2afbf72ccb3766",
+      "size_bytes": 510
+    },
+    {
+      "path": "generated/contracts/typescript/SupportSelection.ts",
+      "sha256": "2249b7d02dd91a85afa2733a755bd73a847eb9d7a24a9733b399ad4f65320863",
+      "size_bytes": 531
+    },
+    {
+      "path": "generated/contracts/typescript/ToolOperation.ts",
+      "sha256": "6ebdb5cc226b45065cc6b854fada01ce705603da40c8c4365a6dfa2c3253fd98",
+      "size_bytes": 734
+    },
+    {
+      "path": "generated/contracts/typescript/TurnDispatch.ts",
+      "sha256": "b760333b390dcc3c47a115f0593d3354a2d4d491d1e06bd62af061463ce63252",
+      "size_bytes": 733
+    },
+    {
+      "path": "generated/contracts/typescript/TurnOutcome.ts",
+      "sha256": "3199fd39554bdb646d6f66c3c5524aa174673107820f771c313a446a0ad2a2f1",
+      "size_bytes": 671
+    },
+    {
+      "path": "generated/contracts/typescript/VerificationReport.ts",
+      "sha256": "999ced2f3ff7c46bf8dbea1bacd14445ac36887bae12859c57d7c88c1b341ba7",
+      "size_bytes": 822
+    },
+    {
+      "path": "generated/contracts/typescript/WebhookEnvelope.ts",
+      "sha256": "7f07b55baab04e7f3a1fd1f4311c31f9bcaf8356aba1740fe0676b721df2a8fc",
+      "size_bytes": 618
+    },
+    {
+      "path": "generated/contracts/typescript/WorkGraph.ts",
+      "sha256": "9dd85ff1c5de8b22180651b9fc08801fa2100d1facff749ba2f89aca128b487d",
+      "size_bytes": 568
+    },
+    {
+      "path": "generated/contracts/typescript/WorkerLease.ts",
+      "sha256": "89241954ccdb4b3f2eadbef13adce90be38d5d311ea25f1eafea9abf6625535d",
+      "size_bytes": 630
+    },
+    {
+      "path": "generated/contracts/typescript/index.ts",
+      "sha256": "8c73ab67cd6108607725d3738b27c45ecd6e79f219eb4a5afe3df322c439f767",
+      "size_bytes": 1628
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/__init__.py",
+      "sha256": "b0f20acdf19931c010626e514ee429138267e169bd43d91502147cd6a033b94b",
+      "size_bytes": 3166
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/agent_graph.py",
+      "sha256": "1d7e8ebb6b1413ca5274c61f6dc9cbdfb6fd56c5cbe369c9cbcf636d3c84b8d3",
+      "size_bytes": 1978
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/approval_receipt.py",
+      "sha256": "7851afc7308568e446ffd61a87a6cdc761d75e4e8572d23ccd70c8cb7f5afa4c",
+      "size_bytes": 2138
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/approval_request.py",
+      "sha256": "9bdb727ae1cf83f25b11e4b0ccddf5afb025d33681ecb2fdb178037dfed9f34e",
+      "size_bytes": 2524
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/artifact_record.py",
+      "sha256": "2fd51ce7e0be15be937d451065b81357805a33312583c5b82f8198e5dd04e858",
+      "size_bytes": 2174
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/automation_fire.py",
+      "sha256": "1b2360313201064d056aec76ffcdcae3548dae78b4a457c4b2cf63dc51722b92",
+      "size_bytes": 2175
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/automation_schedule.py",
+      "sha256": "468ed9281b9c1f284fde867f3316a75fccb96d7219730ae69dec9d1aea58dab0",
+      "size_bytes": 2314
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/browser_session.py",
+      "sha256": "00e1cd612cb779c9f7c303bacb22a89eab772aa840db2a35e61370294b65b85f",
+      "size_bytes": 2204
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/budget_reservation.py",
+      "sha256": "34a64005e0e4c5ff3daeec0c3de92011f3a9f02bd4001c153e327d7f9c8f44c7",
+      "size_bytes": 2092
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/business_capability_pack.py",
+      "sha256": "4135b02d29c1744a382eef433469dea4ec7a00693f29f0c9e92afa4f0c9991a6",
+      "size_bytes": 4330
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/capability_demand.py",
+      "sha256": "c8cedcc1f66f5389a196ffb810fa38ebe2dc08b2ce807846b44548637a21253b",
+      "size_bytes": 2626
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/capability_snapshot.py",
+      "sha256": "0e55ac8d0b39d323ff3f99c9d022c64abfd293c78ea8a4567763c1c33b5ec573",
+      "size_bytes": 2108
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/checkpoint.py",
+      "sha256": "4626a09d05107a0bffb0a4d336ce9914d67928e4879c1da4e372806f11df9da9",
+      "size_bytes": 2436
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/command_envelope.py",
+      "sha256": "fb2180498245f4cbcc24e5c84a07e886a580274bb8e83ffcc2300172eb6f3952",
+      "size_bytes": 2027
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/context_projection.py",
+      "sha256": "ca8c11723a6635f4d7bc7ea7d26b7a8ba27bbce87c5778ff76c91a847d9b7a65",
+      "size_bytes": 2472
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/effect_record.py",
+      "sha256": "127d5f9df9f424b48e8200fc812d85d641152113589efe2119d0cdf487a699e8",
+      "size_bytes": 2800
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/endpoint_action_envelope.py",
+      "sha256": "ab7a19a86f875d9a590f3bc4f50f743cd8d27e0dc175b803553af5113a873846",
+      "size_bytes": 3956
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/endpoint_action_result.py",
+      "sha256": "e285690f700268962198eb8e60c5d8a0f133e9a43693223cbbc1e227f296c365",
+      "size_bytes": 2121
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/execution_target.py",
+      "sha256": "fd12e0ef8f904b12d73a337ea430874c93d11914624bc2ea521b0d3058c9f528",
+      "size_bytes": 2344
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/graph_transaction.py",
+      "sha256": "1456a96c6438d5d75d3570ee458c11a7bbf46b40000e8a4f1173a7a1d0f155f5",
+      "size_bytes": 1890
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/implementation_evidence.py",
+      "sha256": "ced9b13efe71920caa5f175ef33636a282da3a4e27f9ee63bf45a6e88fd34ce7",
+      "size_bytes": 2985
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/knowledge_candidate.py",
+      "sha256": "1473d8b4cf1f8c76602a23eccc3b50f7e4a78a59b52f768473199e9334205041",
+      "size_bytes": 2485
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/model_event.py",
+      "sha256": "90eb09d92e7055a1b859e2873f603ebcaa5dd1490dedde2453a1fd0e613a5b7e",
+      "size_bytes": 2379
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/model_request_envelope.py",
+      "sha256": "ed568a462683348bdb56523053a2c3cf11773fadb699ff6b2149d0786486d66e",
+      "size_bytes": 3404
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/notification_record.py",
+      "sha256": "3a4dc4cafd290816e5fa867af0778cd4d12af4fc402f1b7fa21f645e52658ca8",
+      "size_bytes": 2225
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/policy_decision.py",
+      "sha256": "63d4c83bbd2a07c92e4aa00664ca738b0f0be8645228af0c7a83cfda1cb02c8b",
+      "size_bytes": 2534
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/qualification_result.py",
+      "sha256": "801298177494e5451786a66cef9c6e240a83c0583223c66eb60521aad4dd80ec",
+      "size_bytes": 2551
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/recovery_consistency_point.py",
+      "sha256": "3b4feb19c381030b9c0acd4c36045a1567cab819da55514cd529a0c64fb6b135",
+      "size_bytes": 2491
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/release_candidate.py",
+      "sha256": "003f47f5a6746cf45e61e481cc84d8b71b845383a683e126b85069c1c87d3380",
+      "size_bytes": 2446
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/release_state_record.py",
+      "sha256": "f85b94b708dc9bc2f9bd57d2f4bb1c6940d86163e5647ae2e8ae396b0df493c9",
+      "size_bytes": 2142
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/remote_artifact_verification.py",
+      "sha256": "431f7491acfb6956afa557872a931ac33481f8d7ad78d50dd0f2864f51939086",
+      "size_bytes": 2862
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/research_record.py",
+      "sha256": "4029af1bf8611cf87d30b9b14e70683e36161d6a3a854498916fb7d30fcb12eb",
+      "size_bytes": 2121
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/runtime_event.py",
+      "sha256": "5b901c633956555a0bc3abec79d4405a6717509b41ee9dcbefd7eb071fbc63ae",
+      "size_bytes": 2553
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/search_program.py",
+      "sha256": "e7d6f2f684bf7069894cb657ec52d40350030c985b0020ad2ef1c017a1d1bd93",
+      "size_bytes": 6742
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/skill_package.py",
+      "sha256": "02a0fdf2ffaa4c65fc527b8cd81dd1f00600aa5aa16bd1ff1989110426a77345",
+      "size_bytes": 3409
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/state_graph.py",
+      "sha256": "29cb47fe4b71506d438a7d8fbb1748bda9e9ad867a3484e5344bbceefd995bf0",
+      "size_bytes": 1658
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/support_selection.py",
+      "sha256": "60d485ca917bfa5559a1d90414b1f873de8051401b16b506ee5db7bf7ab18235",
+      "size_bytes": 2028
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/tool_operation.py",
+      "sha256": "0998ba48c5e89f545fa84409a1413f2f5b05111d1b2498669e18fe48664a795e",
+      "size_bytes": 2744
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/turn_dispatch.py",
+      "sha256": "5e2bb265bf3eaa2818382e51bb4b60b25c56c80ae4f234585933c9c8b6ae65be",
+      "size_bytes": 2503
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/turn_outcome.py",
+      "sha256": "675e8726b19d3e8e08d297801819d5f529a0030263e21ec3237ee4daa2507993",
+      "size_bytes": 2128
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/verification_report.py",
+      "sha256": "af8c59b795ef02a5a778b4ea6c86123bce469810ef35f60c572a198293a84a93",
+      "size_bytes": 3647
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/webhook_envelope.py",
+      "sha256": "dc1ababea9c9768fca2c064120a0d3749967268ea0db82c93dc54d5a7b0e4842",
+      "size_bytes": 2045
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/work_graph.py",
+      "sha256": "e9e9f0749213a9c26c6ed000c3fce971cc7934a79a16dd178835175af3aa104e",
+      "size_bytes": 2328
+    },
+    {
+      "path": "generated/contracts/python/quansio_contracts/worker_lease.py",
+      "sha256": "d22f16ccf809f28e9b575e2b402bfe46dbe8a5673e1b44ef5d3b1aaca3fa7e5a",
+      "size_bytes": 2184
+    },
+    {
+      "path": "generated/authority/support-mappings.md",
+      "sha256": "6494bb7d8f4324ef48400ebf5017bfe6dcb97605f28b9b86ceb9b27b314f8f77",
+      "size_bytes": 3756
+    },
+    {
+      "path": "evidence/results/GOV-001.assertion-map.json",
+      "sha256": "aaa6def370042a6d0ab5243a24a0eb101d2edc426483a07736c9c66283ddcebf",
+      "size_bytes": 1595
+    },
+    {
+      "path": "evidence/results/GOV-002.assertion-map.json",
+      "sha256": "f395dd8b7d7f47a617eef5cc57688331c033fa43937087674b0ff312a2b63020",
+      "size_bytes": 1775
+    },
+    {
+      "path": "evidence/results/GOV-003.assertion-map.json",
+      "sha256": "71ee3c2f445fb1497ddf624015dc90c14df843f0236981b913afc29b6c3614da",
+      "size_bytes": 1103
+    },
+    {
+      "path": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",
+      "sha256": "14839996dd5cab1c77b7ae9e10cca4a7e364b83c46b560288581637df3e5faf0",
+      "size_bytes": 1207
+    },
+    {
+      "path": "evidence/reports/evidence-gov-002-fb6d77873346.json",
+      "sha256": "d2be0acc397124636b884309d08e2ddabe45352b2d8d4ad3ab51aaf8dc2622d1",
+      "size_bytes": 1120
+    },
+    {
+      "path": "evidence/reports/evidence-gov-003-c2d1ad837f8a.json",
+      "sha256": "b5de4a4ec9b4e22ca0140049c3f72109408d65f5d5281fd7ab0106b6ff613c65",
+      "size_bytes": 1081
+    },
+    {
+      "path": "evidence/reports/report-gov-001-054ee9a63fa0.json",
+      "sha256": "e68c4e982c5f5e864d4b4218f70b29809803c93aa68a0f35e587e49dabebcb19",
+      "size_bytes": 4212
+    },
+    {
+      "path": "evidence/reports/report-gov-002-fb6d77873346.json",
+      "sha256": "8e479366ddb633ca6c76ecadcb74b6f8d50dec538df55fd18d165139ffbb2753",
+      "size_bytes": 4382
+    },
+    {
+      "path": "evidence/reports/report-gov-003-c2d1ad837f8a.json",
+      "sha256": "7f91ef9bf6858e085f73f73e06979df4f9b5af860cf9815b65106fca155f349d",
+      "size_bytes": 3490
+    },
+    {
       "path": "evidence/ownership/inventory.json",
-      "sha256": "3e00cbb4618a62995c56e2c708b32ef77c4d20290c94064a56b0da9a9dc1587b",
-      "size_bytes": 5149
+      "sha256": "d42f5b45a7bb1996d5f8981b0b3fb54a69148fce94a75d9bf28a2f6942dd951b",
+      "size_bytes": 5366
     },
     {
       "path": "evidence/ownership/ownership_registry.json",
-      "sha256": "17dcfc67b2e554796a4081cf81adfe1e0382601ec808bd32069decf73e58a283",
-      "size_bytes": 15401
+      "sha256": "5815e00f70711834815fe1c247e956d8afeb6bdbfbac0582c64c2a1c533827c5",
+      "size_bytes": 22270
     },
     {
       "path": "docs/01_PRODUCT_CONTRACT.md",
@@ -1161,6 +1691,16 @@
       "path": "docs/52_OPERATIONAL_RUNBOOKS.md",
       "sha256": "5c75cfcd25378ddbd1e4d1694038e4f67071125ed461cab2952d0c6d2a774249",
       "size_bytes": 1323
+    },
+    {
+      "path": "docs/decisions/0001-payload-traversal-and-integrity-regeneration.md",
+      "sha256": "208e575e46122d2236c5d3479ff6d8d922fd7b5f642e2943eda551e37d125f77",
+      "size_bytes": 3304
+    },
+    {
+      "path": "docs/decisions/0002-implementation-stack-and-layout.md",
+      "sha256": "ab381d930a46fbaee30267dc5bfac2e3c162887e8ee6592e9de8d12445ec900c",
+      "size_bytes": 3248
     }
   ],
   "schema_revision": "9.0.0"
