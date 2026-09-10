@@ -1,0 +1,65 @@
+{
+  "gate": "GATE-M10",
+  "git_commit": "2a6e3ce46694bc62eb9bb92405a50373594f1afb",
+  "predecessor_evidence_index": [
+    {
+      "evidence": "evidence/reports/evidence-aut-001-46d53d1644e2.json",
+      "evidence_digest": "35090a77c2236d19f64e218ed26d9f68b3cb9bda43088abb455d11f9b9a6f59c",
+      "status": "PASS",
+      "task": "AUT-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-aut-002-46d53d1644e2.json",
+      "evidence_digest": "38d059e02b7374b8e97237a6671f67a3da0798b89c227b2caf0349f8a7e5f250",
+      "status": "PASS",
+      "task": "AUT-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-aut-003-b25cc806f80c.json",
+      "evidence_digest": "a5fc98f7927827357769036d610caa4c6a10ab2d2ca6ea874e1f50eb5b19b0b8",
+      "status": "PASS",
+      "task": "AUT-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-aut-004-46d53d1644e2.json",
+      "evidence_digest": "d060ee22cf6279c87ee42847ec559ee0103bba9b8614ba91587010712e17dc8f",
+      "status": "PASS",
+      "task": "AUT-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-col-001-b3f5b2943f61.json",
+      "evidence_digest": "b3ad791bf149eaac020d1f462030871f06888021ad5b05c545af2ba257beb636",
+      "status": "PASS",
+      "task": "COL-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-col-002-b3f5b2943f61.json",
+      "evidence_digest": "ffeabbd861f6f6cdd171cdf3d0027b3d681b27c7b73d84c2126bfb9b894e4425",
+      "status": "PASS",
+      "task": "COL-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-col-003-b3f5b2943f61.json",
+      "evidence_digest": "f36c8d2a245996ccf401c32510fe572c4a48cced93d74cc8692d8a3a19a75e6a",
+      "status": "PASS",
+      "task": "COL-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-col-004-b3f5b2943f61.json",
+      "evidence_digest": "6a5055cd04bc4d54e63753d9aba3b01bf425aad3ba46f8300621fd02400381db",
+      "status": "PASS",
+      "task": "COL-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gate-m9-b1b757d48742.json",
+      "evidence_digest": "69a2867c612c7a69cfc56a9185117557f91971d8da924e7cced5d9a1e1201fd8",
+      "status": "PASS",
+      "task": "GATE-M9"
+    }
+  ],
+  "problems": [],
+  "protected_ref": "HEAD",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "result": "PASS",
+  "schema_revision": "9.0.0"
+}
