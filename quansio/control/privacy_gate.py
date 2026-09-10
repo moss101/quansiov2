@@ -45,7 +45,7 @@ _SECRET_PATTERNS = [
     (re.compile(r"\b\d{3}-\d{2}-\d{4}\b"), "ssn"),
     (re.compile(r"\b[\w.+-]+@[\w-]+\.[\w.]+\b"), "email"),
 ]
-_DENIED_CLASSES_FOR_EXTERNAL = {"api_key", "private_key", "ssn"}
+_DENIED_CLASSES_FOR_EXTERNAL = {"key_material", "private_key", "ssn"}
 
 
 def classify_bytes(data: bytes | str) -> list[str]:

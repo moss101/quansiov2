@@ -1169,8 +1169,8 @@
     },
     {
       "path": "quansio/control/privacy_gate.py",
-      "sha256": "222a9a60962dbb716deccf20c3ed6e2242f254f2ba59a02ec684127c2325f901",
-      "size_bytes": 5746
+      "sha256": "afff2f23d9e99a795d5442c9e74395f8d6ff4514b8142bf5e992083002979da0",
+      "size_bytes": 5751
     },
     {
       "path": "quansio/context/__init__.py",
