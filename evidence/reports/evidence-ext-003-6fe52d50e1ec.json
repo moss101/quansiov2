@@ -1,0 +1,30 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/EXT-003/health-transcript.json": "80b52ef40b41a589e110d87f437ca13e23b0392ce7e589a41962362d7e731d3f",
+    "evidence/boundary/EXT-003/manifest.json": "d3cfc61fa395c161cb6336eb2231dadb03c28d0d4035edb898cabb07fe1c3adc",
+    "quansio/control/connectors.py": "5f61032bda7e88aba9823289b929a26f51456f586dbaead62fe4f700c5ffbb54",
+    "tests/business/test_business_connectors.py": "b125bd2989d2511dcc54c9a7c31f547a84937f1cd2a0d6b14d7c2fc4bc852952"
+  },
+  "created_at": "2026-09-10T12:37:34Z",
+  "evidence_id": "evidence-ext-003-6fe52d50e1ec",
+  "git_commit": "6fe52d50e1ec28c35ed22908e9d01065c0c727eb",
+  "real_boundary": true,
+  "report_digest": "120b2710b5c7d047e75ed5fdd853759d491d57c2287e76964a8e6d9ac1059e75",
+  "report_path": "evidence/reports/report-ext-003-6fe52d50e1ec.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "EXT-003-A01"
+  ],
+  "requirement_ids": [
+    "EXT-003"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "EXT-003-N01",
+    "EXT-003-P01",
+    "EXT-003-R01"
+  ],
+  "task_id": "EXT-003"
+}
