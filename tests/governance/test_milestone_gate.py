@@ -21,13 +21,14 @@ import pytest
 REPO_ROOT = Path(__file__).resolve().parents[2]
 GATE_TOOL = REPO_ROOT / "tools/governance/milestone_gate.py"
 PY = sys.executable
-GATES_UNDER_TEST = ["GATE-M0", "GATE-M1"]
+GATES_UNDER_TEST = ["GATE-M0", "GATE-M1", "GATE-M2"]
 EXPECTED_M0 = {"ENV-001", "GOV-001", "GOV-002", "GOV-003", "GOV-004", "GOV-005", "GOV-006", "GOV-007"}
 EXPECTED_M1 = {"DAT-001", "DAT-002", "DAT-003", "DAT-004", "DAT-005", "DAT-006", "DAT-007", "DAT-008", "SEC-001", "GATE-M0"}
-EXPECTED = {"GATE-M0": EXPECTED_M0, "GATE-M1": EXPECTED_M1}
+EXPECTED_M2 = {"RUN-001", "RUN-002", "RUN-003", "RUN-004", "RUN-005", "RUN-006", "RUN-007", "RUN-008", "GATE-M1"}
+EXPECTED = {"GATE-M0": EXPECTED_M0, "GATE-M1": EXPECTED_M1, "GATE-M2": EXPECTED_M2}
 # a direct predecessor whose evidence removal must fail the gate
-PROBE_PREDECESSOR = {"GATE-M0": "gov-003", "GATE-M1": "dat-003"}
-PROBE_NAME = {"GATE-M0": "GOV-003", "GATE-M1": "DAT-003"}
+PROBE_PREDECESSOR = {"GATE-M0": "gov-003", "GATE-M1": "dat-003", "GATE-M2": "run-003"}
+PROBE_NAME = {"GATE-M0": "GOV-003", "GATE-M1": "DAT-003", "GATE-M2": "RUN-003"}
 
 
 def run_gate(*args: str, gate: str = "GATE-M0", out: Path | None = None) -> subprocess.CompletedProcess:
