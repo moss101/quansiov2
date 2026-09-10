@@ -54,17 +54,17 @@ def test_dat003_p01_append_and_canonical_replay(log, context):
             run_id,
             f"stage.{i}",
             {"step": i, "of": "dat003"},
-            causal_parents=(parent,) if parent else (),
-            generation=1,
+            causal_parent_ids=(parent,) if parent else (),
+            execution_generation=1,
         )
         appended.append(event)
         parent = event.event_id
 
     assert [e.sequence for e in appended] == [1, 2, 3, 4, 5]
     assert len({e.event_id for e in appended}) == 5
-    assert appended[3].causal_parents == (appended[2].event_id,)
-    assert all(e.producer == "quansio-runtime" for e in appended)
-    assert all(e.generation == 1 for e in appended)
+    assert list(appended[3].causal_parent_ids) == [appended[2].event_id]
+    assert all(e.producer_id == "quansio-runtime" for e in appended)
+    assert all(e.execution_generation == 1 for e in appended)
     assert all(e.committed_at is not None for e in appended)
     assert all(e.tenant_id == context.tenant_id and e.workspace_id == context.workspace_id for e in appended)
 

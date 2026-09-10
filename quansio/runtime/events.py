@@ -1,56 +1,39 @@
 """Canonical RuntimeEvent append, replay and transactional outbox (DAT-003/DAT-004).
 
-The event log is the durable event transport: per-run canonical sequences,
-stable event ids, causal parents, producer identity, execution generation
-and committed timestamps. Appends are idempotent by event_id and strictly
-monotonic per run; replay reproduces the canonical order. The outbox row is
-written inside the same transaction as the event, so a committed state
-mutation is always accompanied by its announcement.
+Events are represented by the generated canonical binding
+``quansio_contracts.RuntimeEvent``; there is no competing DTO. Appends are
+idempotent by event_id and strictly monotonic per run; replay reproduces
+canonical order. The outbox row is prepared inside the same transaction as
+the event, so a committed mutation is always announced.
 """
 
 from __future__ import annotations
 
 import uuid
-from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 
 import psycopg
 from psycopg.types.json import Json
 
 from quansio.platform.context import IdentityContext
 from quansio.platform.db import PlatformDatabase
-
-
-def _s(value) -> str:
-    """Normalize database UUID objects to canonical strings."""
-    return str(value) if isinstance(value, uuid.UUID) else value
-
-
-@dataclass(frozen=True)
-class RuntimeEvent:
-    tenant_id: str
-    workspace_id: str
-    run_id: str
-    sequence: int
-    event_id: str
-    event_type: str
-    producer: str
-    generation: int
-    causal_parents: tuple[str, ...]
-    payload: dict
-    committed_at: datetime
+from quansio_contracts import RuntimeEvent as RuntimeEventContract
 
 
 class EventAppendError(Exception):
     """Raised when an append would violate event-log invariants."""
 
 
+def _s(value):
+    return str(value) if isinstance(value, uuid.UUID) else value
+
+
 class EventLog:
     """Owner: quansio-runtime. Table: runtime_events."""
 
-    def __init__(self, database: PlatformDatabase, producer: str = "quansio-runtime"):
+    def __init__(self, database: PlatformDatabase, producer_id: str = "quansio-runtime"):
         self._db = database
-        self._producer = producer
+        self._producer_id = producer_id
 
     def append(
         self,
@@ -60,14 +43,15 @@ class EventLog:
         payload: dict,
         sequence: int | None = None,
         event_id: str | None = None,
-        generation: int = 0,
-        causal_parents: tuple[str, ...] = (),
+        execution_generation: int = 1,
+        causal_parent_ids: tuple[str, ...] = (),
         outbox: bool = True,
-    ) -> RuntimeEvent:
-        """Append one event inside a single transaction.
+        occurred_at: datetime | None = None,
+    ) -> RuntimeEventContract:
+        """Append one canonical event inside a single transaction.
 
-        ``sequence=None`` allocates max+1 under a per-run advisory lock;
-        an explicit ``sequence`` must be exactly next, otherwise the append
+        ``sequence=None`` allocates max+1 under a per-run advisory lock; an
+        explicit ``sequence`` must be exactly next, otherwise the append
         fails without corrupting replay.
         """
         event_id = event_id or str(uuid.uuid4())
@@ -76,11 +60,11 @@ class EventLog:
                 with connection.transaction():
                     connection.execute("SELECT pg_advisory_xact_lock(hashtext(%s))", (run_id,))
                     if sequence is None:
-                        row = connection.execute(
+                        current_max = connection.execute(
                             "SELECT COALESCE(MAX(sequence), 0) FROM runtime_events WHERE run_id = %s",
                             (run_id,),
-                        ).fetchone()
-                        sequence = row[0] + 1
+                        ).fetchone()[0]
+                        sequence = current_max + 1
                     else:
                         current_max = connection.execute(
                             "SELECT COALESCE(MAX(sequence), 0) FROM runtime_events WHERE run_id = %s",
@@ -91,19 +75,20 @@ class EventLog:
                                 f"non-monotonic sequence {sequence} for run {run_id} (next is {current_max + 1})"
                             )
                     if outbox:
-                        # The announcement is prepared before the mutation it
-                        # announces; a deferred FK keeps the pair atomic, so a
-                        # rollback after this point leaves no transport trace.
+                        # Announcement prepared before the mutation it
+                        # announces; the deferred FK keeps the pair atomic.
                         connection.execute(
                             "INSERT INTO event_outbox (tenant_id, event_id) VALUES (%s, %s)",
                             (context.tenant_id, event_id),
                         )
-                    row = connection.execute(
+                    committed_at = connection.execute(
                         """
                         INSERT INTO runtime_events
-                            (tenant_id, workspace_id, run_id, sequence, event_id, event_type,
-                             producer, generation, causal_parents, payload)
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                            (tenant_id, workspace_id, run_id, sequence, event_id, schema_revision,
+                             event_type, producer_id, execution_generation, causal_parent_ids,
+                             payload, occurred_at)
+                        VALUES (%s, %s, %s, %s, %s, '9.0.0', %s, %s, %s, %s, %s,
+                                COALESCE(%s, now()))
                         RETURNING committed_at
                         """,
                         (
@@ -113,56 +98,89 @@ class EventLog:
                             sequence,
                             event_id,
                             event_type,
-                            self._producer,
-                            generation,
-                            list(causal_parents),
+                            self._producer_id,
+                            execution_generation,
+                            list(causal_parent_ids),
                             Json(payload),
+                            occurred_at,
                         ),
-                    ).fetchone()
+                    ).fetchone()[0]
             except psycopg.errors.UniqueViolation as error:
                 raise EventAppendError(f"duplicate event identity: {error.diag.constraint_name}") from error
-        return RuntimeEvent(
+        return self._bind(
             tenant_id=context.tenant_id,
             workspace_id=context.workspace_id,
             run_id=run_id,
             sequence=sequence,
             event_id=event_id,
             event_type=event_type,
-            producer=self._producer,
-            generation=generation,
-            causal_parents=tuple(causal_parents),
+            producer_id=self._producer_id,
+            execution_generation=execution_generation,
+            causal_parent_ids=tuple(causal_parent_ids),
             payload=payload,
-            committed_at=row[0],
+            occurred_at=occurred_at or committed_at,
+            committed_at=committed_at,
         )
 
-    def replay(self, tenant_id: str, run_id: str, after_sequence: int = 0) -> list[RuntimeEvent]:
+    @staticmethod
+    def _bind(**fields) -> RuntimeEventContract:
+        canonical = {
+            "schema_revision": "9.0.0",
+            "event_id": fields["event_id"],
+            "tenant_id": fields["tenant_id"],
+            "workspace_id": fields["workspace_id"],
+            "run_id": fields["run_id"],
+            "sequence": fields["sequence"],
+            "producer_id": fields["producer_id"],
+            "execution_generation": fields["execution_generation"],
+            "event_type": fields["event_type"],
+            "occurred_at": fields["occurred_at"],
+            "committed_at": fields["committed_at"],
+            "payload": fields["payload"],
+            "causal_parent_ids": list(fields["causal_parent_ids"]),
+        }
+        canonical = EventLog._serialize(canonical)
+        return RuntimeEventContract.from_dict(canonical)
+
+    @staticmethod
+    def _serialize(canonical: dict) -> dict:
+        return {
+            key: (value.isoformat() if isinstance(value, datetime) else value)
+            for key, value in canonical.items()
+        }
+
+    def replay(self, tenant_id: str, run_id: str, after_sequence: int = 0) -> list[RuntimeEventContract]:
         """Replay canonical order strictly after a consumer cursor."""
         rows = self._db.query_all(
             """
-            SELECT tenant_id, workspace_id, run_id, sequence, event_id, event_type,
-                   producer, generation, causal_parents, payload, committed_at
+            SELECT tenant_id, workspace_id, run_id, sequence, event_id, schema_revision,
+                   event_type, producer_id, execution_generation, causal_parent_ids,
+                   payload, occurred_at, committed_at
             FROM runtime_events
             WHERE tenant_id = %s AND run_id = %s AND sequence > %s
             ORDER BY sequence ASC
             """,
             (tenant_id, run_id, after_sequence),
         )
-        return [
-            RuntimeEvent(
-                tenant_id=_s(r[0]),
-                workspace_id=_s(r[1]),
-                run_id=_s(r[2]),
-                sequence=r[3],
-                event_id=_s(r[4]),
-                event_type=r[5],
-                producer=r[6],
-                generation=r[7],
-                causal_parents=tuple(_s(p) for p in (r[8] or ())),
-                payload=r[9],
-                committed_at=r[10],
+        events = []
+        for r in rows:
+            events.append(
+                self._bind(
+                    tenant_id=_s(r[0]),
+                    workspace_id=_s(r[1]),
+                    run_id=_s(r[2]),
+                    sequence=r[3],
+                    event_id=_s(r[4]),
+                    event_type=r[6],
+                    producer_id=r[7],
+                    execution_generation=r[8],
+                    causal_parent_ids=tuple(_s(p) for p in (r[9] or ())),
+                    payload=r[10],
+                    occurred_at=r[11],
+                    committed_at=r[12],
+                )
             )
-            for r in rows
-        ]
+        return events
 
     def publish_pending_outbox(self, limit: int = 100, crash_after_publish: bool = False) -> list[str]:
         """Two-phase outbox delivery.
@@ -194,7 +212,6 @@ class EventLog:
                         "UPDATE event_outbox SET attempts = attempts + 1 WHERE outbox_id = %s",
                         (outbox_id,),
                     )
-                    # Transport publish: deduplicated by event identity.
                     connection.execute(
                         """
                         INSERT INTO delivered_events (tenant_id, event_id)
