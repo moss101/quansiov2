@@ -1,0 +1,30 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/SKL-001/health-transcript.json": "1469e9cfbfe5312f2578235feff61a7a8ef03e29f29bf14cd652e54ce12161f7",
+    "evidence/boundary/SKL-001/manifest.json": "49f9310bcd2894a0d661a43d767395ebe0b750359a6d8619634a1b6169f4eaf7",
+    "quansio/control/skills.py": "325ab487b70ed7fdfe5945386e57003b5ae4a8228c9e8fb9505b4dcb6bc9fa36",
+    "tests/knowledge/test_knowledge_skills.py": "a5990e834dc3ae7022a0f3cb2c163926b83d50bd60da0698cf9dc41326452102"
+  },
+  "created_at": "2026-09-10T09:02:30Z",
+  "evidence_id": "evidence-skl-001-68201885034e",
+  "git_commit": "68201885034ee1fe38b734325d60af6dca0fc27c",
+  "real_boundary": true,
+  "report_digest": "73da705fce3573cc432b4871dbae32ae9e9adb7a8a3747b13539997d2fedbf33",
+  "report_path": "evidence/reports/report-skl-001-68201885034e.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "SKL-001-A01"
+  ],
+  "requirement_ids": [
+    "SKL-001"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "SKL-001-N01",
+    "SKL-001-P01",
+    "SKL-001-R01"
+  ],
+  "task_id": "SKL-001"
+}

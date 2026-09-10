@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "49f9310bcd2894a0d661a43d767395ebe0b750359a6d8619634a1b6169f4eaf7",
+      "path_or_uri": "evidence/boundary/SKL-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "1469e9cfbfe5312f2578235feff61a7a8ef03e29f29bf14cd652e54ce12161f7",
+      "path_or_uri": "evidence/boundary/SKL-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "325ab487b70ed7fdfe5945386e57003b5ae4a8228c9e8fb9505b4dcb6bc9fa36",
+      "path_or_uri": "quansio/control/skills.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "a5990e834dc3ae7022a0f3cb2c163926b83d50bd60da0698cf9dc41326452102",
+      "path_or_uri": "tests/knowledge/test_knowledge_skills.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "SKL-001-A01",
+      "blocking": true,
+      "details": "executed: tests/knowledge/test_knowledge_skills.py::test_skl001_p01_candidate_created_with_full_metadata; tests/knowledge/test_knowledge_skills.py::test_skl001_n01_untrusted_or_incomplete_intake_refused; tests/knowledge/test_knowledge_skills.py::test_skl001_r01_source_update_creates_new_version; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SKL-001-N01",
+      "blocking": true,
+      "details": "executed: tests/knowledge/test_knowledge_skills.py::test_skl001_n01_untrusted_or_incomplete_intake_refused; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SKL-001-P01",
+      "blocking": true,
+      "details": "executed: tests/knowledge/test_knowledge_skills.py::test_skl001_p01_candidate_created_with_full_metadata; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SKL-001-R01",
+      "blocking": true,
+      "details": "executed: tests/knowledge/test_knowledge_skills.py::test_skl001_r01_source_update_creates_new_version; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T09:02:30Z",
+  "git_commit": "68201885034ee1fe38b734325d60af6dca0fc27c",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-skl-001-68201885034e",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "SKL-001"
+}
