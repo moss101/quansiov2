@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "44a698a714f546e9738c1edf046fef22e83ef259b6a23a90ee70e59e4c5ff5dd",
+      "path_or_uri": "evidence/boundary/SRE-006/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "be4bc9f0ce34ef8a4d1de170fa1b3d5bb517a046167f28542629fe7b7bebd85f",
+      "path_or_uri": "evidence/boundary/SRE-006/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "5327fb57d7c029796bf4e5b0bc64ed2096479ff1a5c9dbc143fb671645959882",
+      "path_or_uri": "quansio/observability/sre.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "f997f4b93499734081cd601af72ce6617906947fbacf9b862341692a548a91a3",
+      "path_or_uri": "tests/sre/test_sre_security.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "RUN-006-A01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre006_n01_tenant_isolation_under_shared_limit; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-006-A01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre006_p01_quota_enforcement_with_audit; tests/sre/test_sre_security.py::test_sre006_n01_tenant_isolation_under_shared_limit; tests/sre/test_sre_security.py::test_sre006_r01_restart_preserves_spend_counters; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-006-N01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre006_n01_tenant_isolation_under_shared_limit; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-006-P01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre006_p01_quota_enforcement_with_audit; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-006-R01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre006_r01_restart_preserves_spend_counters; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T15:35:03Z",
+  "git_commit": "c1fdf9152f485b47a72b627e2f9c8989d55afdfb",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-sre-006-c1fdf9152f48",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "SRE-006"
+}

@@ -1,0 +1,34 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/SRE-002/health-transcript.json": "be4bc9f0ce34ef8a4d1de170fa1b3d5bb517a046167f28542629fe7b7bebd85f",
+    "evidence/boundary/SRE-002/manifest.json": "44a698a714f546e9738c1edf046fef22e83ef259b6a23a90ee70e59e4c5ff5dd",
+    "quansio/observability/telemetry.py": "bf20b3c8b950a5a1868716210b3873c2ee56c59b1e38f9b7d0b8ffb1ed409dcc",
+    "tests/sre/test_sre_security.py": "f997f4b93499734081cd601af72ce6617906947fbacf9b862341692a548a91a3"
+  },
+  "created_at": "2026-09-10T15:35:01Z",
+  "evidence_id": "evidence-sre-002-c1fdf9152f48",
+  "git_commit": "c1fdf9152f485b47a72b627e2f9c8989d55afdfb",
+  "real_boundary": true,
+  "report_digest": "99fcb02a89d7ceddbd497fa1d97010e9c59ca2f4397776b1e9c7b080d775ff70",
+  "report_path": "evidence/reports/report-sre-002-c1fdf9152f48.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "SRE-001-A01",
+    "SRE-004-A01",
+    "SRE-005-A01"
+  ],
+  "requirement_ids": [
+    "SRE-001",
+    "SRE-004",
+    "SRE-005"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "SRE-002-N01",
+    "SRE-002-P01",
+    "SRE-002-R01"
+  ],
+  "task_id": "SRE-002"
+}
