@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 1579,
+  "file_count": 1581,
   "files": [
     {
       "path": ".gitignore",
@@ -3643,6 +3643,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m7-d042d4420d4f.json",
+      "sha256": "08eda95892f85b821d1f6fbbe24ae321e7ab3b8ecedd869e62e7e2d6ef8cdec7",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",
       "sha256": "14839996dd5cab1c77b7ae9e10cca4a7e364b83c46b560288581637df3e5faf0",
       "size_bytes": 1207
@@ -5983,6 +5988,11 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m7-d042d4420d4f.json",
+      "sha256": "02764ee1fe4a2a89f24a3d1e49af237ef73709a7d7146112140c56f9cf6838b5",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gov-001-054ee9a63fa0.json",
       "sha256": "e68c4e982c5f5e864d4b4218f70b29809803c93aa68a0f35e587e49dabebcb19",
       "size_bytes": 4212
@@ -7039,8 +7049,8 @@
     },
     {
       "path": "evidence/gates/GATE-M7.json",
-      "sha256": "c3a38b6c1fd1b5cf7593da527f6f18582cc4d7cd69407a82dd71e29da514069d",
-      "size_bytes": 2505
+      "sha256": "a195d7ca42d40686e453d0f7b703558475c13b7082a3a3be7b7ebada91faf0b7",
+      "size_bytes": 2319
     },
     {
       "path": "evidence/boundary/SEC-005/health-transcript.json",
