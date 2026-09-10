@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 511,
+  "file_count": 510,
   "files": [
     {
       "path": ".gitignore",
@@ -99,8 +99,8 @@
     },
     {
       "path": "tools/governance/repo_paths.py",
-      "sha256": "eb4d1eb462189905acb5b14a8857291e5289e62cf855e873c7a97941a655f961",
-      "size_bytes": 2730
+      "sha256": "0694f21fc92708ce9eb9b45b3da811575eed0c130b97e8c4fcc1b2311ad88b45",
+      "size_bytes": 2829
     },
     {
       "path": "tools/governance/verify_all.sh",
@@ -2541,11 +2541,6 @@
       "path": "docs/decisions/0003-decision-and-threat-model-workflow.md",
       "sha256": "a98ba248831e2d5f6f70d1570edbee681d830a80ed08a46a07d207b7c9cb3dcd",
       "size_bytes": 2750
-    },
-    {
-      "path": "deploy/compose/.env.qual",
-      "sha256": "a555de203ce538bb84bed37e1909861a7326028ae56bc06fa1720308c444b8ae",
-      "size_bytes": 216
     },
     {
       "path": "deploy/compose/docker-compose.yml",
