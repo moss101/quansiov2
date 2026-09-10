@@ -147,10 +147,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--gate", required=True)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--out", default=None, help="explicit report path (tests use temp paths)")
     args = parser.parse_args()
 
     report = evaluate(args.gate)
-    out_path = GATES_DIR / f"{args.gate}.json"
+    out_path = Path(args.out) if args.out else GATES_DIR / f"{args.gate}.json"
     rendered = json.dumps(report, indent=2, sort_keys=True) + "\n"
     if args.write:
         out_path.parent.mkdir(parents=True, exist_ok=True)

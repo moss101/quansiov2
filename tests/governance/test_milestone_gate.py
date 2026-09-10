@@ -22,20 +22,22 @@ GATE_TOOL = REPO_ROOT / "tools/governance/milestone_gate.py"
 PY = sys.executable
 
 
-def run_gate(*args: str) -> subprocess.CompletedProcess:
-    return subprocess.run([PY, str(GATE_TOOL), "--gate", "GATE-M0", *args], capture_output=True, text=True, cwd=REPO_ROOT)
+def run_gate(*args: str, out: Path | None = None) -> subprocess.CompletedProcess:
+    extra = ["--out", str(out)] if out else []
+    return subprocess.run([PY, str(GATE_TOOL), "--gate", "GATE-M0", *args, *extra], capture_output=True, text=True, cwd=REPO_ROOT)
 
 
-def predecessor_index() -> dict[str, str]:
-    report = json.loads((REPO_ROOT / "evidence/gates/GATE-M0.json").read_text())
+def predecessor_index(report_path: Path) -> dict[str, str]:
+    report = json.loads(report_path.read_text())
     return {entry["task"]: entry.get("evidence_digest") for entry in report["predecessor_evidence_index"]}
 
 
 @pytest.fixture()
-def gate_report():
-    result = run_gate("--write")
+def gate_report(tmp_path):
+    out = tmp_path / "GATE-M0.json"
+    result = run_gate("--write", out=out)
     assert result.returncode == 0, result.stdout + result.stderr
-    yield json.loads((REPO_ROOT / "evidence/gates/GATE-M0.json").read_text())
+    yield json.loads(out.read_text())
 
 
 def test_gate_p01_all_predecessors_have_valid_evidence(gate_report):
@@ -78,8 +80,9 @@ def test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified(g
     assert restored.returncode == 0, restored.stdout
 
 
-def test_gate_r01_restored_gate_matches_prior_evaluation_without_touching_other_evidence(gate_report):
-    before = predecessor_index()
+def test_gate_r01_restored_gate_matches_prior_evaluation_without_touching_other_evidence(gate_report, tmp_path):
+    committed = json.loads((REPO_ROOT / "evidence/gates/GATE-M0.json").read_text())
+    before = {entry["task"]: entry.get("evidence_digest") for entry in committed["predecessor_evidence_index"]}
     evidences = sorted((REPO_ROOT / "evidence/reports").glob("evidence-gov-005-*.json"))
     stash_dir = REPO_ROOT / "evidence/reports/.stash"
     stash_dir.mkdir(exist_ok=True)
@@ -94,12 +97,13 @@ def test_gate_r01_restored_gate_matches_prior_evaluation_without_touching_other_
         for target, evidence in moved:
             shutil.move(str(target), str(evidence))
         stash_dir.rmdir()
-    assert run_gate("--write").returncode == 0
-    after = predecessor_index()
+    out = tmp_path / "GATE-M0-after.json"
+    assert run_gate("--write", out=out).returncode == 0
+    after = predecessor_index(out)
     # Deterministic re-evaluation: identical verdict inputs, other tasks untouched.
     assert before == after
     # verify each predecessor's evidence file still hashes to the recorded digest
-    report = json.loads((REPO_ROOT / "evidence/gates/GATE-M0.json").read_text())
+    report = json.loads(out.read_text())
     import hashlib
 
     for entry in report["predecessor_evidence_index"]:
