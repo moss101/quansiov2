@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c8569b91b061705821fc8e2991a4a0b21181d1ecb8d668237c15485414bdee3a",
+      "path_or_uri": "evidence/boundary/CTX-008/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "54c09d8f9d5a243e0b1d49b3c5878591196a3513cc9ab12ffa1e7e9c4330c400",
+      "path_or_uri": "evidence/boundary/CTX-008/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "a2f69046bd615c5065625cf837ce868f217ebb964b33fe07dffc87520e4c0b26",
+      "path_or_uri": "quansio/context/scoring.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "fc9c235f1a303d49729541c3c764b3d7e422f1c0ed1588b3126c0dcb5f48ff98",
+      "path_or_uri": "tests/context/corpus.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "50d3d0f28f136ccd03f971a3e24d8dce8a153606c691b991fc261c8ede2377db",
+      "path_or_uri": "tests/context/test_context_stack.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "CTX-006-A01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx006_p01_projection_under_budget_with_identity; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-008-N01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx008_n01_changed_identity_is_non_comparable; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-008-P01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx008_p01_sealed_benchmark_meets_thresholds; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "CTX-008-R01",
+      "blocking": true,
+      "details": "executed: tests/context/test_context_stack.py::test_ctx008_r01_rerun_from_preserved_outputs_is_identical; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T05:40:26Z",
+  "git_commit": "41ba621f9c5c9982209be30a4f8e1eddc5110bb3",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-ctx-008-41ba621f9c5c",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "CTX-008"
+}
