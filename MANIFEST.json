@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 1930,
+  "file_count": 1932,
   "files": [
     {
       "path": ".gitignore",
@@ -4058,6 +4058,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m8-dcc58e61c6ba.json",
+      "sha256": "7036e0fd59fdac92864f83c74941e6a21cb855f3c2377bcdd0e03fc55cff8ab0",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",
       "sha256": "14839996dd5cab1c77b7ae9e10cca4a7e364b83c46b560288581637df3e5faf0",
       "size_bytes": 1207
@@ -7198,6 +7203,11 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m8-dcc58e61c6ba.json",
+      "sha256": "9425137a2eb8a338d4bab77a25d3cb4a82b0c21d6e5ebf5436e784c2dcd38f22",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gov-001-054ee9a63fa0.json",
       "sha256": "e68c4e982c5f5e864d4b4218f70b29809803c93aa68a0f35e587e49dabebcb19",
       "size_bytes": 4212
@@ -8714,7 +8724,7 @@
     },
     {
       "path": "evidence/gates/GATE-M8.json",
-      "sha256": "b66f049785d6b8a530a4f3622dca479a91ace7c617b0dbda83179be291b104f3",
+      "sha256": "484ece361cff9b5703b38799c7a5c40f96597912b82562ee558561c442426635",
       "size_bytes": 2319
     },
     {
