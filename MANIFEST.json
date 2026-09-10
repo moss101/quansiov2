@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 3898,
+  "file_count": 3903,
   "files": [
     {
       "path": ".gitignore",
@@ -171,6 +171,16 @@
       "path": "tests/runtime/test_schema.py",
       "sha256": "03bfae6d824808b721491f2a2872a37c663f9281f48309a25fe339b8b641f33e",
       "size_bytes": 5400
+    },
+    {
+      "path": "tests/release/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "tests/release/test_release.py",
+      "sha256": "75ecc885849c4c1c34bc4776aeb432f07b8db80fced0c286fecd3d0a8a1555c3",
+      "size_bytes": 11421
     },
     {
       "path": "tests/qa/test_qa_verticals.py",
@@ -1298,6 +1308,11 @@
       "size_bytes": 5751
     },
     {
+      "path": "quansio/control/release.py",
+      "sha256": "d23dc4db9b494e8873ed10adf32c504127a0a33110bb20dcaab9e20ecc5a8f7d",
+      "size_bytes": 16600
+    },
+    {
       "path": "quansio/control/skills.py",
       "sha256": "325ab487b70ed7fdfe5945386e57003b5ae4a8228c9e8fb9505b4dcb6bc9fa36",
       "size_bytes": 17253
@@ -1493,6 +1508,11 @@
       "size_bytes": 3308
     },
     {
+      "path": "migrations/up/0020_release.sql",
+      "sha256": "c205fb1417854e3a1d36ef559552387a55ee4b09abe4a5993be32153fe8f402d",
+      "size_bytes": 1859
+    },
+    {
       "path": "migrations/down/0001_identities.sql",
       "sha256": "e1ff5ccfeec910a5a291618151b4c11ca089aa51efb8f085b02ae3ad3ef35ce4",
       "size_bytes": 228
@@ -1586,6 +1606,11 @@
       "path": "migrations/down/0019_sre_security.sql",
       "sha256": "98e5104e1297031dc296a445f73ec7fb31457c6c76a0d446a2d273e2b387591e",
       "size_bytes": 338
+    },
+    {
+      "path": "migrations/down/0020_release.sql",
+      "sha256": "5bd6686d136143c13e7c900e146c78b2a42827c06ddb639365f34946633c3cca",
+      "size_bytes": 189
     },
     {
       "path": "graphs/business-capability-compiler.mmd",
