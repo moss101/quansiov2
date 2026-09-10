@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 609,
+  "file_count": 615,
   "files": [
     {
       "path": ".gitignore",
@@ -2138,6 +2138,36 @@
       "size_bytes": 2546
     },
     {
+      "path": "evidence/environment/qual-20260910T020154/health-transcript.json",
+      "sha256": "2dc3dbc95ae9fc998d98d2b14bd70abc69abaf927a0974a4bae2c426050c6fb9",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T020154/manifest.json",
+      "sha256": "9d3f777bd4e59b5b0f9367e34a9565dfe39de231567f100638f4259337dcce3d",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T020130/health-transcript.json",
+      "sha256": "407d0dc11027fb26dfbc9d1bbe976e3f646521ca80b016dd06d18591772eda09",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/environment/qual-20260910T020130/manifest.json",
+      "sha256": "8b9db6f801b71d61dc451194b99244593163c4356ab479ca0f71e44aa869056a",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T020108/health-transcript.json",
+      "sha256": "7ec65eb890cffd73ee12b5184ef3bc200e188d7c566ae4a27eb1afc8250ed9ca",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T020108/manifest.json",
+      "sha256": "058dbb3caaee0a8c90e01d11022f7875066a49c7a193dffd63b0dcc42011c68f",
+      "size_bytes": 1701
+    },
+    {
       "path": "evidence/environment/qual-20260910T020049/health-transcript.json",
       "sha256": "8a5eb37e48f0a3a495e059086ab0af1878c3534d781a8e978aa6c52f0d12713c",
       "size_bytes": 1403
@@ -2719,22 +2749,22 @@
     },
     {
       "path": "evidence/boundary/DAT-004/health-transcript.json",
-      "sha256": "7539efc02f44af6f771a131b20df755fb26b4f224ff5256f83de43451a19c913",
-      "size_bytes": 1400
+      "sha256": "407d0dc11027fb26dfbc9d1bbe976e3f646521ca80b016dd06d18591772eda09",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/DAT-004/manifest.json",
-      "sha256": "79f47de3150a5aa4ee9c004a3f50292cc4bc7fbd3a693b1b0f7715d29a30f0f3",
+      "sha256": "8b9db6f801b71d61dc451194b99244593163c4356ab479ca0f71e44aa869056a",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/DAT-003/health-transcript.json",
-      "sha256": "7539efc02f44af6f771a131b20df755fb26b4f224ff5256f83de43451a19c913",
-      "size_bytes": 1400
+      "sha256": "407d0dc11027fb26dfbc9d1bbe976e3f646521ca80b016dd06d18591772eda09",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/DAT-003/manifest.json",
-      "sha256": "79f47de3150a5aa4ee9c004a3f50292cc4bc7fbd3a693b1b0f7715d29a30f0f3",
+      "sha256": "8b9db6f801b71d61dc451194b99244593163c4356ab479ca0f71e44aa869056a",
       "size_bytes": 1549
     },
     {
@@ -3034,7 +3064,7 @@
     },
     {
       "path": "deploy/compose/.env.qual",
-      "sha256": "c0ee4e957769c0a7a2eb958540248a8ab0515f1928192a3367aca9f30ac8eb58",
+      "sha256": "7a0a011c6a67c00f8814505af883b20ff966c1a8eb2d6c67ca4a5f2d17a097b1",
       "size_bytes": 216
     },
     {
