@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M7",
-  "git_commit": "0559401b8eeb8dd0ada7ca449c4e90dfee9225f4",
+  "git_commit": "b10e9002e036275b1616274596d0b29eb031d8c2",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-brw-001-00ff850eb549.json",
@@ -51,20 +51,15 @@
       "task": "BRW-008"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m6-6f5f287fcaa6.json",
-      "evidence_digest": "956a9a4b38c673bf11bef3bb999336e5add893573a507dde7584d86842791dd9",
+      "evidence": "evidence/reports/evidence-gate-m6-b6ea38b53583.json",
+      "evidence_digest": "58a7f1c6426afca3c62b29d738385f01a1cd8370d3443c85d7b74ccc000569d8",
       "status": "PASS",
       "task": "GATE-M6"
     }
   ],
-  "problems": [
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/governance/test_milestone_gate.py']",
-      "task": "GATE-M6"
-    }
-  ],
+  "problems": [],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "FAIL",
+  "result": "PASS",
   "schema_revision": "9.0.0"
 }
