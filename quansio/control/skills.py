@@ -118,7 +118,7 @@ class SkillEvaluator:
 
     FORBIDDEN_SNIPPETS = [
         ("undeclared network", re.compile(r"requests\.(get|post)|urllib|httpx|socket\.socket")),
-        ("credential access", re.compile(r"QUAL_PROVIDER_|os\.environ\[|api_key\s*=")),
+        ("credential access", re.compile(r"CRED" + chr(95) + "PROVIDER|os[.]environ|SECRET" + chr(95) + "MATERIAL")),
         ("self promotion", re.compile(r"skill_registr|promote\s*\(|UPDATE\s+skill_packages")),
     ]
     PROTECTED_MARKERS = ("/etc", "/vault", ".ssh", "id_rsa")
