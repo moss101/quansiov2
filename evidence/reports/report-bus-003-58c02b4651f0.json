@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c20a412dbb53eeed23b00252386ec58c2b07f13821601c8541ef645bc1809cc5",
+      "path_or_uri": "evidence/boundary/BUS-003/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "498950d5df3781b29d0a9b5e4932efc25482d40cbeb819d4d7b25c7f10c7b48e",
+      "path_or_uri": "evidence/boundary/BUS-003/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "248a200f5046f704034de670bb443a261fa480916d969bf9bde9620872452cc5",
+      "path_or_uri": "quansio/control/capability_packs.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "b125bd2989d2511dcc54c9a7c31f547a84937f1cd2a0d6b14d7c2fc4bc852952",
+      "path_or_uri": "tests/business/test_business_connectors.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "BUS-003-A01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_bus003_p01_process_reconstruction_binds_skills_workflows; tests/business/test_business_connectors.py::test_bus003_n01_workflow_with_absent_permission_stays_unresolved; tests/business/test_business_connectors.py::test_bus003_r01_dependency_change_regen_preserves_stable_ids; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BUS-003-N01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_bus003_n01_workflow_with_absent_permission_stays_unresolved; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BUS-003-P01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_bus003_p01_process_reconstruction_binds_skills_workflows; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BUS-003-R01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_bus003_r01_dependency_change_regen_preserves_stable_ids; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T11:06:23Z",
+  "git_commit": "58c02b4651f0fd767f4bb74fb69e41e3ccdd89c3",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-bus-003-58c02b4651f0",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "BUS-003"
+}
