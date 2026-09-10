@@ -109,8 +109,8 @@
     },
     {
       "path": "tools/governance/settle.sh",
-      "sha256": "0875303b742655842952a44c626d838a3a71e8c47369ffb20cf098c414bf4ae7",
-      "size_bytes": 2104
+      "sha256": "a1f63e14dbe09bdadd864e3658ae7e0e434043fd6a765f069e6d475f1852b8e0",
+      "size_bytes": 2329
     },
     {
       "path": "tools/governance/verify_all.sh",
@@ -3124,17 +3124,17 @@
     },
     {
       "path": "evidence/boundary/RUN-005/health-transcript.json",
-      "sha256": "27da9414d498be897d4b4f717d545abefa08f8f28006116d3d80f6385b2bca23",
+      "sha256": "089529391adbdeb6869d2130e917b66741d17415100f309482570957b0d09963",
       "size_bytes": 1401
     },
     {
       "path": "evidence/boundary/RUN-005/manifest.json",
-      "sha256": "ffd5d570a1246b3ec54fd6d5f66840d14b2c26b1c00f294c7c4b9bbe3acfe915",
+      "sha256": "a065b0cd821d5272596b0dfd336601e38b3a626b1da5328c0a08df6e5472f0a5",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/RUN-005/model_gateway/mod008-real-stream.json",
-      "sha256": "e722d6633ba553f8b77ab66171a803f0115e3cab41ce9c2c409286070d0566ec",
+      "sha256": "4377fd7ec5bc5fe590ba7079da9d1fbad2187bf1623ae810cbea718b3dca28d4",
       "size_bytes": 583
     },
     {
@@ -3179,17 +3179,17 @@
     },
     {
       "path": "evidence/boundary/MOD-008/health-transcript.json",
-      "sha256": "27da9414d498be897d4b4f717d545abefa08f8f28006116d3d80f6385b2bca23",
+      "sha256": "089529391adbdeb6869d2130e917b66741d17415100f309482570957b0d09963",
       "size_bytes": 1401
     },
     {
       "path": "evidence/boundary/MOD-008/manifest.json",
-      "sha256": "ffd5d570a1246b3ec54fd6d5f66840d14b2c26b1c00f294c7c4b9bbe3acfe915",
+      "sha256": "a065b0cd821d5272596b0dfd336601e38b3a626b1da5328c0a08df6e5472f0a5",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/MOD-008/model_gateway/mod008-real-stream.json",
-      "sha256": "63bc1a0949067e3dd6a1c69a0fe07c00154eeabe1c66176eb24639899766707d",
+      "sha256": "7703774f030f103421c276f7c297df7288c811d77351670b5625aa7ccad5ddf1",
       "size_bytes": 616
     },
     {
@@ -3249,32 +3249,32 @@
     },
     {
       "path": "evidence/boundary/MOD-002/health-transcript.json",
-      "sha256": "27da9414d498be897d4b4f717d545abefa08f8f28006116d3d80f6385b2bca23",
+      "sha256": "089529391adbdeb6869d2130e917b66741d17415100f309482570957b0d09963",
       "size_bytes": 1401
     },
     {
       "path": "evidence/boundary/MOD-002/manifest.json",
-      "sha256": "ffd5d570a1246b3ec54fd6d5f66840d14b2c26b1c00f294c7c4b9bbe3acfe915",
+      "sha256": "a065b0cd821d5272596b0dfd336601e38b3a626b1da5328c0a08df6e5472f0a5",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/MOD-002/model_gateway/mod008-real-stream.json",
-      "sha256": "e722d6633ba553f8b77ab66171a803f0115e3cab41ce9c2c409286070d0566ec",
+      "sha256": "4377fd7ec5bc5fe590ba7079da9d1fbad2187bf1623ae810cbea718b3dca28d4",
       "size_bytes": 583
     },
     {
       "path": "evidence/boundary/MOD-001/health-transcript.json",
-      "sha256": "27da9414d498be897d4b4f717d545abefa08f8f28006116d3d80f6385b2bca23",
+      "sha256": "089529391adbdeb6869d2130e917b66741d17415100f309482570957b0d09963",
       "size_bytes": 1401
     },
     {
       "path": "evidence/boundary/MOD-001/manifest.json",
-      "sha256": "ffd5d570a1246b3ec54fd6d5f66840d14b2c26b1c00f294c7c4b9bbe3acfe915",
+      "sha256": "a065b0cd821d5272596b0dfd336601e38b3a626b1da5328c0a08df6e5472f0a5",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/MOD-001/model_gateway/mod008-real-stream.json",
-      "sha256": "e722d6633ba553f8b77ab66171a803f0115e3cab41ce9c2c409286070d0566ec",
+      "sha256": "4377fd7ec5bc5fe590ba7079da9d1fbad2187bf1623ae810cbea718b3dca28d4",
       "size_bytes": 583
     },
     {

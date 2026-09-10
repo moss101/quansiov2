@@ -110,7 +110,7 @@ def _adapter() -> object:
         profile_id=PROFILE, base_url=PROVIDER_BASE, api_key=None, protocol="openai-chat"))
 
 
-def test_mod008_p01_real_request_streaming_usage_and_evidence(qual_env):
+def test_mod008_p01_real_request_streaming_usage_and_evidence(qual_env, tmp_path):
     gateway = qual_env["gateway"]
     context = qual_env["context"]
     envelope = gateway.admit(
