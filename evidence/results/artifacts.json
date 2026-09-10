@@ -36,6 +36,11 @@
     "quansio/platform/repository.py",
     "tests/runtime/test_foundation.py"
   ],
+  "ENV-001": [
+    "tools/environment/qualenv.py",
+    "deploy/compose/docker-compose.yml",
+    "tests/environment/test_qualenv.py"
+  ],
   "GATE-M0": [
     "tools/governance/milestone_gate.py",
     "tests/governance/test_milestone_gate.py",
@@ -50,6 +55,42 @@
     "tools/governance/milestone_gate.py",
     "tests/governance/test_milestone_gate.py",
     "evidence/gates/GATE-M2.json"
+  ],
+  "GOV-001": [
+    "evidence/ownership/inventory.json",
+    "evidence/ownership/ownership_registry.json",
+    "tools/governance/ownership_inventory.py",
+    "tests/governance/test_ownership_inventory.py"
+  ],
+  "GOV-002": [
+    "evidence/ownership/ownership_registry.json",
+    "tools/governance/ownership_map.py",
+    "tests/governance/test_ownership_map.py"
+  ],
+  "GOV-003": [
+    "tools/governance/generate_bindings.py",
+    "tools/governance/contract_gate.py",
+    "tests/governance/test_contract_gate.py"
+  ],
+  "GOV-004": [
+    "tools/governance/generate_authority.py",
+    "tests/governance/test_authority_generation.py",
+    "generated/authority/support-mappings.md"
+  ],
+  "GOV-005": [
+    "scripts/scan_production_placeholders.py",
+    "scripts/scan_exclusions.json",
+    "tests/governance/test_source_scan.py"
+  ],
+  "GOV-006": [
+    "tools/governance/record_evidence.py",
+    "scripts/validate_implementation_evidence.py",
+    "tests/governance/test_evidence_gate.py"
+  ],
+  "GOV-007": [
+    "tools/governance/decision_gate.py",
+    "docs/decisions/0003-decision-and-threat-model-workflow.md",
+    "tests/governance/test_decision_gate.py"
   ],
   "RUN-001": [
     "quansio/runtime/graphs.py",
