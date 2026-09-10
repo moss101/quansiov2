@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "ab10f0135b148303ead5e930bdb6616a553000f249c59b43c1163354fa22c8f8",
+      "path_or_uri": "evidence/boundary/COL-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "043034c2ed7efe65e6c13bea296d67f694235e157538ddd487be2459cb761c1a",
+      "path_or_uri": "evidence/boundary/COL-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "6fe164c6b54d0cf2dbccd9e90277be67aec83ca9ce50677f8b1591b06d5685dc",
+      "path_or_uri": "quansio/context/collaboration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "57ada1b380b53157b8eee713f49cede45d0fed4c2a62f0b90372065ab0682272",
+      "path_or_uri": "migrations/up/0018_automation_collaboration.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "2d0d32f0966e885b0e710d22f044eafd980ba2ca441dc3e54573d8f3f8d945da",
+      "path_or_uri": "tests/automation/test_automation_collaboration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "COL-001-N01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col001_n01_shadow_execution_queue_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "COL-001-P01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col001_p01_room_projection_over_participants_and_messages; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "COL-001-R01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col001_r01_projection_rebuilds_from_canonical_events; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-006-A01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col001_n01_shadow_execution_queue_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-004-A01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col001_p01_room_projection_over_participants_and_messages; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T11:43:08Z",
+  "git_commit": "b3f5b2943f61a94e508c2fb1574f2bc60466c1f3",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-col-001-b3f5b2943f61",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "COL-001"
+}

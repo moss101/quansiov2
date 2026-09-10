@@ -13,6 +13,6 @@
     "tests/automation/test_automation_collaboration.py::test_aut003_r01_restored_authority_follows_missed_fire_policy"
   ],
   "SEC-001-A01": [
-    "tests/automation/test_automation_collaboration.py::test_aut003_n01_revoked_authority_blocks_fire"
+    "tests/automation/test_automation_collaboration.py::test_aut003_p01_and_n01_revoked_authority_blocks_fire"
   ]
 }
