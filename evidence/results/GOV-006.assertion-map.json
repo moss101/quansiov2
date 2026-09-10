@@ -1,0 +1,22 @@
+{
+  "GOV-006-P01": [
+    "tests/governance/test_evidence_gate.py::test_p06_valid_evidence_passes",
+    "tests/governance/test_evidence_gate.py::test_p06_each_evidence_dimension_is_enforced"
+  ],
+  "GOV-006-N01": [
+    "tests/governance/test_evidence_gate.py::test_n06_outer_pass_cannot_wrap_blocking_fail",
+    "tests/governance/test_evidence_gate.py::test_n06_substituted_artifact_is_rejected"
+  ],
+  "GOV-006-R01": [
+    "tests/governance/test_evidence_gate.py::test_r06_blocked_boundary_stays_non_completing_until_boundary_available"
+  ],
+  "GOV-004-A01": [
+    "tests/governance/test_evidence_gate.py::test_p06_valid_evidence_passes",
+    "tests/governance/test_evidence_gate.py::test_p06_each_evidence_dimension_is_enforced"
+  ],
+  "INV-008-A01": [
+    "tests/governance/test_evidence_gate.py::test_n06_outer_pass_cannot_wrap_blocking_fail",
+    "tests/governance/test_evidence_gate.py::test_n06_substituted_artifact_is_rejected",
+    "tests/governance/test_evidence_gate.py::test_r06_blocked_boundary_stays_non_completing_until_boundary_available"
+  ]
+}
