@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 1132,
+  "file_count": 1215,
   "files": [
     {
       "path": ".gitignore",
@@ -194,8 +194,8 @@
     },
     {
       "path": "tests/governance/test_milestone_gate.py",
-      "sha256": "9c5d022b04b00165f29a671e9bb39da78d9e19109433571b4e49b5dc13b45cbf",
-      "size_bytes": 5348
+      "sha256": "1945d0640a83622bda12c8520d2f193e81e892cd4aa009b3d12a9382840a5e2b",
+      "size_bytes": 5530
     },
     {
       "path": "tests/governance/test_ownership_inventory.py",
@@ -1948,6 +1948,21 @@
       "size_bytes": 742
     },
     {
+      "path": "evidence/results/EFF-001.assertion-map.json",
+      "sha256": "3c11488b2af30e4c70fcbffcce46691a2c0a5b7db5f58ebc442380299e760fec",
+      "size_bytes": 856
+    },
+    {
+      "path": "evidence/results/EFF-002.assertion-map.json",
+      "sha256": "4874900e6960f5fe12e9cb70628141ad06f60a7bfe554c6ddc5bd94add29a4b4",
+      "size_bytes": 922
+    },
+    {
+      "path": "evidence/results/EFF-003.assertion-map.json",
+      "sha256": "39486f89fb6a1d83d2593d88c7f1e399d8c4b1aa2b9d104df22e27777464b614",
+      "size_bytes": 843
+    },
+    {
       "path": "evidence/results/ENV-001.assertion-map.json",
       "sha256": "5a274b37f557561a74a9012a31a944bb6c34dfa3c34663ff796e4c72632b63ef",
       "size_bytes": 791
@@ -1975,6 +1990,11 @@
     {
       "path": "evidence/results/GATE-M4.assertion-map.json",
       "sha256": "619f2831906c639927df330d2b64378abe2dc100e4a5b1b980c5ea50c471488b",
+      "size_bytes": 717
+    },
+    {
+      "path": "evidence/results/GATE-M5.assertion-map.json",
+      "sha256": "54cab485025d9113afcd4266311c150ddf00b717090842478de5baca2fa57565",
       "size_bytes": 717
     },
     {
@@ -2098,9 +2118,29 @@
       "size_bytes": 813
     },
     {
+      "path": "evidence/results/SEC-002.assertion-map.json",
+      "sha256": "ad7bd2194db42271d554884ec6104a2f04bf05f51bb8df589b215885900a8d5e",
+      "size_bytes": 665
+    },
+    {
+      "path": "evidence/results/SEC-003.assertion-map.json",
+      "sha256": "5b562535e0fa40df851f0a932ffaca0cc81877a3829962c0bb901c58689fc40c",
+      "size_bytes": 826
+    },
+    {
+      "path": "evidence/results/SEC-004.assertion-map.json",
+      "sha256": "0e0b273432d3064723caea343c5569fec8aa86acfc33bc3dbbe539066c11fef6",
+      "size_bytes": 691
+    },
+    {
+      "path": "evidence/results/SEC-005.assertion-map.json",
+      "sha256": "0ccf31683cbd11f98e8fc9516c400c803e650dff3fa75430ea029881a16d0378",
+      "size_bytes": 603
+    },
+    {
       "path": "evidence/results/artifacts.json",
-      "sha256": "b48af00ef7be71cb2f26d3bf0adceb03f8f56ff367cfcac62002560b8a2cab88",
-      "size_bytes": 5887
+      "sha256": "a13124db10df547e396fedfd457e4b131251d5d97fbda23b98aef3d5a1fe475c",
+      "size_bytes": 6876
     },
     {
       "path": "evidence/reports/evidence-ctx-001-3a62b141e640.json",
@@ -2253,6 +2293,11 @@
       "size_bytes": 1261
     },
     {
+      "path": "evidence/reports/evidence-ctx-008-dc3e45d3ade8.json",
+      "sha256": "4b2dee8a21c27e2ab39025fef99402e257b829f6581cb90dc566dfcc2f04e045",
+      "size_bytes": 1261
+    },
+    {
       "path": "evidence/reports/evidence-dat-001-20882bb890ba.json",
       "sha256": "bb2588989b4845ce37a002a0b0235ecaef70766f918d964676a88357abe7ea21",
       "size_bytes": 1282
@@ -2383,6 +2428,21 @@
       "size_bytes": 1197
     },
     {
+      "path": "evidence/reports/evidence-eff-001-4be98e131f5e.json",
+      "sha256": "7a26151a529fb25d478657675cbda89d77f0bc6381fa512f59c2285fce20c164",
+      "size_bytes": 1416
+    },
+    {
+      "path": "evidence/reports/evidence-eff-002-4be98e131f5e.json",
+      "sha256": "9774a56a16144038dd93bb9c4e6fc7017d95a7b24db822dbd44728851750f42e",
+      "size_bytes": 1197
+    },
+    {
+      "path": "evidence/reports/evidence-eff-003-4be98e131f5e.json",
+      "sha256": "79ae7ef057d541f7d62f300db898b839eb9af4f80a97382f8f5f6589a812ff5b",
+      "size_bytes": 1303
+    },
+    {
       "path": "evidence/reports/evidence-env-001-72761ce487c9.json",
       "sha256": "5a7dabb3631a5da483c45a99420e645158f25dfb3abbed55a9750e55086d54be",
       "size_bytes": 1337
@@ -2425,6 +2485,11 @@
     {
       "path": "evidence/reports/evidence-gate-m0-38b6b4db7443.json",
       "sha256": "23e16d8af2c0b935a24edf618df4da66b23b939561e74012ad741de137072046",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m0-3c449ddc5e4f.json",
+      "sha256": "cd9eeb260f5e4e799d7baeaaaf4a5f9dc8ff813487858ccc8b035cf05d05a1e1",
       "size_bytes": 1039
     },
     {
@@ -2483,6 +2548,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m0-9022e5064a38.json",
+      "sha256": "7845ae08bdcb011f04db81a65c16870008e026e7958f6eaba11d1de0fe8a9dc3",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m0-933a2cc2dbf5.json",
       "sha256": "e168e90c6f6083d0b822b26956775267ee98dce1a726995220281e001f8d9c7d",
       "size_bytes": 1039
@@ -2513,6 +2583,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m0-b7c60c5a2383.json",
+      "sha256": "cc841d092ef1ddfdad9cc075aae52d0835649fadfe70c9d75292e62def1728c4",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m0-baa9bf388e60.json",
       "sha256": "e19dc6e763e8ed3b14d7345c0764a829370c314a9efc76de4651872915ad68a4",
       "size_bytes": 1039
@@ -2535,6 +2610,11 @@
     {
       "path": "evidence/reports/evidence-gate-m0-d7c4c7caa5e8.json",
       "sha256": "4131c87fe0d4f07621fad8e11775440460a899e74ae2662750e428d52a267c9f",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m0-dc3e45d3ade8.json",
+      "sha256": "2b6a0b6e939656c2abc092be8dfb8e57e44cb9ed7157f4b23b4148df05eff50d",
       "size_bytes": 1039
     },
     {
@@ -2598,6 +2678,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m1-3c449ddc5e4f.json",
+      "sha256": "c1a71112478273b88a024ada527f3b49963547a394c7b9069c13cbd47ce44a50",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m1-3dc40dde90e7.json",
       "sha256": "0a5748e5d5908a6a0375502332a688cb693a9a328fe0c8532f54e828d49d1463",
       "size_bytes": 1039
@@ -2653,6 +2738,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m1-9022e5064a38.json",
+      "sha256": "605173ac7e60020804824d69a1cb4098fdbf6a2f44d6fb9bbb8127a43778a41d",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m1-933a2cc2dbf5.json",
       "sha256": "994fff4503b1329a5f63d4902e298f3b28a0c5b6dba91ea865d7100bc302b808",
       "size_bytes": 1039
@@ -2670,6 +2760,11 @@
     {
       "path": "evidence/reports/evidence-gate-m1-a61a06b89fe9.json",
       "sha256": "ee4ade841fcc909ec3eb6813d91d4f651e9b769d43d099fb7d8e2219b0fa25b9",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m1-b7c60c5a2383.json",
+      "sha256": "3e52793887e8677a6559e5d7e1ad2389b33d7d0b78ec74675bff87c5639c3a0d",
       "size_bytes": 1039
     },
     {
@@ -2695,6 +2790,11 @@
     {
       "path": "evidence/reports/evidence-gate-m1-d7c4c7caa5e8.json",
       "sha256": "3b8a5fac77115bbe0b2a5e0908162b272ff0738c1d64a44b9453aa182ae29481",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m1-dc3e45d3ade8.json",
+      "sha256": "d331e2321c4b5fefa082aded620eb48a1cbc0e2feb2e493bab418a16f75b9b5f",
       "size_bytes": 1039
     },
     {
@@ -2748,6 +2848,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m2-3c449ddc5e4f.json",
+      "sha256": "44a80fef3631000dcd61fc43523c3747495ac9c041c2b934b89984930c1a310a",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m2-3dc40dde90e7.json",
       "sha256": "f15eac3597a32001b5a220ca1594d7434d46390873715e7bd8cbdbd46bc5c3e3",
       "size_bytes": 1039
@@ -2798,6 +2903,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m2-9022e5064a38.json",
+      "sha256": "749b5378bb421f07bbaa6fd6e8be363241cc99bf3f754b7957937b426501ced4",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m2-933a2cc2dbf5.json",
       "sha256": "944726b4db66d0532e512b96accfdac689c687e7116e2ebe6b008d01b8f6e0b2",
       "size_bytes": 1039
@@ -2818,6 +2928,11 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m2-b7c60c5a2383.json",
+      "sha256": "a87b3368fc2ba587797b04bf5ace66ae47dba90b1d0b840ebf1c58d9c7c42736",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m2-baa9bf388e60.json",
       "sha256": "c59f48e4709ee54a35ea326bddd177ddc18bcdfdae406bae0bf19cea6448a9e6",
       "size_bytes": 1039
@@ -2835,6 +2950,11 @@
     {
       "path": "evidence/reports/evidence-gate-m2-d7c4c7caa5e8.json",
       "sha256": "f31bc98a83e3c64b6fd7c7f6a629ac3795a0df5576d091f1c35fd99ec7beb415",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m2-dc3e45d3ade8.json",
+      "sha256": "f7a0e15c9be8fe84f2697b14dfeb09b8345dc0e17036e18f105d070618834092",
       "size_bytes": 1039
     },
     {
@@ -2873,8 +2993,18 @@
       "size_bytes": 1039
     },
     {
+      "path": "evidence/reports/evidence-gate-m3-dc3e45d3ade8.json",
+      "sha256": "bde55e81a5ddfcde242f2f146e4a4c3bebb14ee5263193acc185034a377c0a44",
+      "size_bytes": 1039
+    },
+    {
       "path": "evidence/reports/evidence-gate-m4-8486cd589e90.json",
       "sha256": "0a4ffbe3b65bf207dca6c75f1ccf5e805298c8912570071831a02e81307e92de",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m4-dc3e45d3ade8.json",
+      "sha256": "a4850db6e8ecf45155ce3e6864f63a7aebb87e66e7a855060d0f9115acdcf655",
       "size_bytes": 1039
     },
     {
@@ -2968,6 +3098,11 @@
       "size_bytes": 1120
     },
     {
+      "path": "evidence/reports/evidence-gov-002-3c449ddc5e4f.json",
+      "sha256": "686cfc272dab281afb07dee810bbfc383920386fd79cf40f04432ba112dadb23",
+      "size_bytes": 1120
+    },
+    {
       "path": "evidence/reports/evidence-gov-002-3dc40dde90e7.json",
       "sha256": "1c1a63a60f98d110e67a5c5a449fec2cce35268e15ed183e763288c46d5a59dd",
       "size_bytes": 1120
@@ -3053,6 +3188,11 @@
       "size_bytes": 1120
     },
     {
+      "path": "evidence/reports/evidence-gov-002-9022e5064a38.json",
+      "sha256": "c4525017245f74d177f5280b9be1f5b0dc51da6037f2cb021b485625d4571290",
+      "size_bytes": 1120
+    },
+    {
       "path": "evidence/reports/evidence-gov-002-933a2cc2dbf5.json",
       "sha256": "3e5d3f531f0b552ddea93d214d0d2d1b02f55226d78ee32ab0d2afcc711ca7b5",
       "size_bytes": 1120
@@ -3075,6 +3215,11 @@
     {
       "path": "evidence/reports/evidence-gov-002-b6ec0505fd13.json",
       "sha256": "63bbe16102db8b2f770de1e944c3bceeaf7378b67007b7e63cfc769322724d9e",
+      "size_bytes": 1120
+    },
+    {
+      "path": "evidence/reports/evidence-gov-002-b7c60c5a2383.json",
+      "sha256": "84db166dce73199d08f1c8aadca6181d52b76aba6ef3e5a5c9f75dfea5225236",
       "size_bytes": 1120
     },
     {
@@ -3105,6 +3250,11 @@
     {
       "path": "evidence/reports/evidence-gov-002-d7c4c7caa5e8.json",
       "sha256": "6eb1633542ffa158d44f42a5c7e2ec97f58aeb2a14996e4c075fa8b20ea89a32",
+      "size_bytes": 1120
+    },
+    {
+      "path": "evidence/reports/evidence-gov-002-dc3e45d3ade8.json",
+      "sha256": "b01c2f1ba74150b8881ea45ef1f46a05de593de5b6b2c9432690f2537beaea53",
       "size_bytes": 1120
     },
     {
@@ -3288,6 +3438,11 @@
       "size_bytes": 1297
     },
     {
+      "path": "evidence/reports/evidence-mod-008-3c449ddc5e4f.json",
+      "sha256": "575d00ab5495d274cfa81a5679d639f68f483cb3ba9c3a26099a5c6a927cb89a",
+      "size_bytes": 1297
+    },
+    {
       "path": "evidence/reports/evidence-mod-008-3dc40dde90e7.json",
       "sha256": "f7a6e35d17bf68595e4a4d6e30cbc40f69dd60524293f513a4cb8301c997bfda",
       "size_bytes": 1297
@@ -3353,6 +3508,11 @@
       "size_bytes": 1297
     },
     {
+      "path": "evidence/reports/evidence-mod-008-9022e5064a38.json",
+      "sha256": "372886f8c6618ef972f075494edff8f6ab11e2ae8444f107a6c57e95de2c6d9c",
+      "size_bytes": 1297
+    },
+    {
       "path": "evidence/reports/evidence-mod-008-933a2cc2dbf5.json",
       "sha256": "814f4de149a2dd8c68ab0d27e125f8e6f2d13cdc5413106066591e58a57b2c2f",
       "size_bytes": 1297
@@ -3366,6 +3526,11 @@
       "path": "evidence/reports/evidence-mod-008-a61a06b89fe9.json",
       "sha256": "23f0481eb27a03b630b42c349d5201fdac47d15ae80d00ebc3ca845f66bd9e3e",
       "size_bytes": 1419
+    },
+    {
+      "path": "evidence/reports/evidence-mod-008-b7c60c5a2383.json",
+      "sha256": "fceae09d80001834155e0c5cdf13dbe722a85ba80f99152ebd53b91973a1b838",
+      "size_bytes": 1297
     },
     {
       "path": "evidence/reports/evidence-mod-008-baa9bf388e60.json",
@@ -3385,6 +3550,11 @@
     {
       "path": "evidence/reports/evidence-mod-008-d7c4c7caa5e8.json",
       "sha256": "1893bf7581d40eb2436e522e84d4ce45959fce90cab255895cb791eb056e9b6a",
+      "size_bytes": 1297
+    },
+    {
+      "path": "evidence/reports/evidence-mod-008-dc3e45d3ade8.json",
+      "sha256": "5f3d87edd885c3d2e34b498be4ce9d0ffd12462510fe6f4cfdcf765470950428",
       "size_bytes": 1297
     },
     {
@@ -3553,6 +3723,26 @@
       "size_bytes": 1315
     },
     {
+      "path": "evidence/reports/evidence-sec-002-4be98e131f5e.json",
+      "sha256": "479f17fe5b556839c0aa50679a9ea863063d4511ba8ac8a5f0a2e7f1c8c67e35",
+      "size_bytes": 1275
+    },
+    {
+      "path": "evidence/reports/evidence-sec-003-4be98e131f5e.json",
+      "sha256": "2393d6346b391ed91d09f69318f3bffdac57cdd803c39219cec950a9835062f5",
+      "size_bytes": 1202
+    },
+    {
+      "path": "evidence/reports/evidence-sec-004-4be98e131f5e.json",
+      "sha256": "538d3ff89e535a0ab2964dd581150fd554f4d40d23cf6880a4ee0a36c0282a84",
+      "size_bytes": 1162
+    },
+    {
+      "path": "evidence/reports/evidence-sec-005-4be98e131f5e.json",
+      "sha256": "619d034f6bcaa90ee248c5dd372e05693a3fc5ddb8d48084a781d7759381adea",
+      "size_bytes": 1161
+    },
+    {
       "path": "evidence/reports/report-ctx-001-3a62b141e640.json",
       "sha256": "9b7610de1d68f9c0e46e78f142f121a6dd4d2a6c4d594acd550c0850da56c9e3",
       "size_bytes": 3015
@@ -3703,6 +3893,11 @@
       "size_bytes": 3138
     },
     {
+      "path": "evidence/reports/report-ctx-008-dc3e45d3ade8.json",
+      "sha256": "ce621ec62b06f6be61fa704293e16fcbcb92800435c51a24da17c5dd59a3a002",
+      "size_bytes": 3138
+    },
+    {
       "path": "evidence/reports/report-dat-001-20882bb890ba.json",
       "sha256": "c8c5197c4d7ec68476269eb1865eb5d1277c6a63a750d9642cc70ffd7761e8a1",
       "size_bytes": 3812
@@ -3833,6 +4028,21 @@
       "size_bytes": 3397
     },
     {
+      "path": "evidence/reports/report-eff-001-4be98e131f5e.json",
+      "sha256": "f3494c68ebfee0048e8c4e0c75d966d5459e47ef6e6aad68dced2efeea716383",
+      "size_bytes": 3980
+    },
+    {
+      "path": "evidence/reports/report-eff-002-4be98e131f5e.json",
+      "sha256": "64550dcb0c21a340fb99f1d0154bdc8ecb85bc090a0b73ba574da4f143262322",
+      "size_bytes": 3571
+    },
+    {
+      "path": "evidence/reports/report-eff-003-4be98e131f5e.json",
+      "sha256": "862a1354afd139b388a45d2b303d215e32c13c642ab8e3278fa272918a36bf17",
+      "size_bytes": 3726
+    },
+    {
       "path": "evidence/reports/report-env-001-72761ce487c9.json",
       "sha256": "d8d4899da276963a5c8602acda8ddd2df5e93d5dfdf01ff20ec18a9013c99db7",
       "size_bytes": 3708
@@ -3875,6 +4085,11 @@
     {
       "path": "evidence/reports/report-gate-m0-38b6b4db7443.json",
       "sha256": "c46001de36e0c780514728f3855d43dd7d1698565abb7045377a35b8aec77fed",
+      "size_bytes": 3023
+    },
+    {
+      "path": "evidence/reports/report-gate-m0-3c449ddc5e4f.json",
+      "sha256": "97ba6a146fec98559acdbc258bd5b644b5334524ee604f04c3155dc874d9d6e5",
       "size_bytes": 3023
     },
     {
@@ -3933,6 +4148,11 @@
       "size_bytes": 3023
     },
     {
+      "path": "evidence/reports/report-gate-m0-9022e5064a38.json",
+      "sha256": "9afa220b1d02dd098201d4e70c5a5d99aec02f38f6dd3f32d5bf1e84acc71a92",
+      "size_bytes": 3023
+    },
+    {
       "path": "evidence/reports/report-gate-m0-933a2cc2dbf5.json",
       "sha256": "87e106ad8f9d25cc40d290fc6735005e013dc5e322c3ff24e726c1604d5ed052",
       "size_bytes": 3023
@@ -3963,6 +4183,11 @@
       "size_bytes": 3023
     },
     {
+      "path": "evidence/reports/report-gate-m0-b7c60c5a2383.json",
+      "sha256": "49e298517d07e7e5f4b37e768c5fcb8b8982c07ed0538ca9f68aa7b133afa874",
+      "size_bytes": 3023
+    },
+    {
       "path": "evidence/reports/report-gate-m0-baa9bf388e60.json",
       "sha256": "a9dacdf7e0a759a7f5bea25a6e4893945f00c6414d53cf0f31c70675c18940a7",
       "size_bytes": 3023
@@ -3985,6 +4210,11 @@
     {
       "path": "evidence/reports/report-gate-m0-d7c4c7caa5e8.json",
       "sha256": "393148e4742ef1187ed12207fe152c86870ffe924b2587f2464bd048c5466b82",
+      "size_bytes": 3023
+    },
+    {
+      "path": "evidence/reports/report-gate-m0-dc3e45d3ade8.json",
+      "sha256": "84127131b2db41b66247adbbf66acd88a16a80e19e3bb31d2a0e02d7f9ab923a",
       "size_bytes": 3023
     },
     {
@@ -4048,6 +4278,11 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m1-3c449ddc5e4f.json",
+      "sha256": "5bacdfa9d426243293b99d551fdf7ebc20a2bc12a29253e15c7382a042d99c5e",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gate-m1-3dc40dde90e7.json",
       "sha256": "fbcfd898d866f31a1faa6e102146a48b15c27a822cf3853207e0e60dab3ffe18",
       "size_bytes": 2887
@@ -4103,6 +4338,11 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m1-9022e5064a38.json",
+      "sha256": "55e3e1a1182036eca6d85cf9db3489453389c8e2429c2ec341a97c0cae1f6bf0",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gate-m1-933a2cc2dbf5.json",
       "sha256": "44dd9a755b49915260b3c8eb76de12dae7fef1adbd3610e0c0eaecd0939b3e8e",
       "size_bytes": 2887
@@ -4120,6 +4360,11 @@
     {
       "path": "evidence/reports/report-gate-m1-a61a06b89fe9.json",
       "sha256": "41d6eae015e09cb66b0834044183a3b23a4c1c96ffb58a96430168f9bcf9f26f",
+      "size_bytes": 2887
+    },
+    {
+      "path": "evidence/reports/report-gate-m1-b7c60c5a2383.json",
+      "sha256": "f6639756f30f2aa7e86028a4983a87728957baba035ceeee65ef93162d0a243d",
       "size_bytes": 2887
     },
     {
@@ -4145,6 +4390,11 @@
     {
       "path": "evidence/reports/report-gate-m1-d7c4c7caa5e8.json",
       "sha256": "988546aca51315cf0593584fd0b74ec7dbd6ad770fcc2e8b3f2bdd2c6b881ed1",
+      "size_bytes": 2887
+    },
+    {
+      "path": "evidence/reports/report-gate-m1-dc3e45d3ade8.json",
+      "sha256": "5c1669aa575c39d46335d83421c6317be10a09aaf822dda96e6f9815f416a892",
       "size_bytes": 2887
     },
     {
@@ -4198,6 +4448,11 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m2-3c449ddc5e4f.json",
+      "sha256": "2baeb53eff6dc60d69f88245a918b5bc43194a0e043a807711220506e941aef3",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gate-m2-3dc40dde90e7.json",
       "sha256": "f6ed4b4d4c88d4a229c9181ca24279246dba33fc83c24e9b1a32b1dbabff6ef9",
       "size_bytes": 2887
@@ -4248,6 +4503,11 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m2-9022e5064a38.json",
+      "sha256": "33ccc7fb44e3dd48fc90ad03d1a08db89b821c260a3939f3df0160b5c5f35862",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gate-m2-933a2cc2dbf5.json",
       "sha256": "9b2877eee5d31bee35667d707541325fae2092e7023471a958c73e0c8bab43d5",
       "size_bytes": 2887
@@ -4268,6 +4528,11 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m2-b7c60c5a2383.json",
+      "sha256": "23b81528b2fc0328bd24984dd40826fa13918bf17498a70bbc2e9fc9d4e5154c",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gate-m2-baa9bf388e60.json",
       "sha256": "a7d6cfa3fc909312b6bc7a6ca4514f31f2d2f5ec3a68fb9a52eca5fe18758e3c",
       "size_bytes": 2887
@@ -4285,6 +4550,11 @@
     {
       "path": "evidence/reports/report-gate-m2-d7c4c7caa5e8.json",
       "sha256": "2a47d30c655836431cc5618ca8804bc7b091873a9d7a10d826df4abb7d2fcd06",
+      "size_bytes": 2887
+    },
+    {
+      "path": "evidence/reports/report-gate-m2-dc3e45d3ade8.json",
+      "sha256": "87c3115a780c0fe60660424ebe4406c0d079be4e65ff549ccea3fac084ed981f",
       "size_bytes": 2887
     },
     {
@@ -4323,8 +4593,18 @@
       "size_bytes": 2887
     },
     {
+      "path": "evidence/reports/report-gate-m3-dc3e45d3ade8.json",
+      "sha256": "e1476a86a450b57da87c52442ef0db3edab31f0a89d16a47838ebfa44576b17f",
+      "size_bytes": 2887
+    },
+    {
       "path": "evidence/reports/report-gate-m4-8486cd589e90.json",
       "sha256": "2d068df8d2535b3c2787ff020ca923efec6197cc8f0206ae3cd1d95622ebca9b",
+      "size_bytes": 2887
+    },
+    {
+      "path": "evidence/reports/report-gate-m4-dc3e45d3ade8.json",
+      "sha256": "c5a03f8edc7bc503e741e7646cdb955efc21c954028c9810ff4b5e136515e600",
       "size_bytes": 2887
     },
     {
@@ -4418,6 +4698,11 @@
       "size_bytes": 4382
     },
     {
+      "path": "evidence/reports/report-gov-002-3c449ddc5e4f.json",
+      "sha256": "6404173436cd4e46ea60aefee122df22994dab05d3a9c06ac840ebcb531a8390",
+      "size_bytes": 4382
+    },
+    {
       "path": "evidence/reports/report-gov-002-3dc40dde90e7.json",
       "sha256": "717bafea2b23d2ba0ad9c592ac1604efa01e58313cb0ff51ef12174e42b4ac08",
       "size_bytes": 4382
@@ -4503,6 +4788,11 @@
       "size_bytes": 4382
     },
     {
+      "path": "evidence/reports/report-gov-002-9022e5064a38.json",
+      "sha256": "16414a421af869a8114debd5fc9893e5a549d973cabdc76ddcd02002da3c240a",
+      "size_bytes": 4382
+    },
+    {
       "path": "evidence/reports/report-gov-002-933a2cc2dbf5.json",
       "sha256": "3e40b6aa56e6d76c5be909092341eaabb472f99221ed32c75a5df5b9a7aeb99a",
       "size_bytes": 4382
@@ -4525,6 +4815,11 @@
     {
       "path": "evidence/reports/report-gov-002-b6ec0505fd13.json",
       "sha256": "c34b43b84f200a39b3408e6afd5f32d5f7662e8d6efb9f5cf8565b690de37bf4",
+      "size_bytes": 4382
+    },
+    {
+      "path": "evidence/reports/report-gov-002-b7c60c5a2383.json",
+      "sha256": "c687bd78561773629407ae9c7530209e7f52afb5e338d99000a334d71c731758",
       "size_bytes": 4382
     },
     {
@@ -4555,6 +4850,11 @@
     {
       "path": "evidence/reports/report-gov-002-d7c4c7caa5e8.json",
       "sha256": "2bfc061069c2d7550b51e5c6621bedfc2349f1528236cefd096524f1c69c2810",
+      "size_bytes": 4382
+    },
+    {
+      "path": "evidence/reports/report-gov-002-dc3e45d3ade8.json",
+      "sha256": "a436053d64c87aa24e76b4f7fec656404db3263cc7d7c92271e184329ad3b3d3",
       "size_bytes": 4382
     },
     {
@@ -4738,6 +5038,11 @@
       "size_bytes": 3754
     },
     {
+      "path": "evidence/reports/report-mod-008-3c449ddc5e4f.json",
+      "sha256": "aca6065daf69e69072dd0599971d50667f7ff45042a63eecabb38fe3309dec21",
+      "size_bytes": 3754
+    },
+    {
       "path": "evidence/reports/report-mod-008-3dc40dde90e7.json",
       "sha256": "07b215c67e06bcf82149e62fe45c63b085aaa08da7976b4485ef76e2861565b1",
       "size_bytes": 3754
@@ -4803,6 +5108,11 @@
       "size_bytes": 3754
     },
     {
+      "path": "evidence/reports/report-mod-008-9022e5064a38.json",
+      "sha256": "190ff3172404c1751478433fee3432daaf6c1351466095337a142f8805ce3f1b",
+      "size_bytes": 3754
+    },
+    {
       "path": "evidence/reports/report-mod-008-933a2cc2dbf5.json",
       "sha256": "d5a1995b5bcc15d0530c6cc906ae019c8024ee6f06404dfda918721ada96d8d6",
       "size_bytes": 3754
@@ -4816,6 +5126,11 @@
       "path": "evidence/reports/report-mod-008-a61a06b89fe9.json",
       "sha256": "36fb25d3c1dea7b3654522066242bcedbe3d43c746722ab1612a610261e5b967",
       "size_bytes": 4004
+    },
+    {
+      "path": "evidence/reports/report-mod-008-b7c60c5a2383.json",
+      "sha256": "daf7a63557472353857250ec858c5c9464b5525a295328ae7eda330133c7781a",
+      "size_bytes": 3754
     },
     {
       "path": "evidence/reports/report-mod-008-baa9bf388e60.json",
@@ -4835,6 +5150,11 @@
     {
       "path": "evidence/reports/report-mod-008-d7c4c7caa5e8.json",
       "sha256": "99b53d393c692f9d07822c93f63ccefb693202cad18bf1775d687829ffc0a6df",
+      "size_bytes": 3754
+    },
+    {
+      "path": "evidence/reports/report-mod-008-dc3e45d3ade8.json",
+      "sha256": "9dd0f9531423d1d80da57a0658fca723b5989aca496f34b7c49dddf33dfb599f",
       "size_bytes": 3754
     },
     {
@@ -5003,6 +5323,26 @@
       "size_bytes": 3708
     },
     {
+      "path": "evidence/reports/report-sec-002-4be98e131f5e.json",
+      "sha256": "1569ba21fc3306b386cce8198725a40c87dfab41845b27b2b9bbbcc21a8e700c",
+      "size_bytes": 3321
+    },
+    {
+      "path": "evidence/reports/report-sec-003-4be98e131f5e.json",
+      "sha256": "1f0321708c313ba0f15d8a99e3c2ce633ef1d629eaa36ee0df2650fe1eaebc13",
+      "size_bytes": 3480
+    },
+    {
+      "path": "evidence/reports/report-sec-004-4be98e131f5e.json",
+      "sha256": "53f5796e80fc3c59e59de7952716e0df5ca9ff850f20515740826c5dde218a22",
+      "size_bytes": 3106
+    },
+    {
+      "path": "evidence/reports/report-sec-005-4be98e131f5e.json",
+      "sha256": "5338049f45990def510c5af6f46db9af30ed6d7d46c7cb3ba074249e38a2b10b",
+      "size_bytes": 3023
+    },
+    {
       "path": "evidence/ownership/inventory.json",
       "sha256": "ab55f15b9ac637c1025ff6420444080d2a2c60d7783d4d1aef751a6fd22c661d",
       "size_bytes": 10000
@@ -5036,6 +5376,51 @@
       "path": "evidence/gates/GATE-M4.json",
       "sha256": "5776fc427befb02a4b8029094a0191f1a4b6c20fedb05bf5dca11d0f6050ae75",
       "size_bytes": 2319
+    },
+    {
+      "path": "evidence/gates/GATE-M5.json",
+      "sha256": "34053d5a896a39049da1c901ab01cb55a303d8d7beac48068ce19e14716bbbca",
+      "size_bytes": 2092
+    },
+    {
+      "path": "evidence/boundary/SEC-005/health-transcript.json",
+      "sha256": "8d483c3ee5c4df9b533dd529ecad6385861d3d7fa1a9d1fceb3902889ebb742a",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/SEC-005/manifest.json",
+      "sha256": "0bdbb6fad75eecb7f6ece20a35e5b984f1de76ccf86b3720ee9388b73b042217",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/SEC-004/health-transcript.json",
+      "sha256": "8d483c3ee5c4df9b533dd529ecad6385861d3d7fa1a9d1fceb3902889ebb742a",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/SEC-004/manifest.json",
+      "sha256": "0bdbb6fad75eecb7f6ece20a35e5b984f1de76ccf86b3720ee9388b73b042217",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/SEC-003/health-transcript.json",
+      "sha256": "8d483c3ee5c4df9b533dd529ecad6385861d3d7fa1a9d1fceb3902889ebb742a",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/SEC-003/manifest.json",
+      "sha256": "0bdbb6fad75eecb7f6ece20a35e5b984f1de76ccf86b3720ee9388b73b042217",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/SEC-002/health-transcript.json",
+      "sha256": "8d483c3ee5c4df9b533dd529ecad6385861d3d7fa1a9d1fceb3902889ebb742a",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/SEC-002/manifest.json",
+      "sha256": "0bdbb6fad75eecb7f6ece20a35e5b984f1de76ccf86b3720ee9388b73b042217",
+      "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/SEC-001/health-transcript.json",
@@ -5129,12 +5514,12 @@
     },
     {
       "path": "evidence/boundary/MOD-008/health-transcript.json",
-      "sha256": "620e14f11e6d2bae57d25411c3c749ba0e3853707d93b66f61816b20fb00b2c9",
-      "size_bytes": 1402
+      "sha256": "3e4ebb1dee13562c285cb7b806a999fdf6295c46b0d710f55fa9e301af3787fe",
+      "size_bytes": 1401
     },
     {
       "path": "evidence/boundary/MOD-008/manifest.json",
-      "sha256": "95c49fbc7bfb325f80425c924601bb89472deff744a752ad9058e6dfc2270fee",
+      "sha256": "1e768bfa0aa5d3e1a6c60236109f59a3e8712f99b242d52688a47d9371adce7d",
       "size_bytes": 1549
     },
     {
@@ -5215,6 +5600,36 @@
     {
       "path": "evidence/boundary/ENV-001/manifest.json",
       "sha256": "b716846b0ef42cb49b1a59d02a1666097212a7795feff46db2f18a0f62454ec5",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/EFF-003/health-transcript.json",
+      "sha256": "8d483c3ee5c4df9b533dd529ecad6385861d3d7fa1a9d1fceb3902889ebb742a",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/EFF-003/manifest.json",
+      "sha256": "0bdbb6fad75eecb7f6ece20a35e5b984f1de76ccf86b3720ee9388b73b042217",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/EFF-002/health-transcript.json",
+      "sha256": "8d483c3ee5c4df9b533dd529ecad6385861d3d7fa1a9d1fceb3902889ebb742a",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/EFF-002/manifest.json",
+      "sha256": "0bdbb6fad75eecb7f6ece20a35e5b984f1de76ccf86b3720ee9388b73b042217",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/EFF-001/health-transcript.json",
+      "sha256": "8d483c3ee5c4df9b533dd529ecad6385861d3d7fa1a9d1fceb3902889ebb742a",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/EFF-001/manifest.json",
+      "sha256": "0bdbb6fad75eecb7f6ece20a35e5b984f1de76ccf86b3720ee9388b73b042217",
       "size_bytes": 1549
     },
     {
@@ -5299,12 +5714,12 @@
     },
     {
       "path": "evidence/boundary/CTX-008/health-transcript.json",
-      "sha256": "620e14f11e6d2bae57d25411c3c749ba0e3853707d93b66f61816b20fb00b2c9",
-      "size_bytes": 1402
+      "sha256": "7940d6873b07621544b86f42a171c7d98db515b2d580b708f5164a8737772229",
+      "size_bytes": 1404
     },
     {
       "path": "evidence/boundary/CTX-008/manifest.json",
-      "sha256": "95c49fbc7bfb325f80425c924601bb89472deff744a752ad9058e6dfc2270fee",
+      "sha256": "f5a3bcc9d5dfa82b251fb2ec65a53056ac3fd90554a495713b9c7a842a94ee75",
       "size_bytes": 1549
     },
     {
