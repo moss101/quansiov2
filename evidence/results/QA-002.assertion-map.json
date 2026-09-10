@@ -1,0 +1,20 @@
+{
+  "MOD-005-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa002_r01_settlement_restart_idempotent"
+  ],
+  "MOD-006-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa002_n01_direct_path_and_denied_egress"
+  ],
+  "MOD-007-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa002_p01_full_gateway_pipeline_real_provider"
+  ],
+  "QA-002-N01": [
+    "tests/qa/test_qa_verticals.py::test_qa002_n01_direct_path_and_denied_egress"
+  ],
+  "QA-002-P01": [
+    "tests/qa/test_qa_verticals.py::test_qa002_p01_full_gateway_pipeline_real_provider"
+  ],
+  "QA-002-R01": [
+    "tests/qa/test_qa_verticals.py::test_qa002_r01_settlement_restart_idempotent"
+  ]
+}

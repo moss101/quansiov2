@@ -1,0 +1,20 @@
+{
+  "EFF-003-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa004_r01_timeout_unknown_reconcile_at_most_once"
+  ],
+  "EFF-005-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa004_p01_and_n01_financial_scope_enforced"
+  ],
+  "EFF-006-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa004_p01_and_n01_financial_scope_enforced"
+  ],
+  "QA-004-N01": [
+    "tests/qa/test_qa_verticals.py::test_qa004_r01_timeout_unknown_reconcile_at_most_once"
+  ],
+  "QA-004-P01": [
+    "tests/qa/test_qa_verticals.py::test_qa004_p01_and_n01_financial_scope_enforced"
+  ],
+  "QA-004-R01": [
+    "tests/qa/test_qa_verticals.py::test_qa004_r01_timeout_unknown_reconcile_at_most_once"
+  ]
+}

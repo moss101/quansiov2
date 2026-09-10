@@ -1,0 +1,17 @@
+{
+  "BRW-006-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa005_p01_and_n01_full_machine_vertical"
+  ],
+  "MAC-007-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa005_p01_and_n01_full_machine_vertical"
+  ],
+  "QA-005-N01": [
+    "tests/qa/test_qa_verticals.py::test_qa005_p01_and_n01_full_machine_vertical"
+  ],
+  "QA-005-P01": [
+    "tests/qa/test_qa_verticals.py::test_qa005_p01_and_n01_full_machine_vertical"
+  ],
+  "QA-005-R01": [
+    "tests/qa/test_qa_verticals.py::test_qa005_p01_and_n01_full_machine_vertical"
+  ]
+}

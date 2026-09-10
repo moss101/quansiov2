@@ -1,0 +1,14 @@
+{
+  "CTX-006-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa003_p01_and_n01_benchmark_binding"
+  ],
+  "QA-003-N01": [
+    "tests/qa/test_qa_verticals.py::test_qa003_p01_and_n01_benchmark_binding"
+  ],
+  "QA-003-P01": [
+    "tests/qa/test_qa_verticals.py::test_qa003_p01_and_n01_benchmark_binding"
+  ],
+  "QA-003-R01": [
+    "tests/qa/test_qa_verticals.py::test_qa003_r01_resume_from_durable_intermediates"
+  ]
+}

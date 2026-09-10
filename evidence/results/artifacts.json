@@ -381,6 +381,39 @@
     "quansio/model_gateway/gateway.py",
     "tests/model_gateway/test_real_provider_qualification.py"
   ],
+  "QA-001": [
+    "tests/qa/test_qa_verticals.py"
+  ],
+  "QA-002": [
+    "tests/qa/test_qa_verticals.py",
+    "quansio/model_gateway/gateway.py"
+  ],
+  "QA-003": [
+    "tests/qa/test_qa_verticals.py",
+    "quansio/context/scoring.py"
+  ],
+  "QA-004": [
+    "tests/qa/test_qa_verticals.py",
+    "quansio/control/effects.py"
+  ],
+  "QA-005": [
+    "tests/qa/test_qa_verticals.py",
+    "quansio/machine_control/services.py"
+  ],
+  "QA-006": [
+    "tests/qa/test_qa_verticals.py",
+    "quansio/control/skills.py",
+    "quansio/control/capability_packs.py"
+  ],
+  "QA-007": [
+    "tests/qa/test_qa_verticals.py",
+    "quansio/context/scheduler.py",
+    "clients/pyapp/engine.py"
+  ],
+  "QA-008": [
+    "tests/qa/test_qa_verticals.py",
+    "quansio/observability/sre.py"
+  ],
   "RUN-001": [
     "quansio/runtime/graphs.py",
     "migrations/up/0007_graph_transactions.sql",

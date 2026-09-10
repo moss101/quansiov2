@@ -1,0 +1,20 @@
+{
+  "BUS-004-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical"
+  ],
+  "BUS-005-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical"
+  ],
+  "QA-006-N01": [
+    "tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical"
+  ],
+  "QA-006-P01": [
+    "tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical"
+  ],
+  "QA-006-R01": [
+    "tests/qa/test_qa_verticals.py::test_qa006_r01_rollback_versions_resolve"
+  ],
+  "SKL-002-A01": [
+    "tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical"
+  ]
+}
