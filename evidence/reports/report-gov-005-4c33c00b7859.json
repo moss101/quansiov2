@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "2c18088a8fb7a0fb2912ef20d8d0fca5cb4a35193e712d727e58d18b6c6658e8",
+      "path_or_uri": "scripts/scan_production_placeholders.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "f86b1c835429e0e96e935156fe073162141c9851612499dc957bf6d968ace0ca",
+      "path_or_uri": "scripts/scan_exclusions.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "885941965f3da591352afa3c4ba0085b46044c129e1fefc0544a73e745c0016d",
+      "path_or_uri": "tests/governance/test_source_scan.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "GOV-003-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_source_scan.py::test_p05_fails_on_production_marker; tests/governance/test_source_scan.py::test_p05_excludes_only_registered_classes; tests/governance/test_source_scan.py::test_p05_unregistered_exclusion_reason_class_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-005-N01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_source_scan.py::test_n05_reachable_api_marker_fails_despite_pass_metadata; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-005-P01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_source_scan.py::test_p05_fails_on_production_marker; tests/governance/test_source_scan.py::test_p05_excludes_only_registered_classes; tests/governance/test_source_scan.py::test_p05_live_repo_scan_is_clean; tests/governance/test_source_scan.py::test_p05_unregistered_exclusion_reason_class_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-005-R01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_source_scan.py::test_r05_marker_in_test_fixture_keeps_production_clean; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-008-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_source_scan.py::test_n05_reachable_api_marker_fails_despite_pass_metadata; tests/governance/test_source_scan.py::test_r05_marker_in_test_fixture_keeps_production_clean; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T00:15:29Z",
+  "git_commit": "4c33c00b7859a8ae3979fc84e7cce2ff77d09eb5",
+  "protected_ref": "HEAD",
+  "real_boundary": false,
+  "report_id": "report-gov-005-4c33c00b7859",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "GOV-005"
+}
