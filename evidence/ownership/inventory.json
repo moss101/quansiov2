@@ -177,6 +177,14 @@
       "status": "present"
     },
     {
+      "kind": "generated_path",
+      "owner": "governance",
+      "path": "generated",
+      "role": "generated schema bindings and authority views",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "governance_path",
       "owner": "governance",
       "path": "tools",
@@ -193,9 +201,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 24,
+  "entry_count": 25,
   "inventory_version": "1.0.0",
-  "registry_sha256": "da33527fe64284ad2de4b908266c6d715d4b4878402f630e7fbaf3c1c8bcaf0d",
+  "registry_sha256": "5815e00f70711834815fe1c247e956d8afeb6bdbfbac0582c64c2a1c533827c5",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "dace0f359ac8803fb7a08186f8cc5f669c300af399c41356f3c49908ba1262db"

@@ -1,0 +1,39 @@
+"""Canonical contract binding for SearchProgram.
+
+Generated from schemas/SearchProgram.schema.json digest 8f42fa6bb5910ed6b179c8a49651bee5fd66ed3dd06abb2d40bf57141135d947 by
+tools/governance/generate_bindings.py 1.0.0. DO NOT EDIT.
+"""
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass
+from typing import Any
+
+import jsonschema
+
+SCHEMA_DIGEST = "8f42fa6bb5910ed6b179c8a49651bee5fd66ed3dd06abb2d40bf57141135d947"
+SCHEMA = json.loads("""{"$defs":{"predicate":{"oneOf":[{"additionalProperties":false,"properties":{"field":{"minLength":1,"type":"string"},"op":{"enum":["eq","ne","lt","lte","gt","gte","contains","in","exists"]},"value":{}},"required":["op","field"],"type":"object"},{"oneOf":[{"additionalProperties":false,"properties":{"args":{"items":{"$ref":"#/$defs/predicate"},"maxItems":20,"minItems":2,"type":"array"},"op":{"enum":["and","or"]}},"required":["op","args"],"type":"object"},{"additionalProperties":false,"properties":{"arg":{"$ref":"#/$defs/predicate"},"op":{"const":"not"}},"required":["op","arg"],"type":"object"}]}]}},"$id":"quansio://schema/SearchProgram/9.0.0","$schema":"https://json-schema.org/draft/2020-12/schema","additionalProperties":false,"properties":{"budget":{"additionalProperties":false,"properties":{"max_duration_seconds":{"maximum":86400,"minimum":1,"type":"integer"},"max_fanout":{"maximum":1000,"minimum":1,"type":"integer"},"max_operations":{"maximum":10000,"minimum":1,"type":"integer"}},"required":["max_operations","max_fanout","max_duration_seconds"],"type":"object"},"evidence_policy_id":{"minLength":1,"type":"string"},"objective":{"minLength":1,"type":"string"},"operators":{"items":{"oneOf":[{"additionalProperties":false,"properties":{"op":{"const":"SEARCH"},"output_ref":{"minLength":1,"type":"string"},"query":{"minLength":1,"type":"string"},"sources":{"items":{"minLength":1,"type":"string"},"type":"array","uniqueItems":true}},"required":["op","query","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"input_ref":{"minLength":1,"type":"string"},"max_items":{"maximum":1000,"minimum":1,"type":"integer"},"op":{"const":"RETRIEVE"},"output_ref":{"minLength":1,"type":"string"}},"required":["op","input_ref","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"input_ref":{"minLength":1,"type":"string"},"max_fanout":{"maximum":1000,"minimum":1,"type":"integer"},"op":{"const":"FAN_OUT"},"output_ref":{"minLength":1,"type":"string"}},"required":["op","input_ref","max_fanout","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"input_ref":{"minLength":1,"type":"string"},"op":{"const":"FILTER"},"output_ref":{"minLength":1,"type":"string"},"predicate":{"$ref":"#/$defs/predicate"}},"required":["op","input_ref","predicate","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"input_ref":{"minLength":1,"type":"string"},"limit":{"maximum":1000,"minimum":1,"type":"integer"},"objective":{"minLength":1,"type":"string"},"op":{"const":"RANK"},"output_ref":{"minLength":1,"type":"string"}},"required":["op","input_ref","objective","limit","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"input_ref":{"minLength":1,"type":"string"},"keys":{"items":{"minLength":1,"type":"string"},"type":"array","uniqueItems":true},"op":{"const":"DEDUPLICATE"},"output_ref":{"minLength":1,"type":"string"}},"required":["op","input_ref","keys","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"join_type":{"enum":["INNER","LEFT"]},"key":{"minLength":1,"type":"string"},"left_ref":{"minLength":1,"type":"string"},"op":{"const":"JOIN"},"output_ref":{"minLength":1,"type":"string"},"right_ref":{"minLength":1,"type":"string"}},"required":["op","left_ref","right_ref","key","join_type","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"input_ref":{"minLength":1,"type":"string"},"op":{"const":"EXTRACT"},"output_ref":{"minLength":1,"type":"string"},"schema_id":{"minLength":1,"type":"string"}},"required":["op","input_ref","schema_id","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"identity_keys":{"items":{"minLength":1,"type":"string"},"type":"array","uniqueItems":true},"input_ref":{"minLength":1,"type":"string"},"op":{"const":"RESOLVE_ENTITY"},"output_ref":{"minLength":1,"type":"string"}},"required":["op","input_ref","identity_keys","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"claim_ref":{"minLength":1,"type":"string"},"independent_refetch":{"type":"boolean"},"op":{"const":"VERIFY"},"output_ref":{"minLength":1,"type":"string"},"source_refs":{"items":{"minLength":1,"type":"string"},"type":"array","uniqueItems":true}},"required":["op","claim_ref","source_refs","independent_refetch","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"body_refs":{"items":{"minLength":1,"type":"string"},"type":"array","uniqueItems":true},"max_iterations":{"maximum":20,"minimum":1,"type":"integer"},"op":{"const":"ITERATE"},"output_ref":{"minLength":1,"type":"string"},"stop_condition":{"$ref":"#/$defs/predicate"}},"required":["op","body_refs","stop_condition","max_iterations","output_ref"],"type":"object"},{"additionalProperties":false,"properties":{"input_refs":{"items":{"minLength":1,"type":"string"},"type":"array","uniqueItems":true},"op":{"const":"SYNTHESIZE"},"output_ref":{"minLength":1,"type":"string"},"output_schema_id":{"minLength":1,"type":"string"}},"required":["op","input_refs","output_schema_id","output_ref"],"type":"object"}]},"maxItems":10000,"minItems":1,"type":"array"},"output_schema_id":{"minLength":1,"type":"string"},"program_id":{"minLength":1,"type":"string"},"schema_revision":{"const":"9.0.0"},"tenant_id":{"minLength":1,"type":"string"}},"required":["schema_revision","program_id","tenant_id","objective","budget","operators","output_schema_id","evidence_policy_id"],"title":"SearchProgram","type":"object"}""")
+VALIDATOR = jsonschema.Draft202012Validator(SCHEMA)
+
+
+@dataclass(frozen=True)
+class SearchProgram:
+    budget: dict
+    evidence_policy_id: str
+    objective: str
+    operators: list
+    output_schema_id: str
+    program_id: str
+    schema_revision: Any
+    tenant_id: str
+
+    @classmethod
+    def validate(cls, payload: dict) -> None:
+        errors = sorted(VALIDATOR.iter_errors(payload), key=lambda e: list(e.absolute_path))
+        if errors:
+            raise ValueError("; ".join(e.message for e in errors))
+
+    @classmethod
+    def from_dict(cls, payload: dict) -> Any:
+        cls.validate(payload)
+        return cls(**{k: payload.get(k) for k in ('budget', 'evidence_policy_id', 'objective', 'operators', 'output_schema_id', 'program_id', 'schema_revision', 'tenant_id',)})

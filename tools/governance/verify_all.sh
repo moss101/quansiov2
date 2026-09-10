@@ -12,6 +12,12 @@ echo "== authority views + integrity artifacts =="
 echo "== ownership inventory =="
 "$PY" tools/governance/ownership_inventory.py
 
+echo "== authority map =="
+"$PY" tools/governance/ownership_map.py
+
+echo "== contract gate =="
+"$PY" tools/governance/contract_gate.py
+
 echo "== production source scan =="
 "$PY" scripts/scan_production_placeholders.py .
 

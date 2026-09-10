@@ -1,0 +1,22 @@
+{
+  "GOV-003-P01": [
+    "tests/governance/test_contract_gate.py::test_p03_every_schema_has_fresh_binding_and_valid_fixtures",
+    "tests/governance/test_contract_gate.py::test_p03_generation_is_deterministic",
+    "tests/governance/test_contract_gate.py::test_p03_no_competing_dtos_in_production_tree"
+  ],
+  "GOV-003-N01": [
+    "tests/governance/test_contract_gate.py::test_n03_shadow_dto_is_rejected",
+    "tests/governance/test_contract_gate.py::test_n03_live_repo_rejects_shadow_dto"
+  ],
+  "GOV-003-R01": [
+    "tests/governance/test_contract_gate.py::test_r03_schema_edit_makes_bindings_stale_then_regeneration_restores"
+  ],
+  "GOV-002-A01": [
+    "tests/governance/test_contract_gate.py::test_p03_generation_is_deterministic",
+    "tests/governance/test_contract_gate.py::test_r03_schema_edit_makes_bindings_stale_then_regeneration_restores"
+  ],
+  "INV-007-A01": [
+    "tests/governance/test_contract_gate.py::test_p03_every_schema_has_fresh_binding_and_valid_fixtures",
+    "tests/governance/test_contract_gate.py::test_r03_schema_edit_makes_bindings_stale_then_regeneration_restores"
+  ]
+}

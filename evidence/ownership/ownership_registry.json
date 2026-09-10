@@ -429,7 +429,7 @@
       "kind": "generated_path",
       "path": "generated",
       "owner": "governance",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "generated schema bindings and authority views"
     },
