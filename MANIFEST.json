@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 1329,
+  "file_count": 1380,
   "files": [
     {
       "path": ".gitignore",
@@ -173,6 +173,11 @@
       "size_bytes": 14099
     },
     {
+      "path": "tests/machines/test_machine_fabric.py",
+      "sha256": "1c9404cd05b59a1807bc9249c5befa11c121aad3b0234a52526698f7f799a685",
+      "size_bytes": 24746
+    },
+    {
       "path": "tests/governance/test_authority_generation.py",
       "sha256": "ecafaee7714fa65613de04ee2c98ad410e24c180fc7355313267d2cebbb33821",
       "size_bytes": 3555
@@ -194,8 +199,8 @@
     },
     {
       "path": "tests/governance/test_milestone_gate.py",
-      "sha256": "1945d0640a83622bda12c8520d2f193e81e892cd4aa009b3d12a9382840a5e2b",
-      "size_bytes": 5530
+      "sha256": "73b4da812b82ec63787e395233f5368a76680bbb52ef4831ab3d1ad1d8d05aaa",
+      "size_bytes": 5723
     },
     {
       "path": "tests/governance/test_ownership_inventory.py",
@@ -673,6 +678,11 @@
       "size_bytes": 7866
     },
     {
+      "path": "services/qworkerd/main.py",
+      "sha256": "40a27856e288ca62390ab095c5aebc5d09667b5a6fe5267806afeb7066e152bf",
+      "size_bytes": 439
+    },
+    {
       "path": "services/quansio_model_gateway/main.py",
       "sha256": "0d9b60935a0a7cc6c63c5dded8e1c892552e5115ccef3f4db08fd73f3286c76f",
       "size_bytes": 603
@@ -1048,6 +1058,16 @@
       "size_bytes": 4844
     },
     {
+      "path": "quansio/qworkerd/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/qworkerd/protocol.py",
+      "sha256": "e04d423532994e49b78b63d15ba1f028c7536fd4d4f54daf7f1ac8c13d4831cf",
+      "size_bytes": 6492
+    },
+    {
       "path": "quansio/platform/__init__.py",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "size_bytes": 0
@@ -1121,6 +1141,21 @@
       "path": "quansio/model_gateway/usage.py",
       "sha256": "aa1cc0a615241de1b7698a0206f294646b79a8cb2aa7c6bdd9c35efa40b843e2",
       "size_bytes": 5238
+    },
+    {
+      "path": "quansio/machine_control/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/machine_control/inventory.py",
+      "sha256": "3f416ad29a3c17becbedaab04dce1d9969704d0d1919cbde622a2ad7c61051e1",
+      "size_bytes": 12079
+    },
+    {
+      "path": "quansio/machine_control/services.py",
+      "sha256": "804919a0467ce905634efc1e29c7e8110f80d97b1ad707817ffffde1e57a38d3",
+      "size_bytes": 18151
     },
     {
       "path": "quansio/indexer/__init__.py",
@@ -1318,6 +1353,11 @@
       "size_bytes": 4189
     },
     {
+      "path": "migrations/up/0014_machine_fabric.sql",
+      "sha256": "81f28e21d99d41bc4acb821189d08e49dacbe493c7a1fa7e20d50c2a12ac4151",
+      "size_bytes": 4168
+    },
+    {
       "path": "migrations/down/0001_identities.sql",
       "sha256": "e1ff5ccfeec910a5a291618151b4c11ca089aa51efb8f085b02ae3ad3ef35ce4",
       "size_bytes": 228
@@ -1381,6 +1421,11 @@
       "path": "migrations/down/0013_policy_effects.sql",
       "sha256": "005fa2bfa3001243db4f6161e38d53e76fadf7380f38e265e573b0624dc59019",
       "size_bytes": 840
+    },
+    {
+      "path": "migrations/down/0014_machine_fabric.sql",
+      "sha256": "fb1cae2008e1c08a13aa8bff4775410aa14ddcb5ab333a7d7da4e95327f2617b",
+      "size_bytes": 372
     },
     {
       "path": "graphs/business-capability-compiler.mmd",
@@ -1998,6 +2043,11 @@
       "size_bytes": 717
     },
     {
+      "path": "evidence/results/GATE-M6.assertion-map.json",
+      "sha256": "8321c658d7292d8c73f5d4d501ac5d5ab24e9cae718d6e67e2085774f3e91918",
+      "size_bytes": 717
+    },
+    {
       "path": "evidence/results/GOV-001.assertion-map.json",
       "sha256": "aaa6def370042a6d0ab5243a24a0eb101d2edc426483a07736c9c66283ddcebf",
       "size_bytes": 1595
@@ -2031,6 +2081,46 @@
       "path": "evidence/results/GOV-007.assertion-map.json",
       "sha256": "2ed83efe6194dce10678e69be59282dda2e6381809ba3e28ebfa5906c670173b",
       "size_bytes": 1313
+    },
+    {
+      "path": "evidence/results/MAC-001.assertion-map.json",
+      "sha256": "017bd0f364da5907a6b68ba89c968f6a7853d2833bb829e979ee2fef199ea101",
+      "size_bytes": 724
+    },
+    {
+      "path": "evidence/results/MAC-002.assertion-map.json",
+      "sha256": "bd6908a0b781b30e329fbb0da43c260633819a7e72011d6c1fd1ba816375d12e",
+      "size_bytes": 646
+    },
+    {
+      "path": "evidence/results/MAC-003.assertion-map.json",
+      "sha256": "c73c3133eb9ac80dc88c0b1bdea4652b8181c8d34a58a29f51246b4945e8f1d3",
+      "size_bytes": 654
+    },
+    {
+      "path": "evidence/results/MAC-004.assertion-map.json",
+      "sha256": "8983e17b26e793d3baf7483bd7f9d5c71f63da6836c2efc65b00720a0981fd50",
+      "size_bytes": 671
+    },
+    {
+      "path": "evidence/results/MAC-005.assertion-map.json",
+      "sha256": "2bcfaca21e28a0b5f3aed10b98ee48b5aeeb2f1895f47e2f40de96bbaa9c0f9c",
+      "size_bytes": 672
+    },
+    {
+      "path": "evidence/results/MAC-006.assertion-map.json",
+      "sha256": "9611e7bd69f92e547dbe26484efd86077af5cbc115fbc012d6e477fea64d31ed",
+      "size_bytes": 642
+    },
+    {
+      "path": "evidence/results/MAC-007.assertion-map.json",
+      "sha256": "14d935d0a513507e87a34a952040c32fb12cb395fdbeb15e931c9fa440ec71e4",
+      "size_bytes": 1009
+    },
+    {
+      "path": "evidence/results/MAC-008.assertion-map.json",
+      "sha256": "f083ac07dcc2f78c9f1d5effd03396122191e60d52f0dc9c12606219c12c20ee",
+      "size_bytes": 591
     },
     {
       "path": "evidence/results/MOD-001.assertion-map.json",
@@ -2139,8 +2229,8 @@
     },
     {
       "path": "evidence/results/artifacts.json",
-      "sha256": "a13124db10df547e396fedfd457e4b131251d5d97fbda23b98aef3d5a1fe475c",
-      "size_bytes": 6876
+      "sha256": "ac0a85a5ea2db1ff48007b4601de99120a868e773461c46c5d6163b202b7f3a5",
+      "size_bytes": 7996
     },
     {
       "path": "evidence/reports/evidence-ctx-001-3a62b141e640.json",
@@ -3581,6 +3671,46 @@
       "path": "evidence/reports/evidence-gov-007-36a3a7adeae9.json",
       "sha256": "004911ebd0bdd09f9aa02619ecf5f58b65b861ce36bbd8666fc18ae3604f9e7f",
       "size_bytes": 1169
+    },
+    {
+      "path": "evidence/reports/evidence-mac-001-29b5146d856b.json",
+      "sha256": "17e9d59eefce246ae7645efe4edbd807f461a9b743c5ee90f60a034813303a14",
+      "size_bytes": 1321
+    },
+    {
+      "path": "evidence/reports/evidence-mac-002-29b5146d856b.json",
+      "sha256": "b0f21ca4d1b27a94dfdeba7703f61090f9f60cac3728a2c63a6539708c571070",
+      "size_bytes": 1208
+    },
+    {
+      "path": "evidence/reports/evidence-mac-003-de382c182c87.json",
+      "sha256": "b223259dceb1a66b29ab81115d518cb7c3a313d468c998a72224d00fc2b3636e",
+      "size_bytes": 1200
+    },
+    {
+      "path": "evidence/reports/evidence-mac-004-29b5146d856b.json",
+      "sha256": "0c0c9124093c409f9487f502f6eefdd12b3843debdf878d94513ec36f4e178e3",
+      "size_bytes": 1320
+    },
+    {
+      "path": "evidence/reports/evidence-mac-005-29b5146d856b.json",
+      "sha256": "937bc114c314f8a13a4aa219e99951d3697407b085af2c2f5eec91995b412bd2",
+      "size_bytes": 1207
+    },
+    {
+      "path": "evidence/reports/evidence-mac-006-29b5146d856b.json",
+      "sha256": "bca616aee3adc675befa24349f318fb59b798a3f202072d63cc54762b05b4fb0",
+      "size_bytes": 1207
+    },
+    {
+      "path": "evidence/reports/evidence-mac-007-de382c182c87.json",
+      "sha256": "8ce631c1b5d6b7fc71505fe6b4c34156a2b1c8fda3e2690ce524ab4002319f75",
+      "size_bytes": 1241
+    },
+    {
+      "path": "evidence/reports/evidence-mac-008-29b5146d856b.json",
+      "sha256": "3b83a31791246c2f55d657344d94eac396c7830666592bb64c22eddf1d1d36a5",
+      "size_bytes": 1277
     },
     {
       "path": "evidence/reports/evidence-mod-001-218dc34975af.json",
@@ -5468,6 +5598,46 @@
       "size_bytes": 4186
     },
     {
+      "path": "evidence/reports/report-mac-001-29b5146d856b.json",
+      "sha256": "8554220628a421bab0fa0d7c1e295e0afbfdc428849187a814b7c662e6422e22",
+      "size_bytes": 3631
+    },
+    {
+      "path": "evidence/reports/report-mac-002-29b5146d856b.json",
+      "sha256": "03ff3c52fda9285c417963fb67c7aade63f5f8a1c4d99f933d515598f22eced7",
+      "size_bytes": 3318
+    },
+    {
+      "path": "evidence/reports/report-mac-003-de382c182c87.json",
+      "sha256": "b86d87bb004160dce054c1e0bc2fb0ad61e9ef1bb588571cf65e419277d77faa",
+      "size_bytes": 3318
+    },
+    {
+      "path": "evidence/reports/report-mac-004-29b5146d856b.json",
+      "sha256": "3b34ed978d2e0cd6eae77f059703c63789e5c90ac966a5512c08d897e480296f",
+      "size_bytes": 3583
+    },
+    {
+      "path": "evidence/reports/report-mac-005-29b5146d856b.json",
+      "sha256": "6a3d85884ac063554e2d7d47641f0a6214d0ca949f453b927ffa41d8b2b9c557",
+      "size_bytes": 3343
+    },
+    {
+      "path": "evidence/reports/report-mac-006-29b5146d856b.json",
+      "sha256": "6dd8e7f0634904d8789328b6c8150a552b46100a4cd80304d022fc4a6897ff19",
+      "size_bytes": 3313
+    },
+    {
+      "path": "evidence/reports/report-mac-007-de382c182c87.json",
+      "sha256": "95c0ff896eeb8c71c0afe2be63cc841f49125410dd39fd6ca3af9ba60fa37b80",
+      "size_bytes": 3901
+    },
+    {
+      "path": "evidence/reports/report-mac-008-29b5146d856b.json",
+      "sha256": "06d2a01ca44066e7a4308430d0b84b352ba5ac1346aa1e035458a3456050d0cc",
+      "size_bytes": 3255
+    },
+    {
       "path": "evidence/reports/report-mod-001-218dc34975af.json",
       "sha256": "b8a8831651d4b747ad72180279fa74e2cf9501b607f26565d6e132b9bee2c07c",
       "size_bytes": 3895
@@ -5914,12 +6084,12 @@
     },
     {
       "path": "evidence/ownership/inventory.json",
-      "sha256": "ab55f15b9ac637c1025ff6420444080d2a2c60d7783d4d1aef751a6fd22c661d",
-      "size_bytes": 10000
+      "sha256": "5b9953707e88eabd927d0177bbe7a36873906ea9de3d7bd5630367819febdd11",
+      "size_bytes": 10645
     },
     {
       "path": "evidence/ownership/ownership_registry.json",
-      "sha256": "5ae159e8660b8c69e08b7b2d3e7ed346ead71a384597671fe2cd38d11eb7a98f",
+      "sha256": "2860ce85066165ed9768e3e8742c06c09c7dac6283c10e15672e63bbead98c9d",
       "size_bytes": 22613
     },
     {
@@ -5951,6 +6121,11 @@
       "path": "evidence/gates/GATE-M5.json",
       "sha256": "34053d5a896a39049da1c901ab01cb55a303d8d7beac48068ce19e14716bbbca",
       "size_bytes": 2092
+    },
+    {
+      "path": "evidence/gates/GATE-M6.json",
+      "sha256": "4f0d94ef6b1e1a38c68c0c4fad4700dc7076e7a7b6755f8a29e8a1f94ecaf98f",
+      "size_bytes": 2505
     },
     {
       "path": "evidence/boundary/SEC-005/health-transcript.json",
@@ -6084,12 +6259,12 @@
     },
     {
       "path": "evidence/boundary/MOD-008/health-transcript.json",
-      "sha256": "e966c074fdfdf6b7122e2b82397a323b43a327a04e5e597ab0191468befbbeb2",
-      "size_bytes": 1402
+      "sha256": "32ca42bb0d4162511e85f8692d6cfdda601acd2e30954001dbb7a8317211e82c",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/MOD-008/manifest.json",
-      "sha256": "5d21f756c64cc96b7292a3748ea4e3242037e0ae7cb9a96f9cf26cac8d5ec859",
+      "sha256": "c1ff70d5b759d5d45928db8193207c85c801d6f21f92bae44fee90d19b260e13",
       "size_bytes": 1549
     },
     {
@@ -6160,6 +6335,86 @@
     {
       "path": "evidence/boundary/MOD-001/manifest.json",
       "sha256": "517e5b9b1c12afe6738186e74d4d6271214f22c16a4f1805eec036edce012083",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/MAC-008/health-transcript.json",
+      "sha256": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/boundary/MAC-008/manifest.json",
+      "sha256": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/MAC-007/health-transcript.json",
+      "sha256": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/boundary/MAC-007/manifest.json",
+      "sha256": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/MAC-006/health-transcript.json",
+      "sha256": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/boundary/MAC-006/manifest.json",
+      "sha256": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/MAC-005/health-transcript.json",
+      "sha256": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/boundary/MAC-005/manifest.json",
+      "sha256": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/MAC-004/health-transcript.json",
+      "sha256": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/boundary/MAC-004/manifest.json",
+      "sha256": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/MAC-003/health-transcript.json",
+      "sha256": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/boundary/MAC-003/manifest.json",
+      "sha256": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/MAC-002/health-transcript.json",
+      "sha256": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/boundary/MAC-002/manifest.json",
+      "sha256": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/MAC-001/health-transcript.json",
+      "sha256": "1e4fbfe2bd8d8df2e27764ef04ee60d009fc95071ed6b1356dec1865ad7d0bee",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/boundary/MAC-001/manifest.json",
+      "sha256": "e152d200cc2997b5ce91d4c4bcfdb4d0952e954d0800334c9987f8269402e8ee",
       "size_bytes": 1549
     },
     {
