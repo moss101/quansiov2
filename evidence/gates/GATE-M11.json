@@ -1,0 +1,65 @@
+{
+  "gate": "GATE-M11",
+  "git_commit": "6c5d001f514a9a5904c74d97c50174e4616a0ba5",
+  "predecessor_evidence_index": [
+    {
+      "evidence": "evidence/reports/evidence-gate-m10-864617fe08fd.json",
+      "evidence_digest": "97f21512d17a486388ece460fa4f36a256bea84141d540e22c23b2cbd32781f0",
+      "status": "PASS",
+      "task": "GATE-M10"
+    },
+    {
+      "evidence": "evidence/reports/evidence-ux-001-a88e224f97a0.json",
+      "evidence_digest": "f486a0652cde8e41d4d14c720b9425ea407e52597c4cd88da7f818e80c503f46",
+      "status": "PASS",
+      "task": "UX-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-ux-002-a88e224f97a0.json",
+      "evidence_digest": "7c05ca83fef445a0e7a05f0b7149602c3af7f4de7906d9fc144311c3ad1c86fe",
+      "status": "PASS",
+      "task": "UX-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-ux-003-48841ed1814c.json",
+      "evidence_digest": "6d49d1860810c69452131aa73dd04ea3d9d7d539a4fecc9d0afdd737f1fd1659",
+      "status": "PASS",
+      "task": "UX-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-ux-004-a88e224f97a0.json",
+      "evidence_digest": "fda161090907caddb87ca43d32414d1570baf3ab9e15eb364215bb89e38faa12",
+      "status": "PASS",
+      "task": "UX-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-ux-005-a88e224f97a0.json",
+      "evidence_digest": "73c76865eb15330fd7a30b51380d10cecca3270094e8c61e94b623c21be17e95",
+      "status": "PASS",
+      "task": "UX-005"
+    },
+    {
+      "evidence": "evidence/reports/evidence-ux-006-a88e224f97a0.json",
+      "evidence_digest": "506ac5b6195b399c91efadad1638d00beee1762867ef16ff4a6386f57eeffece",
+      "status": "PASS",
+      "task": "UX-006"
+    },
+    {
+      "evidence": "evidence/reports/evidence-ux-007-48841ed1814c.json",
+      "evidence_digest": "8c98e5b3315a73e9e7022936107a5ed1b0f8ec6790bdfec54289dbd0a5cb1e16",
+      "status": "PASS",
+      "task": "UX-007"
+    },
+    {
+      "evidence": "evidence/reports/evidence-ux-008-a88e224f97a0.json",
+      "evidence_digest": "6fe514c3a2e5ab56d342b5df7f0405db736a387332be92128641c7ec975b51f1",
+      "status": "PASS",
+      "task": "UX-008"
+    }
+  ],
+  "problems": [],
+  "protected_ref": "HEAD",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "result": "PASS",
+  "schema_revision": "9.0.0"
+}
