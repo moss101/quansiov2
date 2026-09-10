@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 815,
+  "file_count": 817,
   "files": [
     {
       "path": ".gitignore",
@@ -2538,6 +2538,11 @@
       "size_bytes": 1558
     },
     {
+      "path": "evidence/reports/evidence-mod-008-7afa7eee5386.json",
+      "sha256": "04321eb5d34fd5326562f076e4e752c3f6f0cb0502df186000464d3469a8e6a3",
+      "size_bytes": 1297
+    },
+    {
       "path": "evidence/reports/evidence-mod-008-811c8f85a670.json",
       "sha256": "5d6943b16a2a9fc86ff516806a537411de5961a754c6e6f95597de7946148abf",
       "size_bytes": 1419
@@ -3323,6 +3328,11 @@
       "size_bytes": 4271
     },
     {
+      "path": "evidence/reports/report-mod-008-7afa7eee5386.json",
+      "sha256": "6338582438af439d91f9f9a0de9fc1e60d6ac513a3e24a07af6b9d232e1d8f87",
+      "size_bytes": 3754
+    },
+    {
       "path": "evidence/reports/report-mod-008-811c8f85a670.json",
       "sha256": "e18dbb85d3b82e32ec5fa674c65b34b37ef47afb0527d9cec8045055ff43bda1",
       "size_bytes": 4004
@@ -3529,7 +3539,7 @@
     },
     {
       "path": "evidence/gates/GATE-M3.json",
-      "sha256": "2992354eaa867341536f7956aa5aea7e1809cb76e38471f475b876235ef168a9",
+      "sha256": "a59376a0f5e20cd2d447158f2fc2e43edeb593441105d60760601e19af26d9dd",
       "size_bytes": 2319
     },
     {
@@ -3624,12 +3634,12 @@
     },
     {
       "path": "evidence/boundary/MOD-008/health-transcript.json",
-      "sha256": "98e4f83e3a4b4cdb0ab7d7e434a9d1796efc98e7f0c42f81694e65c716b3fb38",
-      "size_bytes": 1403
+      "sha256": "f399b9567d079b29a12fb28ec2cae25a822bf52c07363d0660d5adf70d11dedc",
+      "size_bytes": 1400
     },
     {
       "path": "evidence/boundary/MOD-008/manifest.json",
-      "sha256": "eac66fcf5e7bcce9cca8764a34a2619cf6b77678727386825cd72d5341d61dbc",
+      "sha256": "41be42fb67c507550894cb9dabce5e5d12c1ee5d0c9fa85f1af5d26dfd8ac89c",
       "size_bytes": 1549
     },
     {
