@@ -1,8 +1,6 @@
 {
-  "SRE-002-A01": [
-    "tests/sre/test_sre_security.py::test_sre002_p01_measurement_with_declared_exclusions",
-    "tests/sre/test_sre_security.py::test_sre002_n01_hidden_failure_and_unregistered_exclusion_rejected",
-    "tests/sre/test_sre_security.py::test_sre002_r01_outage_gap_preserved_as_missing"
+  "SRE-001-A01": [
+    "tests/sre/test_sre_security.py::test_sre002_p01_measurement_with_declared_exclusions"
   ],
   "SRE-002-N01": [
     "tests/sre/test_sre_security.py::test_sre002_n01_hidden_failure_and_unregistered_exclusion_rejected"
@@ -12,5 +10,11 @@
   ],
   "SRE-002-R01": [
     "tests/sre/test_sre_security.py::test_sre002_r01_outage_gap_preserved_as_missing"
+  ],
+  "SRE-004-A01": [
+    "tests/sre/test_sre_security.py::test_sre004_p01_drills_meet_rpo_rto_objectives"
+  ],
+  "SRE-005-A01": [
+    "tests/sre/test_sre_security.py::test_sre005_r01_capacity_return_settles_without_storm"
   ]
 }

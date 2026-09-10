@@ -1,12 +1,17 @@
 {
-  "SRE-004-A01": [
-    "tests/sre/test_sre_security.py::test_sre004_p01_drills_meet_rpo_rto_objectives",
-    "tests/sre/test_sre_security.py::test_sre004_n01_drill_fails_on_objective_or_component_gap"
+  "SRE-002-A01": [
+    "tests/sre/test_sre_security.py::test_sre002_p01_measurement_with_declared_exclusions"
+  ],
+  "SRE-003-A01": [
+    "tests/sre/test_sre_security.py::test_sre003_r01_unknown_effects_must_resolve_before_reopen"
   ],
   "SRE-004-N01": [
     "tests/sre/test_sre_security.py::test_sre004_n01_drill_fails_on_objective_or_component_gap"
   ],
   "SRE-004-P01": [
     "tests/sre/test_sre_security.py::test_sre004_p01_drills_meet_rpo_rto_objectives"
+  ],
+  "SRE-004-R01": [
+    "tests/sre/test_sre_security.py::test_sre004_r01_restore_to_new_generation_fails_stale_actions"
   ]
 }
