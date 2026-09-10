@@ -1,70 +1,65 @@
 {
   "gate": "GATE-M8",
-  "git_commit": "e4e740a91d6d3cb4dc8229a66ecd4bc3cb0de843",
+  "git_commit": "f13266a96f6288ec5f3a7d5c5873bc18ad8a95dc",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m7-d042d4420d4f.json",
-      "evidence_digest": "08eda95892f85b821d1f6fbbe24ae321e7ab3b8ecedd869e62e7e2d6ef8cdec7",
+      "evidence": "evidence/reports/evidence-gate-m7-ed05c22cd50b.json",
+      "evidence_digest": "94c7ecbc513e4d0a5d461a7b05716eeb2502181c23befae6542ff4e0e8d95e53",
       "status": "PASS",
       "task": "GATE-M7"
     },
     {
-      "evidence": "evidence/reports/evidence-knw-001-616a926893df.json",
-      "evidence_digest": "1da8f9d76f51a2f97541feca1e275b6821ef2ae9a867f969ab916ac08b0ffce8",
+      "evidence": "evidence/reports/evidence-knw-001-cf0a4f66e329.json",
+      "evidence_digest": "e595cac1af6dbd26a318c6db14ade0a191c56528ad885ee2c404168c81886ef8",
       "status": "PASS",
       "task": "KNW-001"
     },
     {
-      "evidence": "evidence/reports/evidence-knw-002-616a926893df.json",
-      "evidence_digest": "83cc0db16367789a9266f39d3c0a36370cba9907fd5274af8985036bff02763b",
+      "evidence": "evidence/reports/evidence-knw-002-cf0a4f66e329.json",
+      "evidence_digest": "9a458e4815255c10ba54db6c6e1658721487041041dee4b1722c02805cd00127",
       "status": "PASS",
       "task": "KNW-002"
     },
     {
-      "evidence": "evidence/reports/evidence-knw-003-616a926893df.json",
-      "evidence_digest": "3ae7778a63bc29ee7637a6b4cc642632017da89728e58880741bad07267d356b",
+      "evidence": "evidence/reports/evidence-knw-003-cf0a4f66e329.json",
+      "evidence_digest": "d4c4f827ee2973e15a9d43f411ea754b41019ad41bf4de551c25ea7f4f43bfa1",
       "status": "PASS",
       "task": "KNW-003"
     },
     {
-      "evidence": "evidence/reports/evidence-skl-001-616a926893df.json",
-      "evidence_digest": "4b8a40ee50cb4c7ba38fcff78775e5db318f8fcd8335b3873e379db455e672d0",
+      "evidence": "evidence/reports/evidence-skl-001-cf0a4f66e329.json",
+      "evidence_digest": "b70ad5cae68732b54efb7d0f112c47703434449e6faa0b4f409d932aa462919e",
       "status": "PASS",
       "task": "SKL-001"
     },
     {
-      "evidence": "evidence/reports/evidence-skl-002-616a926893df.json",
-      "evidence_digest": "93709ac5c5d63eb5aa098faa6d7e0552fcb48e0de1837e4b60f72d74c0844dc8",
+      "evidence": "evidence/reports/evidence-skl-002-cf0a4f66e329.json",
+      "evidence_digest": "dc4ef79277765fedf6d8b88a05ce1ba6dcd60b363e39cdc117b1557f9e92bbeb",
       "status": "PASS",
       "task": "SKL-002"
     },
     {
-      "evidence": "evidence/reports/evidence-skl-003-acaf42b2dc80.json",
-      "evidence_digest": "6b45040d3328c1895471b7e160410284e2b7ea59a6cdfea4b17d22cce1afd956",
+      "evidence": "evidence/reports/evidence-skl-003-cf0a4f66e329.json",
+      "evidence_digest": "02dc0aa22eeb8d81fa3f298bca6345c5609bd761e8f1e5ef1dcb38c7b90f218f",
       "status": "PASS",
       "task": "SKL-003"
     },
     {
-      "evidence": "evidence/reports/evidence-skl-004-616a926893df.json",
-      "evidence_digest": "fc8a42af64e8efeb72983ef2a59e6d3d5eedcc698849b9be3f0ef6cd1ff6eed2",
+      "evidence": "evidence/reports/evidence-skl-004-cf0a4f66e329.json",
+      "evidence_digest": "c30eeebf1b3cf5e13e6c8cb0d1fb0cd0f6127d211fe1c12e0ad05e1b37ad3aac",
       "status": "PASS",
       "task": "SKL-004"
     },
     {
-      "evidence": "evidence/reports/evidence-skl-005-616a926893df.json",
-      "evidence_digest": "96a7ddfae84a2c0316f50a020f329cb2f1659711ee4b7b0b9ef600b3886976c9",
+      "evidence": "evidence/reports/evidence-skl-005-cf0a4f66e329.json",
+      "evidence_digest": "d6d4bcae99892daa2f0cd3752e1291e9c0b167d0af68dbc6706cfb7a7defb9d1",
       "status": "PASS",
       "task": "SKL-005"
     }
   ],
-  "problems": [
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/governance/test_milestone_gate.py']",
-      "task": "GATE-M7"
-    }
-  ],
+  "problems": [],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "FAIL",
+  "result": "PASS",
   "schema_revision": "9.0.0"
 }

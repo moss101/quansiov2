@@ -8714,8 +8714,8 @@
     },
     {
       "path": "evidence/gates/GATE-M8.json",
-      "sha256": "4a3cb75f2fbe010e6adf85418612ebf1ed54f417a9a10690f306bb38922b1e3b",
-      "size_bytes": 2505
+      "sha256": "b66f049785d6b8a530a4f3622dca479a91ace7c617b0dbda83179be291b104f3",
+      "size_bytes": 2319
     },
     {
       "path": "evidence/boundary/SKL-005/health-transcript.json",
