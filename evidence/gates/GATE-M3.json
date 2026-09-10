@@ -1,22 +1,22 @@
 {
   "gate": "GATE-M3",
-  "git_commit": "6abb5138667bc75f072d5396575c4d9467fc39db",
+  "git_commit": "04545d52a49823f369caa255b7e5fa80dbe8cab7",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m2-f66e8bd40b15.json",
-      "evidence_digest": "acdbfd7af3e83761331822069ca96b50c98060851a30781e7a89e6ea5d8dae5e",
+      "evidence": "evidence/reports/evidence-gate-m2-04545d52a498.json",
+      "evidence_digest": "5db18818e9126135efca2af46d8b1b8f338322794be29bc4a37d6c2425b708c5",
       "status": "PASS",
       "task": "GATE-M2"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-001-218dc34975af.json",
-      "evidence_digest": "e6876af9a173b3e933c6c80eebd87fd39036c6d54fe51948552d2384f948c2f2",
+      "evidence": "evidence/reports/evidence-mod-001-8c9d6ae9e53a.json",
+      "evidence_digest": "fd759d9f142b4ef75ce0289eb49bc290d3a8cee9343c815c37d557b0f9c13030",
       "status": "PASS",
       "task": "MOD-001"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-002-218dc34975af.json",
-      "evidence_digest": "a1910483ebb2c3e11d9970bcb432abcbd7e22ada42b16908a5ff9d71746021c0",
+      "evidence": "evidence/reports/evidence-mod-002-8c9d6ae9e53a.json",
+      "evidence_digest": "bbaebd441bafeb21bdb6a99ff6ce1513e810f0842101276005b87640cd2033bd",
       "status": "PASS",
       "task": "MOD-002"
     },
@@ -45,14 +45,14 @@
       "task": "MOD-006"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-007-162e4eb663a8.json",
-      "evidence_digest": "9b4d4a3e95787f5f3f1dff8ab16ab28e6f5d5d255bad5662caf376bb086ee927",
+      "evidence": "evidence/reports/evidence-mod-007-8c9d6ae9e53a.json",
+      "evidence_digest": "c581dc2c0de6a77b1997fbfc6a24e5d58c0a1b1416d87a5a085bc00fef99fa6f",
       "status": "PASS",
       "task": "MOD-007"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-008-162e4eb663a8.json",
-      "evidence_digest": "7c4bcc299f1144569f33445032d6779375bdf313807a7763f542cf0acb4bd8ee",
+      "evidence": "evidence/reports/evidence-mod-008-e49cc16f2c65.json",
+      "evidence_digest": "eb39029ec834dea9dee1e040993186dc46bf28784108c93a1716edfbec67ea25",
       "status": "PASS",
       "task": "MOD-008"
     }
