@@ -1,0 +1,15 @@
+{
+  "GATE-M11-N01": [
+    "tests/governance/test_milestone_gate.py::test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified[GATE-M11]"
+  ],
+  "GATE-M11-P01": [
+    "tests/governance/test_milestone_gate.py::test_gate_p01_all_predecessors_have_valid_evidence[GATE-M11]"
+  ],
+  "GATE-M11-R01": [
+    "tests/governance/test_milestone_gate.py::test_gate_r01_restored_gate_matches_prior_evaluation_without_touching_other_evidence[GATE-M11]"
+  ],
+  "INV-008-A01": [
+    "tests/governance/test_milestone_gate.py::test_gate_p01_all_predecessors_have_valid_evidence[GATE-M11]",
+    "tests/governance/test_milestone_gate.py::test_gate_n01_missing_predecessor_refuses_advancement_with_task_identified[GATE-M11]"
+  ]
+}
