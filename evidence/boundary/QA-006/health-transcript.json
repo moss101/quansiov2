@@ -1,11 +1,11 @@
 {
-  "executed_at": "2026-09-10T16:40:45+00:00",
+  "executed_at": "2026-09-10T16:43:24+00:00",
   "checks": [
     {
       "boundary": "relational_primary",
       "check": "connect as quansio_app to quansio_platform; SELECT version(), current_user, current_database()",
       "status": "PASS",
-      "latency_ms": 17.9,
+      "latency_ms": 12.9,
       "detail": {
         "server": "PostgreSQL 17.11 on aarch64-unknown-linux-musl",
         "user": "quansio_app",
@@ -16,7 +16,7 @@
       "boundary": "durable_event_transport",
       "check": "connect as quansio_app to quansio_events; SELECT version(), current_user, current_database()",
       "status": "PASS",
-      "latency_ms": 10.1,
+      "latency_ms": 6.1,
       "detail": {
         "server": "PostgreSQL 17.11 on aarch64-unknown-linux-musl",
         "user": "quansio_app",
@@ -27,7 +27,7 @@
       "boundary": "non_authoritative_coordination",
       "check": "PING, SET/GET/DELETE probe key with isolated password",
       "status": "PASS",
-      "latency_ms": 5.8,
+      "latency_ms": 4.9,
       "detail": {
         "server": "redis 8.10.0",
         "mode": "standalone"
