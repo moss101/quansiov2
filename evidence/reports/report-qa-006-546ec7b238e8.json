@@ -1,0 +1,83 @@
+{
+  "artifact_records": [
+    {
+      "digest": "17785e294c6ef942ce40b7ade73bfa4734cf2a900f69d89b64fe101a83d944fe",
+      "path_or_uri": "evidence/boundary/QA-006/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "6aae16db9f4192de6aa152ae7c461a2813ec62c6eda473f6ed7b4ca7c58faaf0",
+      "path_or_uri": "evidence/boundary/QA-006/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "aa096dc567a595744cd7d7f7e94fd7a0f3bef7edcf3ec29a21b3dfe5efd424b5",
+      "path_or_uri": "tests/qa/test_qa_verticals.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "325ab487b70ed7fdfe5945386e57003b5ae4a8228c9e8fb9505b4dcb6bc9fa36",
+      "path_or_uri": "quansio/control/skills.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "248a200f5046f704034de670bb443a261fa480916d969bf9bde9620872452cc5",
+      "path_or_uri": "quansio/control/capability_packs.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "BUS-004-A01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BUS-005-A01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "QA-006-N01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "QA-006-P01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "QA-006-R01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa006_r01_rollback_versions_resolve; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SKL-002-A01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa006_p01_and_n01_skill_and_pack_vertical; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T17:35:27Z",
+  "git_commit": "546ec7b238e868464e2629325a0ef159cc34a0f7",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-qa-006-546ec7b238e8",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "QA-006"
+}
