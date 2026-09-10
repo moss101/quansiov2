@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 340,
+  "file_count": 341,
   "files": [
     {
       "path": ".gitignore",
@@ -1391,6 +1391,11 @@
       "path": "evidence/results/GOV-003.assertion-map.json",
       "sha256": "71ee3c2f445fb1497ddf624015dc90c14df843f0236981b913afc29b6c3614da",
       "size_bytes": 1103
+    },
+    {
+      "path": "evidence/results/GOV-004.assertion-map.json",
+      "sha256": "d76a7a69cec2fe30680620c58c8e31f60cc2e48572d40386babfde628c56c2bb",
+      "size_bytes": 1012
     },
     {
       "path": "evidence/reports/evidence-gov-001-054ee9a63fa0.json",

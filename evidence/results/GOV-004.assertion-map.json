@@ -1,0 +1,19 @@
+{
+  "GOV-004-P01": [
+    "tests/governance/test_authority_generation.py::test_p04_regeneration_twice_is_byte_identical",
+    "tests/governance/test_authority_generation.py::test_p04_all_declared_derived_artifacts_are_regenerated",
+    "tests/governance/test_authority_generation.py::test_p04_write_then_check_leaves_clean_tree"
+  ],
+  "GOV-004-N01": [
+    "tests/governance/test_authority_generation.py::test_n04_hand_edited_task_edge_fails_check",
+    "tests/governance/test_authority_generation.py::test_n04_hand_edited_milestone_count_fails_check"
+  ],
+  "GOV-004-R01": [
+    "tests/governance/test_authority_generation.py::test_r04_deleted_generated_view_is_restored_from_registries"
+  ],
+  "GOV-002-A01": [
+    "tests/governance/test_authority_generation.py::test_p04_regeneration_twice_is_byte_identical",
+    "tests/governance/test_authority_generation.py::test_p04_write_then_check_leaves_clean_tree",
+    "tests/governance/test_authority_generation.py::test_n04_hand_edited_task_edge_fails_check"
+  ]
+}
