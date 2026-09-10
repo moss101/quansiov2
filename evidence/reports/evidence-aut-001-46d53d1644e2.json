@@ -1,0 +1,31 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/AUT-001/health-transcript.json": "043034c2ed7efe65e6c13bea296d67f694235e157538ddd487be2459cb761c1a",
+    "evidence/boundary/AUT-001/manifest.json": "ab10f0135b148303ead5e930bdb6616a553000f249c59b43c1163354fa22c8f8",
+    "migrations/up/0018_automation_collaboration.sql": "57ada1b380b53157b8eee713f49cede45d0fed4c2a62f0b90372065ab0682272",
+    "quansio/context/scheduler.py": "760243db835bac3eacd1217c9e3b97a4ea3b11f23ad74e0a88e480d7e903107f",
+    "tests/automation/test_automation_collaboration.py": "2d0d32f0966e885b0e710d22f044eafd980ba2ca441dc3e54573d8f3f8d945da"
+  },
+  "created_at": "2026-09-10T11:39:47Z",
+  "evidence_id": "evidence-aut-001-46d53d1644e2",
+  "git_commit": "46d53d1644e243c13753a78f35025535b8e75890",
+  "real_boundary": true,
+  "report_digest": "73a05462233773fc7e41e672925ffb85ade0e1c272be59e3f87ffa1659ecdf95",
+  "report_path": "evidence/reports/report-aut-001-46d53d1644e2.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "AUT-001-A01"
+  ],
+  "requirement_ids": [
+    "AUT-001"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "AUT-001-N01",
+    "AUT-001-P01",
+    "AUT-001-R01"
+  ],
+  "task_id": "AUT-001"
+}

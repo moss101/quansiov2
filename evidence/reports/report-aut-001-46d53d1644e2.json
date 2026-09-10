@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "ab10f0135b148303ead5e930bdb6616a553000f249c59b43c1163354fa22c8f8",
+      "path_or_uri": "evidence/boundary/AUT-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "043034c2ed7efe65e6c13bea296d67f694235e157538ddd487be2459cb761c1a",
+      "path_or_uri": "evidence/boundary/AUT-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "760243db835bac3eacd1217c9e3b97a4ea3b11f23ad74e0a88e480d7e903107f",
+      "path_or_uri": "quansio/context/scheduler.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "57ada1b380b53157b8eee713f49cede45d0fed4c2a62f0b90372065ab0682272",
+      "path_or_uri": "migrations/up/0018_automation_collaboration.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "2d0d32f0966e885b0e710d22f044eafd980ba2ca441dc3e54573d8f3f8d945da",
+      "path_or_uri": "tests/automation/test_automation_collaboration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "AUT-001-A01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_aut001_p01_normal_dates_and_dst_fold_policy; tests/automation/test_automation_collaboration.py::test_aut001_n01_ambiguous_schedule_without_policy_refused; tests/automation/test_automation_collaboration.py::test_aut001_r01_restart_across_clock_transition_unique_fire_identities; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "AUT-001-N01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_aut001_n01_ambiguous_schedule_without_policy_refused; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "AUT-001-P01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_aut001_p01_normal_dates_and_dst_fold_policy; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "AUT-001-R01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_aut001_r01_restart_across_clock_transition_unique_fire_identities; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T11:39:47Z",
+  "git_commit": "46d53d1644e243c13753a78f35025535b8e75890",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-aut-001-46d53d1644e2",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "AUT-001"
+}
