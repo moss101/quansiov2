@@ -1,0 +1,64 @@
+{
+  "gate": "GATE-M5",
+  "git_commit": "ac1dad8e4df37b965e8e5fb452891b094a76573c",
+  "predecessor_evidence_index": [
+    {
+      "evidence": "evidence/reports/evidence-eff-001-4be98e131f5e.json",
+      "evidence_digest": "7a26151a529fb25d478657675cbda89d77f0bc6381fa512f59c2285fce20c164",
+      "status": "PASS",
+      "task": "EFF-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-eff-002-4be98e131f5e.json",
+      "evidence_digest": "9774a56a16144038dd93bb9c4e6fc7017d95a7b24db822dbd44728851750f42e",
+      "status": "PASS",
+      "task": "EFF-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-eff-003-4be98e131f5e.json",
+      "evidence_digest": "79ae7ef057d541f7d62f300db898b839eb9af4f80a97382f8f5f6589a812ff5b",
+      "status": "PASS",
+      "task": "EFF-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-gate-m4-8486cd589e90.json",
+      "evidence_digest": "0a4ffbe3b65bf207dca6c75f1ccf5e805298c8912570071831a02e81307e92de",
+      "status": "PASS",
+      "task": "GATE-M4"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sec-002-4be98e131f5e.json",
+      "evidence_digest": "479f17fe5b556839c0aa50679a9ea863063d4511ba8ac8a5f0a2e7f1c8c67e35",
+      "status": "PASS",
+      "task": "SEC-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sec-003-4be98e131f5e.json",
+      "evidence_digest": "2393d6346b391ed91d09f69318f3bffdac57cdd803c39219cec950a9835062f5",
+      "status": "PASS",
+      "task": "SEC-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sec-004-4be98e131f5e.json",
+      "evidence_digest": "538d3ff89e535a0ab2964dd581150fd554f4d40d23cf6880a4ee0a36c0282a84",
+      "status": "PASS",
+      "task": "SEC-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-sec-005-4be98e131f5e.json",
+      "evidence_digest": "619d034f6bcaa90ee248c5dd372e05693a3fc5ddb8d48084a781d7759381adea",
+      "status": "PASS",
+      "task": "SEC-005"
+    }
+  ],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/governance/test_milestone_gate.py']",
+      "task": "GATE-M4"
+    }
+  ],
+  "protected_ref": "HEAD",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "result": "FAIL",
+  "schema_revision": "9.0.0"
+}
