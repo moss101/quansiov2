@@ -121,17 +121,17 @@ def test_bus001_n01_missing_thresholds_rbac_or_compatibility_never_publishable(m
 
 def test_bus001_r01_rollback_loads_prior_version_preserving_identities(migrated_db, workspace_setup, context):
     service = CapabilityPackService(migrated_db)
-    v1 = service.create_pack(context, "invoice-ops", _full_pack())
+    base_version = service.create_pack(context, "invoice-ops", _full_pack())
     pack_v2 = _full_pack()
-    pack_v2["identity"]["domain"] = "finance-v2"
+    pack_v2["identity"]["domain"] = "finance-revised"
     service.create_pack(context, "invoice-ops", pack_v2)
     migrated_db.execute(
         "UPDATE capability_packs SET rollback_version=%s WHERE tenant_id=%s"
         " AND pack_id='invoice-ops' AND version=2",
-        (v1, context.tenant_id),
+        (base_version, context.tenant_id),
     )
     result = service.rollback(context, "invoice-ops")
-    assert result["active_version"] == v1
+    assert result["active_version"] == base_version
     assert result["evidence_identities"] == ["receipt", "digest"]
     active = service.get_pack(context, "invoice-ops", v1)
     assert active["lifecycle"] == "published"
@@ -415,13 +415,13 @@ def test_bus005_n01_mandatory_failure_blocks_despite_high_aggregate(migrated_db,
 def test_bus005_r01_rollback_resolves_rollback_version(migrated_db, workspace_setup, context):
     publisher = PackPublisher(migrated_db)
     service = CapabilityPackService(migrated_db)
-    v1 = service.create_pack(context, "invoice-ops", _full_pack())
+    base_version = service.create_pack(context, "invoice-ops", _full_pack())
     pack_v2 = _full_pack()
     service.create_pack(context, "invoice-ops", pack_v2)
     migrated_db.execute(
         "UPDATE capability_packs SET rollback_version=%s WHERE tenant_id=%s"
         " AND pack_id='invoice-ops' AND version=2",
-        (v1, context.tenant_id),
+        (base_version, context.tenant_id),
     )
     rolled = publisher.rollback_published(context, "invoice-ops")
     assert rolled["active_version"] == v1
