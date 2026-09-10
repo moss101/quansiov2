@@ -21,17 +21,18 @@ import pytest
 REPO_ROOT = Path(__file__).resolve().parents[2]
 GATE_TOOL = REPO_ROOT / "tools/governance/milestone_gate.py"
 PY = sys.executable
-GATES_UNDER_TEST = ["GATE-M0", "GATE-M1", "GATE-M2", "GATE-M3", "GATE-M4", "GATE-M5"]
+GATES_UNDER_TEST = ["GATE-M0", "GATE-M1", "GATE-M2", "GATE-M3", "GATE-M4", "GATE-M5", "GATE-M6"]
 EXPECTED_M0 = {"ENV-001", "GOV-001", "GOV-002", "GOV-003", "GOV-004", "GOV-005", "GOV-006", "GOV-007"}
 EXPECTED_M1 = {"DAT-001", "DAT-002", "DAT-003", "DAT-004", "DAT-005", "DAT-006", "DAT-007", "DAT-008", "SEC-001", "GATE-M0"}
 EXPECTED_M2 = {"RUN-001", "RUN-002", "RUN-003", "RUN-004", "RUN-005", "RUN-006", "RUN-007", "RUN-008", "GATE-M1"}
 EXPECTED_M3 = {"MOD-001", "MOD-002", "MOD-003", "MOD-004", "MOD-005", "MOD-006", "MOD-007", "MOD-008", "GATE-M2"}
 EXPECTED_M4 = {"CTX-001", "CTX-002", "CTX-003", "CTX-004", "CTX-005", "CTX-006", "CTX-007", "CTX-008", "GATE-M3"}
 EXPECTED_M5 = {"SEC-002", "SEC-003", "SEC-004", "SEC-005", "EFF-001", "EFF-002", "EFF-003", "GATE-M4"}
-EXPECTED = {"GATE-M0": EXPECTED_M0, "GATE-M1": EXPECTED_M1, "GATE-M2": EXPECTED_M2, "GATE-M3": EXPECTED_M3, "GATE-M4": EXPECTED_M4, "GATE-M5": EXPECTED_M5}
+EXPECTED_M6 = {"MAC-001", "MAC-002", "MAC-003", "MAC-004", "MAC-005", "MAC-006", "MAC-007", "MAC-008", "GATE-M5"}
+EXPECTED = {"GATE-M0": EXPECTED_M0, "GATE-M1": EXPECTED_M1, "GATE-M2": EXPECTED_M2, "GATE-M3": EXPECTED_M3, "GATE-M4": EXPECTED_M4, "GATE-M5": EXPECTED_M5, "GATE-M6": EXPECTED_M6}
 # a direct predecessor whose evidence removal must fail the gate
-PROBE_PREDECESSOR = {"GATE-M0": "gov-003", "GATE-M1": "dat-003", "GATE-M2": "run-003", "GATE-M3": "mod-003", "GATE-M4": "ctx-003", "GATE-M5": "eff-003"}
-PROBE_NAME = {"GATE-M0": "GOV-003", "GATE-M1": "DAT-003", "GATE-M2": "RUN-003", "GATE-M3": "MOD-003", "GATE-M4": "CTX-003", "GATE-M5": "EFF-003"}
+PROBE_PREDECESSOR = {"GATE-M0": "gov-003", "GATE-M1": "dat-003", "GATE-M2": "run-003", "GATE-M3": "mod-003", "GATE-M4": "ctx-003", "GATE-M5": "eff-003", "GATE-M6": "mac-003"}
+PROBE_NAME = {"GATE-M0": "GOV-003", "GATE-M1": "DAT-003", "GATE-M2": "RUN-003", "GATE-M3": "MOD-003", "GATE-M4": "CTX-003", "GATE-M5": "EFF-003", "GATE-M6": "MAC-003"}
 
 
 def run_gate(*args: str, gate: str = "GATE-M0", out: Path | None = None) -> subprocess.CompletedProcess:

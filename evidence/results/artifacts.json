@@ -120,6 +120,11 @@
     "tests/governance/test_milestone_gate.py",
     "evidence/gates/GATE-M5.json"
   ],
+  "GATE-M6": [
+    "tools/governance/milestone_gate.py",
+    "tests/governance/test_milestone_gate.py",
+    "evidence/gates/GATE-M6.json"
+  ],
   "GOV-001": [
     "evidence/ownership/inventory.json",
     "evidence/ownership/ownership_registry.json",
