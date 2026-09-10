@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "614d6c1fc11a571b56149cc76fd7e6d34362cc2cbb9c91e70cb1541768f5e116",
+      "path_or_uri": "evidence/boundary/REL-006/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "9e3d07c6df8f44276bf3da5ed3a3c1d25552b85a6e9b38c84460f1dde35c9c16",
+      "path_or_uri": "evidence/boundary/REL-006/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "d23dc4db9b494e8873ed10adf32c504127a0a33110bb20dcaab9e20ecc5a8f7d",
+      "path_or_uri": "quansio/control/release.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "75ecc885849c4c1c34bc4776aeb432f07b8db80fced0c286fecd3d0a8a1555c3",
+      "path_or_uri": "tests/release/test_release.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "REL-001-A01",
+      "blocking": true,
+      "details": "executed: tests/release/test_release.py::test_rel001_p01_and_r01_candidate_identity_and_rematerialization; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "REL-003-A01",
+      "blocking": true,
+      "details": "executed: tests/release/test_release.py::test_rel002_p01_qualify_exact_candidate; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "REL-006-N01",
+      "blocking": true,
+      "details": "executed: tests/release/test_release.py::test_rel006_p01_and_n01_and_r01_readiness_bundle; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "REL-006-P01",
+      "blocking": true,
+      "details": "executed: tests/release/test_release.py::test_rel006_p01_and_n01_and_r01_readiness_bundle; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "REL-006-R01",
+      "blocking": true,
+      "details": "executed: tests/release/test_release.py::test_rel006_p01_and_n01_and_r01_readiness_bundle; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T17:28:04Z",
+  "git_commit": "a1126bb3abf0072a3c6466d84c87f14242520dfa",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-rel-006-a1126bb3abf0",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "REL-006"
+}
