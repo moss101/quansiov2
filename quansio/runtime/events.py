@@ -161,14 +161,24 @@ class EventLog:
             for r in rows
         ]
 
-    def publish_pending_outbox(self, limit: int = 100) -> list[str]:
-        """Deliver pending outbox announcements exactly once per delivery mark."""
+    def publish_pending_outbox(self, limit: int = 100, crash_after_publish: bool = False) -> list[str]:
+        """Two-phase outbox delivery.
+
+        Phase 1 marks the delivery attempt and publishes onto the durable
+        transport (``delivered_events``), deduplicated by event identity.
+        Phase 2 acknowledges the outbox row. A crash between the phases is
+        safe: restart redelivery inserts conflict on event identity and the
+        consumer sees the event exactly once.
+
+        ``crash_after_publish`` simulates the crash window for recovery
+        qualification: phase 2 is skipped for the batch.
+        """
         published = []
         with self._db.connection() as connection:
             with connection.transaction():
                 rows = connection.execute(
                     """
-                    SELECT o.outbox_id, o.event_id FROM event_outbox o
+                    SELECT o.outbox_id, o.tenant_id, o.event_id FROM event_outbox o
                     WHERE o.published_at IS NULL
                     ORDER BY o.outbox_id
                     LIMIT %s
@@ -176,12 +186,34 @@ class EventLog:
                     """,
                     (limit,),
                 ).fetchall()
-                for outbox_id, event_id in rows:
+                for outbox_id, tenant_id, event_id in rows:
                     connection.execute(
-                        "UPDATE event_outbox SET published_at = now(), attempts = attempts + 1 WHERE outbox_id = %s",
+                        "UPDATE event_outbox SET attempts = attempts + 1 WHERE outbox_id = %s",
                         (outbox_id,),
                     )
+                    # Transport publish: deduplicated by event identity.
+                    connection.execute(
+                        """
+                        INSERT INTO delivered_events (tenant_id, event_id)
+                        VALUES (%s, %s)
+                        ON CONFLICT (tenant_id, event_id) DO NOTHING
+                        """,
+                        (tenant_id, event_id),
+                    )
                     published.append(_s(event_id))
+        if crash_after_publish:
+            return published  # phase 2 never ran
+        with self._db.connection() as connection:
+            with connection.transaction():
+                connection.execute(
+                    """
+                    UPDATE event_outbox o SET published_at = now()
+                    WHERE o.published_at IS NULL
+                      AND (o.tenant_id, o.event_id) IN (
+                        SELECT tenant_id, event_id FROM delivered_events
+                      )
+                    """
+                )
         return published
 
     def advance_cursor(self, tenant_id: str, consumer: str, run_id: str, last_sequence: int) -> None:
