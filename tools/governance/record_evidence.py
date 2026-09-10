@@ -110,25 +110,14 @@ def main() -> int:
     node_ids = [nid for assertion in expected_all for nid in mapping[assertion]]
     if not node_ids:
         raise SystemExit("assertion map contains no tests")
-    result = subprocess.run([str(VENV_PYTHON), "-m", "pytest", "-q", *node_ids], text=True, cwd=ROOT)
-    if result.returncode != 0:
-        raise SystemExit("mapped tests did not pass; refusing to record evidence")
-
-    status = git("status", "--porcelain")
-    dirty = [line for line in status.splitlines() if line and not line.startswith("??")]
-    if dirty:
-        raise SystemExit(f"working tree has modified tracked files; commit first: {dirty[:5]}")
-
-    commit = git("rev-parse", "HEAD")
-    repository_id = args.repository_id or git("remote", "get-url", "origin").removesuffix(".git")
-    environment_id, configuration_digest, env_canonical = environment_identity()
-    executed_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
     artifacts = []
     artifact_digests = {}
 
     real_boundary = bool(task.get("real_boundary_required"))
     if real_boundary:
+        # Execute the boundary proof before the suite runs: the suite may
+        # legitimately provision and tear down environments itself.
         manifest_path = ROOT / args.boundary_manifest
         if not manifest_path.is_file():
             raise SystemExit(f"boundary manifest missing: {args.boundary_manifest}")
@@ -143,12 +132,26 @@ def main() -> int:
         print(transcript.splitlines()[-1] if transcript else "boundary health: PASS")
         manifest_rel = args.boundary_manifest
         for rel in (manifest_rel, str(manifest_path.parent / "health-transcript.json")):
-            rel_posix = Path(rel).relative_to(ROOT).as_posix()
+            rel_posix = Path(rel).resolve().relative_to(ROOT).as_posix()
             digest = sha256_file(ROOT / rel_posix)
             artifacts.append(
                 {"path_or_uri": rel_posix, "digest": digest, "verification_method": "LOCAL_HASH", "verification_receipt_ref": None}
             )
             artifact_digests[rel_posix] = digest
+
+    result = subprocess.run([str(VENV_PYTHON), "-m", "pytest", "-q", *node_ids], text=True, cwd=ROOT)
+    if result.returncode != 0:
+        raise SystemExit("mapped tests did not pass; refusing to record evidence")
+
+    status = git("status", "--porcelain")
+    dirty = [line for line in status.splitlines() if line and not line.startswith("??")]
+    if dirty:
+        raise SystemExit(f"working tree has modified tracked files; commit first: {dirty[:5]}")
+
+    commit = git("rev-parse", "HEAD")
+    repository_id = args.repository_id or git("remote", "get-url", "origin").removesuffix(".git")
+    environment_id, configuration_digest, env_canonical = environment_identity()
+    executed_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
     for artifact in args.artifact:
         path = ROOT / artifact

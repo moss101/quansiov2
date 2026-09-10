@@ -1,0 +1,19 @@
+{
+  "ENV-001-P01": [
+    "tests/environment/test_qualenv.py::test_p01_four_real_boundaries_healthy_with_isolated_identities"
+  ],
+  "ENV-001-N01": [
+    "tests/environment/test_qualenv.py::test_n01_in_memory_substitution_is_refused"
+  ],
+  "ENV-001-R01": [
+    "tests/environment/test_qualenv.py::test_r01_dependency_restart_is_detected_and_recovered",
+    "tests/environment/test_qualenv.py::test_r01_teardown_leaves_no_falsely_passing_state"
+  ],
+  "GOV-004-A01": [
+    "tests/environment/test_qualenv.py::test_p01_four_real_boundaries_healthy_with_isolated_identities",
+    "tests/environment/test_qualenv.py::test_n01_in_memory_substitution_is_refused"
+  ],
+  "DAT-002-A01": [
+    "tests/environment/test_qualenv.py::test_p01_four_real_boundaries_healthy_with_isolated_identities"
+  ]
+}
