@@ -42,6 +42,7 @@ EXCLUDED_DIR_NAMES = {
 # committed real-boundary proof lives in evidence/boundary/ snapshots).
 EXCLUDED_PREFIXES = {
     "evidence/environment/",
+    "evidence/model_gateway/",
     # rotating qualification secrets (untracked operational state)
     "deploy/compose/.env.qual",
 }

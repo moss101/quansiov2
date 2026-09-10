@@ -12,3 +12,4 @@ node_modules/
 .vscode/
 deploy/compose/.env.qual
 evidence/environment/
+evidence/model_gateway/

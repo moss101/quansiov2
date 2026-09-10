@@ -5,11 +5,6 @@
   "MOD-004-A01": [
     "tests/model_gateway/test_gateway.py::test_mod004_p01_canonical_order_with_backpressure"
   ],
-  "MOD-007-A01": [
-    "tests/model_gateway/test_gateway.py::test_mod007_p01_typed_outcomes_and_allowed_failover",
-    "tests/model_gateway/test_gateway.py::test_mod007_n01_failover_after_effect_boundary_is_forbidden",
-    "tests/model_gateway/test_gateway.py::test_mod007_r01_outage_reentry_requires_fresh_probe"
-  ],
   "MOD-007-N01": [
     "tests/model_gateway/test_gateway.py::test_mod007_n01_failover_after_effect_boundary_is_forbidden"
   ],

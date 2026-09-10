@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "bc7eb4af9e55311b4278aa965e973d22a4b0d1de0e0072285d9753dae08cc1c9",
+      "path_or_uri": "evidence/boundary/MOD-006/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "7155b89f37c376384566d67cd4231447c0f48a90ad5df4957326542543b3a56a",
+      "path_or_uri": "evidence/boundary/MOD-006/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "eb230ac92502b308cbd09068439da7a5cc06efc8254a6b1e4a95c1defff67bd3",
+      "path_or_uri": "quansio/model_gateway/privacy.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "4509f652c199337945c9bf9e879faf80a03ad9bee0055f18f11213e3fe057a03",
+      "path_or_uri": "tests/model_gateway/test_gateway.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "MOD-006-A01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod006_p01_classification_redaction_and_audit_identity; tests/model_gateway/test_gateway.py::test_mod006_n01_denied_destination_never_sends_protected_content; tests/model_gateway/test_gateway.py::test_mod006_r01_policy_dependency_down_fails_closed; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-006-N01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod006_n01_denied_destination_never_sends_protected_content; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-006-P01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod006_p01_classification_redaction_and_audit_identity; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-006-R01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod006_r01_policy_dependency_down_fails_closed; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-003-A01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod006_p01_classification_redaction_and_audit_identity; tests/model_gateway/test_gateway.py::test_mod006_r01_policy_dependency_down_fails_closed; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T03:47:34Z",
+  "git_commit": "218dc34975afe77b12c9aed213417f8577ae73f8",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-mod-006-218dc34975af",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "MOD-006"
+}

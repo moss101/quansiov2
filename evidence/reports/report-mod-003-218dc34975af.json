@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "bc7eb4af9e55311b4278aa965e973d22a4b0d1de0e0072285d9753dae08cc1c9",
+      "path_or_uri": "evidence/boundary/MOD-003/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "7155b89f37c376384566d67cd4231447c0f48a90ad5df4957326542543b3a56a",
+      "path_or_uri": "evidence/boundary/MOD-003/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "d94e38bc6657fefe8cd5921ac5dee99d5c6d7f4322b5077e1860a7d943a5e348",
+      "path_or_uri": "quansio/model_gateway/routing.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "4509f652c199337945c9bf9e879faf80a03ad9bee0055f18f11213e3fe057a03",
+      "path_or_uri": "tests/model_gateway/test_gateway.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "MOD-003-A01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod003_p01_deterministic_route_decision; tests/model_gateway/test_gateway.py::test_mod003_r01_pinned_route_decision_prevents_silent_drift; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-003-N01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod003_n01_unsatisfiable_constraints_fail_without_provider_call; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-003-P01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod003_p01_deterministic_route_decision; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MOD-003-R01",
+      "blocking": true,
+      "details": "executed: tests/model_gateway/test_gateway.py::test_mod003_r01_pinned_route_decision_prevents_silent_drift; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T03:47:29Z",
+  "git_commit": "218dc34975afe77b12c9aed213417f8577ae73f8",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-mod-003-218dc34975af",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "MOD-003"
+}

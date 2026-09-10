@@ -151,6 +151,25 @@ def main() -> int:
     if result.returncode != 0:
         raise SystemExit("mapped tests did not pass; refusing to record evidence")
 
+    if real_boundary:
+        # Snapshot qualification outputs the suite produced (e.g. real
+        # provider response evidence) into the immutable per-task proof.
+        produced_dir = ROOT / "evidence/model_gateway"
+        if produced_dir.is_dir():
+            import shutil
+
+            snapshot_dir = ROOT / "evidence/boundary" / args.task / "model_gateway"
+            snapshot_dir.mkdir(parents=True, exist_ok=True)
+            for produced in sorted(produced_dir.glob("*.json")):
+                shutil.copy2(produced, snapshot_dir / produced.name)
+                rel_posix = (snapshot_dir / produced.name).relative_to(ROOT).as_posix()
+                digest = sha256_file(ROOT / rel_posix)
+                artifacts.append(
+                    {"path_or_uri": rel_posix, "digest": digest,
+                     "verification_method": "LOCAL_HASH", "verification_receipt_ref": None}
+                )
+                artifact_digests[rel_posix] = digest
+
     status = git("status", "--porcelain")
     dirty = [
         line
