@@ -1,16 +1,16 @@
 {
   "gate": "GATE-M3",
-  "git_commit": "04545d52a49823f369caa255b7e5fa80dbe8cab7",
+  "git_commit": "369f21de9bcbc57f530305dd7b75da63e25cd303",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m2-04545d52a498.json",
-      "evidence_digest": "5db18818e9126135efca2af46d8b1b8f338322794be29bc4a37d6c2425b708c5",
+      "evidence": "evidence/reports/evidence-gate-m2-fd16534ef02f.json",
+      "evidence_digest": "b1a31005cfc806d6352e1b1ff1653d8c51fbc75c7173e9f0ff228a76728b8c9b",
       "status": "PASS",
       "task": "GATE-M2"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-001-8c9d6ae9e53a.json",
-      "evidence_digest": "fd759d9f142b4ef75ce0289eb49bc290d3a8cee9343c815c37d557b0f9c13030",
+      "evidence": "evidence/reports/evidence-mod-001-baa9bf388e60.json",
+      "evidence_digest": "bc53f11fced7cff409fd1b3b18886e6787e05759d6d9d80b3e26f4aa052dff35",
       "status": "PASS",
       "task": "MOD-001"
     },
@@ -27,8 +27,8 @@
       "task": "MOD-003"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-004-218dc34975af.json",
-      "evidence_digest": "640420138d2bf191ab7fe7e09220a8ee58f1229e2cada56f732628e5b085be55",
+      "evidence": "evidence/reports/evidence-mod-004-baa9bf388e60.json",
+      "evidence_digest": "84eb7eac645e91e6588ce26b613cf29af3e9ffe9cbbe1889f0f18ad6f01a4c76",
       "status": "PASS",
       "task": "MOD-004"
     },
@@ -51,8 +51,8 @@
       "task": "MOD-007"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-008-e49cc16f2c65.json",
-      "evidence_digest": "eb39029ec834dea9dee1e040993186dc46bf28784108c93a1716edfbec67ea25",
+      "evidence": "evidence/reports/evidence-mod-008-7afa7eee5386.json",
+      "evidence_digest": "04321eb5d34fd5326562f076e4e752c3f6f0cb0502df186000464d3469a8e6a3",
       "status": "PASS",
       "task": "MOD-008"
     }
