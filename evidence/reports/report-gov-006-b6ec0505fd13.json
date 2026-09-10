@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "5e4cc4552c782ed67547dae42b60378869e48d0db9b0a362f21639014a1591eb",
+      "path_or_uri": "tools/governance/record_evidence.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "e0af7c10599604d689887af6fe546a265a1a22fd30d945e4307647f286a04a05",
+      "path_or_uri": "scripts/validate_implementation_evidence.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "a5d3cf56700abb04b926edaeb1eae674aa46944b996fb502969459edb7ec9c0f",
+      "path_or_uri": "tests/governance/test_evidence_gate.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "GOV-004-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_evidence_gate.py::test_p06_valid_evidence_passes; tests/governance/test_evidence_gate.py::test_p06_each_evidence_dimension_is_enforced; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-006-N01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_evidence_gate.py::test_n06_outer_pass_cannot_wrap_blocking_fail; tests/governance/test_evidence_gate.py::test_n06_substituted_artifact_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-006-P01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_evidence_gate.py::test_p06_valid_evidence_passes; tests/governance/test_evidence_gate.py::test_p06_each_evidence_dimension_is_enforced; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "GOV-006-R01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_evidence_gate.py::test_r06_blocked_boundary_stays_non_completing_until_boundary_available; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "INV-008-A01",
+      "blocking": true,
+      "details": "executed: tests/governance/test_evidence_gate.py::test_n06_outer_pass_cannot_wrap_blocking_fail; tests/governance/test_evidence_gate.py::test_n06_substituted_artifact_is_rejected; tests/governance/test_evidence_gate.py::test_r06_blocked_boundary_stays_non_completing_until_boundary_available; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T03:52:10Z",
+  "git_commit": "b6ec0505fd13abdf6a2d6f4ea87b627cb7e74561",
+  "protected_ref": "HEAD",
+  "real_boundary": false,
+  "report_id": "report-gov-006-b6ec0505fd13",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "GOV-006"
+}
