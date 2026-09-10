@@ -1,52 +1,52 @@
 {
   "gate": "GATE-M1",
-  "git_commit": "0bd67bfbfef0aa94c049b2d8449656619343cd4f",
+  "git_commit": "5a78b83c007d3a9f212a1c0e65c23c98650f5131",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-dat-001-361ba54dd45a.json",
-      "evidence_digest": "174caecc88900ac781b77e627cbc5c7dfae1459d789b67e5754115e2a184f7e6",
+      "evidence": "evidence/reports/evidence-dat-001-20882bb890ba.json",
+      "evidence_digest": "bb2588989b4845ce37a002a0b0235ecaef70766f918d964676a88357abe7ea21",
       "status": "PASS",
       "task": "DAT-001"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-002-361ba54dd45a.json",
-      "evidence_digest": "2ddeac0b92da11a8c83b6f111b38e75b716195696b3beeb7641f3cab03d0472c",
+      "evidence": "evidence/reports/evidence-dat-002-20882bb890ba.json",
+      "evidence_digest": "14982ad4a881369682db81d6c8bacd2b7dc8e12f97f8cb5abd272abb39970c30",
       "status": "PASS",
       "task": "DAT-002"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-003-361ba54dd45a.json",
-      "evidence_digest": "850d36fd0ba7a14b6a86f341ab0217f681ea7dd8905324963c4b9ed5ce95e61a",
+      "evidence": "evidence/reports/evidence-dat-003-20882bb890ba.json",
+      "evidence_digest": "4ec57c1d01616bdf225c28e239bcf090a411ea9d6e18971a4e0e9b7cd73d4bf8",
       "status": "PASS",
       "task": "DAT-003"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-004-361ba54dd45a.json",
-      "evidence_digest": "d4df816045119d660a26921825b95fc3700435b901e6186e794fdd40858a38e4",
+      "evidence": "evidence/reports/evidence-dat-004-20882bb890ba.json",
+      "evidence_digest": "15726881e0edd096b91a4d1adad78db890ce7e489880196c173294a8980fc52c",
       "status": "PASS",
       "task": "DAT-004"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-005-361ba54dd45a.json",
-      "evidence_digest": "fce8e43f0bb25a98801a4bc0e9c248ce01b36877dd4236982b86a3727d8c4425",
+      "evidence": "evidence/reports/evidence-dat-005-20882bb890ba.json",
+      "evidence_digest": "5f48d683600a051f15b93cd9b06d94f69cd230602834472704e4e4a0549fb6a7",
       "status": "PASS",
       "task": "DAT-005"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-006-361ba54dd45a.json",
-      "evidence_digest": "b50abc76bc1b8a35a03c03ff557fb0de7de9edf35ec95bab1e319c107633bc2f",
+      "evidence": "evidence/reports/evidence-dat-006-20882bb890ba.json",
+      "evidence_digest": "a6bd653caa929674503e94522856ad48c515b60a67c96edc9e5b4aaa36f4e8c7",
       "status": "PASS",
       "task": "DAT-006"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-007-361ba54dd45a.json",
-      "evidence_digest": "c03ee77b9b58ac2c94c891d64bab0dbaa540a3ffcfe2e0092746ab26a137200c",
+      "evidence": "evidence/reports/evidence-dat-007-20882bb890ba.json",
+      "evidence_digest": "bcfd48a66706eabb16fca74c817495e3b62a0597c8ee1efa8c0b1a003778dc7a",
       "status": "PASS",
       "task": "DAT-007"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-008-361ba54dd45a.json",
-      "evidence_digest": "a3fa77b0afb3276d49ec3c4fe6ba26923d9506fac8cdab46acd191a9bf18bd17",
+      "evidence": "evidence/reports/evidence-dat-008-20882bb890ba.json",
+      "evidence_digest": "d9327f4a9ea3d453e9d668090c90427343c1b9d9b9a033be0bc7a4c060b8540f",
       "status": "PASS",
       "task": "DAT-008"
     },
@@ -57,52 +57,15 @@
       "task": "GATE-M0"
     },
     {
-      "evidence": "evidence/reports/evidence-sec-001-361ba54dd45a.json",
-      "evidence_digest": "4fbe811ede77ef40f69c1f396f074cc570f9b1b223c19a0d3adc41dc4338b333",
+      "evidence": "evidence/reports/evidence-sec-001-20882bb890ba.json",
+      "evidence_digest": "622bd6fc9e6a11bd7c118cad91ff57f57cdce3795f7f89fbdd20a7d5b1fa74ee",
       "status": "PASS",
       "task": "SEC-001"
     }
   ],
-  "problems": [
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "DAT-001"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "DAT-002"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "DAT-003"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "DAT-004"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "DAT-005"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "DAT-006"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "DAT-007"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "DAT-008"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/environment/qual-20260910T012822/manifest.json', '- local artifact mismatch: evidence/environment/qual-20260910T012822/health-transcript.json']",
-      "task": "SEC-001"
-    }
-  ],
+  "problems": [],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "FAIL",
+  "result": "PASS",
   "schema_revision": "9.0.0"
 }
