@@ -1,0 +1,32 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/SEC-003/health-transcript.json": "7503eb7ddd107b94e52d9923c5b94246edc518fb36b7318beaa2ab2b791bc165",
+    "evidence/boundary/SEC-003/manifest.json": "ad2a67e03b69ffbeae6181296df038f0194dbc19969524a403603ee05839f1ed",
+    "quansio/control/privacy_gate.py": "afff2f23d9e99a795d5442c9e74395f8d6ff4514b8142bf5e992083002979da0",
+    "tests/control/test_policy_effects.py": "489d198a1968597fca2f9006b09b4f32396af3fdf536468a00cd0d160364cdb2"
+  },
+  "created_at": "2026-09-10T06:59:01Z",
+  "evidence_id": "evidence-sec-003-c300ba22f258",
+  "git_commit": "c300ba22f2589e90e416ac048c2a328a5c12564f",
+  "real_boundary": true,
+  "report_digest": "1cd59510a16835ec88e3fd1a8091072f1f3dcb49ea53a2775313f387615e3ff2",
+  "report_path": "evidence/reports/report-sec-003-c300ba22f258.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "MOD-006-A01",
+    "SEC-003-A01"
+  ],
+  "requirement_ids": [
+    "MOD-006",
+    "SEC-003"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "SEC-003-N01",
+    "SEC-003-P01",
+    "SEC-003-R01"
+  ],
+  "task_id": "SEC-003"
+}
