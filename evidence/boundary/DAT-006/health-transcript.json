@@ -1,5 +1,5 @@
 {
-  "executed_at": "2026-09-10T01:29:40+00:00",
+  "executed_at": "2026-09-10T01:29:39+00:00",
   "checks": [
     {
       "boundary": "relational_primary",
@@ -16,7 +16,7 @@
       "boundary": "durable_event_transport",
       "check": "connect as quansio_app to quansio_events; SELECT version(), current_user, current_database()",
       "status": "PASS",
-      "latency_ms": 4.9,
+      "latency_ms": 5.4,
       "detail": {
         "server": "PostgreSQL 17.11 on aarch64-unknown-linux-musl",
         "user": "quansio_app",

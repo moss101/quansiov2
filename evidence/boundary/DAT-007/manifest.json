@@ -45,7 +45,7 @@
   "created_at": "2026-09-10T01:28:22+00:00",
   "environment_id": "qual-20260910T012822",
   "health_transcript": "health-transcript.json",
-  "health_transcript_digest": "7539efc02f44af6f771a131b20df755fb26b4f224ff5256f83de43451a19c913",
+  "health_transcript_digest": "a8513dc12e18175b7f8e06747f9be073bb697d5cc804d8332035a0478213bc4d",
   "isolated_identities": true,
   "project": "quansio-qual",
   "schema_revision": "9.0.0",
