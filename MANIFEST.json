@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 2936,
+  "file_count": 2943,
   "files": [
     {
       "path": ".gitignore",
@@ -136,6 +136,16 @@
       "path": "tests/uxclients/test_client_surfaces.py",
       "sha256": "3b2ffdb3469b854e4a2ab7e0f325a6fa3f7fbead0452b26c66e5aa44d6bc5b9c",
       "size_bytes": 18140
+    },
+    {
+      "path": "tests/sre/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "tests/sre/test_sre_security.py",
+      "sha256": "31ee201207e9ae00c80046256d9f056881187292a455e4d18d3c4b5cf6d47f4d",
+      "size_bytes": 21131
     },
     {
       "path": "tests/runtime/test_events.py",
@@ -1148,6 +1158,21 @@
       "size_bytes": 3572
     },
     {
+      "path": "quansio/observability/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "quansio/observability/sre.py",
+      "sha256": "5b0da112707a255d8cdbcb281f5dc0a25926e5e984b0c781bfab28b398fe6e9e",
+      "size_bytes": 11572
+    },
+    {
+      "path": "quansio/observability/telemetry.py",
+      "sha256": "bf20b3c8b950a5a1868716210b3873c2ee56c59b1e38f9b7d0b8ffb1ed409dcc",
+      "size_bytes": 7631
+    },
+    {
       "path": "quansio/model_gateway/__init__.py",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "size_bytes": 0
@@ -1458,6 +1483,11 @@
       "size_bytes": 3268
     },
     {
+      "path": "migrations/up/0019_sre_security.sql",
+      "sha256": "3c9e8697006473fe8fd20fdf4afd560b44df79e96ff66750a824749716258119",
+      "size_bytes": 3308
+    },
+    {
       "path": "migrations/down/0001_identities.sql",
       "sha256": "e1ff5ccfeec910a5a291618151b4c11ca089aa51efb8f085b02ae3ad3ef35ce4",
       "size_bytes": 228
@@ -1546,6 +1576,11 @@
       "path": "migrations/down/0018_automation_collaboration.sql",
       "sha256": "3ce4a21997c9f0e22fb21a57b02515a9a8306f0562a81fa99c17df33e7108256",
       "size_bytes": 262
+    },
+    {
+      "path": "migrations/down/0019_sre_security.sql",
+      "sha256": "98e5104e1297031dc296a445f73ec7fb31457c6c76a0d446a2d273e2b387591e",
+      "size_bytes": 338
     },
     {
       "path": "graphs/business-capability-compiler.mmd",
