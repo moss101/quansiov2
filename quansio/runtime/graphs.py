@@ -271,4 +271,4 @@ class WorkGraphStore:
         }
 
     def transaction(self, context: IdentityContext, graph_id: str, transition_id: str | None = None) -> GraphTransaction:
-        return GraphTransaction(self, context, graph_id, transition_id)
+        return GraphTransition(self, context, graph_id, transition_id)
