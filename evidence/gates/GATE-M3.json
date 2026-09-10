@@ -1,0 +1,65 @@
+{
+  "gate": "GATE-M3",
+  "git_commit": "6abb5138667bc75f072d5396575c4d9467fc39db",
+  "predecessor_evidence_index": [
+    {
+      "evidence": "evidence/reports/evidence-gate-m2-f66e8bd40b15.json",
+      "evidence_digest": "acdbfd7af3e83761331822069ca96b50c98060851a30781e7a89e6ea5d8dae5e",
+      "status": "PASS",
+      "task": "GATE-M2"
+    },
+    {
+      "evidence": "evidence/reports/evidence-mod-001-218dc34975af.json",
+      "evidence_digest": "e6876af9a173b3e933c6c80eebd87fd39036c6d54fe51948552d2384f948c2f2",
+      "status": "PASS",
+      "task": "MOD-001"
+    },
+    {
+      "evidence": "evidence/reports/evidence-mod-002-218dc34975af.json",
+      "evidence_digest": "a1910483ebb2c3e11d9970bcb432abcbd7e22ada42b16908a5ff9d71746021c0",
+      "status": "PASS",
+      "task": "MOD-002"
+    },
+    {
+      "evidence": "evidence/reports/evidence-mod-003-218dc34975af.json",
+      "evidence_digest": "a9e68fa9b00303198869547427c10308fdaf9888f004f193c98a1bdcecfe8302",
+      "status": "PASS",
+      "task": "MOD-003"
+    },
+    {
+      "evidence": "evidence/reports/evidence-mod-004-218dc34975af.json",
+      "evidence_digest": "640420138d2bf191ab7fe7e09220a8ee58f1229e2cada56f732628e5b085be55",
+      "status": "PASS",
+      "task": "MOD-004"
+    },
+    {
+      "evidence": "evidence/reports/evidence-mod-005-218dc34975af.json",
+      "evidence_digest": "e2c44c7191ad526b01e07d9848a918304f0a11b57420781d9cd754928e099e35",
+      "status": "PASS",
+      "task": "MOD-005"
+    },
+    {
+      "evidence": "evidence/reports/evidence-mod-006-218dc34975af.json",
+      "evidence_digest": "493d583da41f9f8c00aac1237bb32613247cc1dee79876594857a9c9dea3e572",
+      "status": "PASS",
+      "task": "MOD-006"
+    },
+    {
+      "evidence": "evidence/reports/evidence-mod-007-162e4eb663a8.json",
+      "evidence_digest": "9b4d4a3e95787f5f3f1dff8ab16ab28e6f5d5d255bad5662caf376bb086ee927",
+      "status": "PASS",
+      "task": "MOD-007"
+    },
+    {
+      "evidence": "evidence/reports/evidence-mod-008-162e4eb663a8.json",
+      "evidence_digest": "7c4bcc299f1144569f33445032d6779375bdf313807a7763f542cf0acb4bd8ee",
+      "status": "PASS",
+      "task": "MOD-008"
+    }
+  ],
+  "problems": [],
+  "protected_ref": "HEAD",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "result": "PASS",
+  "schema_revision": "9.0.0"
+}
