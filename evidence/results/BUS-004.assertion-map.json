@@ -2,11 +2,6 @@
   "BUS-003-A01": [
     "tests/business/test_business_connectors.py::test_bus003_n01_workflow_with_absent_permission_stays_unresolved"
   ],
-  "BUS-004-A01": [
-    "tests/business/test_business_connectors.py::test_bus004_p01_operations_bound_to_tools_rbac_policy_evidence",
-    "tests/business/test_business_connectors.py::test_bus004_n01_fidelity_or_permission_failure_blocks",
-    "tests/business/test_business_connectors.py::test_bus004_r01_rotation_requires_compat_rerun"
-  ],
   "BUS-004-N01": [
     "tests/business/test_business_connectors.py::test_bus004_n01_fidelity_or_permission_failure_blocks"
   ],
