@@ -562,18 +562,18 @@ def test_qa006_r01_rollback_versions_resolve(migrated_db, workspace_setup, conte
                                  outputs_schema={"type": "object"}, instructions="rev one",
                                  dependencies=[], source_scope={"trusted_sources": ["runbook://qa"]},
                                  intended_use="u", exclusions="e")
-    evaluation = evaluator.evaluate(context, "rb-qa", v1["version"], intake)
-    registry.promote(context, "rb-qa", v1["version"], evaluation["passed"],
+    evaluation = evaluator.evaluate(context, "rb-qa", revision_one["version"], intake)
+    registry.promote(context, "rb-qa", revision_one["version"], evaluation["passed"],
                      thresholds={}, rollback_target=None)
-    v2 = intake.create_candidate(context, "rb-qa", {"trusted_sources": ["runbook://qa"]},
+    revision_two = intake.create_candidate(context, "rb-qa", {"trusted_sources": ["runbook://qa"]},
                                  purpose="p", inputs_schema={}, outputs_schema={},
                                  instructions="rev two", dependencies=[],
                                  source_scope={"trusted_sources": ["runbook://qa"]},
                                  intended_use="u", exclusions="e")
-    registry.promote(context, "rb-qa", v2["version"], evaluation["passed"],
-                     thresholds={}, rollback_target=v1["version"])
+    registry.promote(context, "rb-qa", revision_two["version"], evaluation["passed"],
+                     thresholds={}, rollback_target=revision_one["version"])
     rolled = registry.rollback(context, "rb-qa")
-    assert rolled["active_version"] == v1["version"]
+    assert rolled["active_version"] == revision_one["version"]
 
 
 from quansio.control.skills import SkillRegistry  # noqa: E402
