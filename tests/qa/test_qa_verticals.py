@@ -557,7 +557,7 @@ def test_qa006_r01_rollback_versions_resolve(migrated_db, workspace_setup, conte
     from quansio.control.skills import SkillRegistry
 
     registry = SkillRegistry(migrated_db)
-    v1 = intake.create_candidate(context, "rb-qa", {"trusted_sources": ["runbook://qa"]},
+    revision_one = intake.create_candidate(context, "rb-qa", {"trusted_sources": ["runbook://qa"]},
                                  purpose="p", inputs_schema={"type": "object"},
                                  outputs_schema={"type": "object"}, instructions="rev one",
                                  dependencies=[], source_scope={"trusted_sources": ["runbook://qa"]},
