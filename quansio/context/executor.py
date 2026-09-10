@@ -48,7 +48,7 @@ def _jsonable_state(state: dict) -> dict:
 
 
 class ExecutionError(Exception):
-    pass
+    """Executor over validated SearchPrograms."""
 
 
 def _apply_filter(candidates: list[Candidate], predicate: dict) -> list[Candidate]:
@@ -125,7 +125,7 @@ class ProgramExecutor:
         self._runs.finish_run(context, program_id, "completed")
         return {"program_id": program_id, "state": state}
 
-    def _execute_step(self, context: IdentityContext, program: SearchProgram,
+    def _execute_step(self, context: IdentityContext, program: CompiledProgram,
                       program_id: str, index: int, step: Step,
                       state: dict, digest: str, deadline: float) -> dict:
         operator = step.operator

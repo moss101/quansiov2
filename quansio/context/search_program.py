@@ -45,7 +45,7 @@ class Step:
 
 
 @dataclass
-class SearchProgram:
+class CompiledProgram:
     program_id: str
     steps: list[Step]
     max_fan_out: int = 100
@@ -60,7 +60,7 @@ class SearchProgram:
         return hashlib.sha256(material.encode()).hexdigest()
 
 
-def parse_program(spec: dict) -> SearchProgram:
+def parse_program(spec: dict) -> CompiledProgram:
     """Validate a program spec; raise ProgramValidationError on any violation."""
     if not isinstance(spec, dict):
         raise ProgramValidationError("program spec must be an object")
@@ -85,7 +85,7 @@ def parse_program(spec: dict) -> SearchProgram:
             raise ProgramValidationError(f"step {index}: arguments must be an object")
         _validate_arguments_declarative(index, operator, arguments)
         steps.append(Step(operator=operator, arguments=arguments))
-    return SearchProgram(
+    return CompiledProgram(
         program_id=str(uuid.uuid4()),
         steps=steps,
         max_fan_out=max_fan_out,
@@ -127,7 +127,7 @@ class ProgramRunStore:
     def __init__(self, database: PlatformDatabase):
         self._db = database
 
-    def open_run(self, context: IdentityContext, program: SearchProgram) -> str:
+    def open_run(self, context: IdentityContext, program: CompiledProgram) -> str:
         program_id = program.program_id or str(uuid.uuid4())
         with self._db.connection() as connection:
             connection.execute(
