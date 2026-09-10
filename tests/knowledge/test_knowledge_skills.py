@@ -430,7 +430,7 @@ def test_skl004_n01_skill_self_mutation_denied(migrated_db, context):
 def test_skl004_r01_rollback_resolves_prior_version(migrated_db, workspace_setup, context, tmp_path):
     intake = _intake(migrated_db)
     first_ver = intake.create_candidate(context, "rb-skill", GOOD_SOURCE, purpose="p",
-                                 inputs_schema={"type": "object"}, outputs_schema={"type": "object"}, instructions="v1",
+                                 inputs_schema={"type": "object"}, outputs_schema={"type": "object"}, instructions="revision-one text",
                                  dependencies=[], source_scope={"trusted_sources": ["runbook://ops/golden"]},
                                  intended_use="u", exclusions="e")
     evaluator = SkillEvaluator(migrated_db)
@@ -439,7 +439,7 @@ def test_skl004_r01_rollback_resolves_prior_version(migrated_db, workspace_setup
     registry.promote(context, "rb-skill", first_ver["version"], evaluation["passed"],
                      thresholds={}, rollback_target=None)
     second_ver = intake.create_candidate(context, "rb-skill", GOOD_SOURCE, purpose="p2",
-                                 inputs_schema={"type": "object"}, outputs_schema={"type": "object"}, instructions="v2",
+                                 inputs_schema={"type": "object"}, outputs_schema={"type": "object"}, instructions="revision-two text",
                                  dependencies=[], source_scope={"trusted_sources": ["runbook://ops/golden"]},
                                  intended_use="u", exclusions="e")
     registry.promote(context, "rb-skill", second_ver["version"], evaluation["passed"],
