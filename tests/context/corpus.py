@@ -31,7 +31,7 @@ def build_corpus() -> dict[str, str]:
     for j in range(4):
         pages[f"/mirror-{j}"] = pages[f"/companies/company-{j:03d}"]
     # Page designed to disappear (inaccessible transition).
-    pages["/vanishing/v1"] = "CLAIM: vanishing-source was accessible at extraction time"
+    pages["/vanishing/first"] = "CLAIM: vanishing-source was accessible at extraction time"
     return pages
 
 
