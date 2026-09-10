@@ -208,6 +208,11 @@
     "tests/governance/test_milestone_gate.py",
     "evidence/gates/GATE-M8.json"
   ],
+  "GATE-M9": [
+    "tools/governance/milestone_gate.py",
+    "tests/governance/test_milestone_gate.py",
+    "evidence/gates/GATE-M9.json"
+  ],
   "GOV-001": [
     "evidence/ownership/inventory.json",
     "evidence/ownership/ownership_registry.json",
