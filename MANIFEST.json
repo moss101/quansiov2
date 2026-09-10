@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 2650,
+  "file_count": 2691,
   "files": [
     {
       "path": ".gitignore",
@@ -214,8 +214,8 @@
     },
     {
       "path": "tests/governance/test_milestone_gate.py",
-      "sha256": "414d0770073897b73388e03a2dad5b4bbb6477fec92bc1f0870b1575feb0cad6",
-      "size_bytes": 6501
+      "sha256": "a388a01ec236bdbeb9ea1bf2b1cd275d5ddc3e30fc710ce934cd7a64d9e15b35",
+      "size_bytes": 6691
     },
     {
       "path": "tests/governance/test_ownership_inventory.py",
@@ -2268,6 +2268,11 @@
       "size_bytes": 725
     },
     {
+      "path": "evidence/results/GATE-M11.assertion-map.json",
+      "sha256": "4a7782ad09331ad382e0e5095058a1e7ef0c16f6c952b57f45eae4f13d188bce",
+      "size_bytes": 725
+    },
+    {
       "path": "evidence/results/GATE-M2.assertion-map.json",
       "sha256": "9e0a0f54f0269f129ee0245cee270201e9456271905e94967c7e08e2b5e925a9",
       "size_bytes": 717
@@ -2528,9 +2533,49 @@
       "size_bytes": 902
     },
     {
+      "path": "evidence/results/UX-001.assertion-map.json",
+      "sha256": "18122f33925af3a63b4d5dfdf2f3ff2bee35bf4c95924707e4157651dfe38cb2",
+      "size_bytes": 958
+    },
+    {
+      "path": "evidence/results/UX-002.assertion-map.json",
+      "sha256": "7bbf44c364da4198242a96b27274f7775ba8355e9ee7c8c6c7f25317e5f886a5",
+      "size_bytes": 703
+    },
+    {
+      "path": "evidence/results/UX-003.assertion-map.json",
+      "sha256": "9d0ac7ef32c4554bdd841bca69b083d04396b33e84493ee47a6f7b8f84911308",
+      "size_bytes": 609
+    },
+    {
+      "path": "evidence/results/UX-004.assertion-map.json",
+      "sha256": "937af0d0690774f25b146281492e345f4050bcdad97d9c14ae8322a53b96afe6",
+      "size_bytes": 615
+    },
+    {
+      "path": "evidence/results/UX-005.assertion-map.json",
+      "sha256": "d8a7829fe2eb6820257f22ff10eb07a03c85b4a1d094815535b805ffbb9606ee",
+      "size_bytes": 583
+    },
+    {
+      "path": "evidence/results/UX-006.assertion-map.json",
+      "sha256": "19d5b0d35a68aa5b44c101db74bcfab74d912bc130a17c298058c52eb76882ca",
+      "size_bytes": 590
+    },
+    {
+      "path": "evidence/results/UX-007.assertion-map.json",
+      "sha256": "42c8fe7cc86ad0ebab5a3667dd0770785047172f37cd6c6917d99d56124e3ea3",
+      "size_bytes": 629
+    },
+    {
+      "path": "evidence/results/UX-008.assertion-map.json",
+      "sha256": "87db059c459dfab0e323161488ba2cf2bf0cf5d8ff069f7253e552e46e065bb4",
+      "size_bytes": 708
+    },
+    {
       "path": "evidence/results/artifacts.json",
-      "sha256": "3b4927736025708a61685cec1d5e3593bc14656f983afc1a0b6a957c4dd4a16c",
-      "size_bytes": 12659
+      "sha256": "4c9b8509a8bf2e7351c1b62e3b70d46d30e272dd969b41b23aadb4a619f32c08",
+      "size_bytes": 13716
     },
     {
       "path": "evidence/reports/evidence-aut-001-46d53d1644e2.json",
@@ -7303,6 +7348,46 @@
       "size_bytes": 1304
     },
     {
+      "path": "evidence/reports/evidence-ux-001-a88e224f97a0.json",
+      "sha256": "f486a0652cde8e41d4d14c720b9425ea407e52597c4cd88da7f818e80c503f46",
+      "size_bytes": 1219
+    },
+    {
+      "path": "evidence/reports/evidence-ux-002-a88e224f97a0.json",
+      "sha256": "7c05ca83fef445a0e7a05f0b7149602c3af7f4de7906d9fc144311c3ad1c86fe",
+      "size_bytes": 1153
+    },
+    {
+      "path": "evidence/reports/evidence-ux-003-48841ed1814c.json",
+      "sha256": "6d49d1860810c69452131aa73dd04ea3d9d7d539a4fecc9d0afdd737f1fd1659",
+      "size_bytes": 1197
+    },
+    {
+      "path": "evidence/reports/evidence-ux-004-a88e224f97a0.json",
+      "sha256": "fda161090907caddb87ca43d32414d1570baf3ab9e15eb364215bb89e38faa12",
+      "size_bytes": 1290
+    },
+    {
+      "path": "evidence/reports/evidence-ux-005-a88e224f97a0.json",
+      "sha256": "73c76865eb15330fd7a30b51380d10cecca3270094e8c61e94b623c21be17e95",
+      "size_bytes": 1289
+    },
+    {
+      "path": "evidence/reports/evidence-ux-006-a88e224f97a0.json",
+      "sha256": "506ac5b6195b399c91efadad1638d00beee1762867ef16ff4a6386f57eeffece",
+      "size_bytes": 1287
+    },
+    {
+      "path": "evidence/reports/evidence-ux-007-48841ed1814c.json",
+      "sha256": "8c98e5b3315a73e9e7022936107a5ed1b0f8ec6790bdfec54289dbd0a5cb1e16",
+      "size_bytes": 1188
+    },
+    {
+      "path": "evidence/reports/evidence-ux-008-a88e224f97a0.json",
+      "sha256": "6fe514c3a2e5ab56d342b5df7f0405db736a387332be92128641c7ec975b51f1",
+      "size_bytes": 1287
+    },
+    {
       "path": "evidence/reports/report-aut-001-46d53d1644e2.json",
       "sha256": "73a05462233773fc7e41e672925ffb85ade0e1c272be59e3f87ffa1659ecdf95",
       "size_bytes": 3481
@@ -12073,6 +12158,46 @@
       "size_bytes": 3786
     },
     {
+      "path": "evidence/reports/report-ux-001-a88e224f97a0.json",
+      "sha256": "cc94d60be412cbba911464447423577933103f3620a4206777f92d7323526590",
+      "size_bytes": 3836
+    },
+    {
+      "path": "evidence/reports/report-ux-002-a88e224f97a0.json",
+      "sha256": "1a6fed4e98677758176b457bc4c833bda027b3aef058279751bdf56a3095b846",
+      "size_bytes": 3115
+    },
+    {
+      "path": "evidence/reports/report-ux-003-48841ed1814c.json",
+      "sha256": "59284dc44ba9b02257081607a0a70b211c77409faf23988d557d6a69a3282282",
+      "size_bytes": 3276
+    },
+    {
+      "path": "evidence/reports/report-ux-004-a88e224f97a0.json",
+      "sha256": "1dca6000810ea7cdbbcee6b02f026c0f513b67296d7fd0fa970fb7fb224b8906",
+      "size_bytes": 3503
+    },
+    {
+      "path": "evidence/reports/report-ux-005-a88e224f97a0.json",
+      "sha256": "1d60a2d030806bc8e655d03d09b6d753e79c0229cf086b4e073fed8153e1e406",
+      "size_bytes": 3470
+    },
+    {
+      "path": "evidence/reports/report-ux-006-a88e224f97a0.json",
+      "sha256": "ae02efe258e8c04982feec318792f2ec713c1c461fb72790da6968e313a8c382",
+      "size_bytes": 3475
+    },
+    {
+      "path": "evidence/reports/report-ux-007-48841ed1814c.json",
+      "sha256": "ad6122aaab7a00836a49c36bd94f82992ee1f2140fc7d85eaa5421c96ef29da8",
+      "size_bytes": 3287
+    },
+    {
+      "path": "evidence/reports/report-ux-008-a88e224f97a0.json",
+      "sha256": "690cababc610f7f8bbdb4687c76c99daf1166f0f58d4ff0816a8385974b72528",
+      "size_bytes": 3587
+    },
+    {
       "path": "evidence/ownership/inventory.json",
       "sha256": "c3bc03a980f41a815c40316e90ab95332031d322ac9055ba4b09b4216d896314",
       "size_bytes": 11115
@@ -12136,6 +12261,86 @@
       "path": "evidence/gates/GATE-M9.json",
       "sha256": "65ab403d858f7a55d714b45a7578604730b7da2262af5a25a62fda1f764f2410",
       "size_bytes": 2319
+    },
+    {
+      "path": "evidence/boundary/UX-008/health-transcript.json",
+      "sha256": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/UX-008/manifest.json",
+      "sha256": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/UX-007/health-transcript.json",
+      "sha256": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/UX-007/manifest.json",
+      "sha256": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/UX-006/health-transcript.json",
+      "sha256": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/UX-006/manifest.json",
+      "sha256": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/UX-005/health-transcript.json",
+      "sha256": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/UX-005/manifest.json",
+      "sha256": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/UX-004/health-transcript.json",
+      "sha256": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/UX-004/manifest.json",
+      "sha256": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/UX-003/health-transcript.json",
+      "sha256": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/UX-003/manifest.json",
+      "sha256": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/UX-002/health-transcript.json",
+      "sha256": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/UX-002/manifest.json",
+      "sha256": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/boundary/UX-001/health-transcript.json",
+      "sha256": "3a84dd674478e10ca030656c85a9abedb7e9b95cfbfc1194ee446ae015f0e4e3",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/boundary/UX-001/manifest.json",
+      "sha256": "fc850eaea9c1ae28471958bf9afce17664662ce4cc0c5d8ed67654d9437ac4a6",
+      "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/SKL-005/health-transcript.json",
@@ -12319,12 +12524,12 @@
     },
     {
       "path": "evidence/boundary/MOD-008/health-transcript.json",
-      "sha256": "24f49113e246c41a73cdf53def07add6fbf58120e6fcf32a5f39baacce4a5202",
-      "size_bytes": 1404
+      "sha256": "beccf060ca818c937c9d01db7617e43619bdc10a3788346e71b9f8c64e468bce",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/MOD-008/manifest.json",
-      "sha256": "e74a162aec6849e83979c76c0695e45c91c3e359f7f0c8411047089ef0fa7628",
+      "sha256": "548df254ac6114b8aa56ee2ba75bed1e5d5ce66554072853d74589d16719d703",
       "size_bytes": 1549
     },
     {
@@ -12509,32 +12714,32 @@
     },
     {
       "path": "evidence/boundary/EXT-003/health-transcript.json",
-      "sha256": "24f49113e246c41a73cdf53def07add6fbf58120e6fcf32a5f39baacce4a5202",
-      "size_bytes": 1404
+      "sha256": "beccf060ca818c937c9d01db7617e43619bdc10a3788346e71b9f8c64e468bce",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/EXT-003/manifest.json",
-      "sha256": "e74a162aec6849e83979c76c0695e45c91c3e359f7f0c8411047089ef0fa7628",
+      "sha256": "548df254ac6114b8aa56ee2ba75bed1e5d5ce66554072853d74589d16719d703",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/EXT-002/health-transcript.json",
-      "sha256": "24f49113e246c41a73cdf53def07add6fbf58120e6fcf32a5f39baacce4a5202",
-      "size_bytes": 1404
+      "sha256": "beccf060ca818c937c9d01db7617e43619bdc10a3788346e71b9f8c64e468bce",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/EXT-002/manifest.json",
-      "sha256": "e74a162aec6849e83979c76c0695e45c91c3e359f7f0c8411047089ef0fa7628",
+      "sha256": "548df254ac6114b8aa56ee2ba75bed1e5d5ce66554072853d74589d16719d703",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/EXT-001/health-transcript.json",
-      "sha256": "24f49113e246c41a73cdf53def07add6fbf58120e6fcf32a5f39baacce4a5202",
-      "size_bytes": 1404
+      "sha256": "beccf060ca818c937c9d01db7617e43619bdc10a3788346e71b9f8c64e468bce",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/EXT-001/manifest.json",
-      "sha256": "e74a162aec6849e83979c76c0695e45c91c3e359f7f0c8411047089ef0fa7628",
+      "sha256": "548df254ac6114b8aa56ee2ba75bed1e5d5ce66554072853d74589d16719d703",
       "size_bytes": 1549
     },
     {
@@ -12599,12 +12804,12 @@
     },
     {
       "path": "evidence/boundary/DAT-006/health-transcript.json",
-      "sha256": "5b2b20c7ee51d089cc0a26486842668445a04bb2db26adafd3cf30fc6a132987",
+      "sha256": "beccf060ca818c937c9d01db7617e43619bdc10a3788346e71b9f8c64e468bce",
       "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/DAT-006/manifest.json",
-      "sha256": "c92a4d86411c55d302fdbe825d8d854edfb57fadcfd15c200c2910e3b758853e",
+      "sha256": "548df254ac6114b8aa56ee2ba75bed1e5d5ce66554072853d74589d16719d703",
       "size_bytes": 1549
     },
     {
@@ -12799,32 +13004,32 @@
     },
     {
       "path": "evidence/boundary/BUS-003/health-transcript.json",
-      "sha256": "24f49113e246c41a73cdf53def07add6fbf58120e6fcf32a5f39baacce4a5202",
-      "size_bytes": 1404
+      "sha256": "beccf060ca818c937c9d01db7617e43619bdc10a3788346e71b9f8c64e468bce",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/BUS-003/manifest.json",
-      "sha256": "e74a162aec6849e83979c76c0695e45c91c3e359f7f0c8411047089ef0fa7628",
+      "sha256": "548df254ac6114b8aa56ee2ba75bed1e5d5ce66554072853d74589d16719d703",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/BUS-002/health-transcript.json",
-      "sha256": "24f49113e246c41a73cdf53def07add6fbf58120e6fcf32a5f39baacce4a5202",
-      "size_bytes": 1404
+      "sha256": "beccf060ca818c937c9d01db7617e43619bdc10a3788346e71b9f8c64e468bce",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/BUS-002/manifest.json",
-      "sha256": "e74a162aec6849e83979c76c0695e45c91c3e359f7f0c8411047089ef0fa7628",
+      "sha256": "548df254ac6114b8aa56ee2ba75bed1e5d5ce66554072853d74589d16719d703",
       "size_bytes": 1549
     },
     {
       "path": "evidence/boundary/BUS-001/health-transcript.json",
-      "sha256": "24f49113e246c41a73cdf53def07add6fbf58120e6fcf32a5f39baacce4a5202",
-      "size_bytes": 1404
+      "sha256": "beccf060ca818c937c9d01db7617e43619bdc10a3788346e71b9f8c64e468bce",
+      "size_bytes": 1403
     },
     {
       "path": "evidence/boundary/BUS-001/manifest.json",
-      "sha256": "e74a162aec6849e83979c76c0695e45c91c3e359f7f0c8411047089ef0fa7628",
+      "sha256": "548df254ac6114b8aa56ee2ba75bed1e5d5ce66554072853d74589d16719d703",
       "size_bytes": 1549
     },
     {
