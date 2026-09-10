@@ -1,0 +1,15 @@
+{
+  "AUT-004-A01": [
+    "tests/automation/test_automation_collaboration.py::test_aut004_p01_and_n01_pause_resume_serialized_against_claiming",
+    "tests/automation/test_automation_collaboration.py::test_aut004_r01_deleted_automation_cannot_reappear"
+  ],
+  "AUT-004-N01": [
+    "tests/automation/test_automation_collaboration.py::test_aut004_p01_and_n01_pause_resume_serialized_against_claiming"
+  ],
+  "AUT-004-P01": [
+    "tests/automation/test_automation_collaboration.py::test_aut004_p01_and_n01_pause_resume_serialized_against_claiming"
+  ],
+  "AUT-004-R01": [
+    "tests/automation/test_automation_collaboration.py::test_aut004_r01_deleted_automation_cannot_reappear"
+  ]
+}

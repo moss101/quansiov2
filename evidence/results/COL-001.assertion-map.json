@@ -1,0 +1,22 @@
+{
+  "COL-001-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col001_p01_room_projection_over_participants_and_messages",
+    "tests/automation/test_automation_collaboration.py::test_col001_n01_shadow_execution_queue_rejected",
+    "tests/automation/test_automation_collaboration.py::test_col001_r01_projection_rebuilds_from_canonical_events"
+  ],
+  "COL-001-N01": [
+    "tests/automation/test_automation_collaboration.py::test_col001_n01_shadow_execution_queue_rejected"
+  ],
+  "COL-001-P01": [
+    "tests/automation/test_automation_collaboration.py::test_col001_p01_room_projection_over_participants_and_messages"
+  ],
+  "COL-001-R01": [
+    "tests/automation/test_automation_collaboration.py::test_col001_r01_projection_rebuilds_from_canonical_events"
+  ],
+  "INV-006-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col001_n01_shadow_execution_queue_rejected"
+  ],
+  "RUN-004-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col001_p01_room_projection_over_participants_and_messages"
+  ]
+}

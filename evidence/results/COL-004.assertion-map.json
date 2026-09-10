@@ -1,0 +1,22 @@
+{
+  "AUT-003-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col004_n01_stale_teammate_no_orphan_routine"
+  ],
+  "COL-004-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col004_p01_routine_fires_with_current_identity",
+    "tests/automation/test_automation_collaboration.py::test_col004_n01_stale_teammate_no_orphan_routine",
+    "tests/automation/test_automation_collaboration.py::test_col004_r01_missed_windows_apply_policy_with_durable_identities"
+  ],
+  "COL-004-N01": [
+    "tests/automation/test_automation_collaboration.py::test_col004_n01_stale_teammate_no_orphan_routine"
+  ],
+  "COL-004-P01": [
+    "tests/automation/test_automation_collaboration.py::test_col004_p01_routine_fires_with_current_identity"
+  ],
+  "COL-004-R01": [
+    "tests/automation/test_automation_collaboration.py::test_col004_r01_missed_windows_apply_policy_with_durable_identities"
+  ],
+  "RUN-002-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col004_p01_routine_fires_with_current_identity"
+  ]
+}

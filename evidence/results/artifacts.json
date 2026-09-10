@@ -1,4 +1,21 @@
 {
+  "AUT-001": [
+    "quansio/context/scheduler.py",
+    "migrations/up/0018_automation_collaboration.sql",
+    "tests/automation/test_automation_collaboration.py"
+  ],
+  "AUT-002": [
+    "quansio/context/scheduler.py",
+    "tests/automation/test_automation_collaboration.py"
+  ],
+  "AUT-003": [
+    "quansio/context/scheduler.py",
+    "tests/automation/test_automation_collaboration.py"
+  ],
+  "AUT-004": [
+    "quansio/context/scheduler.py",
+    "tests/automation/test_automation_collaboration.py"
+  ],
   "BRW-001": [
     "quansio/worker_gateway/browser.py",
     "migrations/up/0015_browser_stack.sql",
@@ -56,6 +73,24 @@
   "BUS-005": [
     "quansio/control/capability_packs.py",
     "tests/business/test_business_connectors.py"
+  ],
+  "COL-001": [
+    "quansio/context/collaboration.py",
+    "migrations/up/0018_automation_collaboration.sql",
+    "tests/automation/test_automation_collaboration.py"
+  ],
+  "COL-002": [
+    "quansio/context/collaboration.py",
+    "tests/automation/test_automation_collaboration.py"
+  ],
+  "COL-003": [
+    "quansio/context/collaboration.py",
+    "tests/automation/test_automation_collaboration.py"
+  ],
+  "COL-004": [
+    "quansio/context/collaboration.py",
+    "quansio/context/scheduler.py",
+    "tests/automation/test_automation_collaboration.py"
   ],
   "CTX-001": [
     "quansio/context/search_program.py",

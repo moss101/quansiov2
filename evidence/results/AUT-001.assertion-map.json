@@ -1,0 +1,16 @@
+{
+  "AUT-001-A01": [
+    "tests/automation/test_automation_collaboration.py::test_aut001_p01_normal_dates_and_dst_fold_policy",
+    "tests/automation/test_automation_collaboration.py::test_aut001_n01_ambiguous_schedule_without_policy_refused",
+    "tests/automation/test_automation_collaboration.py::test_aut001_r01_restart_across_clock_transition_unique_fire_identities"
+  ],
+  "AUT-001-N01": [
+    "tests/automation/test_automation_collaboration.py::test_aut001_n01_ambiguous_schedule_without_policy_refused"
+  ],
+  "AUT-001-P01": [
+    "tests/automation/test_automation_collaboration.py::test_aut001_p01_normal_dates_and_dst_fold_policy"
+  ],
+  "AUT-001-R01": [
+    "tests/automation/test_automation_collaboration.py::test_aut001_r01_restart_across_clock_transition_unique_fire_identities"
+  ]
+}

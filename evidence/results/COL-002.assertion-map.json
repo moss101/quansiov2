@@ -1,0 +1,22 @@
+{
+  "COL-002-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col002_p01_handoff_persists_identity_and_outcome",
+    "tests/automation/test_automation_collaboration.py::test_col002_n01_duplicate_handoff_and_cancelled_target",
+    "tests/automation/test_automation_collaboration.py::test_col002_r01_interrupted_delivery_exposes_durable_outcome"
+  ],
+  "COL-002-N01": [
+    "tests/automation/test_automation_collaboration.py::test_col002_n01_duplicate_handoff_and_cancelled_target"
+  ],
+  "COL-002-P01": [
+    "tests/automation/test_automation_collaboration.py::test_col002_p01_handoff_persists_identity_and_outcome"
+  ],
+  "COL-002-R01": [
+    "tests/automation/test_automation_collaboration.py::test_col002_r01_interrupted_delivery_exposes_durable_outcome"
+  ],
+  "DAT-005-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col002_r01_interrupted_delivery_exposes_durable_outcome"
+  ],
+  "RUN-004-A01": [
+    "tests/automation/test_automation_collaboration.py::test_col002_n01_duplicate_handoff_and_cancelled_target"
+  ]
+}

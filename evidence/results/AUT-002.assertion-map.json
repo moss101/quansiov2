@@ -1,0 +1,16 @@
+{
+  "AUT-002-A01": [
+    "tests/automation/test_automation_collaboration.py::test_aut002_p01_policies_skip_fireonce_and_bounded",
+    "tests/automation/test_automation_collaboration.py::test_aut002_n01_excess_occurrences_not_silently_emitted",
+    "tests/automation/test_automation_collaboration.py::test_aut002_r01_catchup_identities_survive_second_restart"
+  ],
+  "AUT-002-N01": [
+    "tests/automation/test_automation_collaboration.py::test_aut002_n01_excess_occurrences_not_silently_emitted"
+  ],
+  "AUT-002-P01": [
+    "tests/automation/test_automation_collaboration.py::test_aut002_p01_policies_skip_fireonce_and_bounded"
+  ],
+  "AUT-002-R01": [
+    "tests/automation/test_automation_collaboration.py::test_aut002_r01_catchup_identities_survive_second_restart"
+  ]
+}
