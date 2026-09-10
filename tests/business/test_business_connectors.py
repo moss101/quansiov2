@@ -165,11 +165,11 @@ def test_bus002_p01_authoritative_material_decomposes(migrated_db, workspace_set
 def test_bus002_n01_contradiction_yields_explicit_conflict_not_invented_rules(migrated_db, workspace_setup, context):
     compiler = CapabilityCompiler(migrated_db)
     sources = [
-        {"source_ref": "policy-book-v1", "authority": "authoritative",
+        {"source_ref": "policy-book-first", "authority": "authoritative",
          "content": {}, "components": [
              {"kind": "rule", "name": "approval-over-limit",
               "statement": "threshold 500000"}]},
-        {"source_ref": "policy-book-v2", "authority": "authoritative",
+        {"source_ref": "policy-book-second", "authority": "authoritative",
          "content": {}, "components": [
              {"kind": "rule", "name": "approval-over-limit",
               "statement": "threshold 100000"}]},
