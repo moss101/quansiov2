@@ -453,7 +453,7 @@
       "kind": "package_path",
       "path": "quansio/artifact",
       "owner": "quansio-artifact",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "immutable artifact and evidence storage"
     },
@@ -525,7 +525,7 @@
       "kind": "package_path",
       "path": "quansio/runtime",
       "owner": "quansio-runtime",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "canonical graph execution authority"
     },

@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 545,
+  "file_count": 559,
   "files": [
     {
       "path": ".gitignore",
@@ -114,8 +114,8 @@
     },
     {
       "path": "tests/conftest.py",
-      "sha256": "dc2e4ba16ac6337c36a1e67a5686004926d77010a7a08afe459858427f81cb4d",
-      "size_bytes": 2048
+      "sha256": "081c3e66472a5c34235f0f0dde6d9232c12b4ebad989f8a330157d0c376ce371",
+      "size_bytes": 3170
     },
     {
       "path": "tests/runtime/test_events.py",
@@ -2089,12 +2089,12 @@
     },
     {
       "path": "evidence/ownership/inventory.json",
-      "sha256": "2fe8796e2cadbef314d3b1bf7d4964c73608610c8c3a1466d57f918bbefbbdca",
-      "size_bytes": 8235
+      "sha256": "e36c601ef40319c54e3b77a8099cbe3808332aa360ad26bae4c17049734a3bc1",
+      "size_bytes": 8673
     },
     {
       "path": "evidence/ownership/ownership_registry.json",
-      "sha256": "2957653fcb368ade4a9a474770919f57c140ebce3833456b2a28dcf4ef0eb130",
+      "sha256": "7b2e7dc45474dc0e19159233169153d1d46e3533b161f81b250275ad825ab0d0",
       "size_bytes": 22613
     },
     {
@@ -2106,6 +2106,76 @@
       "path": "evidence/gates/GATE-M1.json",
       "sha256": "e7c514a75b7ade1974a145c11927c64e27d60950db5ae8e9a7da805d612c594a",
       "size_bytes": 2546
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014735/health-transcript.json",
+      "sha256": "177a31db55fd27644c8574101b8c0f3e393dfbad032b4070078e6429b6d014ec",
+      "size_bytes": 1400
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014735/manifest.json",
+      "sha256": "b97abc8fc8ef5590d513a157da4e11cb108a776d75e91b7446ec0bc096a539ff",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014713/health-transcript.json",
+      "sha256": "118989fa0e08beb4488cb223d297ad69a35f56394f2b336f111302cb9a5a32e1",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014713/manifest.json",
+      "sha256": "0cc8308bbb60f01499d240395fffef2372c798d8ab990e84826cf673a1c5f013",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014641/health-transcript.json",
+      "sha256": "f5d8ca83249d6696efc3160e43c1aec94b105a1b70063e8f677f557fc609ec17",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014641/manifest.json",
+      "sha256": "0311d228629a380b61e9509ef7f557c927b7e8a7c252fe4099429169ac4a452a",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014619/health-transcript.json",
+      "sha256": "1c7ca928d0d5b853dbb1d37338705fffd36600e025b2711994ab13fd705b4df9",
+      "size_bytes": 1403
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014619/manifest.json",
+      "sha256": "31db724921ac951f8baa380cfb89499c48890ed597baecb2115290cf74262ad0",
+      "size_bytes": 1549
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014552/health-transcript.json",
+      "sha256": "2435e3a893d73185e41378d0a00ea0625e74563b0ef7b3da0e9b10975b40002c",
+      "size_bytes": 1400
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014552/manifest.json",
+      "sha256": "02b14569b2250463e0bb606b5f7e14fa8cc8ab0d1dbe5e39185840503b5721ec",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014527/health-transcript.json",
+      "sha256": "f96cf20b125778acaeea439693fdbfe2fd4d8e47468fcfae0979200c05593a8e",
+      "size_bytes": 1401
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014527/manifest.json",
+      "sha256": "72b43c20fd63b1a04f07af283a7bd9dffc0f31f1ab63245d050b8e3d33c3bfe0",
+      "size_bytes": 1701
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014453/health-transcript.json",
+      "sha256": "7aff3f71000410b41c7982401fa94d3ac41d4da4648583c956adf11adaa48569",
+      "size_bytes": 1400
+    },
+    {
+      "path": "evidence/environment/qual-20260910T014453/manifest.json",
+      "sha256": "06c342a944bdb70bec34f05be62eb88e5b7b5bafb712e3a9e3a5ebe680fba49e",
+      "size_bytes": 1701
     },
     {
       "path": "evidence/environment/qual-20260910T014252/health-transcript.json",
@@ -2714,7 +2784,7 @@
     },
     {
       "path": "deploy/compose/.env.qual",
-      "sha256": "b1ed334f5f5efabc428e6bf3b13e26f54942546b0d1adaf7b40be80174c59c62",
+      "sha256": "f613428a268df7dfb7f238a40d34ce39161575e8d66d933b2aa3d6660ab422fa",
       "size_bytes": 216
     },
     {

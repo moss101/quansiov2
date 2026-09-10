@@ -274,6 +274,14 @@
     },
     {
       "kind": "package_path",
+      "owner": "quansio-artifact",
+      "path": "quansio/artifact",
+      "role": "immutable artifact and evidence storage",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
       "owner": "quansio-control",
       "path": "quansio/control",
       "role": "tenant/identity/policy/approval authority",
@@ -289,6 +297,14 @@
       "status": "present"
     },
     {
+      "kind": "package_path",
+      "owner": "quansio-runtime",
+      "path": "quansio/runtime",
+      "role": "canonical graph execution authority",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "test_path",
       "owner": "tests",
       "path": "tests",
@@ -297,9 +313,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 37,
+  "entry_count": 39,
   "inventory_version": "1.0.0",
-  "registry_sha256": "2957653fcb368ade4a9a474770919f57c140ebce3833456b2a28dcf4ef0eb130",
+  "registry_sha256": "7b2e7dc45474dc0e19159233169153d1d46e3533b161f81b250275ad825ab0d0",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "665604288cc6723e743a179243e76f1853fe7d995076022c5bb8e98b82410413"
