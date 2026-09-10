@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M13",
-  "git_commit": "5faa57043a2932c9dbbbd998ae162f6da9ab12f6",
+  "git_commit": "3a6ae0a8c2df1df3d751b3a4a5fef3f33af826dc",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-gate-m12-87d1aee68008.json",
@@ -9,57 +9,86 @@
       "task": "GATE-M12"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-001-298a4813d2ef.json",
-      "evidence_digest": "c1272327eb1bdb85b59adb57685ed553bcf45240c3f7579d1395f4cc90fb40ea",
+      "evidence": "evidence/reports/evidence-qa-001-e9764f162f8e.json",
+      "evidence_digest": "a0b40a50c4065760ccd4da720c04ce2beaf85416aca601888be93afb49b5a6f9",
       "status": "PASS",
       "task": "QA-001"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-002-298a4813d2ef.json",
-      "evidence_digest": "a7ae4c4002e22d2986a954683867ded9766444c2635cb90fced9001cdbb8324e",
+      "evidence": "evidence/reports/evidence-qa-002-e9764f162f8e.json",
+      "evidence_digest": "3e9c070b560a9e6fb9578e66f0dbc6b109edd7ca208c5dbfebf3c49ae3cda7e2",
       "status": "PASS",
       "task": "QA-002"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-003-298a4813d2ef.json",
-      "evidence_digest": "371727e95d8a23b39820f2f25f48308e5b11d77cd7451de0b7028f0fd7b66d4e",
+      "evidence": "evidence/reports/evidence-qa-003-e9764f162f8e.json",
+      "evidence_digest": "085dfdc94a32035333c1514c3fd099c69474a954d24fdb9136d6adad1303d8fd",
       "status": "PASS",
       "task": "QA-003"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-004-298a4813d2ef.json",
-      "evidence_digest": "6c8df108374367b30f2f0897b4e88a841e96a04d49d1e2f17e6333610becc532",
+      "evidence": "evidence/reports/evidence-qa-004-e9764f162f8e.json",
+      "evidence_digest": "e76a424e23e598a1b1e770172fc0bb4c213225e3acb01de637d31436980ce1d9",
       "status": "PASS",
       "task": "QA-004"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-005-298a4813d2ef.json",
-      "evidence_digest": "88f36be79225cfb66802be47e124b5de4c9eb305efbc7c6e4e19500d9fe10b2d",
+      "evidence": "evidence/reports/evidence-qa-005-e9764f162f8e.json",
+      "evidence_digest": "75b458611544de6f4d14a7a2336b08a35bacb537a171275e35856c23112b0a85",
       "status": "PASS",
       "task": "QA-005"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-006-298a4813d2ef.json",
-      "evidence_digest": "df51bfef7e6fe7cf0035b722088d4912658afb631fd483263eac7e18374a42ff",
+      "evidence": "evidence/reports/evidence-qa-006-e588be03f75c.json",
+      "evidence_digest": "77514a6c21c74cf2045b2dccf50dd89d6874d4ccc9cd7dc21a49e15030d46910",
       "status": "PASS",
       "task": "QA-006"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-007-298a4813d2ef.json",
-      "evidence_digest": "d11168f0afc1c09b5711edca52c13d46506318c938331a60d210934382ab839a",
+      "evidence": "evidence/reports/evidence-qa-007-e9764f162f8e.json",
+      "evidence_digest": "8f844aeadd9947443bf3125a2ab45c126618d12a4c1614a2cf29e29dfeec5a00",
       "status": "PASS",
       "task": "QA-007"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-008-298a4813d2ef.json",
-      "evidence_digest": "398ae752171a671754fcee212d1f8449dec3655c0259091976b918ad0e1c99d2",
+      "evidence": "evidence/reports/evidence-qa-008-e9764f162f8e.json",
+      "evidence_digest": "024e2a46eef8f00ac83cc9b7b744df1340589054732a58ece0db7b3882f8da5b",
       "status": "PASS",
       "task": "QA-008"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/qa/test_qa_verticals.py']",
+      "task": "QA-001"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/qa/test_qa_verticals.py']",
+      "task": "QA-002"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/qa/test_qa_verticals.py']",
+      "task": "QA-003"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/qa/test_qa_verticals.py']",
+      "task": "QA-004"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/qa/test_qa_verticals.py']",
+      "task": "QA-005"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/qa/test_qa_verticals.py']",
+      "task": "QA-007"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: tests/qa/test_qa_verticals.py']",
+      "task": "QA-008"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }
