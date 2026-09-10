@@ -1,0 +1,16 @@
+{
+  "CTX-004-A01": [
+    "tests/context/test_context_stack.py::test_ctx004_p01_wide_fan_out_discovers_100_plus_candidates",
+    "tests/context/test_context_stack.py::test_ctx004_n01_budget_and_timeout_branches_record_missing_data",
+    "tests/context/test_context_stack.py::test_ctx004_r01_restart_continues_from_persisted_intermediates"
+  ],
+  "CTX-004-N01": [
+    "tests/context/test_context_stack.py::test_ctx004_n01_budget_and_timeout_branches_record_missing_data"
+  ],
+  "CTX-004-P01": [
+    "tests/context/test_context_stack.py::test_ctx004_p01_wide_fan_out_discovers_100_plus_candidates"
+  ],
+  "CTX-004-R01": [
+    "tests/context/test_context_stack.py::test_ctx004_r01_restart_continues_from_persisted_intermediates"
+  ]
+}

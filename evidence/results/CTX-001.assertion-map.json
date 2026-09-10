@@ -1,0 +1,15 @@
+{
+  "CTX-001-A01": [
+    "tests/context/test_context_stack.py::test_ctx001_p01_valid_program_parses_and_executes",
+    "tests/context/test_context_stack.py::test_ctx001_n01_invalid_programs_fail_before_execution"
+  ],
+  "CTX-001-N01": [
+    "tests/context/test_context_stack.py::test_ctx001_n01_invalid_programs_fail_before_execution"
+  ],
+  "CTX-001-P01": [
+    "tests/context/test_context_stack.py::test_ctx001_p01_valid_program_parses_and_executes"
+  ],
+  "CTX-001-R01": [
+    "tests/context/test_context_stack.py::test_ctx001_r01_restart_resumes_from_durable_operator_outputs"
+  ]
+}

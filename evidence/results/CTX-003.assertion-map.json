@@ -1,0 +1,16 @@
+{
+  "CTX-003-A01": [
+    "tests/context/test_context_stack.py::test_ctx003_p01_entity_record_separates_identity_attributes_claims",
+    "tests/context/test_context_stack.py::test_ctx003_n01_similar_names_with_different_keys_are_not_merged",
+    "tests/context/test_context_stack.py::test_ctx003_r01_identity_correction_preserves_superseded_evidence"
+  ],
+  "CTX-003-N01": [
+    "tests/context/test_context_stack.py::test_ctx003_n01_similar_names_with_different_keys_are_not_merged"
+  ],
+  "CTX-003-P01": [
+    "tests/context/test_context_stack.py::test_ctx003_p01_entity_record_separates_identity_attributes_claims"
+  ],
+  "CTX-003-R01": [
+    "tests/context/test_context_stack.py::test_ctx003_r01_identity_correction_preserves_superseded_evidence"
+  ]
+}

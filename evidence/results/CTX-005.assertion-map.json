@@ -1,0 +1,16 @@
+{
+  "CTX-005-A01": [
+    "tests/context/test_context_stack.py::test_ctx005_p01_refetch_classifies_claim_states",
+    "tests/context/test_context_stack.py::test_ctx005_n01_altered_claim_fails_despite_citation",
+    "tests/context/test_context_stack.py::test_ctx005_r01_accessible_to_inaccessible_keeps_last_digest"
+  ],
+  "CTX-005-N01": [
+    "tests/context/test_context_stack.py::test_ctx005_n01_altered_claim_fails_despite_citation"
+  ],
+  "CTX-005-P01": [
+    "tests/context/test_context_stack.py::test_ctx005_p01_refetch_classifies_claim_states"
+  ],
+  "CTX-005-R01": [
+    "tests/context/test_context_stack.py::test_ctx005_r01_accessible_to_inaccessible_keeps_last_digest"
+  ]
+}

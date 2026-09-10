@@ -1,0 +1,14 @@
+{
+  "CTX-002-A01": [
+    "tests/context/test_context_stack.py::test_ctx002_p01_retrieval_carries_canonical_provenance"
+  ],
+  "CTX-007-N01": [
+    "tests/context/test_context_stack.py::test_ctx007_n01_source_deleted_without_tombstone_is_divergence"
+  ],
+  "CTX-007-P01": [
+    "tests/context/test_context_stack.py::test_ctx007_p01_ingest_query_tombstone_watermark"
+  ],
+  "CTX-007-R01": [
+    "tests/context/test_context_stack.py::test_ctx007_r01_rebuild_preserves_query_identity"
+  ]
+}

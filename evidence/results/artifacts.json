@@ -1,4 +1,38 @@
 {
+  "CTX-001": [
+    "quansio/context/search_program.py",
+    "tests/context/test_context_stack.py"
+  ],
+  "CTX-002": [
+    "quansio/context/retrieval.py",
+    "tests/context/test_context_stack.py"
+  ],
+  "CTX-003": [
+    "quansio/context/research_record.py",
+    "tests/context/test_context_stack.py"
+  ],
+  "CTX-004": [
+    "quansio/context/executor.py",
+    "tests/context/test_context_stack.py"
+  ],
+  "CTX-005": [
+    "quansio/context/verification.py",
+    "tests/context/test_context_stack.py"
+  ],
+  "CTX-006": [
+    "quansio/context/projection.py",
+    "tests/context/test_context_stack.py"
+  ],
+  "CTX-007": [
+    "quansio/indexer/index.py",
+    "migrations/up/0012_context_research.sql",
+    "tests/context/test_context_stack.py"
+  ],
+  "CTX-008": [
+    "quansio/context/scoring.py",
+    "tests/context/corpus.py",
+    "tests/context/test_context_stack.py"
+  ],
   "DAT-001": [
     "quansio/control/identity.py",
     "quansio/api/app.py",

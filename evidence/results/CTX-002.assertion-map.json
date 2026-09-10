@@ -1,0 +1,16 @@
+{
+  "CTX-002-A01": [
+    "tests/context/test_context_stack.py::test_ctx002_p01_retrieval_carries_canonical_provenance",
+    "tests/context/test_context_stack.py::test_ctx002_n01_duplicate_content_merges_with_distinct_provenance",
+    "tests/context/test_context_stack.py::test_ctx002_r01_inaccessible_source_preserved_as_stale"
+  ],
+  "CTX-002-N01": [
+    "tests/context/test_context_stack.py::test_ctx002_n01_duplicate_content_merges_with_distinct_provenance"
+  ],
+  "CTX-002-P01": [
+    "tests/context/test_context_stack.py::test_ctx002_p01_retrieval_carries_canonical_provenance"
+  ],
+  "CTX-002-R01": [
+    "tests/context/test_context_stack.py::test_ctx002_r01_inaccessible_source_preserved_as_stale"
+  ]
+}

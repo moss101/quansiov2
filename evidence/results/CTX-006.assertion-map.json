@@ -1,0 +1,17 @@
+{
+  "CTX-006-N01": [
+    "tests/context/test_context_stack.py::test_ctx006_n01_forbidden_data_class_denied_before_construction"
+  ],
+  "CTX-006-P01": [
+    "tests/context/test_context_stack.py::test_ctx006_p01_projection_under_budget_with_identity"
+  ],
+  "CTX-006-R01": [
+    "tests/context/test_context_stack.py::test_ctx006_r01_epoch_invalidation_rebuilds_projection_only"
+  ],
+  "CTX-007-A01": [
+    "tests/context/test_context_stack.py::test_ctx007_p01_ingest_query_tombstone_watermark"
+  ],
+  "INV-003-A01": [
+    "tests/context/test_context_stack.py::test_ctx006_r01_epoch_invalidation_rebuilds_projection_only"
+  ]
+}
