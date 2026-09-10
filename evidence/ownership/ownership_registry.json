@@ -621,7 +621,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_worker_gateway/main.py",
       "owner": "quansio-worker-gateway",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "worker gateway entrypoint"
     },

@@ -258,6 +258,14 @@
     },
     {
       "kind": "entrypoint",
+      "owner": "quansio-worker-gateway",
+      "path": "services/quansio_worker_gateway/main.py",
+      "role": "worker gateway entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
       "owner": "qworkerd",
       "path": "services/qworkerd/main.py",
       "role": "guest actuator entrypoint",
@@ -393,9 +401,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 49,
+  "entry_count": 50,
   "inventory_version": "1.0.0",
-  "registry_sha256": "edf093529f5f5d9629b9cbf5de5d2cfb6bf5fa18d3c31e236c9bc58b1ceb7147",
+  "registry_sha256": "44f077b1fdb47c186922ad53bb5436c0734342c778a49e0f46ef19a7bdcf0c77",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "71696e5be24ac6a6e2893727cba9edf608ff8c56d4d406b2aa092b7b87793eae"
