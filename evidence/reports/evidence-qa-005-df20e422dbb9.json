@@ -1,0 +1,32 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/QA-005/health-transcript.json": "e6da82b8933dabb3d0c76068d918c4dfde9f98588dc31cd214aad49cb159a2b5",
+    "evidence/boundary/QA-005/manifest.json": "114f19037680a0d68545a2b60f80f8a373af3233ecb2a65c9171e420084c8799",
+    "quansio/machine_control/services.py": "804919a0467ce905634efc1e29c7e8110f80d97b1ad707817ffffde1e57a38d3",
+    "tests/qa/test_qa_verticals.py": "aa096dc567a595744cd7d7f7e94fd7a0f3bef7edcf3ec29a21b3dfe5efd424b5"
+  },
+  "created_at": "2026-09-10T17:11:43Z",
+  "evidence_id": "evidence-qa-005-df20e422dbb9",
+  "git_commit": "df20e422dbb92c148d8afc1cb9ab8890c6342667",
+  "real_boundary": true,
+  "report_digest": "51c085cca244817b50078e88e8ea0545139e1bbb104cc86129427ac94e8ed81a",
+  "report_path": "evidence/reports/report-qa-005-df20e422dbb9.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "BRW-006-A01",
+    "MAC-007-A01"
+  ],
+  "requirement_ids": [
+    "BRW-006",
+    "MAC-007"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "QA-005-N01",
+    "QA-005-P01",
+    "QA-005-R01"
+  ],
+  "task_id": "QA-005"
+}
