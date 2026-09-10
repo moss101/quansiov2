@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M1",
-  "git_commit": "2f364b0ef2b7455d026ab30389bf32039b8c93a1",
+  "git_commit": "7f49b47a9c706319493562865b74a0bedb2f2a2d",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-dat-001-20882bb890ba.json",
@@ -51,8 +51,8 @@
       "task": "DAT-008"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m0-f95552a18fff.json",
-      "evidence_digest": "d6a7945dc435b6ff016030ed3c02deaf563fbc88fc9ee8e2e47f75c16c334786",
+      "evidence": "evidence/reports/evidence-gate-m0-1c5d92e6ea1d.json",
+      "evidence_digest": "9f437641c09f094a587e6195c71b926e16e6eb71b6abc25dd08af8783a283422",
       "status": "PASS",
       "task": "GATE-M0"
     },
@@ -63,9 +63,18 @@
       "task": "SEC-001"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/DAT-003/manifest.json', '- local artifact mismatch: evidence/boundary/DAT-003/health-transcript.json', '- local artifact mismatch: quansio/runtime/events.py']",
+      "task": "DAT-003"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/DAT-004/manifest.json', '- local artifact mismatch: evidence/boundary/DAT-004/health-transcript.json', '- local artifact mismatch: quansio/runtime/events.py']",
+      "task": "DAT-004"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }
