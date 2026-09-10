@@ -2,9 +2,6 @@
   "BRW-002-A01": [
     "tests/browser/test_browser_stack.py::test_brw002_p01_structured_actions_correlated"
   ],
-  "UX-003-A01": [
-    "tests/uxclients/test_client_surfaces.py::test_ux003_p01_and_n01_pane_respects_controller_lease"
-  ],
   "UX-003-N01": [
     "tests/uxclients/test_client_surfaces.py::test_ux003_p01_and_n01_pane_respects_controller_lease"
   ],

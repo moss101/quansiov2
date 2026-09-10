@@ -10,5 +10,8 @@
   ],
   "UX-007-P01": [
     "tests/uxclients/test_client_surfaces.py::test_ux007_n01_mobile_unsupported_surface_gated"
+  ],
+  "UX-007-R01": [
+    "tests/uxclients/test_client_surfaces.py::test_ux008_r01_event_follow_resume_from_stored_cursor"
   ]
 }
