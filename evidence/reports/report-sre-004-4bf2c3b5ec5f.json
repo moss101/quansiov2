@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "4c6626f60197e7574c9856deb7b82a44506826719441274a9457f882e80f7c08",
+      "path_or_uri": "evidence/boundary/SRE-004/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "93022bb500ec25522bc6aa02c765973d826f348d00cff9d1481613b29e184c05",
+      "path_or_uri": "evidence/boundary/SRE-004/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "5b0da112707a255d8cdbcb281f5dc0a25926e5e984b0c781bfab28b398fe6e9e",
+      "path_or_uri": "quansio/observability/sre.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "31ee201207e9ae00c80046256d9f056881187292a455e4d18d3c4b5cf6d47f4d",
+      "path_or_uri": "tests/sre/test_sre_security.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "5a4b43e7ed9afde818916a4eb816c1d406f5719c09029a4002fd699aebb5049f",
+      "path_or_uri": "tests/machines/test_machine_fabric.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "SRE-002-A01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre002_p01_measurement_with_declared_exclusions; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-003-A01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre003_r01_unknown_effects_must_resolve_before_reopen; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-004-N01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre004_n01_drill_fails_on_objective_or_component_gap; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-004-P01",
+      "blocking": true,
+      "details": "executed: tests/sre/test_sre_security.py::test_sre004_p01_drills_meet_rpo_rto_objectives; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SRE-004-R01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac007_r01_restore_to_new_generation_fails_stale_actions; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T14:10:13Z",
+  "git_commit": "4bf2c3b5ec5fc774fe8b2c56f9f0b03ae06c253d",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-sre-004-4bf2c3b5ec5f",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "SRE-004"
+}
