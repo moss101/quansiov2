@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "5aa2ec8c33e0cf17edbcd42fe3dc06c7846e8318cbe7b5144540e488486c95cd",
+      "path_or_uri": "evidence/boundary/BUS-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "5b226038f3d2cdbcb4642e6c75630bca2bec36372be29fe32ab2c0cd6817cc73",
+      "path_or_uri": "evidence/boundary/BUS-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "248a200f5046f704034de670bb443a261fa480916d969bf9bde9620872452cc5",
+      "path_or_uri": "quansio/control/capability_packs.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "14faa79f61dfab13e18dcf88604c48a1416fb59529977dcded88b0ae9f81bbf9",
+      "path_or_uri": "migrations/up/0017_business_connectors.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "b125bd2989d2511dcc54c9a7c31f547a84937f1cd2a0d6b14d7c2fc4bc852952",
+      "path_or_uri": "tests/business/test_business_connectors.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "BUS-001-A01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_bus001_p01_full_pack_reaches_draft; tests/business/test_business_connectors.py::test_bus001_n01_missing_thresholds_rbac_or_compatibility_never_publishable; tests/business/test_business_connectors.py::test_bus001_r01_rollback_loads_prior_version_preserving_identities; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BUS-001-N01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_bus001_n01_missing_thresholds_rbac_or_compatibility_never_publishable; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BUS-001-P01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_bus001_p01_full_pack_reaches_draft; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BUS-001-R01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_bus001_r01_rollback_loads_prior_version_preserving_identities; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T12:39:41Z",
+  "git_commit": "4ea9b6de9f49d92a9d92a483330357e7fd634aa3",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-bus-001-4ea9b6de9f49",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "BUS-001"
+}
