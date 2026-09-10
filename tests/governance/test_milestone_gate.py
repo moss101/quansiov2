@@ -23,7 +23,7 @@ GATE_TOOL = REPO_ROOT / "tools/governance/milestone_gate.py"
 PY = sys.executable
 GATES_UNDER_TEST = ["GATE-M0", "GATE-M1"]
 EXPECTED_M0 = {"ENV-001", "GOV-001", "GOV-002", "GOV-003", "GOV-004", "GOV-005", "GOV-006", "GOV-007"}
-EXPECTED_M1 = EXPECTED_M0 | {"DAT-001", "DAT-002", "DAT-003", "DAT-004", "DAT-005", "DAT-006", "DAT-007", "DAT-008", "SEC-001"}
+EXPECTED_M1 = {"DAT-001", "DAT-002", "DAT-003", "DAT-004", "DAT-005", "DAT-006", "DAT-007", "DAT-008", "SEC-001", "GATE-M0"}
 EXPECTED = {"GATE-M0": EXPECTED_M0, "GATE-M1": EXPECTED_M1}
 # a direct predecessor whose evidence removal must fail the gate
 PROBE_PREDECESSOR = {"GATE-M0": "gov-003", "GATE-M1": "dat-003"}
