@@ -12,6 +12,6 @@
     "tests/sre/test_sre_security.py::test_sre004_p01_drills_meet_rpo_rto_objectives"
   ],
   "SRE-004-R01": [
-    "tests/sre/test_sre_security.py::test_sre004_r01_restore_to_new_generation_fails_stale_actions"
+    "tests/machines/test_machine_fabric.py::test_mac007_r01_restore_to_new_generation_fails_stale_actions"
   ]
 }
