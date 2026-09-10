@@ -92,6 +92,41 @@
     "docs/decisions/0003-decision-and-threat-model-workflow.md",
     "tests/governance/test_decision_gate.py"
   ],
+  "MOD-001": [
+    "quansio/model_gateway/gateway.py",
+    "quansio/model_gateway/credentials.py",
+    "tests/model_gateway/test_boundary.py"
+  ],
+  "MOD-002": [
+    "quansio/model_gateway/adapters.py",
+    "tests/model_gateway/test_gateway.py"
+  ],
+  "MOD-003": [
+    "quansio/model_gateway/routing.py",
+    "tests/model_gateway/test_gateway.py"
+  ],
+  "MOD-004": [
+    "quansio/model_gateway/streaming.py",
+    "tests/model_gateway/test_gateway.py"
+  ],
+  "MOD-005": [
+    "quansio/model_gateway/usage.py",
+    "tests/model_gateway/test_gateway.py"
+  ],
+  "MOD-006": [
+    "quansio/model_gateway/privacy.py",
+    "tests/model_gateway/test_gateway.py"
+  ],
+  "MOD-007": [
+    "quansio/model_gateway/failover.py",
+    "tests/model_gateway/test_gateway.py"
+  ],
+  "MOD-008": [
+    "quansio/model_gateway/adapters.py",
+    "quansio/model_gateway/gateway.py",
+    "tests/model_gateway/test_real_provider_qualification.py",
+    "evidence/model_gateway/mod008-real-stream.json"
+  ],
   "RUN-001": [
     "quansio/runtime/graphs.py",
     "migrations/up/0007_graph_transactions.sql",

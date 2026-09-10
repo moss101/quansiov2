@@ -1,0 +1,16 @@
+{
+  "MOD-002-A01": [
+    "tests/model_gateway/test_gateway.py::test_mod002_p01_real_profile_translates_to_canonical_events",
+    "tests/model_gateway/test_gateway.py::test_mod002_n01_missing_mandatory_fields_emit_typed_protocol_failure",
+    "tests/model_gateway/test_gateway.py::test_mod002_r01_adapter_disabled_mid_flight_reaches_explicit_terminal"
+  ],
+  "MOD-002-N01": [
+    "tests/model_gateway/test_gateway.py::test_mod002_n01_missing_mandatory_fields_emit_typed_protocol_failure"
+  ],
+  "MOD-002-P01": [
+    "tests/model_gateway/test_gateway.py::test_mod002_p01_real_profile_translates_to_canonical_events"
+  ],
+  "MOD-002-R01": [
+    "tests/model_gateway/test_gateway.py::test_mod002_r01_adapter_disabled_mid_flight_reaches_explicit_terminal"
+  ]
+}

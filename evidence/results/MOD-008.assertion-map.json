@@ -1,0 +1,18 @@
+{
+  "MOD-007-A01": [
+    "tests/model_gateway/test_real_provider_qualification.py::test_mod008_p01_outage_failover_completes_on_healthy_profile",
+    "tests/model_gateway/test_real_provider_qualification.py::test_mod008_r01_restart_reproducibility_without_stale_charges"
+  ],
+  "MOD-008-N01": [
+    "tests/model_gateway/test_real_provider_qualification.py::test_mod008_n01_qualification_without_real_boundary_cannot_complete"
+  ],
+  "MOD-008-P01": [
+    "tests/model_gateway/test_real_provider_qualification.py::test_mod008_p01_real_request_streaming_usage_and_evidence",
+    "tests/model_gateway/test_real_provider_qualification.py::test_mod008_p01_cancellation_mid_stream_settles",
+    "tests/model_gateway/test_real_provider_qualification.py::test_mod008_p01_malformed_response_is_typed_protocol_failure",
+    "tests/model_gateway/test_real_provider_qualification.py::test_mod008_p01_outage_failover_completes_on_healthy_profile"
+  ],
+  "MOD-008-R01": [
+    "tests/model_gateway/test_real_provider_qualification.py::test_mod008_r01_restart_reproducibility_without_stale_charges"
+  ]
+}

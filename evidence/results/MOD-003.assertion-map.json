@@ -1,0 +1,15 @@
+{
+  "MOD-003-A01": [
+    "tests/model_gateway/test_gateway.py::test_mod003_p01_deterministic_route_decision",
+    "tests/model_gateway/test_gateway.py::test_mod003_r01_pinned_route_decision_prevents_silent_drift"
+  ],
+  "MOD-003-N01": [
+    "tests/model_gateway/test_gateway.py::test_mod003_n01_unsatisfiable_constraints_fail_without_provider_call"
+  ],
+  "MOD-003-P01": [
+    "tests/model_gateway/test_gateway.py::test_mod003_p01_deterministic_route_decision"
+  ],
+  "MOD-003-R01": [
+    "tests/model_gateway/test_gateway.py::test_mod003_r01_pinned_route_decision_prevents_silent_drift"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "MOD-004-A01": [
+    "tests/model_gateway/test_gateway.py::test_mod004_p01_canonical_order_with_backpressure",
+    "tests/model_gateway/test_gateway.py::test_mod004_n01_injected_invalid_streams_never_reach_runtime",
+    "tests/model_gateway/test_gateway.py::test_mod004_r01_cancel_during_blocked_consumption"
+  ],
+  "MOD-004-N01": [
+    "tests/model_gateway/test_gateway.py::test_mod004_n01_injected_invalid_streams_never_reach_runtime"
+  ],
+  "MOD-004-P01": [
+    "tests/model_gateway/test_gateway.py::test_mod004_p01_canonical_order_with_backpressure"
+  ],
+  "MOD-004-R01": [
+    "tests/model_gateway/test_gateway.py::test_mod004_r01_cancel_during_blocked_consumption"
+  ]
+}

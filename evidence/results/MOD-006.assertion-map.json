@@ -1,0 +1,20 @@
+{
+  "MOD-006-A01": [
+    "tests/model_gateway/test_gateway.py::test_mod006_p01_classification_redaction_and_audit_identity",
+    "tests/model_gateway/test_gateway.py::test_mod006_n01_denied_destination_never_sends_protected_content",
+    "tests/model_gateway/test_gateway.py::test_mod006_r01_policy_dependency_down_fails_closed"
+  ],
+  "MOD-006-N01": [
+    "tests/model_gateway/test_gateway.py::test_mod006_n01_denied_destination_never_sends_protected_content"
+  ],
+  "MOD-006-P01": [
+    "tests/model_gateway/test_gateway.py::test_mod006_p01_classification_redaction_and_audit_identity"
+  ],
+  "MOD-006-R01": [
+    "tests/model_gateway/test_gateway.py::test_mod006_r01_policy_dependency_down_fails_closed"
+  ],
+  "SEC-003-A01": [
+    "tests/model_gateway/test_gateway.py::test_mod006_p01_classification_redaction_and_audit_identity",
+    "tests/model_gateway/test_gateway.py::test_mod006_r01_policy_dependency_down_fails_closed"
+  ]
+}
