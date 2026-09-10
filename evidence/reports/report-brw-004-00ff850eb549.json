@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "cb6d801d6267b1c462d97a7c253ae54dd3f88325590c6afc26e47b8d023be6f6",
+      "path_or_uri": "evidence/boundary/BRW-004/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "edfdd455f10d194f619fce49e3ab37cf19831e6db32f6060e1bf3212f9a9b1f7",
+      "path_or_uri": "evidence/boundary/BRW-004/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "9432452f5248015985b23c4a87fdafd2966e75a983d64fb5dbfc6884222812ad",
+      "path_or_uri": "quansio/worker_gateway/browser.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "a6a59c24dca8cae5e8e45a465e1b93ee2d4d52c62d69c861a9b186dbb02f961a",
+      "path_or_uri": "tests/browser/test_browser_stack.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "BRW-002-A01",
+      "blocking": true,
+      "details": "executed: tests/browser/test_browser_stack.py::test_brw002_p01_structured_actions_correlated; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BRW-004-N01",
+      "blocking": true,
+      "details": "executed: tests/browser/test_browser_stack.py::test_brw004_n01_agent_blocked_while_human_holds_control; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BRW-004-P01",
+      "blocking": true,
+      "details": "executed: tests/browser/test_browser_stack.py::test_brw004_p01_takeover_and_return; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "BRW-004-R01",
+      "blocking": true,
+      "details": "executed: tests/browser/test_browser_stack.py::test_brw004_r01_bounded_release_after_disconnect; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-10T07:54:58Z",
+  "git_commit": "00ff850eb5496e9e6c4e75d6f406e19435a68bd7",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-brw-004-00ff850eb549",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "BRW-004"
+}
