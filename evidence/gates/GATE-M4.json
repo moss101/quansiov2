@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M4",
-  "git_commit": "f2d531fdcd52522b162c5a7e2b680c2a0a54885e",
+  "git_commit": "6f77db0c488a985e902a2833ffea5824c3742f19",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-ctx-001-9fb218a9e25a.json",
@@ -51,8 +51,8 @@
       "task": "CTX-008"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m3-f2d531fdcd52.json",
-      "evidence_digest": "bbe7b27bf75195f26a292a922562b553d1d9df02b4bc4db78ef91d02a8d0aae9",
+      "evidence": "evidence/reports/evidence-gate-m3-6f77db0c488a.json",
+      "evidence_digest": "c04286cb2c62f5ce6cb8a35efc5b130c1ac1f6ffce4ec95e3310d8b21bdb9426",
       "status": "PASS",
       "task": "GATE-M3"
     }
