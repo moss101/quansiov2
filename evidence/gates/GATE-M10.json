@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M10",
-  "git_commit": "8a422c5b5f05cd2a6169ecd0fcd4f391f9ebdeca",
+  "git_commit": "36aa12a0d148249d42d92ea214a48c2c6f80f158",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-aut-001-46d53d1644e2.json",
@@ -39,8 +39,8 @@
       "task": "COL-002"
     },
     {
-      "evidence": "evidence/reports/evidence-col-003-fb3678440fe9.json",
-      "evidence_digest": "9f0688749ef8888d24782e3e8c491b7c807c6c1f73f4706010b9965c7d6c6e12",
+      "evidence": "evidence/reports/evidence-col-003-f2edeebf7795.json",
+      "evidence_digest": "85531faa28b217d14d9ba597077d7e9670ad0233d0101abaa6b6a4672bd24565",
       "status": "PASS",
       "task": "COL-003"
     },
@@ -51,8 +51,8 @@
       "task": "COL-004"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m9-8a422c5b5f05.json",
-      "evidence_digest": "b4d223a056d8b943cd7d2a3dc4b5d7a8428a5c2ab35ebbcdb82502cdef9935d8",
+      "evidence": "evidence/reports/evidence-gate-m9-36aa12a0d148.json",
+      "evidence_digest": "99622e1713a83eab358702ba79d6827be19182b4481e4348d2ffd4a6ab172535",
       "status": "PASS",
       "task": "GATE-M9"
     }
