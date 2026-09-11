@@ -1,16 +1,17 @@
 {
-  "EXT-003-A01": [
-    "tests/business/test_business_connectors.py::test_ext003_p01_authenticated_ingress_creates_work_once",
-    "tests/business/test_business_connectors.py::test_ext003_n01_replay_and_invalid_signature_rejected",
-    "tests/business/test_business_connectors.py::test_ext003_r01_crash_between_ingress_and_work_resumes_once"
-  ],
-  "EXT-003-N01": [
-    "tests/business/test_business_connectors.py::test_ext003_n01_replay_and_invalid_signature_rejected"
-  ],
-  "EXT-003-P01": [
-    "tests/business/test_business_connectors.py::test_ext003_p01_authenticated_ingress_creates_work_once"
-  ],
-  "EXT-003-R01": [
-    "tests/business/test_business_connectors.py::test_ext003_r01_crash_between_ingress_and_work_resumes_once"
-  ]
+ "EXT-003-A01": [
+  "tests/business/test_business_connectors.py::test_ext003_p01_authenticated_ingress_creates_work_once",
+  "tests/business/test_business_connectors.py::test_ext003_n01_replay_and_invalid_signature_rejected",
+  "tests/business/test_business_connectors.py::test_ext003_r01_crash_between_ingress_and_work_resumes_once"
+ ],
+ "EXT-003-N01": [
+  "tests/business/test_business_connectors.py::test_ext003_n01_replay_and_invalid_signature_rejected"
+ ],
+ "EXT-003-P01": [
+  "tests/business/test_business_connectors.py::test_ext003_p01_authenticated_ingress_creates_work_once",
+  "tests/services/test_service_surfaces.py::test_broker_webhook_signature_enforced"
+ ],
+ "EXT-003-R01": [
+  "tests/business/test_business_connectors.py::test_ext003_r01_crash_between_ingress_and_work_resumes_once"
+ ]
 }

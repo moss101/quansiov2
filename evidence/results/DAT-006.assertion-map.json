@@ -1,15 +1,16 @@
 {
-  "DAT-006-A01": [
-    "tests/runtime/test_foundation.py::test_dat006_p01_store_and_refetch_by_digest",
-    "tests/runtime/test_foundation.py::test_dat006_n01_digest_mutation_is_rejected"
-  ],
-  "DAT-006-N01": [
-    "tests/runtime/test_foundation.py::test_dat006_n01_digest_mutation_is_rejected"
-  ],
-  "DAT-006-P01": [
-    "tests/runtime/test_foundation.py::test_dat006_p01_store_and_refetch_by_digest"
-  ],
-  "DAT-006-R01": [
-    "tests/runtime/test_foundation.py::test_dat006_r01_metadata_restore_requires_digest_verification"
-  ]
+ "DAT-006-A01": [
+  "tests/runtime/test_foundation.py::test_dat006_p01_store_and_refetch_by_digest",
+  "tests/runtime/test_foundation.py::test_dat006_n01_digest_mutation_is_rejected"
+ ],
+ "DAT-006-N01": [
+  "tests/runtime/test_foundation.py::test_dat006_n01_digest_mutation_is_rejected"
+ ],
+ "DAT-006-P01": [
+  "tests/runtime/test_foundation.py::test_dat006_p01_store_and_refetch_by_digest",
+  "tests/services/test_service_surfaces.py::test_artifact_put_get_digest_verification"
+ ],
+ "DAT-006-R01": [
+  "tests/runtime/test_foundation.py::test_dat006_r01_metadata_restore_requires_digest_verification"
+ ]
 }

@@ -1,22 +1,23 @@
 {
-  "EFF-001-A01": [
-    "tests/business/test_business_connectors.py::test_ext002_n01_direct_path_and_missing_effect_refused"
-  ],
-  "EXT-002-A01": [
-    "tests/business/test_business_connectors.py::test_ext002_p01_mediated_connector_execution_with_receipt",
-    "tests/business/test_business_connectors.py::test_ext002_n01_direct_path_and_missing_effect_refused",
-    "tests/business/test_business_connectors.py::test_ext002_r01_ambiguous_timeout_creates_unknown_and_reconciles"
-  ],
-  "EXT-002-N01": [
-    "tests/business/test_business_connectors.py::test_ext002_n01_direct_path_and_missing_effect_refused"
-  ],
-  "EXT-002-P01": [
-    "tests/business/test_business_connectors.py::test_ext002_p01_mediated_connector_execution_with_receipt"
-  ],
-  "EXT-002-R01": [
-    "tests/business/test_business_connectors.py::test_ext002_r01_ambiguous_timeout_creates_unknown_and_reconciles"
-  ],
-  "SEC-004-A01": [
-    "tests/business/test_business_connectors.py::test_ext002_p01_mediated_connector_execution_with_receipt"
-  ]
+ "EFF-001-A01": [
+  "tests/business/test_business_connectors.py::test_ext002_n01_direct_path_and_missing_effect_refused"
+ ],
+ "EXT-002-A01": [
+  "tests/business/test_business_connectors.py::test_ext002_p01_mediated_connector_execution_with_receipt",
+  "tests/business/test_business_connectors.py::test_ext002_n01_direct_path_and_missing_effect_refused",
+  "tests/business/test_business_connectors.py::test_ext002_r01_ambiguous_timeout_creates_unknown_and_reconciles"
+ ],
+ "EXT-002-N01": [
+  "tests/business/test_business_connectors.py::test_ext002_n01_direct_path_and_missing_effect_refused"
+ ],
+ "EXT-002-P01": [
+  "tests/business/test_business_connectors.py::test_ext002_p01_mediated_connector_execution_with_receipt",
+  "tests/services/test_service_surfaces.py::test_broker_mediated_connector_operation"
+ ],
+ "EXT-002-R01": [
+  "tests/business/test_business_connectors.py::test_ext002_r01_ambiguous_timeout_creates_unknown_and_reconciles"
+ ],
+ "SEC-004-A01": [
+  "tests/business/test_business_connectors.py::test_ext002_p01_mediated_connector_execution_with_receipt"
+ ]
 }
