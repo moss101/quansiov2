@@ -8,11 +8,36 @@ only that shared plumbing — no domain authority lives here.
 
 from __future__ import annotations
 
+import os
+
 from fastapi import Header, HTTPException
 
 from quansio.control.identity import ControlService, IdentityContextError
 from quansio.platform.context import IdentityContext
 from quansio.platform.db import PlatformDatabase, database_config
+
+DEFAULT_WEB_ORIGINS = "http://127.0.0.1:8188,http://localhost:8188"
+
+
+def add_cors(app, allow_origins: list[str] | None = None) -> None:
+    """Browser clients (clients/web, desktop shell, mobile PWA) call these
+    services cross-origin from their static origins. The allowed origins are
+    deployment configuration (``QUANSIO_WEB_ORIGINS``), never a wildcard in
+    production: credentials ride the Authorization header."""
+    from fastapi.middleware.cors import CORSMiddleware
+
+    origins = allow_origins or [
+        origin for origin in os.environ.get("QUANSIO_WEB_ORIGINS", DEFAULT_WEB_ORIGINS).split(",")
+        if origin
+    ]
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=False,
+        allow_methods=["GET", "POST", "PUT", "DELETE"],
+        allow_headers=["Authorization", "Content-Type", "X-Webhook-Signature",
+                       "X-Webhook-Event-Identity"],
+    )
 
 
 def resolve_bearer(

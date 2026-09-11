@@ -16,6 +16,7 @@ from quansio.artifact.store import ArtifactIntegrityError, ArtifactStore
 from quansio.control.identity import ControlService
 from quansio.platform.db import PlatformDatabase, database_config, load_qualenv_passwords
 from quansio.platform.service import (
+    add_cors,
     add_health_routes,
     default_database,
     identity_view,
@@ -36,6 +37,7 @@ def _minio_client() -> Minio:
 def create_app(database: PlatformDatabase | None = None,
                client: Minio | None = None) -> FastAPI:
     app = FastAPI(title="quansio-artifact", version="9.0.0")
+    add_cors(app)
     db = database or default_database()
     control = ControlService(db)
     store = ArtifactStore(db, client or _minio_client())

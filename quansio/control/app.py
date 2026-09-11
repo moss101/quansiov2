@@ -35,6 +35,7 @@ from quansio.control.policy import (
 from quansio.platform.context import IdentityContext
 from quansio.platform.db import PlatformDatabase, database_config
 from quansio.platform.service import (
+    add_cors,
     add_health_routes,
     default_database,
     identity_view,
@@ -112,6 +113,7 @@ class ToolRegistration(BaseModel):
 
 def create_app(database: PlatformDatabase | None = None) -> FastAPI:
     app = FastAPI(title="quansio-control", version="9.0.0")
+    add_cors(app)
     db = database or default_database()
     control = ControlService(db)
     policy = PolicyEngine(db)

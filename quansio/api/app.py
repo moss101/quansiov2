@@ -23,6 +23,7 @@ from pydantic import BaseModel
 from quansio.control.identity import ControlService, IdentityContextError
 from quansio.platform.context import IdentityContext
 from quansio.platform.db import PlatformDatabase, database_config
+from quansio.platform.service import add_cors
 
 FORBIDDEN_CLIENT_FIELDS = {"tenant_id", "user_id", "session_id", "workspace_id", "actor_id"}
 
@@ -78,6 +79,7 @@ def create_app(
     runtime_transport=None,
 ) -> FastAPI:
     app = FastAPI(title="quansio-api", version="9.0.0")
+    add_cors(app)
     db = database or PlatformDatabase(database_config())
     control = ControlService(db)
     runtime_url = runtime_base_url or os.environ.get(

@@ -18,6 +18,7 @@ from quansio.notify.service import (
 )
 from quansio.platform.db import PlatformDatabase, database_config
 from quansio.platform.service import (
+    add_cors,
     add_health_routes,
     default_database,
     identity_view,
@@ -40,6 +41,7 @@ class AcknowledgeRequest(BaseModel):
 
 def create_app(database: PlatformDatabase | None = None) -> FastAPI:
     app = FastAPI(title="quansio-notify", version="9.0.0")
+    add_cors(app)
     db = database or default_database()
     control = ControlService(db)
     notifications = NotificationService(db)
