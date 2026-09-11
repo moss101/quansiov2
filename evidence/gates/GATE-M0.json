@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M0",
-  "git_commit": "56d00fbcf405ae1a37490551ff21ba6d70cd9f8a",
+  "git_commit": "632ddd0d24b5adba0f5bb857beb8784d47e492c4",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-env-001-c7e68eb6df6f.json",
@@ -9,14 +9,14 @@
       "task": "ENV-001"
     },
     {
-      "evidence": "evidence/reports/evidence-gov-001-d9f72b9ee42d.json",
-      "evidence_digest": "7766978b87242d45a0109664ef075996c45cc20ead20e8177739680db3d4e8a0",
+      "evidence": "evidence/reports/evidence-gov-001-46dfb1199b39.json",
+      "evidence_digest": "5e752f0faf2811acb05af1b20cbb12ba221625c1454cb2c53fae5e9ec8cb5f0e",
       "status": "PASS",
       "task": "GOV-001"
     },
     {
-      "evidence": "evidence/reports/evidence-gov-002-d9f72b9ee42d.json",
-      "evidence_digest": "9c7ec9891bc10a163491cff2e7a5bc4841d11c754c7e027b5bd6bbddbc55cd2d",
+      "evidence": "evidence/reports/evidence-gov-002-46dfb1199b39.json",
+      "evidence_digest": "9c4d96648f92093079ca09d29b2c1938bc59f3c691f186dc91e42ef9b5fa0924",
       "status": "PASS",
       "task": "GOV-002"
     },
