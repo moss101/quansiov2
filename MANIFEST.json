@@ -22129,18 +22129,18 @@
     },
     {
       "path": "clients/web/app.js",
-      "sha256": "4324f145223bf8c01f6ec71c361d9ebe8cdcb5fc3503dcd8ba8d842e6a00b822",
-      "size_bytes": 7007
+      "sha256": "e7f06b98afe965e7ccb5b76118ec4081eeb88a2d3ff9801a8f0e57868c9420d9",
+      "size_bytes": 13223
     },
     {
       "path": "clients/web/index.html",
-      "sha256": "7fa7db82753dcfacf9dbccf2f72e393b817e91e6f40b49a50a5d8dbfbad6c394",
-      "size_bytes": 3153
+      "sha256": "070e0f00c3ef83b82f11c50e8cb0ef550b2a8d3196529c9fe17298f66e97c578",
+      "size_bytes": 3754
     },
     {
       "path": "clients/web/styles.css",
-      "sha256": "7b57701db33e988edcc0934d3dc96103a6ab700e7b66964a43eccc83968a529b",
-      "size_bytes": 1758
+      "sha256": "70026ef524bc3494d161158eef40033942990dc7952527782fa1542ca34701aa",
+      "size_bytes": 6632
     },
     {
       "path": "clients/pyapp/__init__.py",
