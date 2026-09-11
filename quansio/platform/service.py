@@ -16,14 +16,18 @@ from quansio.control.identity import ControlService, IdentityContextError
 from quansio.platform.context import IdentityContext
 from quansio.platform.db import PlatformDatabase, database_config
 
-DEFAULT_WEB_ORIGINS = "http://127.0.0.1:8188,http://localhost:8188"
+DEFAULT_WEB_ORIGINS = ("http://127.0.0.1:8188,http://localhost:8188,"
+                       "http://127.0.0.1:8189,http://localhost:8189,null")
 
 
 def add_cors(app, allow_origins: list[str] | None = None) -> None:
-    """Browser clients (clients/web, desktop shell, mobile PWA) call these
-    services cross-origin from their static origins. The allowed origins are
-    deployment configuration (``QUANSIO_WEB_ORIGINS``), never a wildcard in
-    production: session credentials ride the request's authorization header."""
+    """Browser clients (clients/web, mobile PWA) call these services
+    cross-origin from their static origins, and the Electron desktop shell
+    loads local files, which presents the literal ``null`` origin. The
+    allowed origins are deployment configuration (``QUANSIO_WEB_ORIGINS``);
+    deployments serving only same-origin or native clients can drop ``null``
+    from the list. Session credentials ride the request's authorization
+    header."""
     from fastapi.middleware.cors import CORSMiddleware
 
     origins = allow_origins or [
