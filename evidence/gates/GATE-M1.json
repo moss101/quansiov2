@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M1",
-  "git_commit": "d8eefa35e3e11770c345af9501ab6553ab79ff5f",
+  "git_commit": "3a90f9f48c4a3c3bc6b5577919c7ad07c3a67399",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-dat-001-295252a34895.json",
@@ -51,8 +51,8 @@
       "task": "DAT-008"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m0-d8eefa35e3e1.json",
-      "evidence_digest": "517cf1b12d4df0cb1841e7ca23b92a3c586961a77cfa48f32473472360ef531c",
+      "evidence": "evidence/reports/evidence-gate-m0-3a90f9f48c4a.json",
+      "evidence_digest": "36fd93d4f1ce91fb733a3d519919a98ff05320466a557deae0ca48d3c6f52eab",
       "status": "PASS",
       "task": "GATE-M0"
     },
