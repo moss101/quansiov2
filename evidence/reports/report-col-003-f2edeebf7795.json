@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c834a40092404d1fa15fb26dd78242ae531f22752014894f9ee05faa26e0723a",
+      "path_or_uri": "evidence/boundary/COL-003/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "d62d136eabc51b5ce24144803c0f11120c61225c409120cd12a6594c2d5b95e4",
+      "path_or_uri": "evidence/boundary/COL-003/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "01e3b841234d9b2aaf5c3934b9cbbb30fec061aa35200c2e187895558b58d15f",
+      "path_or_uri": "quansio/context/collaboration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "2d0d32f0966e885b0e710d22f044eafd980ba2ca441dc3e54573d8f3f8d945da",
+      "path_or_uri": "tests/automation/test_automation_collaboration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "COL-003-N01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col003_n01_duplicate_delivery_and_wrong_tenant_ack; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "COL-003-P01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col003_p01_notification_created_delivered_acknowledged; tests/services/test_service_surfaces.py::test_notify_delivery_receipts_and_cross_tenant_refusal; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "COL-003-R01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col003_r01_outage_recovery_delivers_pending_without_state_change; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-008-A01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col003_r01_outage_recovery_delivers_pending_without_state_change; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-11T09:12:15Z",
+  "git_commit": "f2edeebf7795ee1ab2f0575c87c975b390623edc",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-col-003-f2edeebf7795",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "COL-003"
+}

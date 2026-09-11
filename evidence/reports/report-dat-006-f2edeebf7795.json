@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c834a40092404d1fa15fb26dd78242ae531f22752014894f9ee05faa26e0723a",
+      "path_or_uri": "evidence/boundary/DAT-006/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "d62d136eabc51b5ce24144803c0f11120c61225c409120cd12a6594c2d5b95e4",
+      "path_or_uri": "evidence/boundary/DAT-006/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "60eaf26063655b50be545d344cd5caabc920fbe58e6007a9aa207af05078c154",
+      "path_or_uri": "quansio/artifact/store.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "4d4a1aa6dc3d740043883df35e5845eb805921cc16162f6cf212cbe845fb7ca6",
+      "path_or_uri": "migrations/up/0005_artifacts.sql",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "41acf6219317e7ed14b02e9ea6aaf1d9c6a9286763f814a4d4dbb980118ad01b",
+      "path_or_uri": "tests/runtime/test_foundation.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "DAT-006-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_dat006_p01_store_and_refetch_by_digest; tests/runtime/test_foundation.py::test_dat006_n01_digest_mutation_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-006-N01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_dat006_n01_digest_mutation_is_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-006-P01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_dat006_p01_store_and_refetch_by_digest; tests/services/test_service_surfaces.py::test_artifact_put_get_digest_verification; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-006-R01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_foundation.py::test_dat006_r01_metadata_restore_requires_digest_verification; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-11T09:12:26Z",
+  "git_commit": "f2edeebf7795ee1ab2f0575c87c975b390623edc",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-dat-006-f2edeebf7795",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "DAT-006"
+}

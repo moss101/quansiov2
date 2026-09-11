@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c834a40092404d1fa15fb26dd78242ae531f22752014894f9ee05faa26e0723a",
+      "path_or_uri": "evidence/boundary/MAC-005/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "d62d136eabc51b5ce24144803c0f11120c61225c409120cd12a6594c2d5b95e4",
+      "path_or_uri": "evidence/boundary/MAC-005/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "804919a0467ce905634efc1e29c7e8110f80d97b1ad707817ffffde1e57a38d3",
+      "path_or_uri": "quansio/machine_control/services.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "5a4b43e7ed9afde818916a4eb816c1d406f5719c09029a4002fd699aebb5049f",
+      "path_or_uri": "tests/machines/test_machine_fabric.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "MAC-003-A01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac003_n01_unknown_version_protected_path_ambient_secret_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MAC-005-N01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac005_n01_internal_access_and_unbrokered_credentials_blocked; tests/machines/test_isolation.py::test_mac005_n01_no_ambient_secrets_or_host_identity_reach_guest; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MAC-005-P01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac005_p01_provision_isolated_environment_from_declared_inputs; tests/services/test_service_surfaces.py::test_machine_control_full_actuation_path_with_qworkerd; tests/machines/test_isolation.py::test_mac005_p02_filesystem_scope_is_deny_by_default; tests/machines/test_isolation.py::test_mac005_p03_typed_protocol_has_no_raw_network_operation; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "MAC-005-R01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac005_r01_recreate_from_declared_inputs_only; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-006-A01",
+      "blocking": true,
+      "details": "executed: tests/machines/test_machine_fabric.py::test_mac005_n01_internal_access_and_unbrokered_credentials_blocked; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-11T09:12:13Z",
+  "git_commit": "f2edeebf7795ee1ab2f0575c87c975b390623edc",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-mac-005-f2edeebf7795",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "MAC-005"
+}

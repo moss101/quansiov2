@@ -1,0 +1,65 @@
+{
+  "artifact_records": [
+    {
+      "digest": "c834a40092404d1fa15fb26dd78242ae531f22752014894f9ee05faa26e0723a",
+      "path_or_uri": "evidence/boundary/EXT-003/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "d62d136eabc51b5ce24144803c0f11120c61225c409120cd12a6594c2d5b95e4",
+      "path_or_uri": "evidence/boundary/EXT-003/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "31aab88186be449a1a6c8ee2a9805f40af9675b8e64a82ee5dacea8e82ae1bcf",
+      "path_or_uri": "quansio/control/connectors.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "1c8889795c42d0f827946fbcca284e95774c0044dd2b7bcde34ba21580eba56c",
+      "path_or_uri": "tests/business/test_business_connectors.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "EXT-003-A01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_ext003_p01_authenticated_ingress_creates_work_once; tests/business/test_business_connectors.py::test_ext003_n01_replay_and_invalid_signature_rejected; tests/business/test_business_connectors.py::test_ext003_r01_crash_between_ingress_and_work_resumes_once; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "EXT-003-N01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_ext003_n01_replay_and_invalid_signature_rejected; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "EXT-003-P01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_ext003_p01_authenticated_ingress_creates_work_once; tests/services/test_service_surfaces.py::test_broker_webhook_signature_enforced; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "EXT-003-R01",
+      "blocking": true,
+      "details": "executed: tests/business/test_business_connectors.py::test_ext003_r01_crash_between_ingress_and_work_resumes_once; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-11T09:12:19Z",
+  "git_commit": "f2edeebf7795ee1ab2f0575c87c975b390623edc",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-ext-003-f2edeebf7795",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "EXT-003"
+}
