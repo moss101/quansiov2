@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M1",
-  "git_commit": "1333e1a7df2bda6478f64809f0834d3e61d8d52e",
+  "git_commit": "d759527c423bb528938927f19bdf4cf8bda9cce1",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-dat-001-f2edeebf7795.json",
@@ -51,8 +51,8 @@
       "task": "DAT-008"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m0-1333e1a7df2b.json",
-      "evidence_digest": "6198a03154e27c7e7c94dcad1c24ae65443a2f43dac3d69e0bbf1ca16976b9c7",
+      "evidence": "evidence/reports/evidence-gate-m0-d759527c423b.json",
+      "evidence_digest": "0998a4c5b6566de88a8a85c36d1232e15ef22812ef1f4c7a31bbd0a65cc5d33d",
       "status": "PASS",
       "task": "GATE-M0"
     },
@@ -63,9 +63,14 @@
       "task": "SEC-001"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/DAT-001/manifest.json', '- local artifact mismatch: evidence/boundary/DAT-001/health-transcript.json', '- local artifact mismatch: quansio/api/app.py']",
+      "task": "DAT-001"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }

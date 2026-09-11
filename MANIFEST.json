@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 4501,
+  "file_count": 4503,
   "files": [
     {
       "path": ".gitignore",
@@ -4730,6 +4730,11 @@
     {
       "path": "evidence/reports/evidence-gate-m0-d6f994b29a2c.json",
       "sha256": "3ea98d5284e260e3896096f60931ff13a8fd4d3442c10743fdf3e6408a2b9251",
+      "size_bytes": 1039
+    },
+    {
+      "path": "evidence/reports/evidence-gate-m0-d759527c423b.json",
+      "sha256": "0998a4c5b6566de88a8a85c36d1232e15ef22812ef1f4c7a31bbd0a65cc5d33d",
       "size_bytes": 1039
     },
     {
@@ -13718,6 +13723,11 @@
       "size_bytes": 3023
     },
     {
+      "path": "evidence/reports/report-gate-m0-d759527c423b.json",
+      "sha256": "b8f630b920daf0b81df7f97daf83bb6702dbd6b299edebffbda953d1f9a91525",
+      "size_bytes": 3023
+    },
+    {
       "path": "evidence/reports/report-gate-m0-d7c4c7caa5e8.json",
       "sha256": "393148e4742ef1187ed12207fe152c86870ffe924b2587f2464bd048c5466b82",
       "size_bytes": 3023
@@ -20929,13 +20939,13 @@
     },
     {
       "path": "evidence/gates/GATE-M0.json",
-      "sha256": "d5ca071cd2af86ecb92de5db3949f7fd04b4274ad395bf14cc4680158bddead0",
+      "sha256": "a31622cf54a08b9af05ee218a703ec10b616a80bd8f1b365a8639d511532fc37",
       "size_bytes": 2092
     },
     {
       "path": "evidence/gates/GATE-M1.json",
-      "sha256": "99523ee7bcccff14c1b89a41ab8ee3a6ba92f084ce8943d8157657cd92b1df4b",
-      "size_bytes": 2546
+      "sha256": "ec1896947930e7a79df9f930346972af2309357e99d1f74796461926c4bcd7c9",
+      "size_bytes": 2860
     },
     {
       "path": "evidence/gates/GATE-M10.json",
@@ -21834,12 +21844,12 @@
     },
     {
       "path": "evidence/boundary/DAT-001/health-transcript.json",
-      "sha256": "d62d136eabc51b5ce24144803c0f11120c61225c409120cd12a6594c2d5b95e4",
+      "sha256": "69c608ce4f9f08623bf43e798f4dc1f86452255ed3e484d04a176dd97dae047d",
       "size_bytes": 1401
     },
     {
       "path": "evidence/boundary/DAT-001/manifest.json",
-      "sha256": "c834a40092404d1fa15fb26dd78242ae531f22752014894f9ee05faa26e0723a",
+      "sha256": "63ae613d062afedacb79114f57981c0e2cd50af9b1f211708733946638c50a77",
       "size_bytes": 1549
     },
     {
