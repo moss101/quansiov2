@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "06423ad25fa1e5b5fb273937ae91e3d5ea13b78ebd887fc64689e3696c73c118",
+      "path_or_uri": "evidence/boundary/DAT-001/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "7dd94fc6e5484c4d936c70fec198d98206cf5850f1dd18ef4e8a69de68aebffc",
+      "path_or_uri": "evidence/boundary/DAT-001/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "28b7813840544f56e1e62a6f83ba7224a23bb98de48d9f58a238056bf7ef7188",
+      "path_or_uri": "quansio/control/identity.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "98510810228602b6d4ed94c16e06fda77973e0baba9bce31a0b3cc5689782c50",
+      "path_or_uri": "quansio/api/app.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "95bbb2dfc8919a76b84804b2e65d234a1b8f251804219b42bc567ce91953a793",
+      "path_or_uri": "tests/api/test_identity.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "DAT-001-A01",
+      "blocking": true,
+      "details": "executed: tests/api/test_identity.py::test_dat001_p01_commands_carry_server_resolved_identity; tests/api/test_identity.py::test_dat001_p01_session_resolves_from_server_state; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-001-N01",
+      "blocking": true,
+      "details": "executed: tests/api/test_identity.py::test_dat001_n01_client_supplied_identity_is_rejected_before_authority; tests/api/test_identity.py::test_dat001_n01_wrong_tenant_credentials_do_not_authenticate; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-001-P01",
+      "blocking": true,
+      "details": "executed: tests/api/test_identity.py::test_dat001_p01_commands_carry_server_resolved_identity; tests/api/test_identity.py::test_dat001_p01_session_resolves_from_server_state; tests/services/test_service_surfaces.py::test_every_service_rejects_missing_session; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-001-R01",
+      "blocking": true,
+      "details": "executed: tests/api/test_identity.py::test_dat001_r01_session_survives_api_process_restart; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-006-A01",
+      "blocking": true,
+      "details": "executed: tests/api/test_identity.py::test_dat001_n01_client_supplied_identity_is_rejected_before_authority; tests/api/test_identity.py::test_dat001_n01_wrong_tenant_credentials_do_not_authenticate; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-11T10:48:31Z",
+  "git_commit": "295252a348958d8e92a303ca0f312a8848534422",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-dat-001-295252a34895",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "DAT-001"
+}

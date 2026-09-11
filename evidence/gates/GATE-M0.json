@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M0",
-  "git_commit": "0a7b8b757cee3ec170241bf94bad856db9600d48",
+  "git_commit": "295252a348958d8e92a303ca0f312a8848534422",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-env-001-c7e68eb6df6f.json",
