@@ -1,0 +1,32 @@
+{
+  "artifact_digests": {
+    "evidence/ownership/inventory.json": "34c0e22973101b912a39aefab462c344a3c94fd4c6d1b9e099bc1452f6b7370f",
+    "evidence/ownership/ownership_registry.json": "2702e0533f151ec1a33a569de3b24cbe678fbb42c4beb9ef44e749e5ed7e2b09",
+    "tests/governance/test_ownership_inventory.py": "2f2471e98dfaf6b5095e504e7fd811d8f87c998163f93abb3be059c799d949c2",
+    "tools/governance/ownership_inventory.py": "19f0d1aa12eb7eef548082637fce0d0afc533f58f6b43a43f161ef3b164acd1b"
+  },
+  "created_at": "2026-09-11T08:43:43Z",
+  "evidence_id": "evidence-gov-001-46dfb1199b39",
+  "git_commit": "46dfb1199b393c5eda0e5f0cd9c9bb01bba707e3",
+  "real_boundary": false,
+  "report_digest": "eb004a7d854e55ffaa49976988660d9a02a87717a81e4798d24ded6ab26bafa7",
+  "report_path": "evidence/reports/report-gov-001-46dfb1199b39.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "GOV-001-A01",
+    "INV-007-A01"
+  ],
+  "requirement_ids": [
+    "GOV-001",
+    "INV-007"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "GOV-001-N01",
+    "GOV-001-P01",
+    "GOV-001-R01"
+  ],
+  "task_id": "GOV-001"
+}

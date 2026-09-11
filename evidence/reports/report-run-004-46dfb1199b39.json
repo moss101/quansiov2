@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "742381f5501850dc10a399fdc0c468d7baca7f64d499f2f4dd81a7cf7d2a665d",
+      "path_or_uri": "evidence/boundary/RUN-004/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "3d04dded8091d116aa9776f6f85edb401d0c2337cfa37d68ce210beba16f004c",
+      "path_or_uri": "evidence/boundary/RUN-004/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "a973c4f5e1f56b0ad3c0b6c81544a83f967adf2c3ed935a8fa9d291d9be3d40b",
+      "path_or_uri": "quansio/runtime/orchestration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "1f880f67d284631ddab071a285396246e6951aeb135278bee0c4c1322c65bc0b",
+      "path_or_uri": "tests/runtime/test_orchestration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "INV-009-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-003-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_orchestration.py::test_run004_p01_admission_reserves_capacity_budget_capability_atomically; tests/runtime/test_orchestration.py::test_run004_r01_orphaned_reservation_recovered; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-004-N01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility; tests/runtime/test_orchestration.py::test_run004_n02_budget_failure_rolls_back_child_snapshot; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-004-P01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_orchestration.py::test_run004_p01_admission_reserves_capacity_budget_capability_atomically; tests/runtime/test_orchestration.py::test_run007_p02_concurrent_worker_admissions_enforce_budget_and_capability_atomically; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-004-R01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_orchestration.py::test_run004_r01_orphaned_reservation_recovered; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "SEC-001-A01",
+      "blocking": true,
+      "details": "executed: tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-11T08:43:59Z",
+  "git_commit": "46dfb1199b393c5eda0e5f0cd9c9bb01bba707e3",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-run-004-46dfb1199b39",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "RUN-004"
+}

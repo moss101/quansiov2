@@ -1,20 +1,20 @@
 {
-  "SRE-004-A01": [
-    "tests/sre/test_sre_security.py::test_sre004_p01_drills_meet_rpo_rto_objectives"
-  ],
-  "SRE-005-A01": [
-    "tests/sre/test_sre_security.py::test_sre005_r01_capacity_return_settles_without_storm"
-  ],
-  "SRE-005-N01": [
-    "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload"
-  ],
-  "SRE-005-P01": [
-    "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload"
-  ],
-  "SRE-005-R01": [
-    "tests/sre/test_sre_security.py::test_sre005_r01_capacity_return_settles_without_storm"
-  ],
-  "SRE-006-A01": [
-    "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload"
-  ]
+ "SRE-004-A01": [
+  "tests/sre/test_sre_security.py::test_sre004_p01_real_backup_restore_drill_meets_rpo_rto"
+ ],
+ "SRE-005-A01": [
+  "tests/sre/test_sre_security.py::test_sre005_r01_capacity_return_settles_without_storm"
+ ],
+ "SRE-005-N01": [
+  "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload"
+ ],
+ "SRE-005-P01": [
+  "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload"
+ ],
+ "SRE-005-R01": [
+  "tests/sre/test_sre_security.py::test_sre005_r01_capacity_return_settles_without_storm"
+ ],
+ "SRE-006-A01": [
+  "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload"
+ ]
 }
