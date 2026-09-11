@@ -1,86 +1,95 @@
 <!doctype html>
-<!-- Quansio V9 web client (UX-006): a thin projection over canonical
-     commands/events. No task state is mutated locally; commands go through
-     quansio-api and the timeline is rebuilt from canonical events. -->
+<!-- Quansio V9 web client (UX-006): a chat-first thin projection over
+     canonical commands/events. Conversations are runs; every visible state
+     change arrives as a canonical event. No task state is mutated locally:
+     commands go through quansio-api and the timeline is rebuilt from the
+     canonical event log. -->
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Quansio Workbench</title>
-<link rel="stylesheet" href="styles.css" />
+<title>Quansio</title>
+<link rel="stylesheet" href="styles.css?v=9.0.2" />
 </head>
 <body>
-<header id="shell">
-  <h1>Quansio</h1>
-  <nav>
-    <button data-view="tasks">Tasks</button>
-    <button data-view="approvals">Approvals</button>
-    <button data-view="artifacts">Artifacts</button>
-  </nav>
-  <span id="connection" class="offline">offline</span>
-  <span id="whoami"></span>
-</header>
+<aside id="sidebar">
+  <div class="brand">
+    <span class="brand-mark">Q</span>
+    <span class="brand-name">Quansio</span>
+  </div>
+  <button id="new-task" class="new-task">＋ New task</button>
+  <nav id="run-list" class="run-list"></nav>
+  <div class="sidebar-footer">
+    <button id="nav-approvals" class="ghost">Approvals</button>
+    <button id="nav-artifacts" class="ghost">Artifacts</button>
+    <span id="connection" class="dot offline" title="connection">offline</span>
+    <span id="whoami" class="whoami"></span>
+    <button id="logout" class="ghost subtle">Sign out</button>
+  </div>
+</aside>
 
-<main>
-  <section id="view-login" class="card">
-    <h2>Sign in</h2>
-    <form id="login-form">
-      <label>Tenant ID <input name="tenant_id" required /></label>
-      <label>Workspace ID <input name="workspace_id" required /></label>
-      <label>Email <input name="email" type="email" required /></label>
-      <label>Password <input name="password" type="password" required minlength="10" /></label>
-      <button type="submit">Sign in</button>
+<main id="shell">
+  <section id="thread-view" class="view">
+    <div id="thread" class="thread">
+      <div class="thread-empty">
+        <h1>What should Quansio do?</h1>
+        <p class="muted">Describe a task. Commands are admitted by quansio-api,
+        executed by the canonical runtime, and every state change arrives here
+        as a signed event.</p>
+      </div>
+    </div>
+    <form id="composer" class="composer" autocomplete="off">
+      <textarea id="objective" rows="1" placeholder="Ask Quansio to do something…"></textarea>
+      <div class="composer-row">
+        <input id="agent-id" class="agent-id" placeholder="agent id (admitted teammate)" />
+        <input id="budget" class="budget" type="number" min="0" value="0" title="budget cents" />
+        <button type="submit" class="send" title="Send">↑</button>
+      </div>
     </form>
-    <p id="login-error" class="error"></p>
   </section>
 
-  <section id="view-tasks" class="view" hidden>
-    <div class="card">
-      <h2>Start a task</h2>
-      <form id="task-form">
-        <label>Objective <input name="objective" required /></label>
-        <label>Agent ID <input name="agent_id" placeholder="admitted teammate" required /></label>
-        <label>Budget (cents) <input name="budget_cents" type="number" min="0" value="0" /></label>
-        <button type="submit">Submit command</button>
-      </form>
-      <p class="hint">Commands are admitted by quansio-api and dispatched by
-      the quansio-runtime admission authority; execution state is owned by
-      the canonical runtime and rendered from events only.</p>
-    </div>
-    <div class="card">
-      <h2>Run timeline</h2>
-      <label>Run ID <input id="run-id" placeholder="paste a run id" /></label>
-      <button id="follow">Follow</button>
-      <ul id="timeline"></ul>
-    </div>
-  </section>
-
-  <section id="view-approvals" class="view" hidden>
-    <div class="card">
-      <h2>Exact-scope approval</h2>
+  <section id="approvals-view" class="view" hidden>
+    <div class="panel">
+      <h2>Exact-scope approvals</h2>
       <form id="approval-form">
-        <label>Approval ID <input name="approval_id" required /></label>
-        <button name="decision" value="approve" type="submit">Approve</button>
-        <button name="decision" value="deny" type="submit">Deny</button>
+        <input name="approval_id" placeholder="approval id" required />
+        <div class="row">
+          <button name="decision" value="approve" type="submit" class="send">Approve</button>
+          <button name="decision" value="deny" type="submit" class="danger">Deny</button>
+        </div>
       </form>
-      <p class="hint">Decisions are recorded by quansio-control against the
-      exact argument scope; the web client never approves by itself.</p>
-      <p id="approval-result"></p>
+      <p id="approval-result" class="muted small"></p>
+      <p class="muted small">Decisions are recorded by quansio-control against
+      the exact argument scope; this client never approves by itself.</p>
     </div>
   </section>
 
-  <section id="view-artifacts" class="view" hidden>
-    <div class="card">
+  <section id="artifacts-view" class="view" hidden>
+    <div class="panel">
       <h2>Artifact lookup</h2>
       <form id="artifact-form">
-        <label>Digest <input name="digest" required /></label>
-        <button type="submit">Look up</button>
+        <input name="digest" placeholder="sha256 digest" required />
+        <button type="submit" class="send">Look up</button>
       </form>
-      <pre id="artifact-result"></pre>
+      <pre id="artifact-result" class="mono"></pre>
+    </div>
+  </section>
+
+  <section id="login-view" class="view" hidden>
+    <div class="panel login">
+      <h2>Sign in to Quansio</h2>
+      <form id="login-form">
+        <input name="tenant_id" placeholder="tenant id" required />
+        <input name="workspace_id" placeholder="workspace id" required />
+        <input name="email" type="email" placeholder="email" required />
+        <input name="password" type="password" placeholder="password" minlength="10" required />
+        <button type="submit" class="send wide">Sign in</button>
+      </form>
+      <p id="login-error" class="error small"></p>
     </div>
   </section>
 </main>
 
-<script src="app.js"></script>
+<script src="app.js?v=9.0.2"></script>
 </body>
 </html>
