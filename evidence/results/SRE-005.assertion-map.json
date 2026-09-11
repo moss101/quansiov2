@@ -9,7 +9,8 @@
   "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload"
  ],
  "SRE-005-P01": [
-  "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload"
+  "tests/sre/test_sre_security.py::test_sre005_p01_and_n01_sustained_load_bounded_under_dependency_overload",
+  "tests/sre/test_load_operations.py::test_sre005_p02_measured_load_meets_slo_and_overload_degrades_bounded"
  ],
  "SRE-005-R01": [
   "tests/sre/test_sre_security.py::test_sre005_r01_capacity_return_settles_without_storm"
