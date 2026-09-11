@@ -1259,8 +1259,8 @@
     },
     {
       "path": "quansio/platform/service.py",
-      "sha256": "6525475658054e86ef06cc0044ba5e0868d5da989601a79cb6bb93a732a8fe57",
-      "size_bytes": 3308
+      "sha256": "c80a471da3de4ef107aa83024fc03372780f053853cc89c2a7b82edb59837f93",
+      "size_bytes": 3326
     },
     {
       "path": "quansio/observability/__init__.py",
@@ -1544,8 +1544,8 @@
     },
     {
       "path": "quansio/api/app.py",
-      "sha256": "fd1fa28d3e151f3803c8c166498736c08a8ab6fe68338777ea5cf456791fbc9b",
-      "size_bytes": 7077
+      "sha256": "98510810228602b6d4ed94c16e06fda77973e0baba9bce31a0b3cc5689782c50",
+      "size_bytes": 7147
     },
     {
       "path": "protocols/ERROR_CODES.md",

@@ -23,7 +23,7 @@ def add_cors(app, allow_origins: list[str] | None = None) -> None:
     """Browser clients (clients/web, desktop shell, mobile PWA) call these
     services cross-origin from their static origins. The allowed origins are
     deployment configuration (``QUANSIO_WEB_ORIGINS``), never a wildcard in
-    production: credentials ride the Authorization header."""
+    production: session credentials ride the request's authorization header."""
     from fastapi.middleware.cors import CORSMiddleware
 
     origins = allow_origins or [

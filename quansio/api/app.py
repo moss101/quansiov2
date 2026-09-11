@@ -68,8 +68,11 @@ def _forward_to_runtime(
             detail=f"runtime admission unavailable; retry with the same idempotency_key: {error}",
         ) from error
     if response.status_code >= 400:
-        detail = response.json().get("detail") if response.content else response.text
-        raise HTTPException(status_code=response.status_code, detail=detail)
+        try:
+            detail = response.json().get("detail")
+        except ValueError:
+            detail = response.text
+        raise HTTPException(status_code=response.status_code, detail=detail or "runtime admission failed")
     return response.json()["admission"]
 
 
