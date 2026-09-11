@@ -1,0 +1,32 @@
+# Heavy qualification tier: full integration/recovery/security/release suites
+# against real PostgreSQL, Redis and MinIO. Requires the self-hosted runner
+# labeled "quansio" (see the tiered $0-budget CI strategy): free public
+# minutes cannot carry the service stack.
+name: qualification
+on:
+  workflow_dispatch:
+  push:
+    tags: ["candidate-*"]
+jobs:
+  full-suite:
+    runs-on: [self-hosted, quansio]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use repository virtualenv
+        run: |
+          test -x .venv/bin/python || python3 -m venv .venv
+          .venv/bin/python -m pip install -e ".[dev]" || .venv/bin/python -m pip install -e .
+      - name: Provision qualification environment
+        run: .venv/bin/python tools/environment/qualenv.py provision
+      - name: Governance checks
+        run: |
+          .venv/bin/python tools/governance/generate_authority.py --check
+          .venv/bin/python tools/governance/contract_gate.py
+          .venv/bin/python tools/governance/ownership_inventory.py
+          .venv/bin/python scripts/scan_production_placeholders.py .
+          .venv/bin/python scripts/validate_integrity.py
+      - name: Full qualification suite
+        run: .venv/bin/python -m pytest tests/ -q
+      - name: Teardown
+        if: always()
+        run: .venv/bin/python tools/environment/qualenv.py teardown
