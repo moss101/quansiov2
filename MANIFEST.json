@@ -1,6 +1,6 @@
 {
   "authority_name": "Quansio V9 Final Implementation Authority",
-  "file_count": 4599,
+  "file_count": 4600,
   "files": [
     {
       "path": ".gitignore",
@@ -29,8 +29,8 @@
     },
     {
       "path": "Quansio_V9_FINAL_MASTER_DOSSIER.md",
-      "sha256": "b62a863fc83d4916c61a548cfd8336bb92b070b041f545fa9846dba69e9a0d46",
-      "size_bytes": 271731
+      "sha256": "80f251928b899ab14e89afc3e05ee4e5d5662af38cbef94e6eca29a3844621cf",
+      "size_bytes": 271829
     },
     {
       "path": "SKILLS.md",
@@ -22769,8 +22769,8 @@
     },
     {
       "path": "docs/31_CURRENT_REPOSITORY_IMPLEMENTATION_MAP.md",
-      "sha256": "f283137b5826311ecc8900872b4746302bbd42f9323bf9e4bf1edb2b94e4aad1",
-      "size_bytes": 4700
+      "sha256": "48d27eb50030a4816478743dc070278e2fd49147377dd0ee4ea26e7104eb5459",
+      "size_bytes": 4798
     },
     {
       "path": "docs/32_AGENT_IMPLEMENTATION_PLAYBOOK.md",
@@ -22896,6 +22896,11 @@
       "path": "docs/decisions/0003-decision-and-threat-model-workflow.md",
       "sha256": "a98ba248831e2d5f6f70d1570edbee681d830a80ed08a46a07d207b7c9cb3dcd",
       "size_bytes": 2750
+    },
+    {
+      "path": "docs/decisions/0004-canonical-service-surfaces-and-adoption.md",
+      "sha256": "8cb2b3aa218f42bcb8633b054ac79119ec0acd24b34486972eba55e90fbb1e01",
+      "size_bytes": 5784
     },
     {
       "path": "deploy/launch.sh",
