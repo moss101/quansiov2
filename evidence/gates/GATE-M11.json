@@ -1,10 +1,10 @@
 {
   "gate": "GATE-M11",
-  "git_commit": "6c5d001f514a9a5904c74d97c50174e4616a0ba5",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m10-864617fe08fd.json",
-      "evidence_digest": "97f21512d17a486388ece460fa4f36a256bea84141d540e22c23b2cbd32781f0",
+      "evidence": "evidence/reports/evidence-gate-m10-fb3678440fe9.json",
+      "evidence_digest": "e8d03f3a46627f558e30cec48393d266eef0f5b5733260724ca2d5eb5ba4443f",
       "status": "PASS",
       "task": "GATE-M10"
     },
@@ -57,9 +57,14 @@
       "task": "UX-008"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/gates/GATE-M10.json']",
+      "task": "GATE-M10"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }

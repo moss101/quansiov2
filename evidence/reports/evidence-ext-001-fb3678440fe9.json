@@ -1,0 +1,31 @@
+{
+  "artifact_digests": {
+    "evidence/boundary/EXT-001/health-transcript.json": "e28a0dddeb0bdc008ef723da526c7c01fb411b0b82761f8e1b9019c4d1f18876",
+    "evidence/boundary/EXT-001/manifest.json": "4c05c70ad5a04daca85d57ab6e87ed541aa27663e634a5cd1fcd530f01b9857c",
+    "migrations/up/0017_business_connectors.sql": "14faa79f61dfab13e18dcf88604c48a1416fb59529977dcded88b0ae9f81bbf9",
+    "quansio/control/connectors.py": "31aab88186be449a1a6c8ee2a9805f40af9675b8e64a82ee5dacea8e82ae1bcf",
+    "tests/business/test_business_connectors.py": "1c8889795c42d0f827946fbcca284e95774c0044dd2b7bcde34ba21580eba56c"
+  },
+  "created_at": "2026-09-11T03:41:59Z",
+  "evidence_id": "evidence-ext-001-fb3678440fe9",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
+  "real_boundary": true,
+  "report_digest": "c2b6c4280cd0ff891da0f82f17df83deff014bc4a751e7bf301dc3efbd4e8be8",
+  "report_path": "evidence/reports/report-ext-001-fb3678440fe9.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "EXT-001-A01"
+  ],
+  "requirement_ids": [
+    "EXT-001"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "EXT-001-N01",
+    "EXT-001-P01",
+    "EXT-001-R01"
+  ],
+  "task_id": "EXT-001"
+}

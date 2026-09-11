@@ -1,10 +1,10 @@
 {
   "gate": "GATE-M3",
-  "git_commit": "369f21de9bcbc57f530305dd7b75da63e25cd303",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m2-fd16534ef02f.json",
-      "evidence_digest": "b1a31005cfc806d6352e1b1ff1653d8c51fbc75c7173e9f0ff228a76728b8c9b",
+      "evidence": "evidence/reports/evidence-gate-m2-fb3678440fe9.json",
+      "evidence_digest": "7f421063a32196e85e414daa62744c82387a33af411aef6ad386b1a2e309836e",
       "status": "PASS",
       "task": "GATE-M2"
     },
@@ -51,15 +51,24 @@
       "task": "MOD-007"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-008-7afa7eee5386.json",
-      "evidence_digest": "04321eb5d34fd5326562f076e4e752c3f6f0cb0502df186000464d3469a8e6a3",
+      "evidence": "evidence/reports/evidence-mod-008-fb3678440fe9.json",
+      "evidence_digest": "e09b26487ad8ccc0acd03cb8fc9dc6f1d0ae31125087e010fca3dc7104499cda",
       "status": "PASS",
       "task": "MOD-008"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/gates/GATE-M2.json']",
+      "task": "GATE-M2"
+    },
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MOD-008/manifest.json', '- local artifact mismatch: evidence/boundary/MOD-008/health-transcript.json']",
+      "task": "MOD-008"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }

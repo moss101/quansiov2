@@ -1,0 +1,77 @@
+{
+  "artifact_records": [
+    {
+      "digest": "4c05c70ad5a04daca85d57ab6e87ed541aa27663e634a5cd1fcd530f01b9857c",
+      "path_or_uri": "evidence/boundary/QA-004/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "e28a0dddeb0bdc008ef723da526c7c01fb411b0b82761f8e1b9019c4d1f18876",
+      "path_or_uri": "evidence/boundary/QA-004/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "99ecd86ed0ab234ba813c5bdcaf412903a9a4fc9d966a527a695388d3318189d",
+      "path_or_uri": "tests/qa/test_qa_verticals.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "45f0c90248c794fee411e90b1d32b30e3ad9f1c8062cee7a0b16646749c4183d",
+      "path_or_uri": "quansio/control/effects.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "EFF-003-A01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa004_r01_timeout_unknown_reconcile_at_most_once; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "EFF-005-A01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa004_p01_and_n01_financial_scope_enforced; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "EFF-006-A01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa004_p01_and_n01_financial_scope_enforced; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "QA-004-N01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa004_r01_timeout_unknown_reconcile_at_most_once; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "QA-004-P01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa004_p01_and_n01_financial_scope_enforced; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "QA-004-R01",
+      "blocking": true,
+      "details": "executed: tests/qa/test_qa_verticals.py::test_qa004_r01_timeout_unknown_reconcile_at_most_once; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-11T03:42:39Z",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-qa-004-fb3678440fe9",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "QA-004"
+}

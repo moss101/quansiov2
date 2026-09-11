@@ -1,22 +1,22 @@
 {
   "gate": "GATE-M0",
-  "git_commit": "76ca125c663b96e62a16ec7d2a40db53176a14b9",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-env-001-72761ce487c9.json",
-      "evidence_digest": "5a7dabb3631a5da483c45a99420e645158f25dfb3abbed55a9750e55086d54be",
+      "evidence": "evidence/reports/evidence-env-001-c7e68eb6df6f.json",
+      "evidence_digest": "ac10b95e3596a0d5f33ec6c0e2433875bc371f14de6ccf1fb28dc7dcf52d3692",
       "status": "PASS",
       "task": "ENV-001"
     },
     {
-      "evidence": "evidence/reports/evidence-gov-001-112b44aff256.json",
-      "evidence_digest": "349a8dbde4476efd1a7e968f6bafc7e75d7ae659ec4e24e1559f7c29e87afc24",
+      "evidence": "evidence/reports/evidence-gov-001-fb3678440fe9.json",
+      "evidence_digest": "858dff62489471c1f5de9632f46d0008000ae405cf4f1cc85b0cdab6cc2a5e89",
       "status": "PASS",
       "task": "GOV-001"
     },
     {
-      "evidence": "evidence/reports/evidence-gov-002-79ac679486c5.json",
-      "evidence_digest": "53cda1280805f7b7b7e5d3172124dd363fae41ebd26ca6d08bda213ce7ce969d",
+      "evidence": "evidence/reports/evidence-gov-002-fb3678440fe9.json",
+      "evidence_digest": "6f8a7493c78526ba71dc3692481172f668f26982e2796c16888c490f28892885",
       "status": "PASS",
       "task": "GOV-002"
     },
@@ -39,8 +39,8 @@
       "task": "GOV-005"
     },
     {
-      "evidence": "evidence/reports/evidence-gov-006-79ac679486c5.json",
-      "evidence_digest": "88a8d84569517395ec39c66b3da3111f17d802d51b476cf7ab3ffd06f045aedb",
+      "evidence": "evidence/reports/evidence-gov-006-04545d52a498.json",
+      "evidence_digest": "f307da44340288f722f5770add5812fded2597e2ff934465ca040f390ee4d23f",
       "status": "PASS",
       "task": "GOV-006"
     },

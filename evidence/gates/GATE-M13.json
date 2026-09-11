@@ -1,65 +1,70 @@
 {
   "gate": "GATE-M13",
-  "git_commit": "a17b52b9a18d97f83c1868fc4015a28705e68ffa",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m12-87d1aee68008.json",
-      "evidence_digest": "8eaaec448cb1358909a055aaa4837ca087c20f2b6c1f3c6ae4c5af3f1adcab8e",
+      "evidence": "evidence/reports/evidence-gate-m12-dcce4112fb12.json",
+      "evidence_digest": "674cd7863f1734088e5f2e1bceeeac9ddfc2b2a542a40e7dc4c70a5e28ebfc4b",
       "status": "PASS",
       "task": "GATE-M12"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-001-df20e422dbb9.json",
-      "evidence_digest": "ca55fad66b8b97d2f78345513517814d42052e1474e6872fb433ce4dc1b74f5d",
+      "evidence": "evidence/reports/evidence-qa-001-fb3678440fe9.json",
+      "evidence_digest": "d98099bbfe86c7d18c0da6dab76ce5671a57c7b7c43d7ece541aad7d4c99ca0b",
       "status": "PASS",
       "task": "QA-001"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-002-df20e422dbb9.json",
-      "evidence_digest": "10589aeaaa62f2436d3acf571bb7451e517b7742672e5ee0093a0f783d9027fa",
+      "evidence": "evidence/reports/evidence-qa-002-fb3678440fe9.json",
+      "evidence_digest": "9380e896dccb8b368cc1a55575b291fcdcb31918504f153f2d4d8339292e2d1e",
       "status": "PASS",
       "task": "QA-002"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-003-df20e422dbb9.json",
-      "evidence_digest": "98575ff00399af2367400db57726ce8baf0d1ebf629a5b1957162c317fcb1239",
+      "evidence": "evidence/reports/evidence-qa-003-fb3678440fe9.json",
+      "evidence_digest": "1cf66be6e3313c529d9c78a0732b26df87b5cb0a0d9d5fa0b4274e48c1515763",
       "status": "PASS",
       "task": "QA-003"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-004-df20e422dbb9.json",
-      "evidence_digest": "8860ca5c8ec50ea58829588dc1455ef89bd03f61b98d97a913ab940fc355a577",
+      "evidence": "evidence/reports/evidence-qa-004-fb3678440fe9.json",
+      "evidence_digest": "a709c60e975c81f5e4b5e15cbaf6873ef43eb2db2c19767e6ca87784a95346ec",
       "status": "PASS",
       "task": "QA-004"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-005-df20e422dbb9.json",
-      "evidence_digest": "0dc98cf0acb6c0fd1247a429b4608c400c3975c47bc227a3b3cc9e94528b9044",
+      "evidence": "evidence/reports/evidence-qa-005-fb3678440fe9.json",
+      "evidence_digest": "8e8751ac9a5125aba5c6728d01af0ebe22c7b41e855e6ecbc04ba5cd08a6f994",
       "status": "PASS",
       "task": "QA-005"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-006-df20e422dbb9.json",
-      "evidence_digest": "263163168632cac83f5f74850b7688050893761fa25d20877014021c31fe9387",
+      "evidence": "evidence/reports/evidence-qa-006-fb3678440fe9.json",
+      "evidence_digest": "9b16070e59f28cdfaff1ba561705ec9f36031849bd333eeec28213db6ccd4604",
       "status": "PASS",
       "task": "QA-006"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-007-df20e422dbb9.json",
-      "evidence_digest": "efb55743a914770bcc998c03c9dc80f1250368a25e7e63d7759fee68430e20e3",
+      "evidence": "evidence/reports/evidence-qa-007-fb3678440fe9.json",
+      "evidence_digest": "507129df18596b5414908c4dfe00e9c2aead6cd93e886f59ae0e5c6c161fb598",
       "status": "PASS",
       "task": "QA-007"
     },
     {
-      "evidence": "evidence/reports/evidence-qa-008-df20e422dbb9.json",
-      "evidence_digest": "c5cc05fad0512958b8d09d3380acf94651c59d5c30b3e726e40336aacff3bcd3",
+      "evidence": "evidence/reports/evidence-qa-008-fb3678440fe9.json",
+      "evidence_digest": "b4edcdeed721782ccd7c183509ff9fa58408a995ffdbaf22d3eb17237a4fc640",
       "status": "PASS",
       "task": "QA-008"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/gates/GATE-M12.json']",
+      "task": "GATE-M12"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }

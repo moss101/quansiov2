@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M5",
-  "git_commit": "5c895d5a181fad799adb0c62d0330e10a161e061",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-eff-001-4be98e131f5e.json",
@@ -21,8 +21,8 @@
       "task": "EFF-003"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m4-dc3e45d3ade8.json",
-      "evidence_digest": "a4850db6e8ecf45155ce3e6864f63a7aebb87e66e7a855060d0f9115acdcf655",
+      "evidence": "evidence/reports/evidence-gate-m4-fb3678440fe9.json",
+      "evidence_digest": "0e972204a39ab0b54f7bfcd963ab1881cb0c9a6592565674b6d474abac8481b2",
       "status": "PASS",
       "task": "GATE-M4"
     },
@@ -33,8 +33,8 @@
       "task": "SEC-002"
     },
     {
-      "evidence": "evidence/reports/evidence-sec-003-4be98e131f5e.json",
-      "evidence_digest": "2393d6346b391ed91d09f69318f3bffdac57cdd803c39219cec950a9835062f5",
+      "evidence": "evidence/reports/evidence-sec-003-c300ba22f258.json",
+      "evidence_digest": "f4522c63943dfd4e3b21de5eab977b8bc3ccb92f381f9de7ae949c766a4335a8",
       "status": "PASS",
       "task": "SEC-003"
     },
@@ -51,9 +51,14 @@
       "task": "SEC-005"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/gates/GATE-M4.json']",
+      "task": "GATE-M4"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }

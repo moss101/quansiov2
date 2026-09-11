@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M10",
-  "git_commit": "2a6e3ce46694bc62eb9bb92405a50373594f1afb",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-aut-001-46d53d1644e2.json",
@@ -27,39 +27,44 @@
       "task": "AUT-004"
     },
     {
-      "evidence": "evidence/reports/evidence-col-001-b3f5b2943f61.json",
-      "evidence_digest": "b3ad791bf149eaac020d1f462030871f06888021ad5b05c545af2ba257beb636",
+      "evidence": "evidence/reports/evidence-col-001-fb3678440fe9.json",
+      "evidence_digest": "5cd2f9016d9bade6dd9f1cc1de501752a2b37c7de2b3d9d7b2e7b04064861216",
       "status": "PASS",
       "task": "COL-001"
     },
     {
-      "evidence": "evidence/reports/evidence-col-002-b3f5b2943f61.json",
-      "evidence_digest": "ffeabbd861f6f6cdd171cdf3d0027b3d681b27c7b73d84c2126bfb9b894e4425",
+      "evidence": "evidence/reports/evidence-col-002-fb3678440fe9.json",
+      "evidence_digest": "fd9a02dcc5d57b428d6cc40e13a7676e17ee6cfbd1b821d882875908bf551eb1",
       "status": "PASS",
       "task": "COL-002"
     },
     {
-      "evidence": "evidence/reports/evidence-col-003-b3f5b2943f61.json",
-      "evidence_digest": "f36c8d2a245996ccf401c32510fe572c4a48cced93d74cc8692d8a3a19a75e6a",
+      "evidence": "evidence/reports/evidence-col-003-fb3678440fe9.json",
+      "evidence_digest": "9f0688749ef8888d24782e3e8c491b7c807c6c1f73f4706010b9965c7d6c6e12",
       "status": "PASS",
       "task": "COL-003"
     },
     {
-      "evidence": "evidence/reports/evidence-col-004-b3f5b2943f61.json",
-      "evidence_digest": "6a5055cd04bc4d54e63753d9aba3b01bf425aad3ba46f8300621fd02400381db",
+      "evidence": "evidence/reports/evidence-col-004-fb3678440fe9.json",
+      "evidence_digest": "d56ce12a7a0a76d394e6ff5834d730d31aeff60171adab8acd629cf7a2480deb",
       "status": "PASS",
       "task": "COL-004"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m9-b1b757d48742.json",
-      "evidence_digest": "69a2867c612c7a69cfc56a9185117557f91971d8da924e7cced5d9a1e1201fd8",
+      "evidence": "evidence/reports/evidence-gate-m9-fb3678440fe9.json",
+      "evidence_digest": "f59bcdd7783eb086c1940fe9fb416ec8e7837e817f716f7bb578ae2c116c715d",
       "status": "PASS",
       "task": "GATE-M9"
     }
   ],
-  "problems": [],
+  "problems": [
+    {
+      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/gates/GATE-M9.json']",
+      "task": "GATE-M9"
+    }
+  ],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "PASS",
+  "result": "FAIL",
   "schema_revision": "9.0.0"
 }

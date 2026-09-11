@@ -1,0 +1,71 @@
+{
+  "artifact_records": [
+    {
+      "digest": "4c05c70ad5a04daca85d57ab6e87ed541aa27663e634a5cd1fcd530f01b9857c",
+      "path_or_uri": "evidence/boundary/COL-002/manifest.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "e28a0dddeb0bdc008ef723da526c7c01fb411b0b82761f8e1b9019c4d1f18876",
+      "path_or_uri": "evidence/boundary/COL-002/health-transcript.json",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "01e3b841234d9b2aaf5c3934b9cbbb30fec061aa35200c2e187895558b58d15f",
+      "path_or_uri": "quansio/context/collaboration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    },
+    {
+      "digest": "2d0d32f0966e885b0e710d22f044eafd980ba2ca441dc3e54573d8f3f8d945da",
+      "path_or_uri": "tests/automation/test_automation_collaboration.py",
+      "verification_method": "LOCAL_HASH",
+      "verification_receipt_ref": null
+    }
+  ],
+  "assertion_results": [
+    {
+      "assertion_id": "COL-002-N01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col002_n01_duplicate_handoff_and_cancelled_target; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "COL-002-P01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col002_p01_handoff_persists_identity_and_outcome; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "COL-002-R01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col002_r01_interrupted_delivery_exposes_durable_outcome; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "DAT-005-A01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col002_r01_interrupted_delivery_exposes_durable_outcome; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    },
+    {
+      "assertion_id": "RUN-004-A01",
+      "blocking": true,
+      "details": "executed: tests/automation/test_automation_collaboration.py::test_col002_n01_duplicate_handoff_and_cancelled_target; environment: {\"machine\": \"arm64\", \"os\": \"macOS-26.5.1-arm64-arm-64bit\", \"pytest\": \"pytest 9.1.1\", \"python\": \"3.12.13\"}",
+      "status": "PASS"
+    }
+  ],
+  "configuration_digest": "6d55e4d9fbe5a768497b9ad411bd41dbf33c24b9ceeea05625f9e6728b61a35a",
+  "environment_id": "local-darwin-arm64-py312",
+  "executed_at": "2026-09-11T03:42:18Z",
+  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
+  "protected_ref": "HEAD",
+  "real_boundary": true,
+  "report_id": "report-col-002-fb3678440fe9",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_id": "COL-002"
+}
