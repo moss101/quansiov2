@@ -35,8 +35,8 @@ def add_cors(app, allow_origins: list[str] | None = None) -> None:
         allow_origins=origins,
         allow_credentials=False,
         allow_methods=["GET", "POST", "PUT", "DELETE"],
-        allow_headers=["Authorization", "Content-Type", "X-Webhook-Signature",
-                       "X-Webhook-Event-Identity"],
+        allow_headers=["authorization", "content-type", "x-webhook-signature",
+                       "x-webhook-event-identity"],
     )
 
 
