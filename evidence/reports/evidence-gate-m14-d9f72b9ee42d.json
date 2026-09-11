@@ -1,0 +1,31 @@
+{
+  "artifact_digests": {
+    "evidence/gates/GATE-M14.json": "fd3c06c0217f2fd532c82ca6fd2631579cc044ec59144b901ebe7bfa56b7fea8",
+    "tests/governance/test_milestone_gate.py": "40d961004216777b2945a02aaa46763be79a54363f8dd232fcdae06f728c492b",
+    "tools/governance/milestone_gate.py": "0799f5f49ab000ef1ef2670732e87c25fd8da530bb3cfe8b91ebd233cb2a58e6"
+  },
+  "created_at": "2026-09-11T04:20:46Z",
+  "evidence_id": "evidence-gate-m14-d9f72b9ee42d",
+  "git_commit": "d9f72b9ee42d6847fd534828397509aa6804ccba",
+  "real_boundary": false,
+  "report_digest": "05a3bc93cfd0524f149a6b39092dd1b86cd24e1793b49da584938805d30d2e5a",
+  "report_path": "evidence/reports/report-gate-m14-d9f72b9ee42d.json",
+  "repository_id": "https://github.com/moss101/quansiov2",
+  "requirement_assertion_ids": [
+    "INV-008-A01",
+    "REL-005-A01"
+  ],
+  "requirement_ids": [
+    "INV-008",
+    "REL-005"
+  ],
+  "rollback_verified": true,
+  "schema_revision": "9.0.0",
+  "status": "PASS",
+  "task_assertion_ids": [
+    "GATE-M14-N01",
+    "GATE-M14-P01",
+    "GATE-M14-R01"
+  ],
+  "task_id": "GATE-M14"
+}

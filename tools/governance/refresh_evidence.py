@@ -35,8 +35,18 @@ def sha(path: Path) -> str:
 
 
 def latest_evidence(task_id: str) -> Path | None:
+    """Newest evidence for a task, ordered by the recorded created_at
+    timestamp (filename hex is a commit prefix and does not sort
+    chronologically)."""
     candidates = sorted(REPORTS.glob(f"evidence-{task_id.lower()}-*.json"))
-    return candidates[-1] if candidates else None
+
+    def created_at(path: Path) -> str:
+        try:
+            return json.loads(path.read_text()).get("created_at", "")
+        except (OSError, ValueError):
+            return ""
+
+    return max(candidates, key=created_at) if candidates else None
 
 
 def is_stale(evidence_path: Path) -> bool:
