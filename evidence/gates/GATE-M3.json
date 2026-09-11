@@ -1,10 +1,10 @@
 {
   "gate": "GATE-M3",
-  "git_commit": "fb3678440fe9525928d3bb5b20aa0bf9752f12ce",
+  "git_commit": "b8c032cbeb0ced8b84f9c8ca87cb984f463ae767",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m2-fb3678440fe9.json",
-      "evidence_digest": "7f421063a32196e85e414daa62744c82387a33af411aef6ad386b1a2e309836e",
+      "evidence": "evidence/reports/evidence-gate-m2-d9f72b9ee42d.json",
+      "evidence_digest": "9f9d200f01900782edab8ab119a1cfaf363ec7c61f873c20a33a438ef23d19df",
       "status": "PASS",
       "task": "GATE-M2"
     },
@@ -51,8 +51,8 @@
       "task": "MOD-007"
     },
     {
-      "evidence": "evidence/reports/evidence-mod-008-fb3678440fe9.json",
-      "evidence_digest": "e09b26487ad8ccc0acd03cb8fc9dc6f1d0ae31125087e010fca3dc7104499cda",
+      "evidence": "evidence/reports/evidence-mod-008-d9f72b9ee42d.json",
+      "evidence_digest": "ec93d9cc9f7b8a37bee8152464c87060e101dad28bc46e72676dac49d885c0ef",
       "status": "PASS",
       "task": "MOD-008"
     }
@@ -61,10 +61,6 @@
     {
       "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/gates/GATE-M2.json']",
       "task": "GATE-M2"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MOD-008/manifest.json', '- local artifact mismatch: evidence/boundary/MOD-008/health-transcript.json']",
-      "task": "MOD-008"
     }
   ],
   "protected_ref": "HEAD",
