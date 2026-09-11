@@ -1,10 +1,10 @@
 {
   "gate": "GATE-M12",
-  "git_commit": "904601d87b5cab0ad7eaba398911fec4166b70ab",
+  "git_commit": "b9e17a053aaa7ca2daeb3b79cb0ff564c7e73577",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m11-904601d87b5c.json",
-      "evidence_digest": "ffa372fb8e919211f43685d7d7dde737b201756649152298b1fe0917288c1b59",
+      "evidence": "evidence/reports/evidence-gate-m11-b9e17a053aaa.json",
+      "evidence_digest": "87202377dfa5a04dfdce91c83b48d26c0e9c103c6cf05f9d3699f2662b7d94c3",
       "status": "PASS",
       "task": "GATE-M11"
     },
@@ -21,8 +21,8 @@
       "task": "SEC-007"
     },
     {
-      "evidence": "evidence/reports/evidence-sre-001-46dfb1199b39.json",
-      "evidence_digest": "1a0e3c45706fc35c76f1f945f57a345a2e0bcdd6eef60e4e4eff94437929483d",
+      "evidence": "evidence/reports/evidence-sre-001-f2edeebf7795.json",
+      "evidence_digest": "b06b4c15f68a213ac1da1b85e9ae23374aa19c2aa4b52b26311ee38d4486f92b",
       "status": "PASS",
       "task": "SRE-001"
     },
