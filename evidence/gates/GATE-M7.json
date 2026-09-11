@@ -1,6 +1,6 @@
 {
   "gate": "GATE-M7",
-  "git_commit": "d9e697593adff7d05d0a7a919590ce2e57870bc1",
+  "git_commit": "f1e1f3f9c03f5b16d7d8be07827e7583bfa3a28a",
   "predecessor_evidence_index": [
     {
       "evidence": "evidence/reports/evidence-brw-001-00ff850eb549.json",
@@ -51,8 +51,8 @@
       "task": "BRW-008"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m6-d9e697593adf.json",
-      "evidence_digest": "e478d37ac33db289a24e6b0e4b2e581b0ba8dd41159e11073fd59899c05cd048",
+      "evidence": "evidence/reports/evidence-gate-m6-f1e1f3f9c03f.json",
+      "evidence_digest": "fadf67eca3f93676a15f89d3ecfba228d092db3302a53cdea29021e4ef00ba5c",
       "status": "PASS",
       "task": "GATE-M6"
     }
