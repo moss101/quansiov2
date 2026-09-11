@@ -29,6 +29,7 @@ from quansio.platform.service import (
     identity_view,
     resolve_bearer,
 )
+from quansio.runtime.admissions import AdmissionRefused, CommandAdmission
 from quansio.runtime.agents import AgentLifecycleError, AgentRegistry
 from quansio.runtime.events import EventAppendError, EventLog
 from quansio.runtime.graphs import GraphTransactionError, WorkGraphStore
@@ -123,6 +124,13 @@ class AgentCreate(BaseModel):
     ttl_seconds: int = 600
 
 
+class CommandAdmit(BaseModel):
+    command_id: str
+    command_type: str
+    arguments: dict
+    idempotency_key: str
+
+
 def create_app(database: PlatformDatabase | None = None) -> FastAPI:
     app = FastAPI(title="quansio-runtime", version="9.0.0")
     db = database or default_database()
@@ -138,8 +146,32 @@ def create_app(database: PlatformDatabase | None = None) -> FastAPI:
     waits = DurableWaits(db, protocol)
     agents = AgentRegistry(db, capabilities)
     repository = TenantRepository(db)
+    commands = CommandAdmission(db, events)
 
     add_health_routes(app, db, "quansio-runtime")
+
+    @app.post("/v9/admissions")
+    def admit_command(body: CommandAdmit, authorization: str = Header(default="")) -> dict:
+        """Durable command admission: persists the command, creates the run
+        it produces and emits the canonical run.started event. Idempotent by
+        the caller's idempotency key."""
+        context = resolve_bearer(authorization, control)
+        try:
+            result = commands.admit(
+                context, body.command_id, body.command_type,
+                body.arguments, body.idempotency_key,
+            )
+        except AdmissionRefused as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
+        return {"admission": result, "identity": identity_view(context)}
+
+    @app.get("/v9/admissions/{command_id}")
+    def get_admission(command_id: str, authorization: str = Header(default="")) -> dict:
+        context = resolve_bearer(authorization, control)
+        status = commands.status(context, command_id)
+        if status is None:
+            raise HTTPException(status_code=404, detail="command unknown")
+        return {"admission": status}
 
     @app.post("/v9/runs")
     def create_run(body: RunCreate, authorization: str = Header(default="")) -> dict:

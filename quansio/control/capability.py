@@ -109,8 +109,16 @@ class CapabilityService:
         capabilities: list[str],
         constraints: dict,
         budget_cents: int,
+        connection=None,
     ) -> dict:
-        parent = self.require_active(context, parent_snapshot_id)
+        """Admit a strict child snapshot.
+
+        ``connection`` joins the caller's transaction so the snapshot is
+        visible and committed (or rolled back) together with the caller's
+        other writes — required by worker admission, where a budget failure
+        must also roll the snapshot back.
+        """
+        parent = self.require_active(context, parent_snapshot_id, connection=connection)
         expires_at = min(
             parent["expires_at"],
             datetime.now(timezone.utc) + timedelta(hours=1),
@@ -124,6 +132,7 @@ class CapabilityService:
             constraints=constraints,
             budget_cents=budget_cents,
             expires_at=expires_at,
+            connection=connection,
         )
 
     def _admit(
@@ -136,6 +145,7 @@ class CapabilityService:
         constraints: dict,
         budget_cents: int,
         expires_at: datetime,
+        connection=None,
     ) -> dict:
         # Strict-subset enforcement happens before the snapshot exists and
         # therefore before any execution can become externally visible.
@@ -152,8 +162,40 @@ class CapabilityService:
         snapshot_id = str(uuid.uuid4())
         revision = 1 if parent is None else parent["revision"] + 1
         digest = _canonical(capabilities, constraints, budget_cents, expires_at)
-        with self._db.connection() as connection:
+        if connection is not None:
             connection.execute(
+                """
+                INSERT INTO capability_snapshots
+                    (tenant_id, snapshot_id, parent_snapshot_id, principal_id, revision,
+                     capabilities, constraints, budget_cents, content_digest, expires_at)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                """,
+                (
+                    context.tenant_id,
+                    snapshot_id,
+                    parent_snapshot_id,
+                    principal_id,
+                    revision,
+                    Json(capabilities),
+                    Json(constraints),
+                    budget_cents,
+                    digest,
+                    expires_at,
+                ),
+            )
+            return {
+                "snapshot_id": snapshot_id,
+                "parent_snapshot_id": parent_snapshot_id,
+                "principal_id": principal_id,
+                "revision": revision,
+                "capabilities": capabilities,
+                "constraints": constraints,
+                "budget_cents": budget_cents,
+                "expires_at": expires_at,
+                "revoked_at": None,
+            }
+        with self._db.connection() as pooled:
+            pooled.execute(
                 """
                 INSERT INTO capability_snapshots
                     (tenant_id, snapshot_id, parent_snapshot_id, principal_id, revision,
@@ -175,16 +217,27 @@ class CapabilityService:
             )
         return self.require_active(context, snapshot_id)
 
-    def require_active(self, context: IdentityContext, snapshot_id: str) -> dict:
-        row = self._db.query_one(
-            """
-            SELECT snapshot_id::text, parent_snapshot_id::text, principal_id::text, revision,
-                   capabilities, constraints, budget_cents, expires_at, revoked_at
-            FROM capability_snapshots
-            WHERE tenant_id = %s AND snapshot_id = %s
-            """,
-            (context.tenant_id, snapshot_id),
-        )
+    def require_active(self, context: IdentityContext, snapshot_id: str, connection=None) -> dict:
+        if connection is not None:
+            row = connection.execute(
+                """
+                SELECT snapshot_id::text, parent_snapshot_id::text, principal_id::text, revision,
+                       capabilities, constraints, budget_cents, expires_at, revoked_at
+                FROM capability_snapshots
+                WHERE tenant_id = %s AND snapshot_id = %s
+                """,
+                (context.tenant_id, snapshot_id),
+            ).fetchone()
+        else:
+            row = self._db.query_one(
+                """
+                SELECT snapshot_id::text, parent_snapshot_id::text, principal_id::text, revision,
+                       capabilities, constraints, budget_cents, expires_at, revoked_at
+                FROM capability_snapshots
+                WHERE tenant_id = %s AND snapshot_id = %s
+                """,
+                (context.tenant_id, snapshot_id),
+            )
         if row is None:
             raise KeyError(f"unknown snapshot {snapshot_id}")
         snapshot = {

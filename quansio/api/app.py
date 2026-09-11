@@ -4,15 +4,19 @@ The API authenticates transport identity, resolves tenant/workspace/session
 from server state, and rejects any client-supplied authoritative identity
 field that does not match the server-resolved context — before any
 authoritative read or write. It never executes graphs, holds provider
-credentials or settles effects.
+credentials or settles effects. Admitted commands are forwarded to the
+quansio-runtime admission authority, which persists them durably and creates
+the run they produce; the API holds no command or run truth of its own.
 """
 
 from __future__ import annotations
 
+import os
 import uuid
 from datetime import datetime, timezone
 from typing import Any
 
+import httpx
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel
 
@@ -21,6 +25,8 @@ from quansio.platform.context import IdentityContext
 from quansio.platform.db import PlatformDatabase, database_config
 
 FORBIDDEN_CLIENT_FIELDS = {"tenant_id", "user_id", "session_id", "workspace_id", "actor_id"}
+
+DEFAULT_RUNTIME_URL = "http://127.0.0.1:8087"
 
 
 class LoginRequest(BaseModel):
@@ -37,10 +43,46 @@ class CommandRequest(BaseModel):
     submitted_at: datetime | None = None
 
 
-def create_app(database: PlatformDatabase | None = None) -> FastAPI:
+def _forward_to_runtime(
+    runtime_url: str, envelope: dict, authorization: str, transport
+) -> dict:
+    """Forward the admitted command to the runtime admission authority.
+
+    ``transport`` is injectable for qualification; production uses HTTP with
+    the caller's own bearer session so the runtime re-resolves identity from
+    the same control authority — the API never delegates its own authority.
+    """
+    if transport is not None:
+        return transport(envelope, authorization)
+    try:
+        response = httpx.post(
+            f"{runtime_url}/v9/admissions",
+            json=envelope,
+            headers={"authorization": authorization},
+            timeout=15.0,
+        )
+    except httpx.HTTPError as error:
+        raise HTTPException(
+            status_code=502,
+            detail=f"runtime admission unavailable; retry with the same idempotency_key: {error}",
+        ) from error
+    if response.status_code >= 400:
+        detail = response.json().get("detail") if response.content else response.text
+        raise HTTPException(status_code=response.status_code, detail=detail)
+    return response.json()["admission"]
+
+
+def create_app(
+    database: PlatformDatabase | None = None,
+    runtime_base_url: str | None = None,
+    runtime_transport=None,
+) -> FastAPI:
     app = FastAPI(title="quansio-api", version="9.0.0")
     db = database or PlatformDatabase(database_config())
     control = ControlService(db)
+    runtime_url = runtime_base_url or os.environ.get(
+        "QUANSIO_RUNTIME_URL", DEFAULT_RUNTIME_URL
+    )
 
     @app.get("/healthz")
     def healthz() -> dict:
@@ -106,9 +148,22 @@ def create_app(database: PlatformDatabase | None = None) -> FastAPI:
             "idempotency_key": body.idempotency_key,
             "submitted_at": (body.submitted_at or datetime.now(timezone.utc)).isoformat(),
         }
+        admission = _forward_to_runtime(
+            runtime_url,
+            {
+                "command_id": envelope["command_id"],
+                "command_type": envelope["command_type"],
+                "arguments": envelope["arguments"],
+                "idempotency_key": envelope["idempotency_key"],
+            },
+            authorization,
+            runtime_transport,
+        )
         return {
             "admitted": True,
             "command": envelope,
+            "admission": admission,
+            "run_id": admission.get("run_id"),
             "identity": _identity_view(context),
         }
 

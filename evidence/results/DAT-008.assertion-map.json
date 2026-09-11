@@ -1,18 +1,19 @@
 {
-  "DAT-002-A01": [
-    "tests/runtime/test_foundation.py::test_dat008_p01_identical_ids_never_cross_tenant_scope"
-  ],
-  "DAT-008-N01": [
-    "tests/runtime/test_foundation.py::test_dat008_n01_foreign_tenant_parameter_is_denied_before_materialization"
-  ],
-  "DAT-008-P01": [
-    "tests/runtime/test_foundation.py::test_dat008_p01_identical_ids_never_cross_tenant_scope"
-  ],
-  "DAT-008-R01": [
-    "tests/runtime/test_foundation.py::test_dat008_r01_isolation_probes_rerun_after_connection_failover"
-  ],
-  "SEC-006-A01": [
-    "tests/runtime/test_foundation.py::test_dat008_p01_identical_ids_never_cross_tenant_scope",
-    "tests/runtime/test_foundation.py::test_dat008_n01_foreign_tenant_parameter_is_denied_before_materialization"
-  ]
+ "DAT-002-A01": [
+  "tests/runtime/test_foundation.py::test_dat008_p01_identical_ids_never_cross_tenant_scope"
+ ],
+ "DAT-008-N01": [
+  "tests/runtime/test_foundation.py::test_dat008_n01_foreign_tenant_parameter_is_denied_before_materialization",
+  "tests/runtime/test_foundation.py::test_dat008_p02_cross_workspace_run_read_and_update_are_refused"
+ ],
+ "DAT-008-P01": [
+  "tests/runtime/test_foundation.py::test_dat008_p01_identical_ids_never_cross_tenant_scope"
+ ],
+ "DAT-008-R01": [
+  "tests/runtime/test_foundation.py::test_dat008_r01_isolation_probes_rerun_after_connection_failover"
+ ],
+ "SEC-006-A01": [
+  "tests/runtime/test_foundation.py::test_dat008_p01_identical_ids_never_cross_tenant_scope",
+  "tests/runtime/test_foundation.py::test_dat008_n01_foreign_tenant_parameter_is_denied_before_materialization"
+ ]
 }

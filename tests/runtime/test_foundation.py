@@ -410,3 +410,25 @@ def test_sec001_r01_expired_snapshot_requires_fresh_admission(migrated_db, minio
     )
     assert fresh["snapshot_id"] != root["snapshot_id"]
     assert service.require_active(context, fresh["snapshot_id"])["snapshot_id"] == fresh["snapshot_id"]
+
+
+# ---------------------------------------------------------------------------
+# DAT-008/SEC-006: workspace authorization consistency — individual run
+# reads and status updates are scoped to the caller's workspace, matching
+# the workspace filter that list_runs has always applied.
+# ---------------------------------------------------------------------------
+
+
+def test_dat008_p02_cross_workspace_run_read_and_update_are_refused(migrated_db, workspace_setup):
+    repository = TenantRepository(migrated_db)
+    context_a = _context(workspace_setup, "workspace_a")
+    context_b = _context(workspace_setup, "workspace_b")
+    agent_a = _admit_agent(migrated_db, context_a)
+    run_a = repository.create_run(context_a, agent_a)
+
+    # Same tenant, different workspace: the run is invisible and immutable.
+    assert repository.get_run(context_b, run_a) is None
+    assert repository.update_run_status(context_b, run_a, "cancelled") is False
+    # The owner still reads and updates it.
+    assert repository.get_run(context_a, run_a)["run_id"] == run_a
+    assert repository.update_run_status(context_a, run_a, "running") is True

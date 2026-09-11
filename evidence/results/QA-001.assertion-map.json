@@ -1,17 +1,18 @@
 {
-  "QA-001-N01": [
-    "tests/qa/test_qa_verticals.py::test_qa001_n01_duplicate_results_and_stale_commands_consistent"
-  ],
-  "QA-001-P01": [
-    "tests/qa/test_qa_verticals.py::test_qa001_p01_teammate_with_32_workers_disconnect_partial_cancel_restart"
-  ],
-  "QA-001-R01": [
-    "tests/qa/test_qa_verticals.py::test_qa001_r01_restart_completes_from_durable_state"
-  ],
-  "RUN-004-A01": [
-    "tests/qa/test_qa_verticals.py::test_qa001_n01_duplicate_results_and_stale_commands_consistent"
-  ],
-  "RUN-008-A01": [
-    "tests/qa/test_qa_verticals.py::test_qa001_r01_restart_completes_from_durable_state"
-  ]
+ "QA-001-N01": [
+  "tests/qa/test_qa_verticals.py::test_qa001_n01_duplicate_results_and_stale_commands_consistent"
+ ],
+ "QA-001-P01": [
+  "tests/qa/test_qa_verticals.py::test_qa001_p01_teammate_with_32_workers_disconnect_partial_cancel_restart",
+  "tests/qa/test_command_journey.py::test_command_to_artifact_journey"
+ ],
+ "QA-001-R01": [
+  "tests/qa/test_qa_verticals.py::test_qa001_r01_restart_completes_from_durable_state"
+ ],
+ "RUN-004-A01": [
+  "tests/qa/test_qa_verticals.py::test_qa001_n01_duplicate_results_and_stale_commands_consistent"
+ ],
+ "RUN-008-A01": [
+  "tests/qa/test_qa_verticals.py::test_qa001_r01_restart_completes_from_durable_state"
+ ]
 }

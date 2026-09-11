@@ -406,3 +406,105 @@ def test_run008_r01_restart_during_pending_wait_resumes_exactly_once(migrated_db
     assert waits_b.deliver_callback(context, run_id, protocol_id, {"nonce": 42}) is True
     assert waits_b.deliver_callback(context, run_id, protocol_id, {"nonce": 42}) is False
     assert waits_b.resume(context, run_id, protocol_id, {"resumed": True}) is False, "second resumption denied"
+
+
+# ---------------------------------------------------------------------------
+# RUN-004/SEC-001: admission atomicity — capability snapshot joins the
+# admission transaction, so ANY admission failure rolls the snapshot back.
+# ---------------------------------------------------------------------------
+
+
+def test_run004_n02_budget_failure_rolls_back_child_snapshot(migrated_db, context, capability, parent_setup):
+    """The capability snapshot must not survive a budget failure: before the
+    connection-joining fix this test failed because admit_child inserted the
+    snapshot on its own connection outside the admission transaction."""
+    admission = WorkerAdmission(migrated_db, capability)
+    # First admission consumes most of the ceiling.
+    first = admission.admit_worker(
+        context, parent_run_id=parent_setup["run_id"], parent_agent_id=parent_setup["agent_id"],
+        display_name="first-worker", capabilities=["fs.read"],
+        constraints={"targets": {}}, budget_cents=800,
+    )
+    assert first["reservation_id"]
+    # This request passes the parent-snapshot ceiling (500 <= 1000) but
+    # exceeds the run's remaining budget (800 spent + 500 > 1000): the
+    # failure happens AFTER the child snapshot insert, which must roll back.
+    with pytest.raises(BudgetExceededError):
+        admission.admit_worker(
+            context, parent_run_id=parent_setup["run_id"], parent_agent_id=parent_setup["agent_id"],
+            display_name="over-ceiling", capabilities=["fs.read"],
+            constraints={"targets": {}}, budget_cents=500,
+        )
+    # No child snapshot beyond the successfully admitted one remains.
+    children = migrated_db.query_all(
+        """
+        SELECT snapshot_id::text FROM capability_snapshots
+        WHERE tenant_id=%s AND parent_snapshot_id=%s
+        """,
+        (context.tenant_id, parent_setup["snapshot"]["snapshot_id"]),
+    )
+    assert len(children) == 1, "a failed admission must not leave a child snapshot"
+    assert migrated_db.query_one(
+        "SELECT count(*) FROM agents WHERE display_name='over-ceiling' AND tenant_id=%s",
+        (context.tenant_id,),
+    )[0] == 0
+    assert migrated_db.query_one(
+        """
+        SELECT COALESCE(SUM(reserved_cents),0) FROM budget_reservations
+        WHERE tenant_id=%s AND parent_run_id=%s
+        """,
+        (context.tenant_id, parent_setup["run_id"]),
+    )[0] == 800
+
+
+def test_run007_p02_concurrent_worker_admissions_enforce_budget_and_capability_atomically(
+    migrated_db, context, capability, parent_setup
+):
+    """Concurrent admissions must serialize on the budget lock: exactly the
+    ceiling-fitting subset succeeds, every success has its child snapshot,
+    and no partial state exists for any failure."""
+    import concurrent.futures
+
+    admission = WorkerAdmission(migrated_db, capability)
+
+    def admit(index: int) -> dict | str:
+        try:
+            return admission.admit_worker(
+                context, parent_run_id=parent_setup["run_id"],
+                parent_agent_id=parent_setup["agent_id"],
+                display_name=f"racer-{index}", capabilities=["fs.read"],
+                constraints={"targets": {}}, budget_cents=300,
+            )
+        except BudgetExceededError:
+            return "exceeded"
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        outcomes = list(pool.map(admit, range(6)))
+
+    succeeded = [o for o in outcomes if isinstance(o, dict)]
+    assert len(succeeded) == 3, f"ceiling 1000 admits exactly 3x300: {outcomes}"
+    spent = migrated_db.query_one(
+        """
+        SELECT COALESCE(SUM(reserved_cents),0) FROM budget_reservations
+        WHERE tenant_id=%s AND parent_run_id=%s AND status IN ('reserved','settling')
+        """,
+        (context.tenant_id, parent_setup["run_id"]),
+    )[0]
+    assert spent == 900 <= 1000
+    # Every succeeded admission has exactly one durable child snapshot.
+    for result in succeeded:
+        child = migrated_db.query_one(
+            """
+            SELECT parent_snapshot_id::text FROM capability_snapshots
+            WHERE tenant_id=%s AND snapshot_id=%s
+            """,
+            (context.tenant_id, result["child_snapshot_id"]),
+        )
+        assert child is not None and child[0] == parent_setup["snapshot"]["snapshot_id"]
+    assert migrated_db.query_one(
+        """
+        SELECT count(*) FROM capability_snapshots
+        WHERE tenant_id=%s AND parent_snapshot_id=%s
+        """,
+        (context.tenant_id, parent_setup["snapshot"]["snapshot_id"]),
+    )[0] == 3

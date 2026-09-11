@@ -2,6 +2,14 @@
   "entries": [
     {
       "kind": "authority_path",
+      "owner": "deploy",
+      "path": ".github",
+      "role": "CI workflow definitions",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "authority_path",
       "owner": "authority",
       "path": ".gitignore",
       "role": "VCS ignore rules",
@@ -521,9 +529,9 @@
       "status": "present"
     }
   ],
-  "entry_count": 65,
+  "entry_count": 66,
   "inventory_version": "1.1.0",
-  "registry_sha256": "e07a4108577b1fb942815213834b5a9ec2994f14a1e25a715ae468c183223d59",
+  "registry_sha256": "2702e0533f151ec1a33a569de3b24cbe678fbb42c4beb9ef44e749e5ed7e2b09",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
   "tooling_sha256": "c84b78e9b3ffa8071380c74d9c408f0fbf3a8f374afbf8d3256f6881f5e3649c"

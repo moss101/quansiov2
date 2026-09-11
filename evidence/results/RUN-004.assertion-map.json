@@ -1,21 +1,23 @@
 {
-  "INV-009-A01": [
-    "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility"
-  ],
-  "RUN-003-A01": [
-    "tests/runtime/test_orchestration.py::test_run004_p01_admission_reserves_capacity_budget_capability_atomically",
-    "tests/runtime/test_orchestration.py::test_run004_r01_orphaned_reservation_recovered"
-  ],
-  "RUN-004-N01": [
-    "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility"
-  ],
-  "RUN-004-P01": [
-    "tests/runtime/test_orchestration.py::test_run004_p01_admission_reserves_capacity_budget_capability_atomically"
-  ],
-  "RUN-004-R01": [
-    "tests/runtime/test_orchestration.py::test_run004_r01_orphaned_reservation_recovered"
-  ],
-  "SEC-001-A01": [
-    "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility"
-  ]
+ "INV-009-A01": [
+  "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility"
+ ],
+ "RUN-003-A01": [
+  "tests/runtime/test_orchestration.py::test_run004_p01_admission_reserves_capacity_budget_capability_atomically",
+  "tests/runtime/test_orchestration.py::test_run004_r01_orphaned_reservation_recovered"
+ ],
+ "RUN-004-N01": [
+  "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility",
+  "tests/runtime/test_orchestration.py::test_run004_n02_budget_failure_rolls_back_child_snapshot"
+ ],
+ "RUN-004-P01": [
+  "tests/runtime/test_orchestration.py::test_run004_p01_admission_reserves_capacity_budget_capability_atomically",
+  "tests/runtime/test_orchestration.py::test_run007_p02_concurrent_worker_admissions_enforce_budget_and_capability_atomically"
+ ],
+ "RUN-004-R01": [
+  "tests/runtime/test_orchestration.py::test_run004_r01_orphaned_reservation_recovered"
+ ],
+ "SEC-001-A01": [
+  "tests/runtime/test_orchestration.py::test_run004_n01_escalation_rejected_before_visibility"
+ ]
 }

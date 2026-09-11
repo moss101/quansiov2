@@ -52,9 +52,9 @@ class TenantRepository:
             cursor = connection.execute(
                 """
                 UPDATE runs SET status = %s, updated_at = now()
-                WHERE tenant_id = %s AND run_id = %s
+                WHERE tenant_id = %s AND workspace_id = %s AND run_id = %s
                 """,
-                (status, tenant, run_id),
+                (status, tenant, context.workspace_id, run_id),
             )
             return cursor.rowcount > 0
 
@@ -62,12 +62,14 @@ class TenantRepository:
 
     def get_run(self, context: IdentityContext, run_id: str, claimed_tenant: str | None = None) -> dict[str, Any] | None:
         tenant = self._tenant(context, claimed_tenant)
+        # Workspace scope matches list_runs: runs are workspace aggregates,
+        # so a same-tenant foreign-workspace run is invisible here too.
         row = self._db.query_one(
             """
             SELECT tenant_id::text, workspace_id::text, run_id::text, agent_id::text, status, generation, budget_cents
-            FROM runs WHERE tenant_id = %s AND run_id = %s
+            FROM runs WHERE tenant_id = %s AND workspace_id = %s AND run_id = %s
             """,
-            (tenant, run_id),
+            (tenant, context.workspace_id, run_id),
         )
         if row is None:
             return None

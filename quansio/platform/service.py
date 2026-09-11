@@ -45,12 +45,19 @@ def add_health_routes(app, database: PlatformDatabase, service: str) -> None:
         return {"status": "live", "service": service}
 
     @app.get("/readyz")
-    def readyz() -> dict:
+    def readyz() -> object:
         try:
             database.query_one("SELECT 1")
-            return {"status": "ready", "service": service}
         except Exception as error:  # noqa: BLE001 - readiness reports degradation
-            return {"status": "degraded", "service": service, "error": str(error)}
+            # A degraded service must not answer 200: load balancers and
+            # orchestrators key on the status code.
+            from fastapi.responses import JSONResponse
+
+            return JSONResponse(
+                status_code=503,
+                content={"status": "degraded", "service": service, "error": str(error)},
+            )
+        return {"status": "ready", "service": service}
 
 
 def default_database() -> PlatformDatabase:

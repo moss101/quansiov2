@@ -646,3 +646,18 @@ def test_gateway_admission_shape(migrated_db, auth):
             for field in ("request_id", "model_profile_id", "usage_reservation_id",
                           "privacy_decision_id", "stream_id"):
                 assert field in envelope, f"missing canonical envelope field {field}"
+
+
+def test_degraded_dependency_returns_readyz_503(migrated_db, auth):
+    """A service whose database is unreachable must answer readiness with
+    HTTP 503 (never a 200 body claiming degraded) while liveness stays 200:
+    load balancers key on the status code."""
+    from quansio.platform.db import PlatformDatabase, database_config
+
+    standalone = PlatformDatabase(database_config(), max_size=1)
+    standalone.close()  # dependency down
+    with _client(create_notify_app(standalone)) as http:
+        assert http.get("/healthz").status_code == 200
+        ready = http.get("/readyz")
+        assert ready.status_code == 503, ready.text
+        assert ready.json()["status"] == "degraded"

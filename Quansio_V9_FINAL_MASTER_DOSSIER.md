@@ -3752,7 +3752,7 @@ Each runbook names owner/on-call, trigger signals, containment steps, commands/t
 
 # Code-quality improvement plan
 
-Date: 2026-09-11. Baseline commit: `dd72196f7b81116a5474e34f02b464801643433e`, plus the existing dirty working tree inspected on this date.
+Date: 2026-09-11. Baseline commit: `d4facfa7f8b1af07d4eef4fc6338205abeafbe6d`. The working tree was clean before this planning update.
 
 Status: proposed implementation backlog. This document does not change canonical tasks, acceptance assertions, service ownership, or completion status.
 
@@ -3769,7 +3769,7 @@ Observed checks:
 - Ruff check and formatting check: unavailable; `.venv/bin/ruff` does not exist. Import inspection also found mypy unavailable. Neither is a passing quality check.
 - Full integration, recovery, security, and release suites were not executed for this planning task. Shared fixtures can provision infrastructure and lifecycle tests can tear it down.
 
-There are existing modified and untracked service, deployment, ownership, and integrity files. Reconcile their intended changes before implementation; do not overwrite or revert them. Findings below come from source inspection, not a completed production qualification. No lint count, coverage percentage, or current DAG-ready task is claimed.
+Recheck the working tree and prerequisite evidence before implementation; preserve any concurrent changes. The contract gate was rerun for this update; Ruff and mypy availability were checked through Python module discovery. Findings below come from source inspection, not a completed production qualification. No lint count, coverage percentage, or current DAG-ready task is claimed.
 
 ## Findings driving the work
 
@@ -3777,12 +3777,14 @@ There are existing modified and untracked service, deployment, ownership, and in
 |---|---|---|
 | P0 | `WorkerAdmission.admit_worker` in `quansio/runtime/orchestration.py` calls capability admission inside its transaction; `CapabilityService._admit` in `quansio/control/capability.py` acquires its own pooled connection. | The claimed atomic boundary does not include the capability insert. Reproduce rollback behavior before changing it. |
 | P0 | `TenantRepository.get_run` and `update_run_status` filter tenant and run, while `list_runs` also filters workspace. | Workspace authorization is inconsistent at this layer. Verify the intended role policy and calling paths; this is not yet a demonstrated exploit. |
-| P1 | Several working-tree service entrypoints construct database pools at import and return a degraded readiness dictionary without a non-200 status. | Imports require infrastructure, shutdown ownership is unclear, and HTTP readiness can indicate success during dependency failure. |
+| P1 | `services/quansio_context/main.py` calls its app factory at import; the shared `quansio/platform/service.py:add_health_routes` returns a degraded readiness dictionary without a non-200 status. | Imports require infrastructure, shutdown ownership is unclear, and HTTP readiness can indicate success during dependency failure. |
 | P1 | `pyproject.toml` declares lower-bounded dependencies, no lockfile was found, and production artifact code imports undeclared `minio`. The wheel includes only `quansio`. | Fresh installations may differ or omit needed dependencies and generated contracts/deployment resources. |
 | P1 | `tools/governance/verify_all.sh` generates authority and ownership artifacts before checking; it does not invoke Ruff or mypy. No checked-in CI workflow was found. | Verification can repair drift before reporting it and does not enforce the stated static-quality tools. |
 | P1 | The contract gate detects competing DTO names and freshness; API commands are manually assembled dictionaries, and generated bindings use dictionary payloads. | A passing gate does not prove all runtime boundaries validate canonical contracts or benefit from field-level static typing. |
 | P1 | `tests/conftest.py` provisions a shared environment and orders lifecycle tests last. | Test isolation depends on ordering; concurrent or interrupted runs need explicit environment ownership. |
 | P2 | `orchestration.py` is 522 lines and `machine_control/services.py` 396; domain APIs frequently expose bare dictionaries and positional database rows. | These are candidates for focused decomposition and stronger interfaces, not justification for a wholesale rewrite. |
+
+| P1 | `clients/web/app.js` keeps one event cursor across followed runs, silently drops sequence gaps, and puts a command ID in the run-ID input. `clients/desktop/package.json` defines only a start script. | Client recovery and command-to-run identity need contract reconciliation; JavaScript quality checks need explicit build integration. |
 
 ## Execution rules
 
@@ -3857,6 +3859,33 @@ Canonical anchors: relevant RUN, MAC, MOD, EFF, CTX, and other domain tasks afte
 Start with worker admission/budgets, then machine lifecycle and model/effect boundaries according to measured change frequency and defects. Extract coherent operations inside the same owner, name state transitions explicitly, centralize repeated row conversion and error mapping, and remove dead imports/branches proven unused. Preserve transaction scope, event ordering, cancellation, and canonical effect routing.
 
 Acceptance: behavior-preserving refactors pass existing positive, adversarial, and recovery assertions; no second execution path appears; public contracts and digests remain compatible. Measure complexity and duplication before/after as supporting evidence. Do not split files solely to reach a line-count target.
+
+### Q7 — Verify client projections and JavaScript quality
+
+Canonical anchors: UX-001 and UX-006 with their actual prerequisites. Owner: existing client projection layer; runtime retains event and run authority.
+
+1. Resolve command-to-run identity using the canonical command response and runtime APIs. Remove the command-ID-as-run-ID shortcut only after the server exposes the required authoritative mapping.
+2. Reconcile event sequence scope with the runtime contract. Scope cursors to the defined stream, reset projection state when switching identity/workspace, and recover gaps through canonical replay or snapshots. Do not invent missing state locally.
+3. Add JavaScript linting, formatting, a dependency lock, and installed Electron startup validation to Q1 build checks. Keep the existing Electron isolation settings enforced.
+4. Exercise switching between two runs, duplicate and missing events, reconnect, expired sessions, malformed stored identity, and command failure. Use real server boundaries for qualification and permitted unit doubles only for isolated rendering tests.
+
+Acceptance: following one run cannot suppress another run's events; gaps trigger observable recovery; commands resolve to server-issued run identities; logout/workspace changes clear prior projections; client validation runs in CI alongside Python checks.
+
+## Reviewable delivery order and measurements
+
+These dependencies order improvement work only; canonical DAG eligibility still controls execution. Q1 enables measurement and tooling. Q2 correctness reproducers can proceed alongside Q1 when eligible. Q3 and Q4 use that baseline; Q5 isolation should land before running their destructive recovery suites. Q6 follows regression coverage for each touched operation. Q7 identity work depends on Q4's server contract reconciliation.
+
+| Pull-request scope | Required evidence before merge |
+|---|---|
+| Baseline report and read-only verification separation | Exact commands, versions, failures, and clean-tree check; stale output must fail rather than regenerate. |
+| Dependency lock and installed-package checks | Fresh install, wheel/resource inventory, service import checks, client build/startup checks. |
+| Worker admission atomicity | Failing real-database reproducer before the fix, passing rollback/race/idempotency cases afterward, decision record. |
+| Workspace authorization consistency | Policy decision, same-tenant cross-workspace and foreign-tenant tests, legitimate access retained. |
+| Shared readiness and resource lifecycle | HTTP 503 under outage, recovery to ready, deterministic shutdown, redacted diagnostics. |
+| One contract boundary at a time | Generated types, runtime rejection cases, strict type check, replay evidence where durable admission changes. |
+| Test environment isolation and client recovery | Job ownership and teardown proof; run switching, event gaps, reconnect, and authoritative identity tests. |
+
+Q1 should record counts of lint/type violations by module, formatting drift, installed-import failures, test duration and flaky failures, and critical assertion coverage. Subsequent changes must introduce no new findings under enabled blocking rules. Existing debt needs explicit tracked scope and removal criteria; do not convert failing release assertions into accepted debt. Report transaction residue, unauthorized access, false-ready responses, and unrecovered client gaps as behavioral failures rather than folding them into a cosmetic quality score.
 
 ## Delivery and completion
 

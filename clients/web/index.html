@@ -39,10 +39,13 @@
       <h2>Start a task</h2>
       <form id="task-form">
         <label>Objective <input name="objective" required /></label>
+        <label>Agent ID <input name="agent_id" placeholder="admitted teammate" required /></label>
+        <label>Budget (cents) <input name="budget_cents" type="number" min="0" value="0" /></label>
         <button type="submit">Submit command</button>
       </form>
-      <p class="hint">Commands are admitted by quansio-api; execution state
-      is owned by the canonical runtime and rendered from events only.</p>
+      <p class="hint">Commands are admitted by quansio-api and dispatched by
+      the quansio-runtime admission authority; execution state is owned by
+      the canonical runtime and rendered from events only.</p>
     </div>
     <div class="card">
       <h2>Run timeline</h2>

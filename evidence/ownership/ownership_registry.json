@@ -363,6 +363,14 @@
     },
     {
       "kind": "authority_path",
+      "path": ".github",
+      "owner": "deploy",
+      "status": "present",
+      "state_class": null,
+      "role": "CI workflow definitions"
+    },
+    {
+      "kind": "authority_path",
       "path": ".gitignore",
       "owner": "authority",
       "status": "present",

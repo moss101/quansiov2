@@ -223,15 +223,33 @@ def test_sre003_r01_unknown_effects_must_resolve_before_reopen(migrated_db, work
 # ---------------------------------------------------------------------------
 
 
-def test_sre004_p01_drills_meet_rpo_rto_objectives(migrated_db, workspace_setup, context):
+def test_sre004_p01_real_backup_restore_drill_meets_rpo_rto(migrated_db, workspace_setup, context):
+    """A REAL drill: consistent pg_dump of both authoritative databases,
+    restore into scratch databases, and proof that the restored state is
+    complete — probe-table counts plus a canary row written before the
+    backup and deleted after it must reappear after restore. The measured
+    elapsed time is the RTO; the canary proves zero-loss RPO. The recorded
+    drill then binds the measured values, not asserted booleans."""
+    from quansio.observability.backup import BackupRestoreDrill
+
+    drill = BackupRestoreDrill(migrated_db).run()
+    assert drill.get("error") is None, drill
+    assert drill["all_components_restored"] is True, drill["checks"]
+    assert drill["rpo_seconds"] == 0, "canary row must survive restore"
+    assert drill["rto_seconds"] <= 1800, drill["rto_seconds"]
+
     runner = DrillRunner(migrated_db)
     auth = runner.run_drill(context, str(uuid.uuid4()), "authoritative",
-                            rpo_seconds=120, rto_seconds=900,
-                            all_components_restored=True, unknown_effects_resolved=True)
+                            rpo_seconds=drill["rpo_seconds"],
+                            rto_seconds=int(drill["rto_seconds"]),
+                            all_components_restored=drill["all_components_restored"],
+                            unknown_effects_resolved=drill["unknown_effects_resolved"])
+    assert auth["passed"] is True
+    # Decision logic still refuses representative objective breaches.
     ev = runner.run_drill(context, str(uuid.uuid4()), "evidence",
-                          rpo_seconds=600, rto_seconds=3000,
+                          rpo_seconds=drill["rpo_seconds"], rto_seconds=10**6,
                           all_components_restored=True, unknown_effects_resolved=True)
-    assert auth["passed"] and ev["passed"]
+    assert ev["passed"] is False
 
 
 def test_sre004_n01_drill_fails_on_objective_or_component_gap(migrated_db, workspace_setup, context):

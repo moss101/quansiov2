@@ -113,11 +113,17 @@ document.getElementById("task-form").addEventListener("submit", async (event) =>
       method: "POST",
       body: JSON.stringify({
         command_type: "task.start",
-        arguments: { objective: form.get("objective") },
+        arguments: {
+          objective: form.get("objective"),
+          agent_id: form.get("agent_id") || undefined,
+          budget_cents: Number(form.get("budget_cents") || 0),
+        },
         idempotency_key: `web-${crypto.randomUUID()}`,
       }),
     });
-    document.getElementById("run-id").value = result.command.command_id; // demo aid
+    // The runtime admission returns the durable run the command produced;
+    // the timeline follows that run — never the command id.
+    document.getElementById("run-id").value = result.run_id;
   } catch (error) {
     alert(`command refused: ${error.message}`);
   }

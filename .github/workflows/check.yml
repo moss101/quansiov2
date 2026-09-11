@@ -1,0 +1,29 @@
+# Light authority/contract/integrity checks on free public runners.
+# Heavy qualification (real PostgreSQL/MinIO suites) stays on the
+# self-hosted runner per the tiered $0-budget CI strategy.
+name: authority-check
+on:
+  push:
+  pull_request:
+jobs:
+  authority:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install minimal validator dependencies
+        run: python -m pip install jsonschema psycopg binary
+      - name: Authority generation determinism
+        run: |
+          python tools/governance/generate_authority.py --check
+      - name: Contract gate
+        run: |
+          python tools/governance/contract_gate.py
+      - name: Production source scan
+        run: |
+          python scripts/scan_production_placeholders.py .
+      - name: Integrity validation
+        run: |
+          python scripts/validate_integrity.py

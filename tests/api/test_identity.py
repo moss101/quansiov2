@@ -34,11 +34,30 @@ from quansio.platform.context import IdentityContextError  # noqa: E402
 from quansio.platform.db import database_config  # noqa: E402
 
 
+def _recording_transport(envelope, authorization):
+    """Stand-in for the runtime admission authority: records the forwarded
+    envelope so tests can assert exactly what the API forwarded."""
+    _recording_transport.forwarded.append(dict(envelope))
+    return {
+        "command_id": envelope["command_id"],
+        "run_id": str(uuid.uuid4()),
+        "status": "dispatched",
+        "replayed": False,
+    }
+
+
+_recording_transport.forwarded = []
+
+
 @pytest.fixture()
 def app(migrated_db):
     from quansio.platform.db import PlatformDatabase
 
-    return create_app(PlatformDatabase(database_config(), max_size=4))
+    _recording_transport.forwarded.clear()
+    return create_app(
+        PlatformDatabase(database_config(), max_size=4),
+        runtime_transport=_recording_transport,
+    )
 
 
 @pytest.fixture()

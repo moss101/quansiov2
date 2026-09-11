@@ -82,7 +82,9 @@ class WorkerAdmission:
                     parent_snapshot_id = parent_run[2]
                     if parent_snapshot_id is None:
                         raise AdmissionError("parent run has no admitted capability snapshot")
-                    # Strict-subset child snapshot before anything is visible.
+                    # Strict-subset child snapshot, inserted on THIS
+                    # transaction's connection so a later budget failure rolls
+                    # the snapshot back together with the agent/reservation.
                     try:
                         child = self._capabilities.admit_child(
                             context,
@@ -91,6 +93,7 @@ class WorkerAdmission:
                             capabilities=capabilities,
                             constraints=constraints,
                             budget_cents=budget_cents,
+                            connection=connection,
                         )
                     except CapabilityEscalationError:
                         raise

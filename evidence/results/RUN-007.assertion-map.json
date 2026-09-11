@@ -1,17 +1,18 @@
 {
-  "MOD-005-A01": [
-    "tests/runtime/test_orchestration.py::test_run007_r01_late_usage_settles_exactly_once_and_releases_unused"
-  ],
-  "RUN-006-A01": [
-    "tests/runtime/test_orchestration.py::test_run006_p01_cancel_parent_with_mixed_children"
-  ],
-  "RUN-007-N01": [
-    "tests/runtime/test_orchestration.py::test_run007_n01_idempotency_key_and_stale_generation_rejected"
-  ],
-  "RUN-007-P01": [
-    "tests/runtime/test_orchestration.py::test_run007_p01_32_concurrent_reservations_never_exceed_ceiling"
-  ],
-  "RUN-007-R01": [
-    "tests/runtime/test_orchestration.py::test_run007_r01_late_usage_settles_exactly_once_and_releases_unused"
-  ]
+ "MOD-005-A01": [
+  "tests/runtime/test_orchestration.py::test_run007_r01_late_usage_settles_exactly_once_and_releases_unused"
+ ],
+ "RUN-006-A01": [
+  "tests/runtime/test_orchestration.py::test_run006_p01_cancel_parent_with_mixed_children"
+ ],
+ "RUN-007-N01": [
+  "tests/runtime/test_orchestration.py::test_run007_n01_idempotency_key_and_stale_generation_rejected"
+ ],
+ "RUN-007-P01": [
+  "tests/runtime/test_orchestration.py::test_run007_p01_32_concurrent_reservations_never_exceed_ceiling",
+  "tests/runtime/test_orchestration.py::test_run007_p02_concurrent_worker_admissions_enforce_budget_and_capability_atomically"
+ ],
+ "RUN-007-R01": [
+  "tests/runtime/test_orchestration.py::test_run007_r01_late_usage_settles_exactly_once_and_releases_unused"
+ ]
 }
