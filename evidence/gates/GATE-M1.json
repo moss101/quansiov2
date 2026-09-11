@@ -1,10 +1,10 @@
 {
   "gate": "GATE-M1",
-  "git_commit": "833d68d52cabb3adb0c57766bd617063cb0b8867",
+  "git_commit": "ecdcd4b9c3333bdbb9fe1b5c05557cffefa67f87",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-dat-001-fb3678440fe9.json",
-      "evidence_digest": "244016726d39df2e08e98a0f6c36d35d2cc06de03f90786399032cdfb64aeb98",
+      "evidence": "evidence/reports/evidence-dat-001-46dfb1199b39.json",
+      "evidence_digest": "e674e84a862b30eafd72cb36defff9d3b3354abefa0b1a1c00990c98c01d16b4",
       "status": "PASS",
       "task": "DAT-001"
     },
@@ -27,38 +27,38 @@
       "task": "DAT-004"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-005-8009e8e8848e.json",
-      "evidence_digest": "b5cb013f450b0454b9a20fac4372f5993ad469bb71d01757e321da48352128aa",
+      "evidence": "evidence/reports/evidence-dat-005-46dfb1199b39.json",
+      "evidence_digest": "a1ddaa2831ace4f223f462ec29865001332d38ffdba564611d1bdbaf479a4dad",
       "status": "PASS",
       "task": "DAT-005"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-006-864617fe08fd.json",
-      "evidence_digest": "d272db1baded7c1a1996dd5baf9bce58d4c0f1ae4966ea58b1467552e2290f4b",
+      "evidence": "evidence/reports/evidence-dat-006-46dfb1199b39.json",
+      "evidence_digest": "e5e9c96c20d96f39a9cf3a347187749da0ce12b9ca4e391338af0715a416b5d0",
       "status": "PASS",
       "task": "DAT-006"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-007-8009e8e8848e.json",
-      "evidence_digest": "b2d80ca88c37ad2da69d4d23f6f691e5571e05057f4a3ecbbf08e217ebafcad3",
+      "evidence": "evidence/reports/evidence-dat-007-46dfb1199b39.json",
+      "evidence_digest": "ab65a8f2e747d0df0a78d030d74034b1005f4f2b6751381b0f824425aff8d94b",
       "status": "PASS",
       "task": "DAT-007"
     },
     {
-      "evidence": "evidence/reports/evidence-dat-008-8009e8e8848e.json",
-      "evidence_digest": "85f948e422fbf938fed6364f83001b6e20eadd0cc059aece4b040d56a8830746",
+      "evidence": "evidence/reports/evidence-dat-008-46dfb1199b39.json",
+      "evidence_digest": "5154473ce0c5f874dafdca3ab34c60948589cd81ac40b8f8b107768bf04fe02e",
       "status": "PASS",
       "task": "DAT-008"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m0-833d68d52cab.json",
-      "evidence_digest": "aae0ff44c0326a2e8224aae015dc478c8426d0f6704b7f5767833457fa0b1041",
+      "evidence": "evidence/reports/evidence-gate-m0-ecdcd4b9c333.json",
+      "evidence_digest": "f386d36e1350bb4b77c1869bc5e2fc486efed9941bd96d69de72cf17227a4245",
       "status": "PASS",
       "task": "GATE-M0"
     },
     {
-      "evidence": "evidence/reports/evidence-sec-001-8009e8e8848e.json",
-      "evidence_digest": "319bb283c52e9d8d98a863ed922eb7ddd69bc8f3e0cc719da37bedb785bdf64b",
+      "evidence": "evidence/reports/evidence-sec-001-46dfb1199b39.json",
+      "evidence_digest": "b3f0ae24013fab813d2d3c8ddd5727fd69a6904e60e08afe801950f290810bee",
       "status": "PASS",
       "task": "SEC-001"
     }
