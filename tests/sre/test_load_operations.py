@@ -10,6 +10,7 @@ asserted booleans, are the evidence.
 
 from __future__ import annotations
 
+import os
 import socket
 import statistics
 import subprocess
@@ -39,58 +40,76 @@ def _free_port() -> int:
         return sock.getsockname()[1]
 
 
+def _launch(service_dir: str, port: int, name: str,
+            runtime_url: str | None = None) -> subprocess.Popen:
+    log = open(f"/tmp/quansio-load-{name}-{port}.log", "wb")  # noqa: SIM115
+    env = dict(os.environ)
+    if runtime_url:
+        env["QUANSIO_RUNTIME_URL"] = runtime_url
+    return subprocess.Popen(
+        [sys.executable, "-m", "uvicorn", "main:app",
+         "--app-dir", f"services/{service_dir}",
+         "--host", "127.0.0.1", "--port", str(port), "--log-level", "warning"],
+        cwd=REPO_ROOT, stdout=log, stderr=subprocess.STDOUT, env=env,
+    )
+
+
+def _wait_healthy(url: str) -> None:
+    deadline = time.monotonic() + 60
+    while time.monotonic() < deadline:
+        try:
+            if httpx.get(f"{url}/healthz", timeout=2).status_code == 200:
+                return
+        except httpx.HTTPError:
+            time.sleep(0.4)
+    raise AssertionError(f"{url} did not become healthy")
+
+
 @pytest.fixture(scope="module")
 def live_api(migrated_db):
-    """One live API instance plus a prepared tenant with an admitted agent."""
+    """A live API instance paired with its own live runtime instance (the
+    API forwards admitted commands to it), plus a prepared tenant with an
+    admitted agent. Self-contained: no dependency on a manually launched
+    development stack."""
     from quansio.control.capability import CapabilityService
     from quansio.control.identity import ControlService
     from quansio.platform.context import IdentityContext
     from quansio.runtime.agents import AgentRegistry
     from datetime import datetime, timedelta, timezone
 
-    port = _free_port()
-    log = open(f"/tmp/quansio-load-{port}.log", "wb")  # noqa: SIM115
-    process = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "main:app",
-         "--app-dir", "services/quansio_api",
-         "--host", "127.0.0.1", "--port", str(port), "--log-level", "warning"],
-        cwd=REPO_ROOT, stdout=log, stderr=subprocess.STDOUT,
-    )
-    base = f"http://127.0.0.1:{port}"
-    deadline = time.monotonic() + 60
-    while time.monotonic() < deadline:
-        try:
-            if httpx.get(f"{base}/healthz", timeout=2).status_code == 200:
-                break
-        except httpx.HTTPError:
-            time.sleep(0.4)
-    else:
-        process.terminate()
-        raise AssertionError("api instance did not become healthy")
-
-    database = migrated_db
-    control = ControlService(database)
-    suffix = uuid.uuid4().hex[:10]
-    tenant_id = control.create_tenant(f"load-{suffix}")
-    workspace_id = control.create_workspace(tenant_id, f"load-ws-{suffix}")
-    control.create_user(tenant_id, f"load-{suffix}@qual.invalid", "Load",
-                        "correct horse battery", role="tenant_admin",
-                        workspace_id=workspace_id)
-    token, context = control.authenticate(tenant_id, f"load-{suffix}@qual.invalid",
-                                          "correct horse battery", workspace_id)
-    snapshot = CapabilityService(database).admit_root(
-        context, context.user_id, ["cap.load"], {}, 500)
-    agent_id = AgentRegistry(database, CapabilityService(database)).create_persistent_teammate(
-        context, f"load-agent-{suffix}", snapshot["snapshot_id"])
+    runtime_port, api_port = _free_port(), _free_port()
+    runtime_process = _launch("quansio_runtime", runtime_port, "rt")
+    api_process = _launch("quansio_api", api_port, "api",
+                          runtime_url=f"http://127.0.0.1:{runtime_port}")
     try:
-        yield {"base": base, "token": token, "tenant_id": tenant_id,
+        _wait_healthy(f"http://127.0.0.1:{runtime_port}")
+        base = f"http://127.0.0.1:{api_port}"
+        _wait_healthy(base)
+
+        database = migrated_db
+        control = ControlService(database)
+        suffix = uuid.uuid4().hex[:10]
+        tenant_id = control.create_tenant(f"load-{suffix}")
+        workspace_id = control.create_workspace(tenant_id, f"load-ws-{suffix}")
+        control.create_user(tenant_id, f"load-{suffix}@qual.invalid", "Load",
+                            "correct horse battery", role="tenant_admin",
+                            workspace_id=workspace_id)
+        token, context = control.authenticate(tenant_id, f"load-{suffix}@qual.invalid",
+                                              "correct horse battery", workspace_id)
+        snapshot = CapabilityService(database).admit_root(
+            context, context.user_id, ["cap.load"], {}, 500)
+        agent_id = AgentRegistry(database, CapabilityService(database)).create_persistent_teammate(
+            context, f"load-agent-{suffix}", snapshot["snapshot_id"])
+        yield {"base": base, "runtime_base": f"http://127.0.0.1:{runtime_port}",
+               "token": token, "tenant_id": tenant_id,
                "workspace_id": workspace_id, "agent_id": agent_id}
     finally:
-        process.terminate()
-        try:
-            process.wait(timeout=10)
-        except subprocess.TimeoutExpired:
-            process.kill()
+        for process in (api_process, runtime_process):
+            process.terminate()
+            try:
+                process.wait(timeout=10)
+            except subprocess.TimeoutExpired:
+                process.kill()
 
 
 def test_sre005_p02_measured_load_meets_slo_and_overload_degrades_bounded(live_api):
@@ -134,51 +153,27 @@ def test_sre005_p02_measured_load_meets_slo_and_overload_degrades_bounded(live_a
         "idempotency_key": f"load-{uuid.uuid4().hex[:10]}",
     })
     assert admitted.status_code == 200, admitted.text
-    # The runtime service lives on its own port in a real deployment; here the
-    # burst goes against the live runtime instance launched separately.
-    runtime_port = _free_port()
-    log = open(f"/tmp/quansio-load-rt-{runtime_port}.log", "wb")  # noqa: SIM115
-    runtime = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "main:app",
-         "--app-dir", "services/quansio_runtime",
-         "--host", "127.0.0.1", "--port", str(runtime_port), "--log-level", "warning"],
-        cwd=REPO_ROOT, stdout=log, stderr=subprocess.STDOUT,
-    )
-    runtime_base = f"http://127.0.0.1:{runtime_port}"
-    try:
-        deadline = time.monotonic() + 60
-        while time.monotonic() < deadline:
-            try:
-                if httpx.get(f"{runtime_base}/healthz", timeout=2).status_code == 200:
-                    break
-            except httpx.HTTPError:
-                time.sleep(0.4)
-        else:
-            raise AssertionError("runtime instance did not become healthy")
+    # The burst goes against the fixture's live runtime instance — the same
+    # authority the API forwards admitted commands to.
+    runtime_base = live_api["runtime_base"]
 
-        outcomes: list[int] = []
+    outcomes: list[int] = []
 
-        def reserver(index: int) -> None:
-            with httpx.Client(timeout=15.0) as client:
-                response = client.post(f"{runtime_base}/v9/budgets/reservations",
-                                       headers=headers, json={
-                    "parent_run_id": admitted.json()["run_id"],
-                    "idempotency_key": f"burst-{index}",
-                    "amount_cents": 30,
-                })
-                outcomes.append(response.status_code)
+    def reserver(index: int) -> None:
+        with httpx.Client(timeout=15.0) as client:
+            response = client.post(f"{runtime_base}/v9/budgets/reservations",
+                                   headers=headers, json={
+                "parent_run_id": admitted.json()["run_id"],
+                "idempotency_key": f"burst-{index}",
+                "amount_cents": 30,
+            })
+            outcomes.append(response.status_code)
 
-        with ThreadPoolExecutor(max_workers=ADMITTERS) as pool:
-            list(pool.map(reserver, range(ADMITTERS * ADMISSIONS_PER_ADMITTER)))
+    with ThreadPoolExecutor(max_workers=ADMITTERS) as pool:
+        list(pool.map(reserver, range(ADMITTERS * ADMISSIONS_PER_ADMITTER)))
 
-        accepted = outcomes.count(200)
-        bounded_denials = outcomes.count(402)
-        assert accepted == 3, f"ceiling 100 admits exactly 3x30: {outcomes}"
-        assert bounded_denials == 27, "overload must be bounded typed refusals"
-        assert outcomes.count(500) == 0, "no crashes under overload"
-    finally:
-        runtime.terminate()
-        try:
-            runtime.wait(timeout=10)
-        except subprocess.TimeoutExpired:
-            runtime.kill()
+    accepted = outcomes.count(200)
+    bounded_denials = outcomes.count(402)
+    assert accepted == 3, f"ceiling 100 admits exactly 3x30: {outcomes}"
+    assert bounded_denials == 27, "overload must be bounded typed refusals"
+    assert outcomes.count(500) == 0, "no crashes under overload"
