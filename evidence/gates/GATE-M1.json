@@ -1,10 +1,10 @@
 {
   "gate": "GATE-M1",
-  "git_commit": "d759527c423bb528938927f19bdf4cf8bda9cce1",
+  "git_commit": "c7a7369631bcf025ae7870d8f6cc627c50698538",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-dat-001-f2edeebf7795.json",
-      "evidence_digest": "ca36711a69739451dce8aa1c0d4ced3616f08c04818ea840d2383707cc7c7319",
+      "evidence": "evidence/reports/evidence-dat-001-295252a34895.json",
+      "evidence_digest": "3b484fb934f3c0398b78ea847c91e3e6b1b456b073d8389d6b1eb1e089f9d2a7",
       "status": "PASS",
       "task": "DAT-001"
     },
@@ -51,8 +51,8 @@
       "task": "DAT-008"
     },
     {
-      "evidence": "evidence/reports/evidence-gate-m0-d759527c423b.json",
-      "evidence_digest": "0998a4c5b6566de88a8a85c36d1232e15ef22812ef1f4c7a31bbd0a65cc5d33d",
+      "evidence": "evidence/reports/evidence-gate-m0-c7a7369631bc.json",
+      "evidence_digest": "2faff43b095806944b5268d88641437f69cfad2a7fde759e8e7a063bdfb6951d",
       "status": "PASS",
       "task": "GATE-M0"
     },
@@ -63,14 +63,9 @@
       "task": "SEC-001"
     }
   ],
-  "problems": [
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/DAT-001/manifest.json', '- local artifact mismatch: evidence/boundary/DAT-001/health-transcript.json', '- local artifact mismatch: quansio/api/app.py']",
-      "task": "DAT-001"
-    }
-  ],
+  "problems": [],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "FAIL",
+  "result": "PASS",
   "schema_revision": "9.0.0"
 }
