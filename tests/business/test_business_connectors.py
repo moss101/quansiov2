@@ -34,12 +34,12 @@ from quansio.control.capability_packs import (  # noqa: E402
     PublicationBlocked,
 )
 from quansio.control.connectors import (  # noqa: E402
-    ConnectorBroker,
     EffectRequired,
     ToolRegistry,
     UnsafeDeclaration,
-    WebhookIngress,
 )
+from quansio.integration_broker.adapters import ConnectorBroker  # noqa: E402
+from quansio.integration_broker.webhooks import WebhookIngress  # noqa: E402
 from quansio.control.effects import EffectLedger  # noqa: E402
 from quansio.control.policy import PolicyEngine  # noqa: E402
 from quansio.platform.context import IdentityContext  # noqa: E402

@@ -148,10 +148,10 @@ class ControlService:
                 (session_id, tenant_id, row[1], workspace_id, _hash_token(token), expires_at),
             )
         context = IdentityContext(
-            tenant_id=tenant_id,
-            workspace_id=workspace_id,
-            user_id=row[1],
-            session_id=session_id,
+            tenant_id=str(tenant_id),
+            workspace_id=str(workspace_id),
+            user_id=str(row[1]),
+            session_id=str(session_id),
             roles=tuple(sorted({r[0] for r in role_rows})),
             expires_at=expires_at,
         )
@@ -189,10 +189,10 @@ class ControlService:
         if "member" not in roles and "workspace_admin" not in roles and "tenant_admin" not in roles:
             raise IdentityContextError("no authority in workspace")
         return IdentityContext(
-            tenant_id=tenant_id,
-            workspace_id=workspace_id,
-            user_id=user_id,
-            session_id=session_id,
+            tenant_id=str(tenant_id),
+            workspace_id=str(workspace_id),
+            user_id=str(user_id),
+            session_id=str(session_id),
             roles=tuple(roles),
             expires_at=expires_at,
         )

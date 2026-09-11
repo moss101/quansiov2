@@ -1,0 +1,10 @@
+{
+  "name": "Quansio Attention",
+  "short_name": "Quansio",
+  "description": "Quansio V9 mobile attention and continuation client (thin projection)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f1420",
+  "theme_color": "#171e2e",
+  "icons": []
+}

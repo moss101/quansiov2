@@ -1,0 +1,49 @@
+/* Quansio V9 web client: canonical projection styling. */
+:root {
+  --bg: #0f1420;
+  --panel: #171e2e;
+  --text: #e8ecf4;
+  --muted: #93a0b4;
+  --accent: #5b9dff;
+  --ok: #3ecf8e;
+  --bad: #ff6b6b;
+  font-family: system-ui, sans-serif;
+}
+body { margin: 0; background: var(--bg); color: var(--text); }
+header#shell {
+  display: flex; gap: 16px; align-items: center;
+  padding: 12px 20px; background: var(--panel);
+}
+header h1 { font-size: 18px; margin: 0; color: var(--accent); }
+nav { display: flex; gap: 8px; flex: 1; }
+nav button, button {
+  background: var(--panel); color: var(--text);
+  border: 1px solid #2a3550; border-radius: 6px;
+  padding: 6px 14px; cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+#connection.offline { color: var(--bad); }
+#connection.online { color: var(--ok); }
+#whoami { color: var(--muted); font-size: 13px; }
+main { max-width: 760px; margin: 24px auto; padding: 0 16px; }
+.card {
+  background: var(--panel); border-radius: 10px;
+  padding: 16px 20px; margin-bottom: 16px;
+}
+.card h2 { margin-top: 0; font-size: 16px; }
+form { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+input {
+  background: var(--bg); color: var(--text);
+  border: 1px solid #2a3550; border-radius: 6px; padding: 6px 10px;
+  min-width: 220px;
+}
+ul#timeline { list-style: none; padding: 0; }
+ul#timeline li {
+  padding: 6px 10px; border-left: 3px solid var(--accent);
+  margin: 6px 0; background: var(--bg); border-radius: 0 6px 6px 0;
+  font-size: 13px;
+}
+.hint { color: var(--muted); font-size: 12px; }
+.error { color: var(--bad); }
+pre { overflow-x: auto; background: var(--bg); padding: 10px; border-radius: 6px; }

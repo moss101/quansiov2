@@ -485,7 +485,7 @@
       "kind": "package_path",
       "path": "quansio/integration_broker",
       "owner": "quansio-integration-broker",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "connector adapters and webhook ingress"
     },
@@ -509,7 +509,7 @@
       "kind": "package_path",
       "path": "quansio/notify",
       "owner": "quansio-notify",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "durable notification delivery"
     },
@@ -549,7 +549,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_artifact/main.py",
       "owner": "quansio-artifact",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "artifact service entrypoint"
     },
@@ -565,7 +565,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_control/main.py",
       "owner": "quansio-control",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "control service entrypoint"
     },
@@ -581,7 +581,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_integration_broker/main.py",
       "owner": "quansio-integration-broker",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "integration broker entrypoint"
     },
@@ -589,7 +589,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_machine_control/main.py",
       "owner": "quansio-machine-control",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "machine control entrypoint"
     },
@@ -605,7 +605,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_notify/main.py",
       "owner": "quansio-notify",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "notification service entrypoint"
     },
@@ -613,7 +613,7 @@
       "kind": "entrypoint",
       "path": "services/quansio_runtime/main.py",
       "owner": "quansio-runtime",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "runtime service entrypoint"
     },
@@ -669,15 +669,23 @@
       "kind": "client_path",
       "path": "clients/cli",
       "owner": "clients",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "packaged command-line client"
     },
     {
       "kind": "client_path",
+      "path": "clients/pyapp",
+      "owner": "clients",
+      "status": "present",
+      "state_class": null,
+      "role": "shared client projection engine (convergence engine and surfaces)"
+    },
+    {
+      "kind": "client_path",
       "path": "clients/desktop",
       "owner": "clients",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "Electron desktop workbench"
     },
@@ -685,7 +693,7 @@
       "kind": "client_path",
       "path": "clients/mobile",
       "owner": "clients",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "mobile attention client"
     },
@@ -693,7 +701,7 @@
       "kind": "client_path",
       "path": "clients/web",
       "owner": "clients",
-      "status": "planned",
+      "status": "present",
       "state_class": null,
       "role": "web client"
     },

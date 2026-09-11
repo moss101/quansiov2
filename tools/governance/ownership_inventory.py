@@ -31,7 +31,7 @@ from repo_paths import RULESET_VERSION, iter_payload_files, sha256_bytes, sha256
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY_PATH = ROOT / "evidence/ownership/ownership_registry.json"
 INVENTORY_PATH = ROOT / "evidence/ownership/inventory.json"
-INVENTORY_VERSION = "1.0.0"
+INVENTORY_VERSION = "1.1.0"
 
 KINDS = {
     "entrypoint",
@@ -162,8 +162,9 @@ def discover(root: Path = ROOT) -> list[dict]:
         # Python packages per canonical owner module (derived from nested files).
         if len(parts) >= 3 and parts[0] == "quansio" and not parts[1].startswith("_"):
             add("package_path", f"quansio/{parts[1]}")
-        # Client application packages.
-        if len(parts) >= 3 and parts[0] == "clients" and path.is_dir():
+        # Client application packages: any payload file nested under
+        # clients/<name>/ marks that client package as discovered.
+        if len(parts) >= 3 and parts[0] == "clients":
             add("client_path", f"clients/{parts[1]}")
 
     if (root / "pyproject.toml").is_file():

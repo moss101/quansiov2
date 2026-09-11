@@ -29,9 +29,9 @@ from quansio.control.effects import (  # noqa: E402
 from quansio.control.policy import PolicyEngine  # noqa: E402
 from quansio.context.collaboration import (  # noqa: E402
     CollaborationProjection,
-    NotificationService,
     TeammateRoutineService,
 )
+from quansio.notify.service import NotificationService  # noqa: E402
 from quansio.context.scheduler import AutomationService  # noqa: E402
 from quansio.machine_control.inventory import (  # noqa: E402
     LeaseRejection,

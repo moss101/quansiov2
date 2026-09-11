@@ -16,7 +16,7 @@ for round in 1 2 3 4 5 6; do
   "$PY" tools/governance/generate_authority.py --write >/dev/null
   if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
     git add -A
-    git commit -q "Settle round ${round}: derived artifacts" || true
+    git commit -q -m "Settle round ${round}: derived artifacts" || true
   fi
   "$PY" tools/governance/refresh_evidence.py || true
   "$PY" tools/governance/generate_authority.py --write >/dev/null
@@ -33,11 +33,11 @@ for round in 1 2 3 4 5 6; do
   "$PY" tools/governance/generate_authority.py --write >/dev/null
   if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
     git add -A
-    git commit -q "Settle: refresh evidence, gates and integrity artifacts (round ${round})" || true
+    git commit -q -m "Settle: refresh evidence, gates and integrity artifacts (round ${round})" || true
   fi
   if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
     git add -A
-    git commit -q "Settle round ${round}: evidence and gates" || true
+    git commit -q -m "Settle round ${round}: evidence and gates" || true
   fi
   if "$VPY" -m pytest tests/ -q; then
     if [ "$(git status --porcelain | wc -l | tr -d ' ')" = "0" ]; then
@@ -49,9 +49,9 @@ for round in 1 2 3 4 5 6; do
   fi
 done
 if [ "$(git status --porcelain | wc -l | tr -d ' ')" != "0" ]; then
-  git add -A && git commit -q "Settle: final round"
+  git add -A && git commit -q -m "Settle: final round"
   "$PY" tools/governance/generate_authority.py --write >/dev/null
-  git add -A && git commit -q "Settle: integrity refresh" || true
+  git add -A && git commit -q -m "Settle: integrity refresh" || true
 fi
 "$VPY" -m pytest tests/ -q
 git status --porcelain | wc -l

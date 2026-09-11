@@ -1,90 +1,65 @@
 {
   "gate": "GATE-M6",
-  "git_commit": "64e7893e71adba66e950b17950b19b6131477b7f",
+  "git_commit": "dd72196f7b81116a5474e34f02b464801643433e",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m5-53807a31ed60.json",
-      "evidence_digest": "060d9fc51651fa54092698a9b87b1e545304ca4e0e1c37ce15c5d2ecb5ae9982",
+      "evidence": "evidence/reports/evidence-gate-m5-9a09e5b3879c.json",
+      "evidence_digest": "ca33b299f2feeb4d14021d9055f586289287b422ae7e5fc0ecc839b7ebf3ae1f",
       "status": "PASS",
       "task": "GATE-M5"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-001-29b5146d856b.json",
-      "evidence_digest": "17e9d59eefce246ae7645efe4edbd807f461a9b743c5ee90f60a034813303a14",
+      "evidence": "evidence/reports/evidence-mac-001-ed05c22cd50b.json",
+      "evidence_digest": "b42303ad87d722c4c0453c2e2ae4ad568f725c56a216349b9736aaf817cc3b25",
       "status": "PASS",
       "task": "MAC-001"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-002-29b5146d856b.json",
-      "evidence_digest": "b0f21ca4d1b27a94dfdeba7703f61090f9f60cac3728a2c63a6539708c571070",
+      "evidence": "evidence/reports/evidence-mac-002-ed05c22cd50b.json",
+      "evidence_digest": "785e83ee5d3de6772711eda9b43cf4dcd4225ea826db3b7e9ff34168c5c4a9ab",
       "status": "PASS",
       "task": "MAC-002"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-003-de382c182c87.json",
-      "evidence_digest": "b223259dceb1a66b29ab81115d518cb7c3a313d468c998a72224d00fc2b3636e",
+      "evidence": "evidence/reports/evidence-mac-003-ed05c22cd50b.json",
+      "evidence_digest": "259953c4e68d933909cc8452f35b9661897ad33952060b718e1ddc494371b53d",
       "status": "PASS",
       "task": "MAC-003"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-004-29b5146d856b.json",
-      "evidence_digest": "0c0c9124093c409f9487f502f6eefdd12b3843debdf878d94513ec36f4e178e3",
+      "evidence": "evidence/reports/evidence-mac-004-ed05c22cd50b.json",
+      "evidence_digest": "763dcb71e84c6fa75b01250703911cf408137ff9368ac84eda5eb1b8e5e0e173",
       "status": "PASS",
       "task": "MAC-004"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-005-29b5146d856b.json",
-      "evidence_digest": "937bc114c314f8a13a4aa219e99951d3697407b085af2c2f5eec91995b412bd2",
+      "evidence": "evidence/reports/evidence-mac-005-ed05c22cd50b.json",
+      "evidence_digest": "e35f27b67c82ed859a8c8d7478df39d8a4da5086014ecf3cbef0b4fa90a00e66",
       "status": "PASS",
       "task": "MAC-005"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-006-29b5146d856b.json",
-      "evidence_digest": "bca616aee3adc675befa24349f318fb59b798a3f202072d63cc54762b05b4fb0",
+      "evidence": "evidence/reports/evidence-mac-006-ed05c22cd50b.json",
+      "evidence_digest": "4108f2275452f8a2e709a0de9e0e6c91d6bca4a474e21163711ae581813a962b",
       "status": "PASS",
       "task": "MAC-006"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-007-de382c182c87.json",
-      "evidence_digest": "8ce631c1b5d6b7fc71505fe6b4c34156a2b1c8fda3e2690ce524ab4002319f75",
+      "evidence": "evidence/reports/evidence-mac-007-ed05c22cd50b.json",
+      "evidence_digest": "cb7b5a571a2564b5f811e20838c0669fb3643645cc110cd3981647809e1abea8",
       "status": "PASS",
       "task": "MAC-007"
     },
     {
-      "evidence": "evidence/reports/evidence-mac-008-c2eca17cf9dd.json",
-      "evidence_digest": "cdf1b792be88e69c4f6ea0fba3528b8c7ebb06274275a15b78fc63dbba2d16f6",
+      "evidence": "evidence/reports/evidence-mac-008-ed05c22cd50b.json",
+      "evidence_digest": "a70a3c7367f3f767aa3272033b2fed48a90279f9169f51590e0a7d9f40ab886e",
       "status": "PASS",
       "task": "MAC-008"
     }
   ],
-  "problems": [
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-003/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-003/health-transcript.json', '- local artifact mismatch: quansio/qworkerd/protocol.py']",
-      "task": "MAC-003"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-004/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-004/health-transcript.json']",
-      "task": "MAC-004"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-005/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-005/health-transcript.json']",
-      "task": "MAC-005"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-006/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-006/health-transcript.json']",
-      "task": "MAC-006"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-007/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-007/health-transcript.json']",
-      "task": "MAC-007"
-    },
-    {
-      "reason": "evidence validation failed: ['EVIDENCE VALIDATION: FAIL', '- local artifact mismatch: evidence/boundary/MAC-008/manifest.json', '- local artifact mismatch: evidence/boundary/MAC-008/health-transcript.json']",
-      "task": "MAC-008"
-    }
-  ],
+  "problems": [],
   "protected_ref": "HEAD",
   "repository_id": "https://github.com/moss101/quansiov2",
-  "result": "FAIL",
+  "result": "PASS",
   "schema_revision": "9.0.0"
 }

@@ -1,0 +1,16 @@
+[project]
+name = "quansio-cli"
+version = "9.0.0"
+description = "Quansio V9 packaged command-line client (thin projection over canonical server APIs)"
+requires-python = ">=3.12"
+dependencies = ["httpx>=0.27"]
+
+[project.scripts]
+quansio = "quansio_cli.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["quansio_cli*"]

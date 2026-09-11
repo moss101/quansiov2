@@ -117,17 +117,25 @@ def test_r01_tracked_input_change_is_detected_then_recovery_is_clean():
     assert inv.render(inv.build_inventory(resolved)) == committed, "regeneration did not return to clean state"
 
 
-def test_r01_planned_path_adopted_only_through_registry():
-    probe_file = REPO_ROOT / "services" / "quansio_notify" / "main.py"
-    probe_file.parent.mkdir(parents=True, exist_ok=True)
-    probe_file.write_text("entrypoint probe\n")
-    try:
-        _, errors = inv.validate()
-        assert any("planned path now exists" in e
-                   and "entrypoint:services/quansio_notify/main.py" in e for e in errors), errors
-    finally:
-        probe_file.unlink()
-        if not any((REPO_ROOT / "services" / "quansio_notify").iterdir()):
-            (REPO_ROOT / "services" / "quansio_notify").rmdir()
-    _, errors = inv.validate()
-    assert errors == []
+def test_r01_planned_path_adopted_only_through_registry(tmp_path):
+    """A planned path that comes into existence must be flagged for adoption
+    through the registry, and adoption clears the flag. The probe runs in a
+    temporary tree so a live production entrypoint is never created or
+    deleted by this test."""
+    registry = json.loads(inv.REGISTRY_PATH.read_text())
+    for entry in registry["entries"]:
+        if entry["path"] == "services/quansio_notify/main.py":
+            entry["status"] = "planned"
+    (tmp_path / "services" / "quansio_notify").mkdir(parents=True)
+    (tmp_path / "services" / "quansio_notify" / "main.py").write_text("entrypoint probe\n")
+    _, errors = inv.validate(root=tmp_path, registry=registry)
+    assert any("planned path now exists" in e
+               and "entrypoint:services/quansio_notify/main.py" in e for e in errors), errors
+    # Adoption through the registry (planned -> present with its owner)
+    # clears the adoption flag; the probe tree contains only this path, so
+    # no error may mention it any more.
+    for entry in registry["entries"]:
+        if entry["path"] == "services/quansio_notify/main.py":
+            entry["status"] = "present"
+    _, errors = inv.validate(root=tmp_path, registry=registry)
+    assert not any("services/quansio_notify/main.py" in e for e in errors), errors

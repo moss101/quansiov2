@@ -177,6 +177,46 @@
       "status": "present"
     },
     {
+      "kind": "client_path",
+      "owner": "clients",
+      "path": "clients/cli",
+      "role": "packaged command-line client",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "client_path",
+      "owner": "clients",
+      "path": "clients/desktop",
+      "role": "Electron desktop workbench",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "client_path",
+      "owner": "clients",
+      "path": "clients/mobile",
+      "role": "mobile attention client",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "client_path",
+      "owner": "clients",
+      "path": "clients/pyapp",
+      "role": "shared client projection engine (convergence engine and surfaces)",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "client_path",
+      "owner": "clients",
+      "path": "clients/web",
+      "role": "web client",
+      "state_class": null,
+      "status": "present"
+    },
+    {
       "kind": "deploy_path",
       "owner": "deploy",
       "path": "deploy",
@@ -242,9 +282,25 @@
     },
     {
       "kind": "entrypoint",
+      "owner": "quansio-artifact",
+      "path": "services/quansio_artifact/main.py",
+      "role": "artifact service entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
       "owner": "quansio-context",
       "path": "services/quansio_context/main.py",
       "role": "context service entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
+      "owner": "quansio-control",
+      "path": "services/quansio_control/main.py",
+      "role": "control service entrypoint",
       "state_class": null,
       "status": "present"
     },
@@ -258,9 +314,41 @@
     },
     {
       "kind": "entrypoint",
+      "owner": "quansio-integration-broker",
+      "path": "services/quansio_integration_broker/main.py",
+      "role": "integration broker entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
+      "owner": "quansio-machine-control",
+      "path": "services/quansio_machine_control/main.py",
+      "role": "machine control entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
       "owner": "quansio-model-gateway",
       "path": "services/quansio_model_gateway/main.py",
       "role": "model gateway entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
+      "owner": "quansio-notify",
+      "path": "services/quansio_notify/main.py",
+      "role": "notification service entrypoint",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "entrypoint",
+      "owner": "quansio-runtime",
+      "path": "services/quansio_runtime/main.py",
+      "role": "runtime service entrypoint",
       "state_class": null,
       "status": "present"
     },
@@ -354,6 +442,14 @@
     },
     {
       "kind": "package_path",
+      "owner": "quansio-integration-broker",
+      "path": "quansio/integration_broker",
+      "role": "connector adapters and webhook ingress",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
       "owner": "quansio-machine-control",
       "path": "quansio/machine_control",
       "role": "execution-target inventory and leases",
@@ -365,6 +461,14 @@
       "owner": "quansio-model-gateway",
       "path": "quansio/model_gateway",
       "role": "exclusive model fulfillment boundary",
+      "state_class": null,
+      "status": "present"
+    },
+    {
+      "kind": "package_path",
+      "owner": "quansio-notify",
+      "path": "quansio/notify",
+      "role": "durable notification delivery",
       "state_class": null,
       "status": "present"
     },
@@ -417,10 +521,10 @@
       "status": "present"
     }
   ],
-  "entry_count": 52,
-  "inventory_version": "1.0.0",
-  "registry_sha256": "337b5c1a2680ebcdafa030f415c3311f64be111cc1ae63846e13bb6a96dda679",
+  "entry_count": 65,
+  "inventory_version": "1.1.0",
+  "registry_sha256": "e07a4108577b1fb942815213834b5a9ec2994f14a1e25a715ae468c183223d59",
   "registry_version": "1.1.0",
   "ruleset_version": "1.0.0",
-  "tooling_sha256": "71696e5be24ac6a6e2893727cba9edf608ff8c56d4d406b2aa092b7b87793eae"
+  "tooling_sha256": "c84b78e9b3ffa8071380c74d9c408f0fbf3a8f374afbf8d3256f6881f5e3649c"
 }

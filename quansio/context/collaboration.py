@@ -1,7 +1,7 @@
 """Collaboration as runtime projections (COL-001), durable typed handoffs
-(COL-002), attention/notifications (COL-003) and persistent teammate
-routines (COL-004). Owners: quansio-runtime projections; quansio-notify
-delivery.
+(COL-002) and persistent teammate routines (COL-004). Owners: quansio-runtime
+projections; notification delivery is owned by quansio-notify
+(``quansio/notify``) and re-exported here for compatibility.
 
 Rooms/groups/threads are projections of participants and typed
 turn/message relations over canonical agents — never a second scheduler or
@@ -159,100 +159,9 @@ class HandoffService:
         )
 
 
-class NotificationService:
-    """COL-003: attention/notification records derived from canonical
-    events. Delivery is idempotent and tenant-safe; the service never owns
-    approval truth."""
-
-    def __init__(self, database: PlatformDatabase):
-        self._db = database
-
-    def create(self, context: IdentityContext, recipient_id: str,
-               channel_class: str, urgency: str, deep_link: str,
-               payload: dict, ttl_seconds: int = 3600) -> dict:
-        notification_id = str(uuid.uuid4())
-        expires_at = _expires(ttl_seconds)
-        self._db.execute(
-            """
-            INSERT INTO notifications
-                (notification_id, tenant_id, recipient_id, channel_class,
-                 urgency, expires_at, deep_link, payload, state)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 'pending')
-            """,
-            (notification_id, context.tenant_id, recipient_id, channel_class,
-             urgency, expires_at, deep_link, Json(payload)),
-        )
-        return {"notification_id": notification_id, "state": "pending"}
-
-    def deliver(self, context: IdentityContext, notification_id: str) -> dict:
-        """Idempotent delivery; expired notifications expire instead."""
-        row = self._db.query_one(
-            "SELECT state, expires_at FROM notifications WHERE tenant_id=%s"
-            " AND notification_id=%s",
-            (context.tenant_id, notification_id),
-        )
-        if row is None:
-            raise KeyError("notification unknown")
-        state, expires_at = row
-        if state in ("delivered", "acknowledged"):
-            return {"notification_id": notification_id, "state": state,
-                    "duplicate": True}
-        if expires_at <= _expires(0):
-            self._db.execute(
-                "UPDATE notifications SET state='expired' WHERE tenant_id=%s"
-                " AND notification_id=%s",
-                (context.tenant_id, notification_id),
-            )
-            return {"notification_id": notification_id, "state": "expired"}
-        self._db.execute(
-            """
-            UPDATE notifications SET state='delivered', delivered_at=now()
-            WHERE tenant_id=%s AND notification_id=%s AND state='pending'
-            """,
-            (context.tenant_id, notification_id),
-        )
-        return {"notification_id": notification_id, "state": "delivered"}
-
-    def acknowledge(self, context: IdentityContext, notification_id: str,
-                    acknowledging_tenant: str, ack_by: str) -> dict:
-        """COL-003-N01: acknowledgement from the wrong tenant is refused."""
-        if acknowledging_tenant != context.tenant_id:
-            raise PermissionError("wrong tenant acknowledgement refused")
-        self._db.execute(
-            """
-            UPDATE notifications SET state='acknowledged', acknowledged_by=%s
-            WHERE tenant_id=%s AND notification_id=%s AND state='delivered'
-            """,
-            (ack_by, context.tenant_id, notification_id),
-        )
-        return {"notification_id": notification_id, "acknowledged_by": ack_by}
-
-    def deliver_pending_after_outage(self, context: IdentityContext) -> int:
-        """COL-003-R01: deliver eligible pending notifications without
-        touching task/approval state."""
-        row = self._db.query_one(
-            """
-            SELECT count(*) FROM notifications
-            WHERE tenant_id=%s AND state='pending' AND expires_at > now()
-            """,
-            (context.tenant_id,),
-        )
-        pending = row[0]
-        if pending:
-            self._db.execute(
-                """
-                UPDATE notifications SET state='delivered', delivered_at=now()
-                WHERE tenant_id=%s AND state='pending' AND expires_at > now()
-                """,
-                (context.tenant_id,),
-            )
-        return pending
-
-
-def _expires(ttl_seconds: int):
-    from datetime import datetime, timedelta, timezone
-
-    return datetime.now(timezone.utc) + timedelta(seconds=ttl_seconds)
+# Canonical notification delivery is owned by quansio-notify; this re-export
+# keeps existing import paths working without a second implementation.
+from quansio.notify.service import NotificationService  # noqa: E402,F401
 
 
 def _now_utc():
