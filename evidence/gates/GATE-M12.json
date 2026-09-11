@@ -1,10 +1,10 @@
 {
   "gate": "GATE-M12",
-  "git_commit": "ed73ea64b7618ac8cdc3c541e62f411fe97c1a83",
+  "git_commit": "066501be074ed0831f4623b463bf4067dcf25c86",
   "predecessor_evidence_index": [
     {
-      "evidence": "evidence/reports/evidence-gate-m11-ed73ea64b761.json",
-      "evidence_digest": "d84d0dae726f5d37e4f9f188d87c818407fbf2b3f39478c53a15dca75752a461",
+      "evidence": "evidence/reports/evidence-gate-m11-066501be074e.json",
+      "evidence_digest": "ec762f406bec1bf29e1e17a507805cab0ff832df0a3e7c5558b5b8ee35bd4cb0",
       "status": "PASS",
       "task": "GATE-M11"
     },
